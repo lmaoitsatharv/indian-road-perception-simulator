@@ -1,0 +1,36 @@
+--- controlled-cases
+
++++ final-policy
+
+@@ -29,9 +29,9 @@
+
+             for a, b in ((-ex, -ey), (ex, -ey), (ex, ey), (-ex, ey))]
+ 
+ 
+-def body(actor, snapshot):
++def body(actor, snapshot, bounds=None):
+     transform = snapshot.get_transform()
+-    b = actor.bounding_box
++    b = bounds if bounds is not None else actor.bounding_box
+     loc = transform.transform(carla.Location(b.location))
+     yaw = math.radians(transform.rotation.yaw + b.rotation.yaw)
+     return {"x": loc.x, "y": loc.y, "z": loc.z, "yaw": yaw,
+@@ -237,6 +237,7 @@
+
+         self.conflicts = {}
+         self.overtakes, self.blocked = 0, set()
+         self._spawn()
++        self.bounds = {a.id: a.bounding_box for a in [d.actor for d in self.drivers] + [p.actor for p in self.walkers]}
+ 
+     def vehicle(self, blueprint, name, incoming, outgoing, start, desired, offset=0., parked=False, color=None):
+         route = self.routes[incoming, outgoing]
+@@ -383,7 +384,7 @@
+
+         states = {}
+         for actor in [d.actor for d in self.drivers] + [p.actor for p in self.walkers]:
+             snap = snapshot.find(actor.id)
+-            b = body(actor, snap)
++            b = body(actor, snap, self.bounds[actor.id])
+             velocity = snap.get_velocity()
+             b["speed"] = math.hypot(velocity.x, velocity.y)
+             states[actor.id] = b

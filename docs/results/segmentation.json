@@ -1,0 +1,137 @@
+{
+  "status": "morning_best_final_test_evaluated",
+  "updated_at_utc": "2026-10-03T15:00:24.338996+00:00",
+  "recommended_current_model": "morning_best",
+  "models": [
+    {
+      "name": "original",
+      "checkpoint": "runs/frozen_01/best.keras",
+      "checkpoint_sha256": "652c3e537e6b944430304d103a80bdff21a67daddcba1d9590e49dfbff0765c3",
+      "selected_epoch": 14,
+      "role": "reference",
+      "run_config": "runs/frozen_01/run_config.json",
+      "validation_metrics_file": "runs/boundary_20261003/reference_original/metrics.json",
+      "global_validation_metrics": {
+        "road_iou": 0.9203454364166681,
+        "road_dice": 0.9585207108717034,
+        "road_precision": 0.9545104375864802,
+        "road_recall": 0.9625648237972048,
+        "boundary_iou_5px": 0.5490874644320445,
+        "boundary_iou_14px": 0.7121914839306107,
+        "visible_boundary_precision_3px": 0.6899633955860085,
+        "visible_boundary_recall_3px": 0.7267885046676005,
+        "visible_boundary_f1_3px": 0.7078973593945003
+      },
+      "test_evaluated": false
+    },
+    {
+      "name": "morning_best",
+      "checkpoint": "runs/overnight_20261003/trial_13_shadow_fixed_bn_low_lr/best.keras",
+      "checkpoint_sha256": "93a8faf3d43b77f0ce74d5cdbaf94124728d371c3b68b2a3386f9f72fc106725",
+      "selected_epoch": 1,
+      "role": "recommended_current_model",
+      "run_config": "runs/overnight_20261003/trial_13_shadow_fixed_bn_low_lr/run_config.json",
+      "validation_metrics_file": "runs/boundary_20261003/reference_trial13/metrics.json",
+      "global_validation_metrics": {
+        "road_iou": 0.9212580814817236,
+        "road_dice": 0.9590154392701117,
+        "road_precision": 0.9536261832582129,
+        "road_recall": 0.9644659544030745,
+        "boundary_iou_5px": 0.5518859791576437,
+        "boundary_iou_14px": 0.7157195476410425,
+        "visible_boundary_precision_3px": 0.6974965523489325,
+        "visible_boundary_recall_3px": 0.725786569617281,
+        "visible_boundary_f1_3px": 0.7113604064240834
+      },
+      "test_evaluated": true,
+      "test_metrics_file": "runs/test_evaluation_20261003_morning_best/test_metrics.json",
+      "global_test_metrics": {
+        "road_iou": 0.9165485449959947,
+        "road_dice": 0.9564574269606202,
+        "road_precision": 0.9518737911594287,
+        "road_recall": 0.9610854202736872,
+        "boundary_iou_5px": 0.5523147646455793,
+        "boundary_iou_14px": 0.7116727106939548,
+        "visible_boundary_precision_3px": 0.6950479892822451,
+        "visible_boundary_recall_3px": 0.7193832498929597,
+        "visible_boundary_f1_3px": 0.7070062757564605,
+        "pixel_accuracy": 0.9765579544753917,
+        "bce_plus_soft_dice_loss": 0.13863086458214482
+      }
+    },
+    {
+      "name": "boundary_best",
+      "checkpoint": "runs/boundary_20261003/boundary_weight4/best.keras",
+      "checkpoint_sha256": "ee996bb45056b1bfa315330e0066bccf71ed86d6cdbb8bff55d6c93d1cba8c85",
+      "selected_epoch": 4,
+      "role": "boundary_experimental_model",
+      "run_config": "runs/boundary_20261003/boundary_weight4/run_config.json",
+      "validation_metrics_file": "runs/boundary_20261003/boundary_weight4/validation_review/metrics.json",
+      "global_validation_metrics": {
+        "road_iou": 0.9205375169464027,
+        "road_dice": 0.958624873321954,
+        "road_precision": 0.9535750538565144,
+        "road_recall": 0.9637284618927562,
+        "boundary_iou_5px": 0.5523606828169337,
+        "boundary_iou_14px": 0.715634634690604,
+        "visible_boundary_precision_3px": 0.6850387427237402,
+        "visible_boundary_recall_3px": 0.7388866173863057,
+        "visible_boundary_f1_3px": 0.7109445109546948
+      },
+      "test_evaluated": false
+    }
+  ],
+  "threshold": 0.5,
+  "input_resolution": [
+    512,
+    512
+  ],
+  "input_normalization": "RGB once to [-1,1] using existing idd_data pipeline; no rescaling inside model.",
+  "mask_values": [
+    0,
+    1
+  ],
+  "split_counts": {
+    "train": 5507,
+    "val": 687,
+    "test": 689
+  },
+  "manifest_sha256": "512cc054e2291ec5e197b0dca913ba94698cf055062b54511977816872005e90",
+  "test_evaluated": true,
+  "pretrained_encoder_dependency": {
+    "path": "models/cache/weights/mobilenet_v2_weights_tf_dim_ordering_tf_kernels_1.0_224_no_top.h5",
+    "sha256": "f8aff69536bd77a692c594f559c798c19bf7f3f36668fc9fa00b21c6aab4797c"
+  },
+  "cleanup_audit": "setup/cleanup_20261003/cleanup_manifest.json",
+  "test_evaluated_models": [
+    "morning_best"
+  ],
+  "final_test_evaluation": {
+    "status": "completed",
+    "model": "morning_best",
+    "images": 689,
+    "checkpoint_sha256": "93a8faf3d43b77f0ce74d5cdbaf94124728d371c3b68b2a3386f9f72fc106725",
+    "threshold": 0.5,
+    "finished_at_utc": "2026-10-03T14:28:34.079558+00:00",
+    "metrics_file": "runs/test_evaluation_20261003_morning_best/test_metrics.json",
+    "report": "runs/test_evaluation_20261003_morning_best/TEST_REPORT.md",
+    "gallery": "runs/test_evaluation_20261003_morning_best/gallery/index.html",
+    "protocol_lock": "models/segmentation_final_lock.json",
+    "global_metrics": {
+      "road_iou": 0.9165485449959947,
+      "road_dice": 0.9564574269606202,
+      "road_precision": 0.9518737911594287,
+      "road_recall": 0.9610854202736872,
+      "boundary_iou_5px": 0.5523147646455793,
+      "boundary_iou_14px": 0.7116727106939548,
+      "visible_boundary_precision_3px": 0.6950479892822451,
+      "visible_boundary_recall_3px": 0.7193832498929597,
+      "visible_boundary_f1_3px": 0.7070062757564605,
+      "pixel_accuracy": 0.9765579544753917,
+      "bce_plus_soft_dice_loss": 0.13863086458214482
+    },
+    "training_performed": false,
+    "test_used_for_reporting": true,
+    "future_test_informed_selection_requires_new_independent_data": true
+  }
+}

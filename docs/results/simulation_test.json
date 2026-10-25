@@ -1,0 +1,257 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-10-22T11:36:44.912778+00:00",
+  "images": 500,
+  "checkpoint": "runs/simulation_frozen_20261022_01/best.keras",
+  "checkpoint_sha256": "8d8c9fd7a3880bb69643c4973db8f14c46242c178fae6927d06b5f9d6aaaf8af",
+  "selected_epoch": 10,
+  "threshold": 0.5,
+  "manifest_sha256": "c1b9ebbc1ba4768de91d413cb03170bdd5ab8f0a5de1dd3bc6ef344e98675e92",
+  "counts": {
+    "tp": 44038649,
+    "fp": 24324,
+    "fn": 7050,
+    "tn": 84665546
+  },
+  "metrics": {
+    "road_iou": 0.9992880875056498,
+    "road_dice": 0.9996439170028576,
+    "precision": 0.9994479718833316,
+    "recall": 0.9998399389688424,
+    "pixel_accuracy": 0.9997562911303868,
+    "masked_bce_dice": 0.001288712739944458
+  },
+  "valid_pixels": 128735569,
+  "total_pixels": 131072000,
+  "ignored_pixels": 2336431,
+  "valid_coverage": 0.982174446105957,
+  "by_group": {
+    "episode_id": {
+      "crossroad_08": {
+        "images": 125,
+        "valid_pixels": 32216933,
+        "tp": 11293604,
+        "fp": 18500,
+        "fn": 3728,
+        "tn": 20901101,
+        "road_iou": 0.9980356724984959,
+        "road_dice": 0.9990168706552432,
+        "precision": 0.9983645836353697,
+        "recall": 0.9996700105830297,
+        "pixel_accuracy": 0.99931005226351
+      },
+      "t_north_08": {
+        "images": 125,
+        "valid_pixels": 32219118,
+        "tp": 11188776,
+        "fp": 2856,
+        "fn": 1169,
+        "tn": 21026317,
+        "road_iou": 0.9996403938567299,
+        "road_dice": 0.9998201645934064,
+        "precision": 0.9997448093361183,
+        "recall": 0.9998955312112794,
+        "pixel_accuracy": 0.9998750741718008
+      },
+      "t_south_08": {
+        "images": 125,
+        "valid_pixels": 32112973,
+        "tp": 10637379,
+        "fp": 2346,
+        "fn": 1298,
+        "tn": 21471950,
+        "road_iou": 0.9996575517222357,
+        "road_dice": 0.9998287465383914,
+        "precision": 0.9997795055793265,
+        "recall": 0.9998779923481087,
+        "pixel_accuracy": 0.9998865256106932
+      },
+      "straight_08": {
+        "images": 125,
+        "valid_pixels": 32186545,
+        "tp": 10918890,
+        "fp": 622,
+        "fn": 855,
+        "tn": 21266178,
+        "road_iou": 0.9998647481352961,
+        "road_dice": 0.999932369494072,
+        "precision": 0.9999430377474744,
+        "recall": 0.9999217014683035,
+        "pixel_accuracy": 0.9999541112598448
+      }
+    },
+    "layout": {
+      "crossroad": {
+        "images": 125,
+        "valid_pixels": 32216933,
+        "tp": 11293604,
+        "fp": 18500,
+        "fn": 3728,
+        "tn": 20901101,
+        "road_iou": 0.9980356724984959,
+        "road_dice": 0.9990168706552432,
+        "precision": 0.9983645836353697,
+        "recall": 0.9996700105830297,
+        "pixel_accuracy": 0.99931005226351
+      },
+      "t_north": {
+        "images": 125,
+        "valid_pixels": 32219118,
+        "tp": 11188776,
+        "fp": 2856,
+        "fn": 1169,
+        "tn": 21026317,
+        "road_iou": 0.9996403938567299,
+        "road_dice": 0.9998201645934064,
+        "precision": 0.9997448093361183,
+        "recall": 0.9998955312112794,
+        "pixel_accuracy": 0.9998750741718008
+      },
+      "t_south": {
+        "images": 125,
+        "valid_pixels": 32112973,
+        "tp": 10637379,
+        "fp": 2346,
+        "fn": 1298,
+        "tn": 21471950,
+        "road_iou": 0.9996575517222357,
+        "road_dice": 0.9998287465383914,
+        "precision": 0.9997795055793265,
+        "recall": 0.9998779923481087,
+        "pixel_accuracy": 0.9998865256106932
+      },
+      "straight": {
+        "images": 125,
+        "valid_pixels": 32186545,
+        "tp": 10918890,
+        "fp": 622,
+        "fn": 855,
+        "tn": 21266178,
+        "road_iou": 0.9998647481352961,
+        "road_dice": 0.999932369494072,
+        "precision": 0.9999430377474744,
+        "recall": 0.9999217014683035,
+        "pixel_accuracy": 0.9999541112598448
+      }
+    },
+    "weather": {
+      "dusk": {
+        "images": 125,
+        "valid_pixels": 32216933,
+        "tp": 11293604,
+        "fp": 18500,
+        "fn": 3728,
+        "tn": 20901101,
+        "road_iou": 0.9980356724984959,
+        "road_dice": 0.9990168706552432,
+        "precision": 0.9983645836353697,
+        "recall": 0.9996700105830297,
+        "pixel_accuracy": 0.99931005226351
+      },
+      "clear": {
+        "images": 125,
+        "valid_pixels": 32219118,
+        "tp": 11188776,
+        "fp": 2856,
+        "fn": 1169,
+        "tn": 21026317,
+        "road_iou": 0.9996403938567299,
+        "road_dice": 0.9998201645934064,
+        "precision": 0.9997448093361183,
+        "recall": 0.9998955312112794,
+        "pixel_accuracy": 0.9998750741718008
+      },
+      "overcast": {
+        "images": 125,
+        "valid_pixels": 32112973,
+        "tp": 10637379,
+        "fp": 2346,
+        "fn": 1298,
+        "tn": 21471950,
+        "road_iou": 0.9996575517222357,
+        "road_dice": 0.9998287465383914,
+        "precision": 0.9997795055793265,
+        "recall": 0.9998779923481087,
+        "pixel_accuracy": 0.9998865256106932
+      },
+      "wet": {
+        "images": 125,
+        "valid_pixels": 32186545,
+        "tp": 10918890,
+        "fp": 622,
+        "fn": 855,
+        "tn": 21266178,
+        "road_iou": 0.9998647481352961,
+        "road_dice": 0.999932369494072,
+        "precision": 0.9999430377474744,
+        "recall": 0.9999217014683035,
+        "pixel_accuracy": 0.9999541112598448
+      }
+    },
+    "case": {
+      "clear_overtake": {
+        "images": 250,
+        "valid_pixels": 64403478,
+        "tp": 22212494,
+        "fp": 19122,
+        "fn": 4583,
+        "tn": 42167279,
+        "road_iou": 0.9989339455003079,
+        "road_dice": 0.9994666884805814,
+        "precision": 0.9991398735926349,
+        "recall": 0.9997937172383208,
+        "pixel_accuracy": 0.9996319298159643
+      },
+      "pedestrian": {
+        "images": 125,
+        "valid_pixels": 32219118,
+        "tp": 11188776,
+        "fp": 2856,
+        "fn": 1169,
+        "tn": 21026317,
+        "road_iou": 0.9996403938567299,
+        "road_dice": 0.9998201645934064,
+        "precision": 0.9997448093361183,
+        "recall": 0.9998955312112794,
+        "pixel_accuracy": 0.9998750741718008
+      },
+      "junction": {
+        "images": 125,
+        "valid_pixels": 32112973,
+        "tp": 10637379,
+        "fp": 2346,
+        "fn": 1298,
+        "tn": 21471950,
+        "road_iou": 0.9996575517222357,
+        "road_dice": 0.9998287465383914,
+        "precision": 0.9997795055793265,
+        "recall": 0.9998779923481087,
+        "pixel_accuracy": 0.9998865256106932
+      }
+    }
+  },
+  "tensorflow_metrics_match_numpy_counts": true,
+  "in_memory_model_weights_unchanged": true,
+  "elapsed_seconds": 25.454907519000002,
+  "gpu": [
+    {
+      "name": "/physical_device:GPU:0",
+      "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "compute_capability": [
+        8,
+        9
+      ]
+    }
+  ],
+  "test_split_now_inspected": true,
+  "real_test_images_read": false,
+  "independent_verification": "passed",
+  "protected_real_checkpoint_and_manifest_unchanged": true,
+  "independent_verification_sha256": "24e0345748ea529838773eb287a6ecd33882fdb85b34b30cc8c99d61980a4ed5",
+  "report": "docs/SIMULATION_TEST.md",
+  "evaluation_directory": "runs/simulation_test_20261022_01",
+  "protocol": "runs/simulation_test_20261022_01/protocol.json",
+  "independent_verification_report": "runs/simulation_test_20261022_01/independent_verification.json",
+  "per_image_counts": "runs/simulation_test_20261022_01/per_image.csv",
+  "examples": "runs/simulation_test_20261022_01/test_examples.png"
+}

@@ -1,0 +1,350 @@
+{
+  "schema": "idd_detector_training_report_v1",
+  "checked_utc": "2026-10-24T04:25:23.488542+00:00",
+  "run": "runs/detection_train_20261024_02",
+  "report_evidence_verified": true,
+  "status": "epochs_and_final_validation_complete_worker_killed_after_results",
+  "training_process_clean_exit": false,
+  "launcher_exit": {
+    "status": "failed_preserved",
+    "returncode": -9,
+    "finished_utc": "2026-10-24T04:14:28.748657+00:00"
+  },
+  "shutdown_cause": "not established",
+  "trainer_status_json_is_stale": true,
+  "epochs_completed": 20,
+  "maximum_epochs": 20,
+  "best_epoch": 20,
+  "checkpoint_selection": "highest validation mAP50-95 in pinned Ultralytics 8.3.225",
+  "optimizer_steps_recorded": 27388,
+  "framework_training_and_epoch_validation_seconds": 31405.3,
+  "dataset": "dataset/idd117k_detection_v2",
+  "counts": {
+    "train": 67159,
+    "val": 17675,
+    "test_metadata_only": 24644
+  },
+  "train_instances": 1042884,
+  "validation_instances": 319438,
+  "names": [
+    "person",
+    "rider",
+    "car",
+    "motorcycle",
+    "bicycle",
+    "autorickshaw",
+    "bus",
+    "truck",
+    "animal",
+    "traffic_light",
+    "traffic_sign",
+    "other_vehicle"
+  ],
+  "evaluation_split": "validation",
+  "official_test_used": false,
+  "protocol": "project filtered validation set and custom 12-class mapping; not official IDD benchmark",
+  "final_validation_complete": true,
+  "final_validation_batches": 2210,
+  "final_best_checkpoint_metrics": {
+    "metrics/precision(B)": 0.654812756390505,
+    "metrics/recall(B)": 0.4272160350065977,
+    "metrics/mAP50(B)": 0.4726297660631545,
+    "metrics/mAP50-95(B)": 0.3124487758329502
+  },
+  "per_class_from_rounded_final_log": {
+    "person": {
+      "images_with_class": 8663,
+      "instances": 34085,
+      "precision": 0.707,
+      "recall": 0.379,
+      "ap50": 0.442,
+      "ap50_95": 0.249
+    },
+    "rider": {
+      "images_with_class": 11940,
+      "instances": 60983,
+      "precision": 0.736,
+      "recall": 0.476,
+      "ap50": 0.541,
+      "ap50_95": 0.318
+    },
+    "car": {
+      "images_with_class": 12745,
+      "instances": 46700,
+      "precision": 0.793,
+      "recall": 0.637,
+      "ap50": 0.704,
+      "ap50_95": 0.52
+    },
+    "motorcycle": {
+      "images_with_class": 12833,
+      "instances": 56618,
+      "precision": 0.739,
+      "recall": 0.601,
+      "ap50": 0.647,
+      "ap50_95": 0.388
+    },
+    "bicycle": {
+      "images_with_class": 652,
+      "instances": 764,
+      "precision": 0.556,
+      "recall": 0.325,
+      "ap50": 0.345,
+      "ap50_95": 0.22
+    },
+    "autorickshaw": {
+      "images_with_class": 5869,
+      "instances": 11745,
+      "precision": 0.697,
+      "recall": 0.705,
+      "ap50": 0.719,
+      "ap50_95": 0.554
+    },
+    "bus": {
+      "images_with_class": 3702,
+      "instances": 5425,
+      "precision": 0.741,
+      "recall": 0.642,
+      "ap50": 0.697,
+      "ap50_95": 0.546
+    },
+    "truck": {
+      "images_with_class": 7142,
+      "instances": 12444,
+      "precision": 0.691,
+      "recall": 0.594,
+      "ap50": 0.643,
+      "ap50_95": 0.48
+    },
+    "animal": {
+      "images_with_class": 280,
+      "instances": 963,
+      "precision": 0.642,
+      "recall": 0.0571,
+      "ap50": 0.173,
+      "ap50_95": 0.0806
+    },
+    "traffic_light": {
+      "images_with_class": 1053,
+      "instances": 2657,
+      "precision": 0.522,
+      "recall": 0.249,
+      "ap50": 0.254,
+      "ap50_95": 0.119
+    },
+    "traffic_sign": {
+      "images_with_class": 7064,
+      "instances": 22222,
+      "precision": 0.632,
+      "recall": 0.345,
+      "ap50": 0.372,
+      "ap50_95": 0.215
+    },
+    "other_vehicle": {
+      "images_with_class": 9447,
+      "instances": 64832,
+      "precision": 0.402,
+      "recall": 0.117,
+      "ap50": 0.133,
+      "ap50_95": 0.058
+    }
+  },
+  "per_class_precision_note": "Printed source values have approximately three significant digits",
+  "precision_recall_aggregation": "macro mean across classes at the evaluator selected F1 operating point; not a deployed threshold",
+  "epoch20_metrics_before_stripped_checkpoint_validation": {
+    "metrics/precision(B)": 0.65446,
+    "metrics/recall(B)": 0.42786,
+    "metrics/mAP50(B)": 0.47269,
+    "metrics/mAP50-95(B)": 0.31239
+  },
+  "improvement_from_epoch1_percentage_points": {
+    "mAP50": 11.509999999999998,
+    "mAP50_95": 7.89
+  },
+  "recipe": {
+    "schema": "idd_detection_training_recipe_v1",
+    "model": "yolo11s",
+    "initial_weights": "models/cache/detection/yolo11s.pt",
+    "initial_weights_metadata": "models/cache/detection/yolo11s.provenance.json",
+    "runtime_verification": "runs/detection_readiness_20261023_01/runtime_isolated/runtime_verification.json",
+    "dataset": "dataset/idd117k_detection_v2",
+    "expected_provider_counts": {
+      "train": 96897,
+      "val": 20202,
+      "test_metadata_only": 24644
+    },
+    "imgsz": 640,
+    "batch": 4,
+    "epochs": 20,
+    "patience": 5,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 0.1,
+    "seed": 42,
+    "workers": 4,
+    "amp": true,
+    "cache": false,
+    "close_mosaic": 5,
+    "deterministic": true,
+    "checkpoint_selection": "pinned Ultralytics validation fitness; no official test-label access",
+    "scope": "object_detection_observation_only",
+    "training_authorised_by_recipe_alone": false,
+    "control_allowed": false,
+    "notes": [
+      "Proposed bounded first candidate; this recipe has not been trained or accuracy-tested on IDD.",
+      "Runtime forward-only checks do not establish backward-pass memory requirements; verify the first training batches before a long run.",
+      "Letterbox to 640 at runtime; no offline stretching of native images.",
+      "Road-segmentation checkpoints and inference defaults remain separate.",
+      "Final selected manifest: 67,159 train, 17,675 validation, 24,644 unlabelled test metadata; raw provider counts recorded separately."
+    ],
+    "expected_prepared_counts": {
+      "train": 67159,
+      "val": 17675,
+      "test_metadata_only": 24644
+    },
+    "data_selection": "Original provider split membership retained; recording overlaps, unresolved uploads, invalid pairs and exact training duplicates of validation excluded with provenance",
+    "data": "dataset/idd117k_detection_v2/data.yaml"
+  },
+  "checkpoints": {
+    "best": {
+      "path": "runs/detection_train_20261024_02/weights/best.pt",
+      "sha256": "57f1d54b93c794677d26fd22773284de2752d878477bb9ac04a761cc7f035153",
+      "bytes": 19168346,
+      "stored_epoch": -1,
+      "checkpoint_date": "2026-10-24T04:12:15.511812",
+      "version": "8.3.225",
+      "names": [
+        "person",
+        "rider",
+        "car",
+        "motorcycle",
+        "bicycle",
+        "autorickshaw",
+        "bus",
+        "truck",
+        "animal",
+        "traffic_light",
+        "traffic_sign",
+        "other_vehicle"
+      ],
+      "state_tensors": 499,
+      "all_tensors_finite": true,
+      "optimizer_present": false,
+      "best_fitness": null,
+      "train_metrics": {
+        "metrics/precision(B)": 0.65446,
+        "metrics/recall(B)": 0.42786,
+        "metrics/mAP50(B)": 0.47269,
+        "metrics/mAP50-95(B)": 0.31239,
+        "val/box_loss": 1.11244,
+        "val/cls_loss": 0.73725,
+        "val/dfl_loss": 0.9423,
+        "fitness": 0.31239
+      },
+      "history_last_row": {
+        "epoch": 20,
+        "time": 31405.3,
+        "train/box_loss": 1.09578,
+        "train/cls_loss": 0.71511,
+        "train/dfl_loss": 0.95448,
+        "metrics/precision(B)": 0.65446,
+        "metrics/recall(B)": 0.42786,
+        "metrics/mAP50(B)": 0.47269,
+        "metrics/mAP50-95(B)": 0.31239,
+        "val/box_loss": 1.11244,
+        "val/cls_loss": 0.73725,
+        "val/dfl_loss": 0.9423,
+        "lr/pg0": 1.45e-05,
+        "lr/pg1": 1.45e-05,
+        "lr/pg2": 1.45e-05
+      },
+      "history_rows": 20
+    },
+    "last": {
+      "path": "runs/detection_train_20261024_02/weights/last.pt",
+      "sha256": "1b466db45741ef125e88c66a0f8b20f3e9cbe43753eba02fe545cd6ff8fe2380",
+      "bytes": 19168346,
+      "stored_epoch": -1,
+      "checkpoint_date": "2026-10-24T04:12:15.511812",
+      "version": "8.3.225",
+      "names": [
+        "person",
+        "rider",
+        "car",
+        "motorcycle",
+        "bicycle",
+        "autorickshaw",
+        "bus",
+        "truck",
+        "animal",
+        "traffic_light",
+        "traffic_sign",
+        "other_vehicle"
+      ],
+      "state_tensors": 499,
+      "all_tensors_finite": true,
+      "optimizer_present": false,
+      "best_fitness": null,
+      "train_metrics": {
+        "metrics/precision(B)": 0.65446,
+        "metrics/recall(B)": 0.42786,
+        "metrics/mAP50(B)": 0.47269,
+        "metrics/mAP50-95(B)": 0.31239,
+        "val/box_loss": 1.11244,
+        "val/cls_loss": 0.73725,
+        "val/dfl_loss": 0.9423,
+        "fitness": 0.31239
+      },
+      "history_last_row": {
+        "epoch": 20,
+        "time": 31405.3,
+        "train/box_loss": 1.09578,
+        "train/cls_loss": 0.71511,
+        "train/dfl_loss": 0.95448,
+        "metrics/precision(B)": 0.65446,
+        "metrics/recall(B)": 0.42786,
+        "metrics/mAP50(B)": 0.47269,
+        "metrics/mAP50-95(B)": 0.31239,
+        "val/box_loss": 1.11244,
+        "val/cls_loss": 0.73725,
+        "val/dfl_loss": 0.9423,
+        "lr/pg0": 1.45e-05,
+        "lr/pg1": 1.45e-05,
+        "lr/pg2": 1.45e-05
+      },
+      "history_rows": 20
+    }
+  },
+  "checkpoint_verification": "runs/detection_train_20261024_02/report_verification_02/checkpoint_verification.json",
+  "protected_files_unchanged": true,
+  "protected_fingerprints": 17,
+  "initial_checkpoint_unchanged": true,
+  "recipe_unchanged": true,
+  "reported_validation_speed_ms_per_image": {
+    "preprocess": 0.1,
+    "inference": 1.7,
+    "postprocess": 1.1
+  },
+  "speed_scope": "batched GPU validation components; not live camera latency or end-to-end FPS",
+  "additional_optimizer_steps_for_report": 0,
+  "distance_accuracy_measured": false,
+  "tracking_evaluated": false,
+  "nearby_only_accuracy_measured": false,
+  "real_deployment_approved": false,
+  "model_control": false,
+  "evidence_sha256": {
+    "runs/detection_train_20261024_02/results.csv": "daeaa560da39ad5a20fde26ee329d08f55b91490870184042bb45f428db05324",
+    "runs/detection_train_20261024_02/progress.json": "7ab8dca01b9beb18e46c869ca0242e211619a2d2c4c0de1da25cd7af3f6da1c3",
+    "runs/detection_train_20261024_02/recipe.json": "ab315d5d9841f5570200a94cd4247bf59d63c744a2694be5260353f99d0d098a",
+    "runs/detection_train_20261024_02/args.yaml": "17ab94609888f9a7304869bbd8f44418e004bb59d082a3e5eb0a59271722c471",
+    "runs/detection_train_20261024_02/readiness.json": "678d9dfeec723340e307e5f3d7ec21afee819a1837b08cf5d308414ab77649be",
+    "runs/detection_train_20261024_02/status.json": "a50ce0f618323f98f723fcb87598df015054a14508077a2e83f657767b1f25f3",
+    "runs/detection_train_20261024_02/startup_verification.json": "b934d970736c4dc7f00c2c92d4eaef87187377cf6f2f774872e8ad3cdd04c478",
+    "runs/detection_train_20261024_02/completion_protection.json": "aec6995ed7613f047c2ecb1c94775abfcf13fc4c9ba0b9bfc3f744777c58e577",
+    "runs/detection_train_20261024_02/report_verification_02/checkpoint_verification.json": "a0c231eabd790c6d3609c8483c4bea1bbe6639d2fcf7e8770df3ddb3517d4541",
+    "runs/detection_train_20261024_02_launcher/exit.json": "ee9b2b0e2995df231c5b5bc868372a184dcd1b047d6a834fb930aba881645d4c",
+    "runs/detection_train_20261024_02_launcher/keep_awake.json": "ef6c317aef6c7522795e9ba12fb29f18f814c012354236891e9f5a6cefbb14e0",
+    "runs/detection_train_20261024_02_launcher/training.log": "f00cd2900841a6034ea92c8d11888b88e3a652edeedd4a40bff6ac8bcc634b48",
+    "runs/detection_train_20261024_02/final_validation_excerpt.txt": "51c658d8eabb1250c33df27e4ae21903837d3bcd0bb9909ad6c88e0ad5355f11"
+  }
+}

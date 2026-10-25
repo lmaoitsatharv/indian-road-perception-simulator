@@ -1,0 +1,39 @@
+{
+  "schema": "source_evidence_manifest_v1",
+  "as_of": "2026-10-26",
+  "matched_result_source": "runs/detection_pilot_recovery_20261025_01/matched_pilot_result.json",
+  "matched_result_source_sha256": "ac2f31b1bdb059e5950e1bf3788d7e194fb962824ed77dbdd2cfba923d501e2b",
+  "synthetic_captures": [
+    {
+      "source": "runs/combined_india_20261023_01/previews/town_plan.png",
+      "published": "docs/results/overview/town_plan.png",
+      "sha256": "eaa15729371444ba95dc517cb56e5e53bcb69f80a62933bd1420dd112560cf6e",
+      "kind": "first-party synthetic scene capture/plan"
+    },
+    {
+      "source": "runs/combined_india_20261023_01/previews/market_street.png",
+      "published": "docs/results/overview/market_street.png",
+      "sha256": "c2f911f8cdd5b223d0b12e3391208006cccb34ff075d2338f81948fe282429e8",
+      "kind": "first-party synthetic scene capture/plan"
+    },
+    {
+      "source": "runs/combined_india_20261023_01/previews/rural_road.png",
+      "published": "docs/results/overview/rural_road.png",
+      "sha256": "baee0e4264e5e69eaebdd5d92c1290f26baaec862ad8e8d8a1ecb6f5ea1ef3f9",
+      "kind": "first-party synthetic scene capture/plan"
+    },
+    {
+      "source": "runs/simulation_live_20261023_07/screenshots/fresh.png",
+      "published": "docs/results/overview/live_road_preview.png",
+      "sha256": "e382a07ff4f6fe791186332ab1735d903efb3a3cc59ce563d53089614e56c7a0",
+      "kind": "first-party synthetic scene capture/plan"
+    }
+  ],
+  "model_checkpoints_uploaded": false,
+  "datasets_uploaded": false,
+  "limitations": [
+    "Results belong to their recorded evaluations.",
+    "Camera perception is observation-only; vehicle control uses simulator states.",
+    "Selected captures do not establish all-scene robustness."
+  ]
+}

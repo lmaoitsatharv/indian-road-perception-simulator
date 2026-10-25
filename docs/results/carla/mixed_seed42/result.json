@@ -1,0 +1,225 @@
+{
+  "case": "mixed",
+  "seed": 42,
+  "exit_reason": "bounded_test_complete",
+  "sim_s": 110.00000163912773,
+  "ticks": 2201,
+  "camera_images": 2199,
+  "loop_wall_s": 112.78099999999995,
+  "simulated_time_per_wall_second": 0.975341605759195,
+  "camera_frames_aligned": true,
+  "camera_max_delivery_delay_frames": 2,
+  "ego_goal_reached": true,
+  "ego_goal_time_s": 81.95000122115016,
+  "completed_overtakes": 1,
+  "overtake_block_reasons": [
+    "junction_too_close",
+    "oncoming_gap",
+    "pedestrian_conflict",
+    "return_gap"
+  ],
+  "collision_events": [],
+  "all_actor_overlaps": [],
+  "offroad_events": [],
+  "wrongway_events": [],
+  "sampled_min_body_gap_m": 0.23458550858625415,
+  "actor_stats": [
+    {
+      "id": 75,
+      "name": "ego",
+      "distance_m": 237.80562136394352,
+      "max_speed_mps": 7.114032867225912,
+      "max_braking_mps2": 20.23315426286379,
+      "max_abs_jerk_mps3": 361.87744004580156,
+      "stopped_s": 30.050000000000292
+    },
+    {
+      "id": 76,
+      "name": "slow_cycle",
+      "distance_m": 203.53848091776098,
+      "max_speed_mps": 2.4379158320707814,
+      "max_braking_mps2": 19.800232712854314,
+      "max_abs_jerk_mps3": 402.95705666665333,
+      "stopped_s": 11.700000000000031
+    },
+    {
+      "id": 77,
+      "name": "oncoming_car",
+      "distance_m": 182.16313260778352,
+      "max_speed_mps": 6.596832275390625,
+      "max_braking_mps2": 6.329064730660357,
+      "max_abs_jerk_mps3": 104.2785653154401,
+      "stopped_s": 71.1499999999981
+    },
+    {
+      "id": 79,
+      "name": "turning_car",
+      "distance_m": 178.88710935067076,
+      "max_speed_mps": 5.040964068612664,
+      "max_braking_mps2": 7.931353425233973,
+      "max_abs_jerk_mps3": 148.640438558488,
+      "stopped_s": 56.09999999999895
+    },
+    {
+      "id": 80,
+      "name": "south_scooter",
+      "distance_m": 215.9230050989003,
+      "max_speed_mps": 5.202178955078125,
+      "max_braking_mps2": 6.072235099540269,
+      "max_abs_jerk_mps3": 168.15182092889998,
+      "stopped_s": 59.199999999998774
+    },
+    {
+      "id": 81,
+      "name": "delivery_van",
+      "distance_m": 217.54090517204077,
+      "max_speed_mps": 6.134948961381892,
+      "max_braking_mps2": 16.796112149720166,
+      "max_abs_jerk_mps3": 250.71724491585414,
+      "stopped_s": 62.54999999999858
+    },
+    {
+      "id": 82,
+      "name": "bus",
+      "distance_m": 206.04007389957468,
+      "max_speed_mps": 5.047150891669713,
+      "max_braking_mps2": 18.423461906273587,
+      "max_abs_jerk_mps3": 315.97900375047175,
+      "stopped_s": 56.9999999999989
+    },
+    {
+      "id": 83,
+      "name": "motorcycle",
+      "distance_m": 267.09805489565787,
+      "max_speed_mps": 6.1718750000902585,
+      "max_braking_mps2": 6.3934326171875,
+      "max_abs_jerk_mps3": 183.9599566748449,
+      "stopped_s": 46.699999999999484
+    },
+    {
+      "id": 84,
+      "name": "parked_car",
+      "distance_m": 0.0,
+      "max_speed_mps": 0.0,
+      "max_braking_mps2": 0.0,
+      "max_abs_jerk_mps3": 0.0,
+      "stopped_s": 110.04999999999589
+    },
+    {
+      "id": 85,
+      "name": "north_car",
+      "distance_m": 248.46780553557159,
+      "max_speed_mps": 5.1397705078125,
+      "max_braking_mps2": 2.391052243120999,
+      "max_abs_jerk_mps3": 104.18701101559252,
+      "stopped_s": 39.24999999999991
+    },
+    {
+      "id": 86,
+      "name": "south_cycle",
+      "distance_m": 157.76474326250764,
+      "max_speed_mps": 2.217254638671875,
+      "max_braking_mps2": 3.9474556712918885,
+      "max_abs_jerk_mps3": 207.33633170226582,
+      "stopped_s": 23.350000000000197
+    },
+    {
+      "id": 78,
+      "name": "crossing_1",
+      "distance_m": 12.372264385223389,
+      "max_speed_mps": 1.2000083923339844,
+      "max_braking_mps2": 15.399742126464844,
+      "max_abs_jerk_mps3": 307.9948425292969,
+      "stopped_s": 99.3999999999965
+    },
+    {
+      "id": 87,
+      "name": "crossing_2",
+      "distance_m": 14.0992112159729,
+      "max_speed_mps": 1.1500072479248047,
+      "max_braking_mps2": 14.75982666015625,
+      "max_abs_jerk_mps3": 295.196533203125,
+      "stopped_s": 97.4999999999966
+    },
+    {
+      "id": 88,
+      "name": "footpath_0",
+      "distance_m": 111.61795806884766,
+      "max_speed_mps": 1.028289794921875,
+      "max_braking_mps2": 17.96875,
+      "max_abs_jerk_mps3": 359.375,
+      "stopped_s": 0.5499999999999999
+    },
+    {
+      "id": 89,
+      "name": "footpath_1",
+      "distance_m": 107.03414916992188,
+      "max_speed_mps": 0.98602294921875,
+      "max_braking_mps2": 17.230224609375,
+      "max_abs_jerk_mps3": 344.54345703125,
+      "stopped_s": 0.6
+    },
+    {
+      "id": 90,
+      "name": "footpath_2",
+      "distance_m": 136.5641326904297,
+      "max_speed_mps": 1.262359619140625,
+      "max_braking_mps2": 22.06268310546875,
+      "max_abs_jerk_mps3": 441.2841796875,
+      "stopped_s": 0.3
+    },
+    {
+      "id": 91,
+      "name": "footpath_3",
+      "distance_m": 124.70540237426758,
+      "max_speed_mps": 1.1566925048828125,
+      "max_braking_mps2": 20.21484375,
+      "max_abs_jerk_mps3": 404.296875,
+      "stopped_s": 0.8500000000000002
+    },
+    {
+      "id": 92,
+      "name": "footpath_4",
+      "distance_m": 103.90852355957031,
+      "max_speed_mps": 0.960540771484375,
+      "max_braking_mps2": 16.7877197265625,
+      "max_abs_jerk_mps3": 335.8154296875,
+      "stopped_s": 0.7500000000000001
+    },
+    {
+      "id": 93,
+      "name": "footpath_5",
+      "distance_m": 111.20606994628906,
+      "max_speed_mps": 1.031494140625,
+      "max_braking_mps2": 18.02978515625,
+      "max_abs_jerk_mps3": 360.595703125,
+      "stopped_s": 0.8500000000000002
+    }
+  ],
+  "errors": [],
+  "cleanup_warnings": [],
+  "control_tests": {
+    "pause": true,
+    "resume": true,
+    "tab": true,
+    "screenshot": true,
+    "screenshot_saved": true
+  },
+  "pause_checks": [
+    {
+      "paused_frame": 152,
+      "resumed_frame": 152,
+      "passed": true
+    }
+  ],
+  "cleanup_complete": true,
+  "runtime_passed": true,
+  "limits": [
+    "Seeded illustrative Indian-style behaviour; not calibrated against traffic counts or trajectories",
+    "Rule-based controller uses simulator ground truth; no camera-model control and no RL",
+    "Geometric conflict reservations at the unsignalised junction are conservative and uncalibrated",
+    "Available scooters/bikes/bus/van/cars; no authentic autorickshaw asset installed",
+    "2D body checks are sampled at 20 Hz on a flat road; not a continuous safety proof"
+  ],
+  "screenshots": 12
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "idd_detection_training_recipe_v1",
+  "model": "yolo11s",
+  "initial_weights": "runs/detection_train_20261024_04/weights/best.pt",
+  "initial_weights_metadata": "runs/detection_pilot_recovery_20261025_01/initial_checkpoint.json",
+  "runtime_verification": "runs/detection_pilot_recovery_20261025_01/runtime_verification.json",
+  "dataset": "dataset/idd117k_detection_v3",
+  "expected_provider_counts": {
+    "train": 96897,
+    "val": 20202,
+    "test_metadata_only": 24644
+  },
+  "imgsz": 1280,
+  "batch": 2,
+  "epochs": 3,
+  "patience": 3,
+  "optimizer": "AdamW",
+  "lr0": 3e-05,
+  "lrf": 0.5,
+  "seed": 42,
+  "workers": 0,
+  "amp": false,
+  "cache": false,
+  "close_mosaic": 0,
+  "deterministic": true,
+  "checkpoint_selection": "pinned Ultralytics validation fitness; no official test-label access",
+  "scope": "object_detection_observation_only",
+  "training_authorised_by_recipe_alone": false,
+  "control_allowed": false,
+  "notes": [
+    "Short gentle training at 1280 may adapt small-object features to the resolution with proven paired gains; animal retention remains an explicit failure criterion.",
+    "New three-epoch adaptation from the verified epoch-30 parent; not a restart of its completed run.",
+    "Input 1280, existing rare-class sampling retained, mosaic remains off as in the parent's final stage.",
+    "Learning rate starts at 0.00003, close to the parent's final rate, with no warmup jump.",
+    "Every epoch and FP32 recovery state are saved. Parent best is preserved; no automatic deployment.",
+    "Final independent GPU FP32 validation must be compared with this starting checkpoint at the same 1280 settings.",
+    "First pilot failed with an unknown CUDA error after 238 batches / 9 optimizer steps and zero saved epochs; all evidence retained.",
+    "This is one changed diagnostic attempt from the unchanged parent, not an optimizer resume or a repeated identical run.",
+    "FP32, batch 2, workers 0 and CUDA_LAUNCH_BLOCKING=1 reduce concurrency/AMP factors and improve error localization; they are not proof of the root cause."
+  ],
+  "expected_prepared_counts": {
+    "train": 56729,
+    "val": 17675,
+    "test_metadata_only": 24644
+  },
+  "data_selection": "Original provider split membership retained; recording overlaps, unresolved uploads, invalid pairs and exact training duplicates of validation excluded with provenance",
+  "initialization": "verified_idd_detector",
+  "cos_lr": true,
+  "warmup_epochs": 0.0,
+  "warmup_bias_lr": 0.0,
+  "mosaic": 0.0,
+  "scale": 0.3,
+  "save_period": 1,
+  "sampling": {
+    "type": "rare_images_with_pixel_group_correction",
+    "class_image_boosts": {
+      "4": 2,
+      "8": 4,
+      "9": 2
+    },
+    "validation_weighted": false,
+    "seed": 42,
+    "duplicate_pixel_base_probability": "divide each identity by group size"
+  },
+  "baseline_analysis": "runs/detection_pilot_recovery_20261025_01/analysis.json",
+  "baseline_analysis_sha256": "e144f3c07a288dca8258c8e454198d05289e299cb536c6ab9d3532abe1f17e72",
+  "matched_comparison_resolution": 1280,
+  "training_view_verification": "dataset/idd117k_detection_v3/provenance/selection_verification.json",
+  "training_view_verification_sha256": "f66052bdd8ea325705af1dca79a93fc03133e05f070a5dca64b7d7269e142506",
+  "independent_data_audit": "runs/detection_clean_audit_20261024_02/verification.json",
+  "independent_data_audit_sha256": "b3808b9eda266941122859fbe03f755cf27adacce1891177f64858dafb363913"
+}

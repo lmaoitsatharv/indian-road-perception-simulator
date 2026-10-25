@@ -1,0 +1,232 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-10-22T20:14:17.506652+00:00",
+  "launcher": "Start_Live_Road_Preview.cmd",
+  "powershell_launcher": "Start_Live_Road_Preview.ps1",
+  "report": "docs/LIVE_SIMULATION_OBSERVATION.md",
+  "camera_hz": 5,
+  "pending_capacity": 1,
+  "inflight_capacity": 1,
+  "wall_freshness_limit_ms": 500,
+  "simulation_freshness_limit_ms": 500,
+  "presentation_reserve_ms": 100,
+  "age_is_conservative_source_tick_start_upper_bound": true,
+  "actual_exposure_wall_timestamp_available": false,
+  "held_overlay_deadline_met": false,
+  "display_timing_limitation": {
+    "intervals_crossing_deadline": 2,
+    "maximum_overrun_ms": 14.87379999999996,
+    "reason": "The synchronous preview can hold its previous image while a simulator/UI operation blocks"
+  },
+  "normal_run": "runs/simulation_live_20261023_07",
+  "normal": {
+    "passed": true,
+    "verification_scope": "Frame identity, stale suppression at completed redraws, model outputs, cleanup and controller input isolation; held-display deadline compliance and numeric replay equality are reported separately",
+    "session": "591cf7c5563a1bd7354100983b1dce62",
+    "live_episode": "runs\\carla_india_smoke_20261022T200722_339651Z_seed4101\\episode_01_mixed_seed4101",
+    "camera_frames": 100,
+    "received_results": 100,
+    "shown_unique_frames": 100,
+    "source_rgb_resize_and_mask_hashes_verified": true,
+    "probabilities_checked": 4,
+    "fresh_presentations": 394,
+    "stale_overlay_presentations": 0,
+    "held_overlay_intervals_crossing_deadline": 2,
+    "maximum_held_overlay_deadline_overrun_ms": 14.87379999999996,
+    "held_overlay_deadline_met": false,
+    "redraw_freshness_gate_passed": true,
+    "presentation_reserve_ms": 100,
+    "source_step_to_result_upper_ms": {
+      "count": 100,
+      "median_ms": 60.36255,
+      "p95_ms": 145.48813499999983,
+      "max_ms": 278.1798
+    },
+    "normal_source_step_to_result_upper_ms": {
+      "count": 100,
+      "median_ms": 60.36255,
+      "p95_ms": 145.48813499999983,
+      "max_ms": 278.1798
+    },
+    "callback_to_result_ms": {
+      "count": 100,
+      "median_ms": 42.0132,
+      "p95_ms": 87.126635,
+      "max_ms": 125.1417
+    },
+    "gpu_inference_ms": {
+      "count": 100,
+      "median_ms": 17.311167500000835,
+      "p95_ms": 22.789699399997325,
+      "max_ms": 29.73064300000061
+    },
+    "presented_source_age_upper_ms": {
+      "count": 394,
+      "median_ms": 215.9028,
+      "p95_ms": 334.24682499999966,
+      "max_ms": 401.0277
+    },
+    "fault_probe": false,
+    "first_presentation_source_age_upper_ms": {
+      "count": 100,
+      "median_ms": 120.10875,
+      "p95_ms": 242.731725,
+      "max_ms": 311.6268
+    },
+    "faults": [],
+    "queue_replacements": 0,
+    "connection_errors": 0,
+    "matched_rule_control": null,
+    "controller_source_unchanged": true,
+    "model_outputs_excluded_from_controller_inputs": true,
+    "received_frame_reference_counts": {
+      "tp": 8592923,
+      "fp": 383,
+      "fn": 2660,
+      "tn": 17126599,
+      "ignored": 491835,
+      "total": 26214400
+    },
+    "received_frame_quality": {
+      "road_iou": 0.9996459967384701,
+      "dice": 0.9998229670341114,
+      "coverage": 0.9812379837036133
+    },
+    "worker_and_native_cleanup_passed": true,
+    "real_and_simulation_weights_unchanged": true,
+    "model_control": false,
+    "age_is_conservative_upper_bound": true,
+    "actual_exposure_wall_timestamp_available": false
+  },
+  "fault_check_run": "runs/simulation_live_20261023_05",
+  "fault_check": {
+    "passed": true,
+    "verification_scope": "Observation timing, frame identity, stale suppression, model outputs, cleanup and controller input isolation; numeric replay equality is reported separately",
+    "session": "b3fb690ce372e138f8b43339d6ea8621",
+    "live_episode": "runs\\carla_india_smoke_20261022T195857_021104Z_seed4101\\episode_01_mixed_seed4101",
+    "camera_frames": 200,
+    "received_results": 196,
+    "shown_unique_frames": 195,
+    "source_rgb_resize_and_mask_hashes_verified": true,
+    "probabilities_checked": 8,
+    "fresh_presentations": 780,
+    "stale_overlay_presentations": 0,
+    "source_step_to_result_upper_ms": {
+      "count": 196,
+      "median_ms": 59.52065,
+      "p95_ms": 109.82645000000001,
+      "max_ms": 1029.1094
+    },
+    "normal_source_step_to_result_upper_ms": {
+      "count": 195,
+      "median_ms": 59.4694,
+      "p95_ms": 106.67646999999992,
+      "max_ms": 282.6057
+    },
+    "callback_to_result_ms": {
+      "count": 196,
+      "median_ms": 42.061499999999995,
+      "p95_ms": 86.78225,
+      "max_ms": 1011.1686
+    },
+    "gpu_inference_ms": {
+      "count": 196,
+      "median_ms": 17.211603000001574,
+      "p95_ms": 22.082580750002023,
+      "max_ms": 35.84776000000289
+    },
+    "presented_source_age_upper_ms": {
+      "count": 780,
+      "median_ms": 170.05875,
+      "p95_ms": 313.609715,
+      "max_ms": 452.2045
+    },
+    "fault_probe": true,
+    "faults": [
+      {
+        "kind": "delay",
+        "frame": 272,
+        "seconds": 0.9
+      },
+      {
+        "kind": "disconnect",
+        "frame": 384
+      }
+    ],
+    "queue_replacements": 3,
+    "connection_errors": 1,
+    "matched_rule_control": {
+      "actor_steps": 15219,
+      "maximum_absolute_differences": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "route_s": 0.0,
+        "target_mps": 0.0,
+        "throttle": 0.0,
+        "brake": 0.0,
+        "steer": 0.0
+      },
+      "decision_reason_or_pass_state_mismatches": 0,
+      "strict_numeric_replay_match": true
+    },
+    "controller_source_unchanged": true,
+    "model_outputs_excluded_from_controller_inputs": true,
+    "received_frame_reference_counts": {
+      "tp": 17022841,
+      "fp": 37270,
+      "fn": 45718,
+      "tn": 33225228,
+      "ignored": 1049167,
+      "total": 51380224
+    },
+    "received_frame_quality": {
+      "road_iou": 0.9951485543319766,
+      "dice": 0.9975683787267421,
+      "coverage": 0.9795803342546735
+    },
+    "worker_and_native_cleanup_passed": true,
+    "real_and_simulation_weights_unchanged": true,
+    "model_control": false,
+    "age_is_conservative_upper_bound": true,
+    "actual_exposure_wall_timestamp_available": false
+  },
+  "normal_run_speed_ratio": 0.911701704790619,
+  "normal_native_wall_s": 21.93700000003446,
+  "normal_sim_s": 20.000000298023224,
+  "live_model_manifest": "runs/simulation_live_20261023_07/model_manifest.json",
+  "checkpoint_sha256": "8d8c9fd7a3880bb69643c4973db8f14c46242c178fae6927d06b5f9d6aaaf8af",
+  "real_inference_and_weights_unchanged": true,
+  "controller_source_unchanged": true,
+  "model_control": false,
+  "rl_started": false,
+  "prototype_history": [
+    {
+      "run": "runs/simulation_live_20261023_01",
+      "result": "Failed before inference: seed4601 required pedestrian spawn failed; preserved"
+    },
+    {
+      "run": "runs/simulation_live_20261023_02",
+      "result": "Early 2 GiB fault prototype; strict numeric replay mismatch retained"
+    },
+    {
+      "run": "runs/simulation_live_20261023_03",
+      "result": "Normal prototype exposed unexpected idle disconnects; preserved"
+    },
+    {
+      "run": "runs/simulation_live_20261023_04",
+      "result": "Transport logging identified timeouts and long initial GPU inference stalls"
+    },
+    {
+      "run": "runs/simulation_live_20261023_06",
+      "result": "Fixed transport processed150/150 with no reconnects; screen-hold audit motivated larger presentation reserve"
+    }
+  ],
+  "limits": [
+    "Known seed4101 scene used to validate engineering behavior, not a new held-out accuracy test",
+    "Measured on this laptop at1x/Low graphics; no hard real-time scheduling or exact exposure-time guarantee",
+    "Freshness gates are checked at redraw; prolonged OS/window/GPU stalls can delay redraw",
+    "Road segmentation only; object detection/tracking and control use remain future work"
+  ]
+}

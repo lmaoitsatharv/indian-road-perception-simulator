@@ -1,0 +1,696 @@
+{
+  "kind": "paired_simulator_camera_observation",
+  "created_utc": "2026-10-19T23:55:18.518258+00:00",
+  "metrics": {
+    "tp": 90990128,
+    "fp": 20333221,
+    "fn": 4257625,
+    "tn": 165745467,
+    "ignored": 7031959,
+    "total": 288358400,
+    "road_iou": 0.7872414018590984,
+    "dice": 0.8809569888434831,
+    "precision": 0.8173498984476294,
+    "recall": 0.9552994704242525,
+    "pixel_accuracy": 0.912589638170555,
+    "evaluated_fraction": 0.9756138229370117
+  },
+  "model_control": false,
+  "model_weights_unchanged": true,
+  "protected_files_unchanged": true,
+  "reference_mapping": {
+    "road_ids": [
+      1,
+      24
+    ],
+    "ignore_ids": [
+      0
+    ],
+    "other_ids": "2..28 excluding 24 are non-road; out-of-schema IDs reject scoring",
+    "occlusions": "Visible surfaces only; people and vehicles are non-road",
+    "unlabeled": "Excluded and coverage reported, never silently treated as road",
+    "road_markings": "RoadLine 24 and underlying road 1 count as road; debug paint has no independent tag",
+    "source": "https://carla.readthedocs.io/en/0.9.16/ref_sensors/#semantic-segmentation-camera",
+    "method": "Native semantic tags plus depth-checked OpenDRIVE driving-lane footprint for unlabeled procedural surfaces",
+    "geometry_range_m": 80,
+    "surface_height_tolerance_m": 0.08,
+    "boundary_uncertainty_m": 0.2,
+    "unknown_beyond_geometry_range": "Ignored; known native classes remain labeled",
+    "grid": {
+      "origin_xy_m": [
+        -154,
+        -154
+      ],
+      "cell_m": 0.1,
+      "shape_hw": [
+        3081,
+        3081
+      ],
+      "file": "driving_footprint.npz",
+      "waypoint_step_m": 0.5,
+      "tile_half_length_m": 0.4,
+      "sha256": "bd4bf79da6bc10c13e094439a01ebf71af876eadc5b442641038bea773034310"
+    }
+  },
+  "resize": "RGB direct bilinear 960x540 to 512x512; class IDs nearest-neighbour; no crop",
+  "source_to_model_pixel_centers": [
+    [
+      0.5333333333333333,
+      0,
+      -0.23333333333333334
+    ],
+    [
+      0,
+      0.9481481481481482,
+      -0.025925925925925908
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "limits": "Recorded camera replay at 5 samples/s. Agreement with a depth/geometry-assisted simulator reference on selected synthetic development scenes; not real-road accuracy or live perception latency. Native road tags are absent on this generated map. Unknown pixels outside the geometry range and uncertain map edges are excluded with coverage reported. The 0.1 m map raster and 0.2 m boundary exclusion limit reference precision. No tuning or control uses these predictions.",
+  "warmup_ms": 2215.6056500000004,
+  "runtime": {
+    "device_requested": "gpu",
+    "device": "/GPU:0",
+    "gpu_details": {
+      "compute_capability": [
+        8,
+        9
+      ],
+      "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    },
+    "tensorflow": "2.20.0",
+    "keras": "3.15.1",
+    "gpu_memory_limit_mib": 3072,
+    "model_loaded_once": true,
+    "optimizer_loaded": false,
+    "normalization": "raw RGB /127.5 -1 once; normalized entry point does not rescale",
+    "threshold": 0.5,
+    "checkpoint_sha256": "93a8faf3d43b77f0ce74d5cdbaf94124728d371c3b68b2a3386f9f72fc106725"
+  },
+  "independent_verification": {
+    "passed": true,
+    "frames_recounted": 1100,
+    "projected_road_points": 1760,
+    "points_outside_opendrive_driving_lanes": 0,
+    "known_actor_pixels_checked": 177762,
+    "mask_values_0_1": true,
+    "selected_probability_thresholds_verified": true,
+    "method": "Independent saved-PNG confusion recount, sampled depth-to-map query and known-actor occlusion checks"
+  },
+  "player_verification": {
+    "embedded_report_matches": true,
+    "comparison_images_present": 1100,
+    "javascript_syntax_checked": true,
+    "playback_controls_automated": false,
+    "limitation": "Browser URL policy blocked local-file observation; no workaround was used"
+  },
+  "result_directory": "runs/carla_road_observation_20261020_01",
+  "episodes": [
+    {
+      "seed": 7,
+      "case": "mixed",
+      "frames": 550,
+      "render_quality": "Low",
+      "metrics": {
+        "tp": 45505968,
+        "fp": 10191103,
+        "fn": 2117786,
+        "tn": 82849086,
+        "ignored": 3515257,
+        "total": 144179200,
+        "road_iou": 0.7870981675177369,
+        "dice": 0.8808672985334757,
+        "precision": 0.8170262310562076,
+        "recall": 0.9555308890601106,
+        "pixel_accuracy": 0.9124943554298062,
+        "evaluated_fraction": 0.9756188340620561
+      },
+      "class_breakdown": [
+        {
+          "id": 0,
+          "name": "unlabeled",
+          "pixels": 67818201,
+          "predicted_road_pixels": 58183151,
+          "predicted_road_fraction": 0.8579282573420076
+        },
+        {
+          "id": 1,
+          "name": "road",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 2,
+          "name": "sidewalk",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 3,
+          "name": "building",
+          "pixels": 21179048,
+          "predicted_road_pixels": 22281,
+          "predicted_road_fraction": 0.0010520302895578688
+        },
+        {
+          "id": 4,
+          "name": "wall",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 5,
+          "name": "fence",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 6,
+          "name": "pole",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 7,
+          "name": "traffic_light",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 8,
+          "name": "traffic_sign",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 9,
+          "name": "vegetation",
+          "pixels": 3956605,
+          "predicted_road_pixels": 3173,
+          "predicted_road_fraction": 0.0008019501567631846
+        },
+        {
+          "id": 10,
+          "name": "terrain",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 11,
+          "name": "sky",
+          "pixels": 48903845,
+          "predicted_road_pixels": 468132,
+          "predicted_road_fraction": 0.009572498849528089
+        },
+        {
+          "id": 12,
+          "name": "pedestrian",
+          "pixels": 157534,
+          "predicted_road_pixels": 1155,
+          "predicted_road_fraction": 0.00733175060621834
+        },
+        {
+          "id": 13,
+          "name": "rider",
+          "pixels": 167977,
+          "predicted_road_pixels": 881,
+          "predicted_road_fraction": 0.005244765652440512
+        },
+        {
+          "id": 14,
+          "name": "car",
+          "pixels": 227443,
+          "predicted_road_pixels": 2231,
+          "predicted_road_fraction": 0.009809051058946637
+        },
+        {
+          "id": 15,
+          "name": "truck",
+          "pixels": 13145,
+          "predicted_road_pixels": 289,
+          "predicted_road_fraction": 0.02198554583491822
+        },
+        {
+          "id": 16,
+          "name": "bus",
+          "pixels": 435576,
+          "predicted_road_pixels": 3811,
+          "predicted_road_fraction": 0.008749334214924605
+        },
+        {
+          "id": 17,
+          "name": "train",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 18,
+          "name": "motorcycle",
+          "pixels": 24559,
+          "predicted_road_pixels": 1007,
+          "predicted_road_fraction": 0.041003298179893316
+        },
+        {
+          "id": 19,
+          "name": "bicycle",
+          "pixels": 88169,
+          "predicted_road_pixels": 371,
+          "predicted_road_fraction": 0.0042078281482153595
+        },
+        {
+          "id": 20,
+          "name": "static",
+          "pixels": 315906,
+          "predicted_road_pixels": 136,
+          "predicted_road_fraction": 0.00043050780928504046
+        },
+        {
+          "id": 21,
+          "name": "dynamic",
+          "pixels": 891192,
+          "predicted_road_pixels": 6241,
+          "predicted_road_fraction": 0.007002980278099444
+        },
+        {
+          "id": 22,
+          "name": "other",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 23,
+          "name": "water",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 24,
+          "name": "road_line",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 25,
+          "name": "ground",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 26,
+          "name": "bridge",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 27,
+          "name": "rail_track",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 28,
+          "name": "guard_rail",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        }
+      ],
+      "inference_ms": {
+        "mean": 17.319030414545786,
+        "median": 16.810395500005626,
+        "p95": 21.35205490000658,
+        "min": 14.538107999996441,
+        "max": 24.93444899999986
+      },
+      "processing_wall_s_including_export": 130.462378234,
+      "native_run": {
+        "ego_goal_reached": true,
+        "completed_overtakes": 1,
+        "exit_reason": "bounded_test_complete",
+        "collision_events": 0,
+        "sampled_body_overlaps": 0
+      },
+      "source_manifest_sha256": "f525e5b4c880e2971555add41a32230966a06295b3ce1152c9f2b40068c952c5",
+      "worst_frames": [
+        {
+          "frame": 1140,
+          "sim_s": 48.10000071674585,
+          "road_iou": 0.4607512898136699,
+          "comparison": "01_mixed_seed7/comparisons/frame_0001140.jpg"
+        },
+        {
+          "frame": 1152,
+          "sim_s": 48.70000072568655,
+          "road_iou": 0.4695024077046549,
+          "comparison": "01_mixed_seed7/comparisons/frame_0001152.jpg"
+        },
+        {
+          "frame": 1136,
+          "sim_s": 47.90000071376562,
+          "road_iou": 0.48090436133914394,
+          "comparison": "01_mixed_seed7/comparisons/frame_0001136.jpg"
+        },
+        {
+          "frame": 1132,
+          "sim_s": 47.70000071078539,
+          "road_iou": 0.4851043707356617,
+          "comparison": "01_mixed_seed7/comparisons/frame_0001132.jpg"
+        },
+        {
+          "frame": 1160,
+          "sim_s": 49.100000731647015,
+          "road_iou": 0.48628232232883395,
+          "comparison": "01_mixed_seed7/comparisons/frame_0001160.jpg"
+        },
+        {
+          "frame": 1144,
+          "sim_s": 48.300000719726086,
+          "road_iou": 0.49890041371407384,
+          "comparison": "01_mixed_seed7/comparisons/frame_0001144.jpg"
+        },
+        {
+          "frame": 1156,
+          "sim_s": 48.90000072866678,
+          "road_iou": 0.5018460710880002,
+          "comparison": "01_mixed_seed7/comparisons/frame_0001156.jpg"
+        },
+        {
+          "frame": 1164,
+          "sim_s": 49.30000073462725,
+          "road_iou": 0.511001652678311,
+          "comparison": "01_mixed_seed7/comparisons/frame_0001164.jpg"
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "case": "mixed",
+      "frames": 550,
+      "render_quality": "Low",
+      "metrics": {
+        "tp": 45484160,
+        "fp": 10142118,
+        "fn": 2139839,
+        "tn": 82896381,
+        "ignored": 3516702,
+        "total": 144179200,
+        "road_iou": 0.7873847570540357,
+        "dice": 0.8810467404363477,
+        "precision": 0.8176739777556212,
+        "recall": 0.9550680529789193,
+        "pixel_accuracy": 0.912684921890126,
+        "evaluated_fraction": 0.9756088118119673
+      },
+      "class_breakdown": [
+        {
+          "id": 0,
+          "name": "unlabeled",
+          "pixels": 67825634,
+          "predicted_road_pixels": 58108778,
+          "predicted_road_fraction": 0.8567377048034671
+        },
+        {
+          "id": 1,
+          "name": "road",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 2,
+          "name": "sidewalk",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 3,
+          "name": "building",
+          "pixels": 21183915,
+          "predicted_road_pixels": 22161,
+          "predicted_road_fraction": 0.0010461239105236213
+        },
+        {
+          "id": 4,
+          "name": "wall",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 5,
+          "name": "fence",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 6,
+          "name": "pole",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 7,
+          "name": "traffic_light",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 8,
+          "name": "traffic_sign",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 9,
+          "name": "vegetation",
+          "pixels": 3958175,
+          "predicted_road_pixels": 2807,
+          "predicted_road_fraction": 0.0007091652087136117
+        },
+        {
+          "id": 10,
+          "name": "terrain",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 11,
+          "name": "sky",
+          "pixels": 48907909,
+          "predicted_road_pixels": 472367,
+          "predicted_road_fraction": 0.009658294735111247
+        },
+        {
+          "id": 12,
+          "name": "pedestrian",
+          "pixels": 136063,
+          "predicted_road_pixels": 1214,
+          "predicted_road_fraction": 0.00892233744662399
+        },
+        {
+          "id": 13,
+          "name": "rider",
+          "pixels": 167981,
+          "predicted_road_pixels": 872,
+          "predicted_road_fraction": 0.005191063275013246
+        },
+        {
+          "id": 14,
+          "name": "car",
+          "pixels": 228049,
+          "predicted_road_pixels": 1885,
+          "predicted_road_fraction": 0.008265767444715829
+        },
+        {
+          "id": 15,
+          "name": "truck",
+          "pixels": 13145,
+          "predicted_road_pixels": 292,
+          "predicted_road_fraction": 0.02221376949410422
+        },
+        {
+          "id": 16,
+          "name": "bus",
+          "pixels": 439459,
+          "predicted_road_pixels": 3749,
+          "predicted_road_fraction": 0.008530943728538954
+        },
+        {
+          "id": 17,
+          "name": "train",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 18,
+          "name": "motorcycle",
+          "pixels": 24559,
+          "predicted_road_pixels": 1011,
+          "predicted_road_fraction": 0.04116617126104483
+        },
+        {
+          "id": 19,
+          "name": "bicycle",
+          "pixels": 88169,
+          "predicted_road_pixels": 364,
+          "predicted_road_fraction": 0.004128435164286767
+        },
+        {
+          "id": 20,
+          "name": "static",
+          "pixels": 315800,
+          "predicted_road_pixels": 141,
+          "predicted_road_fraction": 0.00044648511716276126
+        },
+        {
+          "id": 21,
+          "name": "dynamic",
+          "pixels": 890342,
+          "predicted_road_pixels": 6225,
+          "predicted_road_fraction": 0.006991695326065714
+        },
+        {
+          "id": 22,
+          "name": "other",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 23,
+          "name": "water",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 24,
+          "name": "road_line",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 25,
+          "name": "ground",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 26,
+          "name": "bridge",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 27,
+          "name": "rail_track",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        },
+        {
+          "id": 28,
+          "name": "guard_rail",
+          "pixels": 0,
+          "predicted_road_pixels": 0,
+          "predicted_road_fraction": null
+        }
+      ],
+      "inference_ms": {
+        "mean": 17.07120371636377,
+        "median": 16.664290500003176,
+        "p95": 20.373697600014395,
+        "min": 14.724945000011758,
+        "max": 25.557723999980908
+      },
+      "processing_wall_s_including_export": 148.820638463,
+      "native_run": {
+        "ego_goal_reached": true,
+        "completed_overtakes": 1,
+        "exit_reason": "bounded_test_complete",
+        "collision_events": 0,
+        "sampled_body_overlaps": 0
+      },
+      "source_manifest_sha256": "5232d0ed103f44b4debb746de4e6eece558110327714f890071cdc4649a9fbe9",
+      "worst_frames": [
+        {
+          "frame": 1128,
+          "sim_s": 48.10000071674585,
+          "road_iou": 0.4650012788814051,
+          "comparison": "02_mixed_seed42/comparisons/frame_0001128.jpg"
+        },
+        {
+          "frame": 1140,
+          "sim_s": 48.70000072568655,
+          "road_iou": 0.46722486233687865,
+          "comparison": "02_mixed_seed42/comparisons/frame_0001140.jpg"
+        },
+        {
+          "frame": 1124,
+          "sim_s": 47.90000071376562,
+          "road_iou": 0.4810537955717626,
+          "comparison": "02_mixed_seed42/comparisons/frame_0001124.jpg"
+        },
+        {
+          "frame": 1148,
+          "sim_s": 49.100000731647015,
+          "road_iou": 0.48642990958703264,
+          "comparison": "02_mixed_seed42/comparisons/frame_0001148.jpg"
+        },
+        {
+          "frame": 1120,
+          "sim_s": 47.70000071078539,
+          "road_iou": 0.48696569475505297,
+          "comparison": "02_mixed_seed42/comparisons/frame_0001120.jpg"
+        },
+        {
+          "frame": 1144,
+          "sim_s": 48.90000072866678,
+          "road_iou": 0.5003306257398261,
+          "comparison": "02_mixed_seed42/comparisons/frame_0001144.jpg"
+        },
+        {
+          "frame": 1132,
+          "sim_s": 48.300000719726086,
+          "road_iou": 0.5028066212662666,
+          "comparison": "02_mixed_seed42/comparisons/frame_0001132.jpg"
+        },
+        {
+          "frame": 1152,
+          "sim_s": 49.30000073462725,
+          "road_iou": 0.5125515901917941,
+          "comparison": "02_mixed_seed42/comparisons/frame_0001152.jpg"
+        }
+      ]
+    }
+  ]
+}

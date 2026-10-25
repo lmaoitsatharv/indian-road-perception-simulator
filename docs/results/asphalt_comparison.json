@@ -1,0 +1,177 @@
+{
+  "date": "2026-10-20",
+  "experiment": "final asphalt scene with matched viewer/model-camera post-processing and V4.1 traffic",
+  "model": "locked morning best; no retraining or threshold tuning",
+  "model_control": false,
+  "legacy_metrics": {
+    "tp": 90990128,
+    "fp": 20333221,
+    "fn": 4257625,
+    "tn": 165745467,
+    "ignored": 7031959,
+    "total": 288358400,
+    "road_iou": 0.7872414018590984,
+    "dice": 0.8809569888434831,
+    "precision": 0.8173498984476294,
+    "recall": 0.9552994704242525,
+    "pixel_accuracy": 0.912589638170555,
+    "evaluated_fraction": 0.9756138229370117
+  },
+  "asphalt_metrics": {
+    "tp": 93544210,
+    "fp": 21227629,
+    "fn": 3552420,
+    "tn": 164741489,
+    "ignored": 5292652,
+    "total": 288358400,
+    "road_iou": 0.7905750755641748,
+    "dice": 0.8830404112657273,
+    "precision": 0.8150449693500162,
+    "recall": 0.9634135602852539,
+    "pixel_accuracy": 0.9124583275260841,
+    "evaluated_fraction": 0.981645577170632
+  },
+  "earlier_glare_build_metrics": {
+    "tp": 47915456,
+    "fp": 12068095,
+    "fn": 49183324,
+    "tn": 173891930,
+    "ignored": 5299595,
+    "total": 288358400,
+    "road_iou": 0.4389193700012023,
+    "dice": 0.6100680540575885,
+    "precision": 0.7988099270748409,
+    "recall": 0.4934712464976388,
+    "pixel_accuracy": 0.7836088547042371,
+    "evaluated_fraction": 0.9816214994950728
+  },
+  "road_iou_change_percentage_points": 0.3333673705076423,
+  "episodes": [
+    {
+      "seed": 7,
+      "frames": 550,
+      "legacy_metrics": {
+        "tp": 45505968,
+        "fp": 10191103,
+        "fn": 2117786,
+        "tn": 82849086,
+        "ignored": 3515257,
+        "total": 144179200,
+        "road_iou": 0.7870981675177369,
+        "dice": 0.8808672985334757,
+        "precision": 0.8170262310562076,
+        "recall": 0.9555308890601106,
+        "pixel_accuracy": 0.9124943554298062,
+        "evaluated_fraction": 0.9756188340620561
+      },
+      "asphalt_metrics": {
+        "tp": 46806058,
+        "fp": 10659273,
+        "fn": 1742143,
+        "tn": 82326247,
+        "ignored": 2645479,
+        "total": 144179200,
+        "road_iou": 0.7905430655595947,
+        "dice": 0.8830204430883408,
+        "precision": 0.8145094996494495,
+        "recall": 0.9641151893558322,
+        "pixel_accuracy": 0.9123783652943033,
+        "evaluated_fraction": 0.9816514518044211
+      },
+      "inference_ms": {
+        "mean": 17.207213487273066,
+        "median": 16.828749999998394,
+        "p95": 20.400908849998697,
+        "min": 14.439987999992354,
+        "max": 25.161052000001405
+      },
+      "native_run": {
+        "ego_goal_reached": true,
+        "completed_overtakes": 1,
+        "exit_reason": "bounded_test_complete",
+        "collision_events": 0,
+        "sampled_body_overlaps": 0
+      },
+      "traffic_trace_comparison": {
+        "actor_steps": 41819,
+        "max_position_delta_m": 7.598266602134359,
+        "reason_mismatches": 231,
+        "pass_state_mismatches": 27
+      }
+    },
+    {
+      "seed": 42,
+      "frames": 550,
+      "legacy_metrics": {
+        "tp": 45484160,
+        "fp": 10142118,
+        "fn": 2139839,
+        "tn": 82896381,
+        "ignored": 3516702,
+        "total": 144179200,
+        "road_iou": 0.7873847570540357,
+        "dice": 0.8810467404363477,
+        "precision": 0.8176739777556212,
+        "recall": 0.9550680529789193,
+        "pixel_accuracy": 0.912684921890126,
+        "evaluated_fraction": 0.9756088118119673
+      },
+      "asphalt_metrics": {
+        "tp": 46738152,
+        "fp": 10568356,
+        "fn": 1810277,
+        "tn": 82415242,
+        "ignored": 2647173,
+        "total": 144179200,
+        "road_iou": 0.7906071346741878,
+        "dice": 0.8830604093600283,
+        "precision": 0.8155819230862924,
+        "recall": 0.9627119345097654,
+        "pixel_accuracy": 0.9125382907149348,
+        "evaluated_fraction": 0.9816397025368431
+      },
+      "inference_ms": {
+        "mean": 16.895549840000246,
+        "median": 16.612850499996057,
+        "p95": 19.682619749995922,
+        "min": 14.67104500000005,
+        "max": 25.52165099996273
+      },
+      "native_run": {
+        "ego_goal_reached": true,
+        "completed_overtakes": 1,
+        "exit_reason": "bounded_test_complete",
+        "collision_events": 0,
+        "sampled_body_overlaps": 0
+      },
+      "traffic_trace_comparison": {
+        "actor_steps": 41819,
+        "max_position_delta_m": 5.483474732590272,
+        "reason_mismatches": 208,
+        "pass_state_mismatches": 27
+      }
+    }
+  ],
+  "independent_verification": {
+    "passed": true,
+    "frames_recounted": 1100,
+    "projected_road_points": 1760,
+    "points_outside_opendrive_driving_lanes": 0,
+    "known_actor_pixels_checked": 3621078,
+    "owned_appearance_road_points_checked": 1760,
+    "mask_values_0_1": true,
+    "selected_probability_thresholds_verified": true,
+    "method": "Independent saved-PNG confusion recount, sampled depth-to-map query and known-actor occlusion checks"
+  },
+  "protected_files_unchanged": true,
+  "loaded_model_weights_unchanged": true,
+  "limits": [
+    "Selected, correlated synthetic development scenes; not real-road accuracy",
+    "Appearance includes asphalt texture, edge paint and non-colliding thin appearance geometry",
+    "Reference uses exact owned-instance IDs, native depth and the same driving-lane footprint",
+    "Extra instance-camera capture and small native trajectory differences prevent a strict single-colour causal claim",
+    "Final scenes include pedestrian spacing/endpoints, signal lights and disabled synthetic camera bloom/flare; this is not a single-factor comparison",
+    "The earlier glare-build result is retained separately rather than discarded",
+    "The completed 689-image real-data test was not repeated or used for tuning"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "schema": "idd_detector_training_start_v1",
+  "passed": true,
+  "checked_utc": "2026-10-23T19:29:36.789757+00:00",
+  "user_date_asia_calcutta": "2026-10-24",
+  "training_started": true,
+  "status_at_verification": "training",
+  "run": "runs/detection_train_20261024_02",
+  "launcher": "runs/detection_train_20261024_02_launcher",
+  "dataset": "dataset/idd117k_detection_v2",
+  "counts": {
+    "train": 67159,
+    "val": 17675,
+    "test_metadata_only": 24644
+  },
+  "model": "yolo11s",
+  "maximum_epochs": 20,
+  "early_stopping_patience": 5,
+  "batch": 4,
+  "imgsz": 640,
+  "optimizer": "AdamW",
+  "lr0": 0.0001,
+  "seed": 42,
+  "recipe_sha256": "79604d82a54427feb0ed01642781290a1ea3a328daed56b6783289906471ff38",
+  "startup_real_batches": 10,
+  "startup_optimizer_steps": 6,
+  "startup_losses": {
+    "box_loss": 1.771436333656311,
+    "cls_loss": 3.696202039718628,
+    "dfl_loss": 1.3681037425994873
+  },
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "gpu_peak_allocated_bytes_at_startup": 1242339840,
+  "gpu_peak_reserved_bytes_at_startup": 1382023168,
+  "full_file_readiness_passed": true,
+  "file_audit_verification": {
+    "windows_fixed": {
+      "passed": true,
+      "check_groups": 7,
+      "sha256": "b69602b763a7bca3efbd0a8b2b06930b547c51a501b2197d87c78ae60bc78579"
+    },
+    "wsl_fixed": {
+      "passed": true,
+      "check_groups": 9,
+      "sha256": "70b9c608eeeddfab93481cc60bbc68326c3841c3fe3d7b20ac785a9134e4dd59"
+    }
+  },
+  "framework_cache_matches_audited_counts": true,
+  "framework_cache_counts": {
+    "train": {
+      "images": 67159,
+      "negatives": 151,
+      "corrupt": 0,
+      "boxes": 1042884,
+      "objects_by_class": {
+        "person": 140187,
+        "rider": 200452,
+        "car": 143197,
+        "motorcycle": 200975,
+        "bicycle": 4226,
+        "autorickshaw": 53451,
+        "bus": 20959,
+        "truck": 46692,
+        "animal": 1778,
+        "traffic_light": 8628,
+        "traffic_sign": 53770,
+        "other_vehicle": 168569
+      },
+      "cache_sha256": "3acbf03983db3f8a5cce8a012ebf8662f17f27eb5f1f28668b8049482168fb02"
+    },
+    "val": {
+      "images": 17675,
+      "negatives": 53,
+      "corrupt": 0,
+      "boxes": 319438,
+      "objects_by_class": {
+        "person": 34085,
+        "rider": 60983,
+        "car": 46700,
+        "motorcycle": 56618,
+        "bicycle": 764,
+        "autorickshaw": 11745,
+        "bus": 5425,
+        "truck": 12444,
+        "animal": 963,
+        "traffic_light": 2657,
+        "traffic_sign": 22222,
+        "other_vehicle": 64832
+      },
+      "cache_sha256": "a99f7486dfb7c8bcb897c6adc525775e00ef5992e821c84d5997fedd84e8596d"
+    }
+  },
+  "protected_files_unchanged": true,
+  "protected_fingerprints": 17,
+  "initial_checkpoint_unchanged": true,
+  "source_hashes": {
+    "runs/detection_train_20261024_02/source/detection_policy.json": "65b13b44ede7e504a9574fbe28af5fd7d35c831598de1bc90677a9ccd741cedf",
+    "runs/detection_train_20261024_02/source/detection_training_recipe.json": "79604d82a54427feb0ed01642781290a1ea3a328daed56b6783289906471ff38",
+    "runs/detection_train_20261024_02/source/idd_detection_data.py": "45481f29888b6a257b7c6f61d5982883e88db2610187a63e6dfd3ff3152acf8d",
+    "runs/detection_train_20261024_02/source/requirements-detection-wsl.txt": "3c9be970b2ab1aa26e2609c5e6f1fe535708f5d8369a4614d9798042e8630538",
+    "runs/detection_train_20261024_02/source/train_detection.py": "161fadfd2863e3c266bdb65db843547a57f6fd6b8098584b7de8b9de7013a8e1",
+    "runs/detection_train_20261024_02_launcher/source/detection_training_recipe.json": "79604d82a54427feb0ed01642781290a1ea3a328daed56b6783289906471ff38",
+    "runs/detection_train_20261024_02_launcher/source/train_detection.py": "161fadfd2863e3c266bdb65db843547a57f6fd6b8098584b7de8b9de7013a8e1",
+    "runs/detection_train_20261024_02_launcher/source/setup/keep_detection_training_awake.ps1": "62896f00e2da73e5abd077c237f88588325812fbe35960f51ec6455ad4388c82",
+    "runs/detection_train_20261024_02_launcher/source/setup/launch_detection_training.py": "b8fc7cf7d504ce0ca8eaa10b36f6a8e9aaf3464e59d5ca0004ad5fa38bd65671",
+    "runs/detection_train_20261024_02_launcher/source/setup/report_detection_training_start.py": "93bc8be009dd043a32e33295d467a574b5758f4c9769ac60d523e09ef729918a",
+    "runs/detection_train_20261024_02_launcher/source/setup/verify_detection_file_audit.py": "4689a6adcd2e9ce1b81b944ba652b905381220be7184544a7a4a240d55d55afe"
+  },
+  "official_test_used": false,
+  "control_allowed": false,
+  "scope": "Startup snapshot, not completed training or an accuracy result; read live batch/status files for current progress"
+}

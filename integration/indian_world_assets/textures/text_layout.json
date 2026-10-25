@@ -1,0 +1,175 @@
+[
+  {
+    "file": "shop_0.png",
+    "kind": "shopfront",
+    "text": [
+      "किराना स्टोर",
+      "KIRANA STORE",
+      "GROCERIES  •  DAILY NEEDS"
+    ],
+    "background": [
+      30,
+      84,
+      62
+    ]
+  },
+  {
+    "file": "shop_1.png",
+    "kind": "shopfront",
+    "text": [
+      "चाय और नाश्ता",
+      "CHAI & NASHTA",
+      "FRESH TEA  •  SNACKS"
+    ],
+    "background": [
+      140,
+      51,
+      31
+    ]
+  },
+  {
+    "file": "shop_2.png",
+    "kind": "shopfront",
+    "text": [
+      "फल और सब्ज़ी",
+      "FRESH SABZI",
+      "FRUIT  •  VEGETABLES"
+    ],
+    "background": [
+      46,
+      91,
+      33
+    ]
+  },
+  {
+    "file": "shop_3.png",
+    "kind": "shopfront",
+    "text": [
+      "दवा की दुकान",
+      "MEDICAL STORE",
+      "PHARMACY"
+    ],
+    "background": [
+      32,
+      76,
+      112
+    ]
+  },
+  {
+    "file": "shop_4.png",
+    "kind": "shopfront",
+    "text": [
+      "साइकिल मरम्मत",
+      "CYCLE REPAIR",
+      "CYCLE  •  PUNCTURE"
+    ],
+    "background": [
+      102,
+      65,
+      28
+    ]
+  },
+  {
+    "file": "shop_5.png",
+    "kind": "shopfront",
+    "text": [
+      "दूध और डेयरी",
+      "MILK & DAIRY",
+      "MILK  •  CURD"
+    ],
+    "background": [
+      34,
+      88,
+      120
+    ]
+  },
+  {
+    "file": "speed_20.png",
+    "kind": "traffic_sign",
+    "text": [
+      "20",
+      "km/h"
+    ]
+  },
+  {
+    "file": "speed_30.png",
+    "kind": "traffic_sign",
+    "text": [
+      "30",
+      "km/h"
+    ]
+  },
+  {
+    "file": "speed_40.png",
+    "kind": "traffic_sign",
+    "text": [
+      "40",
+      "km/h"
+    ]
+  },
+  {
+    "file": "bus_stop.png",
+    "kind": "traffic_sign",
+    "text": [
+      "बस स्टॉप",
+      "BUS STOP"
+    ],
+    "background": [
+      27,
+      70,
+      111
+    ]
+  },
+  {
+    "file": "keep_left.png",
+    "kind": "traffic_sign",
+    "text": [
+      "बाईं ओर चलें",
+      "KEEP LEFT"
+    ],
+    "background": [
+      28,
+      82,
+      54
+    ]
+  },
+  {
+    "file": "village.png",
+    "kind": "traffic_sign",
+    "text": [
+      "गाँव की सड़क",
+      "VILLAGE ROAD"
+    ],
+    "background": [
+      34,
+      92,
+      62
+    ]
+  },
+  {
+    "file": "school.png",
+    "kind": "traffic_sign",
+    "text": [
+      "विद्यालय क्षेत्र",
+      "SCHOOL ZONE"
+    ],
+    "background": [
+      141,
+      69,
+      25
+    ]
+  },
+  {
+    "file": "delivery.png",
+    "kind": "vehicle_livery",
+    "text": [
+      "स्थानीय डिलीवरी",
+      "LOCAL DELIVERY"
+    ],
+    "background": [
+      33,
+      86,
+      71
+    ]
+  }
+]

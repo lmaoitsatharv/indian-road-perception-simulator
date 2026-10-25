@@ -1,0 +1,191 @@
+{
+  "status": "preparation_complete_waiting_for_verified_real_dataset",
+  "completed_utc": "2026-10-23T12:41:10.529945+00:00",
+  "training_started": false,
+  "detector": "YOLO11s proposed candidate, official COCO initial weights; not IDD-fine-tuned",
+  "planned_names": [
+    "person",
+    "rider",
+    "car",
+    "motorcycle",
+    "bicycle",
+    "autorickshaw",
+    "bus",
+    "truck",
+    "animal",
+    "traffic_light",
+    "traffic_sign",
+    "other_vehicle"
+  ],
+  "data_checks": {
+    "passed": true,
+    "checks": [
+      "non_square_native_dimensions_and_yolo_roundtrip",
+      "explicit_voc_origin_and_dimension_mismatch",
+      "clipping_fallback_alias_negative_and_overlapping_classes",
+      "unknown_invalid_and_ignore_labels_do_not_become_negatives",
+      "source_path_and_xml_entity_rejection",
+      "actual_downloaded_json_schema_and_source_names",
+      "full_fixture_export_preserves_negatives_bytes_and_test_exclusion",
+      "drive_level_leakage_rejected",
+      "cross_split_byte_and_pixel_duplicates_block_readiness",
+      "missing_annotation_quarantined_not_a_negative"
+    ],
+    "check_groups": 10,
+    "training_started": false,
+    "real_annotation_schema_objects_inspected": 655,
+    "source_names_observed": [
+      "autorickshaw",
+      "bicycle",
+      "bus",
+      "car",
+      "ego vehicle",
+      "motorcycle",
+      "person",
+      "rider",
+      "traffic light",
+      "traffic sign",
+      "truck",
+      "vehicle fallback"
+    ],
+    "real_image_pixels_opened": false,
+    "accuracy_evaluated": false,
+    "fixture_training_allowed": false
+  },
+  "workflow_checks": {
+    "passed": true,
+    "training_started": false,
+    "checks": [
+      "observed_95k_layout_preserves_provider_splits_and_drive_ids",
+      "unlabelled_test_pixels_never_opened_or_turned_into_negatives",
+      "missing_annotations_and_ambiguous_image_keys_rejected",
+      "fixture_scope_rejected_by_training_readiness",
+      "explicit_start_on_fixture_rejected_before_creating_run"
+    ],
+    "incomplete_download_ready": false,
+    "fixture_training_run_created": false
+  },
+  "framework_integration": {
+    "passed": true,
+    "training_started": false,
+    "optimizer_steps": 0,
+    "real_images_evaluated": 0,
+    "json_yaml_accepted_by_pinned_framework": true,
+    "class_order_matches_policy": true,
+    "training_fixture_images": 2,
+    "negative_examples_preserved": 1,
+    "fixture_box_count": 12,
+    "letterbox_tensor_shape": [
+      3,
+      640,
+      640
+    ],
+    "custom_head_classes": 12,
+    "custom_head_output_shape": [
+      2,
+      16,
+      8400
+    ],
+    "pretrained_checkpoint_unchanged": true,
+    "training_memory_checked": false,
+    "scope": "synthetic_fixture_and_forward_only_integration"
+  },
+  "runtime": {
+    "passed": true,
+    "scope": "forward_only_runtime_readiness_not_model_accuracy_or_training_memory",
+    "training_started": false,
+    "backward_or_optimizer_steps": 0,
+    "real_images_evaluated": 0,
+    "torch": "2.9.1+cu128",
+    "torchvision": "0.24.1+cu128",
+    "ultralytics": "8.3.225",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "executable": "$HOME/.venvs/idd-detect/bin/python",
+    "cuda_runtime": "12.8",
+    "isolated_settings_file": "runs/detection_readiness_20261023_01/runtime_isolated/ultralytics_settings/Ultralytics/settings.json",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "total_gpu_bytes": 8585216000,
+    "batch": 4,
+    "imgsz": 640,
+    "warmup_batches": 3,
+    "measured_batches": 20,
+    "batch_forward_median_ms": 24.520751953125,
+    "batch_forward_max_ms": 30.94054412841797,
+    "peak_allocated_bytes": 332731392,
+    "peak_reserved_bytes": 478150656,
+    "native_size_postprocessing_checked": true,
+    "pretrained_checkpoint": {
+      "source_url": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s.pt",
+      "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+      "model": "yolo11s",
+      "training_dataset": "COCO",
+      "original_classes": 80,
+      "idd_finetuning_completed": false,
+      "real_deployment_approved": false,
+      "control_allowed": false,
+      "official_checkpoint_file_unchanged": true
+    },
+    "checkpoint_sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+    "protected_sha256": {
+      "idd_inference.py": "3551e088e71fc6ab6d7127b8a8043dea62a179dac7954dd8cf3667d10b6c1ef7",
+      "predict_road.py": "f38a0d89251c82147fcd70a7626387640d9169cd33cd21ac3c9d3cb97a8f6364",
+      "predict_road_video.py": "04563d428d7c5297bdaa19ff0d83390183b0c9e91648823d3ac23ea26b816336",
+      "idd_data.py": "1994ed447fff19e386a26d3c362ea56c82cdbc78ae01dd1602f5b82749b695e9",
+      "idd_model.py": "e5d115bcd0563db6dc50685956e49c6b921708dbc19bba24e18998e9f22ba8cf",
+      "train_idd.py": "7b8ecab49ef615d585891bd142abcccefccfd8145b37aa678df676c98a137281",
+      "IDD_Preprocessing.ipynb": "14126c40ecd1fe345dc3adef12d746e613e152b44e15f6639e5414837c6c1213",
+      "IDD_UNet_Model.ipynb": "5cb91f275664537a0679b2b3616d0e15ba3dcbd2a20f0a10a8bc9595344af5a9",
+      "models/model_config.json": "94cf5c31e7fa1e601dae4a8c916f38b634e961af59ddbc5a3fb3020c543fdc97",
+      "models/segmentation_final_lock.json": "86c6ce4ac582492bcfaf0f5739a6cd25f7283014c81928de00fa0545a3eb8a61",
+      "models/retained_models.json": "a863dff99832210228189b3f1b83d82874836989872400502ebc5442a1614f6c",
+      "dataset/splits/pair_splits.csv": "512cc054e2291ec5e197b0dca913ba94698cf055062b54511977816872005e90",
+      "runs/frozen_01/best.keras": "652c3e537e6b944430304d103a80bdff21a67daddcba1d9590e49dfbff0765c3",
+      "runs/overnight_20261003/trial_13_shadow_fixed_bn_low_lr/best.keras": "93a8faf3d43b77f0ce74d5cdbaf94124728d371c3b68b2a3386f9f72fc106725",
+      "runs/boundary_20261003/boundary_weight4/best.keras": "ee996bb45056b1bfa315330e0066bccf71ed86d6cdbb8bff55d6c93d1cba8c85",
+      "simulation_checkpoint": "8d8c9fd7a3880bb69643c4973db8f14c46242c178fae6927d06b5f9d6aaaf8af",
+      "rule_driver": "b2d2d1b5aea40f9264f8230100df8f5397385294a805340aab3684dcd3c200b3"
+    },
+    "protected_files_unchanged": true,
+    "distance_estimation_implemented": false,
+    "model_control": false
+  },
+  "training_readiness": {
+    "ready_for_explicit_training_start": false,
+    "training_started": false,
+    "checked_utc": "2026-10-23T12:41:10.505841+00:00",
+    "checks": {
+      "download_verified": false,
+      "prepared_real_dataset": false,
+      "gpu_forward_runtime_checked": true,
+      "initial_weights_verified": true
+    },
+    "waiting_for": [
+      "The full five-part archive is not yet downloaded and verified",
+      "A fully audited real IDD detection dataset has not been prepared"
+    ],
+    "dataset": "dataset\\idd117k_detection_v1",
+    "recipe_sha256": "aa85288fed043a8238df98745e3558419a23eef8723291110fb035c5415609b2",
+    "download_percent": 80.492,
+    "backward_memory_still_to_check": true,
+    "control_allowed": false
+  },
+  "download_snapshot": {
+    "status": "downloading",
+    "updated_utc": "2026-10-23T12:40:58.207765+00:00",
+    "percent": 80.492,
+    "completed_bytes": 58686701568,
+    "total_bytes": 72909856953,
+    "recent_MB_s": 2.855
+  },
+  "original_road_models_and_driver_unchanged": true,
+  "model_control": false,
+  "rl_started": false,
+  "remaining_work": [
+    "Complete byte verification, combined gzip integrity and full archive inventory",
+    "Review native coordinate conventions and all source labels across both releases",
+    "Index the older original detection portion without inventing drive IDs; merge with 95K source manifest",
+    "Prepare and audit full provider splits, duplicates, drive isolation, actual boxes and class coverage",
+    "Measure initial backward-pass memory and throughput when training is explicitly started"
+  ],
+  "report": "docs/DETECTION_PREPARATION.md"
+}

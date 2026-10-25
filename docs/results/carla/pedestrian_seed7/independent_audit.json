@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "case": "pedestrian",
+  "seed": 7,
+  "checks": {
+    "runtime": true,
+    "camera_alignment": true,
+    "cleanup": true,
+    "no_native_collisions": true,
+    "no_body_overlap": true,
+    "no_road_departure": true,
+    "no_wrongway": true,
+    "progress": true,
+    "yielded_to_pedestrian": true,
+    "person_crossed": true
+  },
+  "completed": true,
+  "exit_reason": "bounded_test_complete",
+  "health_passed": true,
+  "measured_frames": 1201,
+  "actors": {
+    "ego": {
+      "distance_m": 237.80760071466838,
+      "max_speed_mps": 7.114410296448632,
+      "stopped_s": 12.55,
+      "braking_500ms_max_mps2": 4.576720980508076,
+      "abs_jerk_500ms_p95_mps3": 5.0152586396927425,
+      "abs_jerk_500ms_max_mps3": 16.093749520922707
+    },
+    "crossing_1": {
+      "distance_m": 12.372264385223389,
+      "max_speed_mps": 1.200008374452466,
+      "stopped_s": 49.35,
+      "braking_500ms_max_mps2": 2.400016713141896,
+      "abs_jerk_500ms_p95_mps3": 7.629394303876327e-05,
+      "abs_jerk_500ms_max_mps3": 4.800071573255312
+    }
+  },
+  "overlap_pairs": [],
+  "offroad": {},
+  "wrongway": {},
+  "min_gap_m": null,
+  "min_gap_pair": null,
+  "goal_reached": true,
+  "events": 8,
+  "method": "Independent saved-trace scalar SAT + all rectangle vertices + position-derived speed; 20 Hz sampling"
+}

@@ -1,0 +1,941 @@
+{
+  "schema": "connected_indian_town_results_v1",
+  "status": "complete_single_connected_town_verified",
+  "single_native_world": true,
+  "world_generation_calls": 1,
+  "world_ids": [
+    14776700102375930781
+  ],
+  "native_session": "runs\\carla_indian_worlds_smoke_20261023T144946_280593Z_seed8101",
+  "audit": "runs\\combined_india_20261023_01\\final_checks",
+  "map": {
+    "passed": true,
+    "single_connected_world": true,
+    "districts": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "nodes": 7,
+    "streets": 9,
+    "directed_connectors": 36,
+    "street_length_m": 2604.403642417495,
+    "native_join_checks": 72,
+    "max_native_join_gap_m": 0.02006957121193409,
+    "native_lht_samples": 60,
+    "map_sha256": "6e3eb20cdfdc2cb72d8587b24ff1b52aeda203ad91b5e3d5fa94dd0901d2868c"
+  },
+  "continuous_sim_seconds": 650.0000096857548,
+  "native_vehicles": 25,
+  "native_walkers": 21,
+  "wide_bus_urban_service_only": true,
+  "ego_visited_all_five": true,
+  "ego_distance_m": 2214.544454593831,
+  "districts_visited": {
+    "ego": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "car_1": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "motorcycle_2": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "motorcycle_3": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "car_4": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "other_vehicle_5": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "bicycle_6": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "car_7": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "car_8": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "motorcycle_9": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "motorcycle_10": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "car_11": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "other_vehicle_12": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "bicycle_13": [
+      "divided_main_road",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "car_14": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "car_15": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "motorcycle_16": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "motorcycle_17": [
+      "irregular_junction",
+      "residential_colony"
+    ],
+    "car_18": [
+      "irregular_junction",
+      "residential_colony"
+    ],
+    "other_vehicle_19": [
+      "irregular_junction",
+      "residential_colony"
+    ],
+    "bicycle_20": [
+      "irregular_junction",
+      "rural_road"
+    ],
+    "car_21": [
+      "irregular_junction",
+      "rural_road"
+    ],
+    "car_22": [
+      "irregular_junction",
+      "rural_road"
+    ],
+    "motorcycle_23": [
+      "divided_main_road",
+      "irregular_junction",
+      "market_street",
+      "residential_colony",
+      "rural_road"
+    ],
+    "bus_24": [
+      "divided_main_road"
+    ]
+  },
+  "district_transitions": [
+    {
+      "sim_s": 0.0,
+      "actor": "ego",
+      "district": "market_street",
+      "distance_m": 0.0,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "car_1",
+      "district": "market_street",
+      "distance_m": 0.0,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "motorcycle_2",
+      "district": "divided_main_road",
+      "distance_m": 0.0,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "motorcycle_3",
+      "district": "divided_main_road",
+      "distance_m": 0.0032791812376444796,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "car_4",
+      "district": "rural_road",
+      "distance_m": 0.030771041795674137,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "other_vehicle_5",
+      "district": "rural_road",
+      "distance_m": 0.09178146562862821,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "bicycle_6",
+      "district": "irregular_junction",
+      "distance_m": 0.036245966715796385,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "car_7",
+      "district": "irregular_junction",
+      "distance_m": 0.0,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "car_8",
+      "district": "residential_colony",
+      "distance_m": 0.006673233832998449,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "motorcycle_9",
+      "district": "residential_colony",
+      "distance_m": 0.11906326690404967,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "motorcycle_10",
+      "district": "residential_colony",
+      "distance_m": 0.09314603083737438,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "car_11",
+      "district": "residential_colony",
+      "distance_m": 0.16420183806769728,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "other_vehicle_12",
+      "district": "irregular_junction",
+      "distance_m": 0.13768365206408362,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "bicycle_13",
+      "district": "rural_road",
+      "distance_m": 0.0,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "car_14",
+      "district": "divided_main_road",
+      "distance_m": 0.0,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "car_15",
+      "district": "divided_main_road",
+      "distance_m": 0.08932445365121566,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "motorcycle_16",
+      "district": "market_street",
+      "distance_m": 0.0,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "motorcycle_17",
+      "district": "residential_colony",
+      "distance_m": 0.1428546400882169,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "car_18",
+      "district": "residential_colony",
+      "distance_m": 0.0,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "other_vehicle_19",
+      "district": "irregular_junction",
+      "distance_m": 0.0,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "bicycle_20",
+      "district": "rural_road",
+      "distance_m": 0.0,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "car_21",
+      "district": "rural_road",
+      "distance_m": 0.0,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "car_22",
+      "district": "irregular_junction",
+      "distance_m": 0.0,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "motorcycle_23",
+      "district": "market_street",
+      "distance_m": 0.0,
+      "frame": 122
+    },
+    {
+      "sim_s": 0.0,
+      "actor": "bus_24",
+      "district": "divided_main_road",
+      "distance_m": 0.0,
+      "frame": 122
+    },
+    {
+      "sim_s": 18.950000282377005,
+      "actor": "car_11",
+      "district": "irregular_junction",
+      "distance_m": 45.3928176450371,
+      "frame": 501
+    },
+    {
+      "sim_s": 32.70000048726797,
+      "actor": "car_15",
+      "district": "market_street",
+      "distance_m": 116.68266682563672,
+      "frame": 776
+    },
+    {
+      "sim_s": 41.15000061318278,
+      "actor": "motorcycle_3",
+      "district": "rural_road",
+      "distance_m": 188.6839101222638,
+      "frame": 945
+    },
+    {
+      "sim_s": 41.20000061392784,
+      "actor": "motorcycle_9",
+      "district": "market_street",
+      "distance_m": 144.3901128297316,
+      "frame": 946
+    },
+    {
+      "sim_s": 41.30000061541796,
+      "actor": "other_vehicle_5",
+      "district": "irregular_junction",
+      "distance_m": 124.50533218134501,
+      "frame": 948
+    },
+    {
+      "sim_s": 47.60000070929527,
+      "actor": "other_vehicle_19",
+      "district": "residential_colony",
+      "distance_m": 67.08050720827634,
+      "frame": 1074
+    },
+    {
+      "sim_s": 52.65000078454614,
+      "actor": "car_1",
+      "district": "divided_main_road",
+      "distance_m": 126.16195569792467,
+      "frame": 1175
+    },
+    {
+      "sim_s": 59.35000088438392,
+      "actor": "motorcycle_16",
+      "district": "residential_colony",
+      "distance_m": 192.90607508053586,
+      "frame": 1309
+    },
+    {
+      "sim_s": 63.70000094920397,
+      "actor": "bicycle_13",
+      "district": "divided_main_road",
+      "distance_m": 158.68406982938347,
+      "frame": 1396
+    },
+    {
+      "sim_s": 71.6500010676682,
+      "actor": "motorcycle_23",
+      "district": "divided_main_road",
+      "distance_m": 200.57463956017932,
+      "frame": 1555
+    },
+    {
+      "sim_s": 71.95000107213855,
+      "actor": "other_vehicle_12",
+      "district": "rural_road",
+      "distance_m": 164.37645672292751,
+      "frame": 1561
+    },
+    {
+      "sim_s": 72.05000107362866,
+      "actor": "car_7",
+      "district": "residential_colony",
+      "distance_m": 138.86828189956873,
+      "frame": 1563
+    },
+    {
+      "sim_s": 76.70000114291906,
+      "actor": "car_8",
+      "district": "market_street",
+      "distance_m": 308.7802256594632,
+      "frame": 1656
+    },
+    {
+      "sim_s": 83.05000123754144,
+      "actor": "motorcycle_2",
+      "district": "rural_road",
+      "distance_m": 353.2317631431746,
+      "frame": 1783
+    },
+    {
+      "sim_s": 83.80000124871731,
+      "actor": "car_21",
+      "district": "irregular_junction",
+      "distance_m": 270.85890502403544,
+      "frame": 1798
+    },
+    {
+      "sim_s": 86.25000128522515,
+      "actor": "car_18",
+      "district": "irregular_junction",
+      "distance_m": 139.87126512036696,
+      "frame": 1847
+    },
+    {
+      "sim_s": 94.80000141263008,
+      "actor": "car_14",
+      "district": "market_street",
+      "distance_m": 354.6673398695441,
+      "frame": 2018
+    },
+    {
+      "sim_s": 105.35000156983733,
+      "actor": "motorcycle_10",
+      "district": "irregular_junction",
+      "distance_m": 296.29250585472255,
+      "frame": 2229
+    },
+    {
+      "sim_s": 106.50000158697367,
+      "actor": "car_4",
+      "district": "irregular_junction",
+      "distance_m": 262.8954450110765,
+      "frame": 2252
+    },
+    {
+      "sim_s": 115.35000171884894,
+      "actor": "car_15",
+      "district": "residential_colony",
+      "distance_m": 430.7993764193686,
+      "frame": 2429
+    },
+    {
+      "sim_s": 116.45000173524022,
+      "actor": "ego",
+      "district": "divided_main_road",
+      "distance_m": 290.55627490491474,
+      "frame": 2451
+    },
+    {
+      "sim_s": 120.00000178813934,
+      "actor": "car_1",
+      "district": "rural_road",
+      "distance_m": 517.9029560638735,
+      "frame": 2522
+    },
+    {
+      "sim_s": 126.35000188276172,
+      "actor": "bicycle_6",
+      "district": "residential_colony",
+      "distance_m": 303.14097655664705,
+      "frame": 2649
+    },
+    {
+      "sim_s": 127.00000189244747,
+      "actor": "car_22",
+      "district": "rural_road",
+      "distance_m": 280.9519238854108,
+      "frame": 2662
+    },
+    {
+      "sim_s": 135.40000201761723,
+      "actor": "motorcycle_9",
+      "district": "divided_main_road",
+      "distance_m": 454.85073306364006,
+      "frame": 2830
+    },
+    {
+      "sim_s": 143.70000214129686,
+      "actor": "motorcycle_3",
+      "district": "irregular_junction",
+      "distance_m": 453.2855578408081,
+      "frame": 2996
+    },
+    {
+      "sim_s": 150.700002245605,
+      "actor": "other_vehicle_12",
+      "district": "divided_main_road",
+      "distance_m": 435.4518793781142,
+      "frame": 3136
+    },
+    {
+      "sim_s": 154.80000230669975,
+      "actor": "other_vehicle_5",
+      "district": "residential_colony",
+      "distance_m": 467.53108938637877,
+      "frame": 3218
+    },
+    {
+      "sim_s": 157.05000234022737,
+      "actor": "car_8",
+      "district": "divided_main_road",
+      "distance_m": 619.2408458933717,
+      "frame": 3263
+    },
+    {
+      "sim_s": 158.30000235885382,
+      "actor": "car_7",
+      "district": "market_street",
+      "distance_m": 473.2877566618481,
+      "frame": 3288
+    },
+    {
+      "sim_s": 165.05000245943666,
+      "actor": "car_11",
+      "district": "rural_road",
+      "distance_m": 389.6289552646605,
+      "frame": 3423
+    },
+    {
+      "sim_s": 172.10000256448984,
+      "actor": "motorcycle_23",
+      "district": "rural_road",
+      "distance_m": 592.3156399261281,
+      "frame": 3564
+    },
+    {
+      "sim_s": 177.85000265017152,
+      "actor": "motorcycle_16",
+      "district": "irregular_junction",
+      "distance_m": 534.198580935258,
+      "frame": 3679
+    },
+    {
+      "sim_s": 183.9500027410686,
+      "actor": "motorcycle_2",
+      "district": "irregular_junction",
+      "distance_m": 617.8334108617189,
+      "frame": 3801
+    },
+    {
+      "sim_s": 185.20000275969505,
+      "actor": "car_14",
+      "district": "residential_colony",
+      "distance_m": 668.784049463276,
+      "frame": 3826
+    },
+    {
+      "sim_s": 194.15000289306045,
+      "actor": "ego",
+      "district": "rural_road",
+      "distance_m": 682.2972752708636,
+      "frame": 4005
+    },
+    {
+      "sim_s": 195.30000291019678,
+      "actor": "motorcycle_17",
+      "district": "irregular_junction",
+      "distance_m": 555.4288354041669,
+      "frame": 4028
+    },
+    {
+      "sim_s": 213.4000031799078,
+      "actor": "bicycle_13",
+      "district": "market_street",
+      "distance_m": 553.6139219059588,
+      "frame": 4390
+    },
+    {
+      "sim_s": 214.05000318959355,
+      "actor": "motorcycle_9",
+      "district": "rural_road",
+      "distance_m": 846.5917334295889,
+      "frame": 4403
+    },
+    {
+      "sim_s": 219.90000327676535,
+      "actor": "car_4",
+      "district": "residential_colony",
+      "distance_m": 605.9212022161103,
+      "frame": 4520
+    },
+    {
+      "sim_s": 234.95000350102782,
+      "actor": "car_1",
+      "district": "irregular_junction",
+      "distance_m": 782.5074164254194,
+      "frame": 4821
+    },
+    {
+      "sim_s": 236.35000352188945,
+      "actor": "car_11",
+      "district": "divided_main_road",
+      "distance_m": 660.7016957616215,
+      "frame": 4849
+    },
+    {
+      "sim_s": 242.40000361204147,
+      "actor": "car_15",
+      "district": "irregular_junction",
+      "distance_m": 772.0918822740907,
+      "frame": 4970
+    },
+    {
+      "sim_s": 242.65000361576676,
+      "actor": "other_vehicle_12",
+      "district": "market_street",
+      "distance_m": 830.3817314546895,
+      "frame": 4975
+    },
+    {
+      "sim_s": 253.40000377595425,
+      "actor": "bicycle_6",
+      "district": "market_street",
+      "distance_m": 637.5604513189264,
+      "frame": 5190
+    },
+    {
+      "sim_s": 255.40000380575657,
+      "actor": "motorcycle_10",
+      "district": "rural_road",
+      "distance_m": 640.5286434743459,
+      "frame": 5230
+    },
+    {
+      "sim_s": 257.2500038333237,
+      "actor": "car_8",
+      "district": "rural_road",
+      "distance_m": 1010.9818462593205,
+      "frame": 5267
+    },
+    {
+      "sim_s": 262.60000391304493,
+      "actor": "motorcycle_3",
+      "district": "residential_colony",
+      "distance_m": 796.3113150458419,
+      "frame": 5374
+    },
+    {
+      "sim_s": 265.65000395849347,
+      "actor": "car_7",
+      "district": "divided_main_road",
+      "distance_m": 783.7483768957566,
+      "frame": 5435
+    },
+    {
+      "sim_s": 273.7000040784478,
+      "actor": "bicycle_20",
+      "district": "irregular_junction",
+      "distance_m": 601.9726647783781,
+      "frame": 5596
+    },
+    {
+      "sim_s": 274.15000408515334,
+      "actor": "motorcycle_23",
+      "district": "irregular_junction",
+      "distance_m": 856.920100287674,
+      "frame": 5605
+    },
+    {
+      "sim_s": 277.8000041395426,
+      "actor": "other_vehicle_5",
+      "district": "market_street",
+      "distance_m": 801.9505641486581,
+      "frame": 5678
+    },
+    {
+      "sim_s": 293.4000043720007,
+      "actor": "motorcycle_2",
+      "district": "residential_colony",
+      "distance_m": 960.8591680667527,
+      "frame": 5990
+    },
+    {
+      "sim_s": 295.25000439956784,
+      "actor": "ego",
+      "district": "irregular_junction",
+      "distance_m": 946.9017356324094,
+      "frame": 6027
+    },
+    {
+      "sim_s": 304.850004542619,
+      "actor": "car_11",
+      "district": "market_street",
+      "distance_m": 1055.6327563508448,
+      "frame": 6219
+    },
+    {
+      "sim_s": 306.8500045724213,
+      "actor": "car_4",
+      "district": "market_street",
+      "distance_m": 940.3406769783896,
+      "frame": 6259
+    },
+    {
+      "sim_s": 312.30000465363264,
+      "actor": "motorcycle_10",
+      "district": "divided_main_road",
+      "distance_m": 911.601383971307,
+      "frame": 6368
+    },
+    {
+      "sim_s": 315.9500047080219,
+      "actor": "motorcycle_16",
+      "district": "rural_road",
+      "distance_m": 878.4347185548813,
+      "frame": 6441
+    },
+    {
+      "sim_s": 328.3500048927963,
+      "actor": "car_14",
+      "district": "irregular_junction",
+      "distance_m": 1010.0765553179981,
+      "frame": 6689
+    },
+    {
+      "sim_s": 333.2000049650669,
+      "actor": "bicycle_13",
+      "district": "residential_colony",
+      "distance_m": 867.7306314996907,
+      "frame": 6786
+    },
+    {
+      "sim_s": 334.45000498369336,
+      "actor": "motorcycle_9",
+      "district": "irregular_junction",
+      "distance_m": 1111.1961937911346,
+      "frame": 6811
+    },
+    {
+      "sim_s": 338.1000050380826,
+      "actor": "car_7",
+      "district": "rural_road",
+      "distance_m": 1175.4893772617042,
+      "frame": 6884
+    },
+    {
+      "sim_s": 359.9000053629279,
+      "actor": "other_vehicle_12",
+      "district": "residential_colony",
+      "distance_m": 1144.4984410484215,
+      "frame": 7320
+    },
+    {
+      "sim_s": 371.6000055372715,
+      "actor": "bicycle_6",
+      "district": "divided_main_road",
+      "distance_m": 948.0210715528349,
+      "frame": 7554
+    },
+    {
+      "sim_s": 371.8500055409968,
+      "actor": "car_8",
+      "district": "irregular_junction",
+      "distance_m": 1275.5863066208676,
+      "frame": 7559
+    },
+    {
+      "sim_s": 374.0000055730343,
+      "actor": "motorcycle_16",
+      "district": "divided_main_road",
+      "distance_m": 1149.5074590518443,
+      "frame": 7602
+    },
+    {
+      "sim_s": 376.4000056087971,
+      "actor": "motorcycle_3",
+      "district": "market_street",
+      "distance_m": 1130.7307898081212,
+      "frame": 7650
+    },
+    {
+      "sim_s": 381.4000056833029,
+      "actor": "car_1",
+      "district": "residential_colony",
+      "distance_m": 1125.534493301067,
+      "frame": 7750
+    },
+    {
+      "sim_s": 392.9500058554113,
+      "actor": "motorcycle_2",
+      "district": "market_street",
+      "distance_m": 1295.278642829032,
+      "frame": 7981
+    },
+    {
+      "sim_s": 393.50000586360693,
+      "actor": "car_15",
+      "district": "rural_road",
+      "distance_m": 1116.3280198937132,
+      "frame": 7992
+    },
+    {
+      "sim_s": 397.9500059299171,
+      "actor": "other_vehicle_5",
+      "district": "divided_main_road",
+      "distance_m": 1112.411184382568,
+      "frame": 8081
+    },
+    {
+      "sim_s": 401.5500059835613,
+      "actor": "motorcycle_23",
+      "district": "residential_colony",
+      "distance_m": 1199.9471771633216,
+      "frame": 8153
+    },
+    {
+      "sim_s": 420.30000626295805,
+      "actor": "motorcycle_10",
+      "district": "market_street",
+      "distance_m": 1306.5324445605302,
+      "frame": 8528
+    },
+    {
+      "sim_s": 423.9500063173473,
+      "actor": "ego",
+      "district": "residential_colony",
+      "distance_m": 1289.9288125080568,
+      "frame": 8601
+    },
+    {
+      "sim_s": 439.95000655576587,
+      "actor": "car_4",
+      "district": "divided_main_road",
+      "distance_m": 1250.8012972122979,
+      "frame": 8921
+    },
+    {
+      "sim_s": 490.8000073134899,
+      "actor": "car_14",
+      "district": "rural_road",
+      "distance_m": 1354.3126929376226,
+      "frame": 9938
+    },
+    {
+      "sim_s": 520.0000077486038,
+      "actor": "bicycle_6",
+      "district": "rural_road",
+      "distance_m": 1339.7620719187826,
+      "frame": 10522
+    }
+  ],
+  "same_actor_ids_every_tick": true,
+  "vehicle_pose_teleport": false,
+  "camera_sets": 650,
+  "independently_reopened_images": 3250,
+  "independent_vehicle_pair_checks": 109619,
+  "native_collisions": 0,
+  "vehicle_body_overlaps": 0,
+  "vehicle_centre_departures": 0,
+  "sampled_min_vehicle_gap_m": 0.27293212371339753,
+  "protected_files_unchanged": {
+    "integration/india_behavior.py": true,
+    "integration/india_road.py": true,
+    "integration/india_world_maps.py": true,
+    "integration/india_world_traffic.py": true,
+    "integration/india_world_scenery.py": true,
+    "integration/india_world_scene.py": true,
+    "idd_inference.py": true,
+    "predict_road.py": true,
+    "predict_road_video.py": true,
+    "runs/overnight_20261003/trial_13_shadow_fixed_bn_low_lr/best.keras": true,
+    "runs/simulation_frozen_20261022_01/best.keras": true
+  },
+  "training_started": false,
+  "model_control": false,
+  "rl_trained": false,
+  "autorickshaw_live": false,
+  "limits": [
+    "Illustrative traffic and generic assets; no live autorickshaw",
+    "Vehicle-body checks are sampled, not a continuous safety proof; sidewalk people not independently body-audited",
+    "Asset masks are inspected development previews; no full depth/map road-edge label audit or dataset split",
+    "Completed download verification is independent of this town and does not mean the detection archive was extracted",
+    "Clear weather and one seed in the long continuous proof; not multi-weather robustness",
+    "Very close sampled clearances remain; native collision/20Hz rectangle checks are not a safety proof",
+    "Generic installed assets with original Hindi/English artwork; custom Indian vehicle import remains pending"
+  ]
+}

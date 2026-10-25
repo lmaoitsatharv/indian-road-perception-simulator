@@ -1,0 +1,371 @@
+{
+  "completed_utc": "2026-10-21T00:02:05.209840+00:00",
+  "real_inference_unchanged": true,
+  "reserved_test_images_read": false,
+  "new_rehearsal": {
+    "baseline": {
+      "real_validation": {
+        "tp": 45846377,
+        "fp": 2229339,
+        "fn": 1689021,
+        "tn": 130328191,
+        "ignored": 0,
+        "total": 180092928,
+        "boundary_intersection_5": 4433170,
+        "boundary_union_5": 8032865,
+        "boundary_intersection_14": 12693128,
+        "boundary_union_14": 17735661,
+        "road_iou": 0.9212623187378646,
+        "dice": 0.9590177351139325,
+        "precision": 0.9536285845435979,
+        "recall": 0.9644681422463319,
+        "boundary_iou_5px": 0.5518790618291233,
+        "boundary_iou_14px": 0.7156839544914622,
+        "coverage": 1.0
+      },
+      "development": {
+        "tp": 5088226,
+        "fp": 860785,
+        "fn": 274175,
+        "tn": 9219363,
+        "ignored": 286091,
+        "total": 15728640,
+        "boundary_intersection_5": 196047,
+        "boundary_union_5": 553292,
+        "boundary_intersection_14": 518869,
+        "boundary_union_14": 1082549,
+        "road_iou": 0.8176239630311548,
+        "dice": 0.8996623940494786,
+        "precision": 0.8553062013164877,
+        "recall": 0.9488708509490431,
+        "boundary_iou_5px": 0.3543282751241659,
+        "boundary_iou_14px": 0.4793030153831374,
+        "coverage": 0.9818108240763347
+      },
+      "real_video_guards": {
+        "time_selected_scoring": {
+          "tp": 795928,
+          "fp": 63445,
+          "fn": 17272,
+          "tn": 2269083,
+          "ignored": 0,
+          "total": 3145728,
+          "boundary_intersection_5": 52510,
+          "boundary_union_5": 152402,
+          "boundary_intersection_14": 195729,
+          "boundary_union_14": 322582,
+          "road_iou": 0.9079251008104763,
+          "dice": 0.9517408208789692,
+          "precision": 0.926172919093339,
+          "recall": 0.9787604525332022,
+          "boundary_iou_5px": 0.34454928413012953,
+          "boundary_iou_14px": 0.6067573516191233,
+          "coverage": 1.0
+        },
+        "diagnostic_only": {
+          "tp": 379299,
+          "fp": 21813,
+          "fn": 34638,
+          "tn": 1137114,
+          "ignored": 0,
+          "total": 1572864,
+          "boundary_intersection_5": 26031,
+          "boundary_union_5": 82226,
+          "boundary_intersection_14": 94896,
+          "boundary_union_14": 171114,
+          "road_iou": 0.8704509466437177,
+          "dice": 0.9307391334754107,
+          "precision": 0.9456186800694071,
+          "recall": 0.9163205995115199,
+          "boundary_iou_5px": 0.31657869773550945,
+          "boundary_iou_14px": 0.5545776499877275,
+          "coverage": 1.0
+        }
+      }
+    },
+    "epochs": [
+      {
+        "epoch": 1,
+        "strict_gates": {
+          "real_validation": {
+            "road_iou_not_lower": false,
+            "boundary5_iou_not_lower": false,
+            "passed": false
+          },
+          "video_time_selected_scoring": {
+            "road_iou_not_lower": false,
+            "boundary5_iou_not_lower": false,
+            "passed": false
+          },
+          "video_diagnostic_only": {
+            "road_iou_not_lower": false,
+            "boundary5_iou_not_lower": false,
+            "passed": false
+          }
+        },
+        "real_validation": {
+          "tp": 45844841,
+          "fp": 2227833,
+          "fn": 1690557,
+          "tn": 130329697,
+          "ignored": 0,
+          "total": 180092928,
+          "boundary_intersection_5": 4433446,
+          "boundary_union_5": 8033397,
+          "boundary_intersection_14": 12692734,
+          "boundary_union_14": 17735642,
+          "road_iou": 0.9212593330203981,
+          "dice": 0.9590161173838962,
+          "precision": 0.9536569777666206,
+          "recall": 0.9644358294843771,
+          "boundary_iou_5px": 0.5518768710173293,
+          "boundary_iou_14px": 0.7156625060429163,
+          "coverage": 1.0
+        },
+        "development": {
+          "tp": 5144293,
+          "fp": 851105,
+          "fn": 218108,
+          "tn": 9229043,
+          "ignored": 286091,
+          "total": 15728640,
+          "boundary_intersection_5": 197053,
+          "boundary_union_5": 540742,
+          "boundary_intersection_14": 521647,
+          "boundary_union_14": 1042611,
+          "road_iou": 0.827921144680636,
+          "dice": 0.9058608978729066,
+          "precision": 0.8580402835641604,
+          "recall": 0.9593264285904766,
+          "boundary_iou_5px": 0.36441223356055197,
+          "boundary_iou_14px": 0.5003275430625612,
+          "coverage": 0.9818108240763347
+        },
+        "real_video_guards": {
+          "time_selected_scoring": {
+            "tp": 795689,
+            "fp": 63520,
+            "fn": 17511,
+            "tn": 2269008,
+            "ignored": 0,
+            "total": 3145728,
+            "boundary_intersection_5": 52511,
+            "boundary_union_5": 152642,
+            "boundary_intersection_14": 195696,
+            "boundary_union_14": 322929,
+            "road_iou": 0.907574824345287,
+            "dice": 0.9515483353653322,
+            "precision": 0.9260715378912465,
+            "recall": 0.9784665518937531,
+            "boundary_iou_5px": 0.34401409834776797,
+            "boundary_iou_14px": 0.6060031771689752,
+            "coverage": 1.0
+          },
+          "diagnostic_only": {
+            "tp": 378788,
+            "fp": 21845,
+            "fn": 35149,
+            "tn": 1137082,
+            "ignored": 0,
+            "total": 1572864,
+            "boundary_intersection_5": 26015,
+            "boundary_union_5": 82325,
+            "boundary_intersection_14": 94834,
+            "boundary_union_14": 171093,
+            "road_iou": 0.8692144237256243,
+            "dice": 0.9300317959168641,
+            "precision": 0.9454737877309158,
+            "recall": 0.9150861121378374,
+            "boundary_iou_5px": 0.3160036440935317,
+            "boundary_iou_14px": 0.5542833429772113,
+            "coverage": 1.0
+          }
+        }
+      },
+      {
+        "epoch": 2,
+        "strict_gates": {
+          "real_validation": {
+            "road_iou_not_lower": false,
+            "boundary5_iou_not_lower": false,
+            "passed": false
+          },
+          "video_time_selected_scoring": {
+            "road_iou_not_lower": false,
+            "boundary5_iou_not_lower": false,
+            "passed": false
+          },
+          "video_diagnostic_only": {
+            "road_iou_not_lower": false,
+            "boundary5_iou_not_lower": false,
+            "passed": false
+          }
+        },
+        "real_validation": {
+          "tp": 45840170,
+          "fp": 2223693,
+          "fn": 1695228,
+          "tn": 130333837,
+          "ignored": 0,
+          "total": 180092928,
+          "boundary_intersection_5": 4432905,
+          "boundary_union_5": 8034140,
+          "boundary_intersection_14": 12691787,
+          "boundary_union_14": 17736689,
+          "road_iou": 0.9212421103110585,
+          "dice": 0.9590067856277675,
+          "precision": 0.9537346176273847,
+          "recall": 0.9643375658703857,
+          "boundary_iou_5px": 0.551758495619942,
+          "boundary_iou_14px": 0.7155668682018386,
+          "coverage": 1.0
+        },
+        "development": {
+          "tp": 5158699,
+          "fp": 830301,
+          "fn": 203702,
+          "tn": 9249847,
+          "ignored": 286091,
+          "total": 15728640,
+          "boundary_intersection_5": 197353,
+          "boundary_union_5": 533442,
+          "boundary_intersection_14": 522336,
+          "boundary_union_14": 1026819,
+          "road_iou": 0.8330287812977275,
+          "dice": 0.9089096579356152,
+          "precision": 0.8613623309400568,
+          "recall": 0.9620129117535223,
+          "boundary_iou_5px": 0.3699614953453234,
+          "boundary_iou_14px": 0.5086933529667839,
+          "coverage": 0.9818108240763347
+        },
+        "real_video_guards": {
+          "time_selected_scoring": {
+            "tp": 795491,
+            "fp": 63353,
+            "fn": 17709,
+            "tn": 2269175,
+            "ignored": 0,
+            "total": 3145728,
+            "boundary_intersection_5": 52510,
+            "boundary_union_5": 152838,
+            "boundary_intersection_14": 195640,
+            "boundary_union_14": 323411,
+            "road_iou": 0.9075218497911707,
+            "dice": 0.9515192183937743,
+            "precision": 0.9262345664637582,
+            "recall": 0.9782230693556321,
+            "boundary_iou_5px": 0.34356639055732213,
+            "boundary_iou_14px": 0.6049268577754003,
+            "coverage": 1.0
+          },
+          "diagnostic_only": {
+            "tp": 378482,
+            "fp": 21765,
+            "fn": 35455,
+            "tn": 1137162,
+            "ignored": 0,
+            "total": 1572864,
+            "boundary_intersection_5": 26034,
+            "boundary_union_5": 82286,
+            "boundary_intersection_14": 94803,
+            "boundary_union_14": 171139,
+            "road_iou": 0.8686717068087821,
+            "dice": 0.9297210458569561,
+            "precision": 0.9456210789837276,
+            "recall": 0.9143468692095658,
+            "boundary_iou_5px": 0.31638431811000656,
+            "boundary_iou_14px": 0.5539532193129562,
+            "coverage": 1.0
+          }
+        }
+      }
+    ],
+    "shared_selection": {
+      "selected_epoch": null,
+      "checkpoint": null,
+      "sha256": null,
+      "frozen_utc": "2026-10-20T23:57:49.972003+00:00",
+      "real_default_is_original": true,
+      "deployed": false,
+      "fresh_future_check_opened": false
+    }
+  },
+  "fresh_synthetic": {
+    "original": {
+      "metrics": {
+        "tp": 9244857,
+        "fp": 1105678,
+        "fn": 459088,
+        "tn": 17503355,
+        "ignored": 522862,
+        "total": 28835840,
+        "road_iou": 0.8552432402129103,
+        "dice": 0.9219742421643443,
+        "precision": 0.8931767295120494,
+        "recall": 0.9526905809956673,
+        "pixel_accuracy": 0.9447332597793139,
+        "evaluated_fraction": 0.9818676341663707
+      },
+      "frames": 110,
+      "checkpoint_sha256": "93a8faf3d43b77f0ce74d5cdbaf94124728d371c3b68b2a3386f9f72fc106725"
+    },
+    "previous03": {
+      "metrics": {
+        "tp": 9418555,
+        "fp": 940725,
+        "fn": 285390,
+        "tn": 17668308,
+        "ignored": 522862,
+        "total": 28835840,
+        "road_iou": 0.8848141840000676,
+        "dice": 0.9388874420737444,
+        "precision": 0.9091901174599006,
+        "recall": 0.97059031146611,
+        "pixel_accuracy": 0.9566942410649986,
+        "evaluated_fraction": 0.9818676341663707
+      },
+      "frames": 110,
+      "checkpoint_sha256": "2eb4c06641bcb8226176500f9a4f2c1ef66a4472db3006787ecaeb57bf59165e"
+    },
+    "selected": {
+      "metrics": {
+        "tp": 9556769,
+        "fp": 754731,
+        "fn": 147176,
+        "tn": 17854302,
+        "ignored": 522862,
+        "total": 28835840,
+        "road_iou": 0.9137647059723429,
+        "dice": 0.9549394480112733,
+        "precision": 0.926806866120351,
+        "recall": 0.984833384772894,
+        "pixel_accuracy": 0.9681451029277104,
+        "evaluated_fraction": 0.9818676341663707
+      },
+      "frames": 110,
+      "checkpoint_sha256": "1cb0998ac91e6bf8c958cc5600fd7aab394984689b47e11b0a2156f17844cff5"
+    },
+    "delta_selected_vs_original_pp": 5.852146575943262,
+    "delta_selected_vs_previous03_pp": 2.8950521972275323
+  },
+  "real_path": "Unchanged LockedRoadSegmenter for real images, videos and unknown sources",
+  "simulation_path": "Opt-in recorded CARLA evaluation only; no camera appearance classifier and no actor control",
+  "limits": [
+    "New seed in the same synthetic town, not an independent real-road test",
+    "Reference uses depth and OpenDRIVE lane geometry with ignored uncertain edges",
+    "The18human-labelled frames are repeated development guards, not whole-video accuracy",
+    "Real outputs are preserved by leaving that deployed path unchanged; a new model is not guaranteed on unseen roads",
+    "No segmentation model or RL policy controls the actors"
+  ],
+  "simulation_checkpoint": {
+    "run": "road_boundary_adaptation_20261020_02",
+    "epoch": 2,
+    "checkpoint": "runs/road_boundary_adaptation_20261020_02/epoch_02.keras",
+    "checkpoint_sha256": "1cb0998ac91e6bf8c958cc5600fd7aab394984689b47e11b0a2156f17844cff5",
+    "dev_road_iou": 0.8654223183056496,
+    "development_metrics_sha256": "e1d67c89d04c0815690d5a41376f7bd61f43b859c4a53cce503a7387c55a3866",
+    "real_retention_passed_in_trial": false,
+    "strict_current_shared_checks_available": false
+  }
+}

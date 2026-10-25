@@ -1,0 +1,410 @@
+{
+  "status": "ready_for_separate_simulation_training",
+  "training_started": false,
+  "counts": {
+    "train": 4000,
+    "val": 500,
+    "test": 500
+  },
+  "pairs": 5000,
+  "episodes": 32,
+  "layouts": [
+    "crossroad",
+    "t_north",
+    "t_south",
+    "straight"
+  ],
+  "manifest_sha256": "c1b9ebbc1ba4768de91d413cb03170bdd5ab8f0a5de1dd3bc6ef344e98675e92",
+  "unique_source_rgb_pixel_hashes": 5000,
+  "valid_pixel_coverage": 0.9830354499816895,
+  "protected_unchanged": true,
+  "breakdown": {
+    "split": {
+      "train": 4000,
+      "val": 500,
+      "test": 500
+    },
+    "layout": {
+      "crossroad": 1250,
+      "t_north": 1250,
+      "t_south": 1250,
+      "straight": 1250
+    },
+    "weather": {
+      "clear": 1250,
+      "overcast": 1250,
+      "wet": 1250,
+      "dusk": 1250
+    },
+    "case": {
+      "mixed": 1083,
+      "clear_overtake": 917,
+      "oncoming": 792,
+      "pedestrian": 792,
+      "return_gap": 791,
+      "junction": 625
+    }
+  },
+  "visible_native_class_frames": {
+    "pedestrian_or_rider": 2308,
+    "bus": 1083,
+    "motorcycle": 527,
+    "bicycle": 1881
+  },
+  "discarded_exact_duplicate_candidates": 0,
+  "discarded_low_change_candidates": 3481,
+  "independent_verification": {
+    "passed": true,
+    "pairs_recounted": 5000,
+    "unique_resized_rgb_images": 5000,
+    "unique_source_rgb_images": 5000,
+    "episode_overlap_across_splits": 0,
+    "seed_overlap_across_splits": 0,
+    "distinct_map_topologies": 4,
+    "projected_road_points": 2400,
+    "points_outside_driving_lanes": 0,
+    "sampled_native_nonroad_pixels_checked": 29870517,
+    "selected_consecutive_low_change_pairs": 78,
+    "cross_split_thumbnail_similarity": {
+      "val": {
+        "minimum_rmse_0_255": 10.138044357299805,
+        "median_rmse_0_255": 14.545926570892334,
+        "pairs_below_rmse_2": 0
+      },
+      "test": {
+        "minimum_rmse_0_255": 6.286559581756592,
+        "median_rmse_0_255": 11.685460090637207,
+        "pairs_below_rmse_2": 0
+      }
+    },
+    "protected_unchanged": true,
+    "training_started": false,
+    "blank_rgb_frames": 0,
+    "minimum_rgb_standard_deviation": 25.003817208721227,
+    "invalid_black_daytime_sky_frames": 0,
+    "minimum_daytime_sky_median": 36.666666666666664,
+    "image_brightness_mean_range": [
+      72.91012700398763,
+      162.538454691569
+    ],
+    "test_read_for_file_and_label_qa_only": true,
+    "model_predictions_or_test_model_scores": false
+  },
+  "map_preflight": {
+    "passed": true,
+    "layouts": [
+      {
+        "passed": true,
+        "layout": "crossroad",
+        "active_arms": [
+          "west",
+          "east",
+          "south",
+          "north"
+        ],
+        "roads": 16,
+        "rule": "LHT",
+        "independent_topology_check": "Lane existence, branch counts and all road rules",
+        "footpath_samples_checked": 10080,
+        "map_sha256": "f539588c47d038c7143ac613778e7b9cbf91f438c9474e3de460073848eea572"
+      },
+      {
+        "passed": true,
+        "layout": "t_north",
+        "active_arms": [
+          "west",
+          "east",
+          "north"
+        ],
+        "roads": 9,
+        "rule": "LHT",
+        "independent_topology_check": "Lane existence, branch counts and all road rules",
+        "footpath_samples_checked": 7650,
+        "map_sha256": "51d2862caa86104549d8ef8c1221b390067492aa5c55dd6fbb5c5db0771fda16"
+      },
+      {
+        "passed": true,
+        "layout": "t_south",
+        "active_arms": [
+          "west",
+          "east",
+          "south"
+        ],
+        "roads": 9,
+        "rule": "LHT",
+        "independent_topology_check": "Lane existence, branch counts and all road rules",
+        "footpath_samples_checked": 7650,
+        "map_sha256": "64f768395f94cc5555e37e92d54b37082cbfbbb7b665732f308c00db779d55d4"
+      },
+      {
+        "passed": true,
+        "layout": "straight",
+        "active_arms": [
+          "west",
+          "east"
+        ],
+        "roads": 4,
+        "rule": "LHT",
+        "independent_topology_check": "Lane existence, branch counts and all road rules",
+        "footpath_samples_checked": 5220,
+        "map_sha256": "a7005990e053aea5b6285c817488cb37b35f825485c5b4b46e1f0ccce42cdd8b"
+      }
+    ],
+    "distinct_map_hashes": 4
+  },
+  "preprocessing_verified": true,
+  "cases_by_split": {
+    "train": {
+      "mixed": 833,
+      "clear_overtake": 667,
+      "oncoming": 667,
+      "pedestrian": 667,
+      "return_gap": 666,
+      "junction": 500
+    },
+    "val": {
+      "mixed": 250,
+      "oncoming": 125,
+      "return_gap": 125
+    },
+    "test": {
+      "clear_overtake": 250,
+      "pedestrian": 125,
+      "junction": 125
+    }
+  },
+  "actor_counts_per_episode": [
+    {
+      "episode_id": "crossroad_01",
+      "layout": "crossroad",
+      "split": "train",
+      "other_vehicles": 10,
+      "pedestrians": 8
+    },
+    {
+      "episode_id": "crossroad_02",
+      "layout": "crossroad",
+      "split": "train",
+      "other_vehicles": 1,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "crossroad_03",
+      "layout": "crossroad",
+      "split": "train",
+      "other_vehicles": 2,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "crossroad_04",
+      "layout": "crossroad",
+      "split": "train",
+      "other_vehicles": 0,
+      "pedestrians": 1
+    },
+    {
+      "episode_id": "crossroad_05",
+      "layout": "crossroad",
+      "split": "train",
+      "other_vehicles": 2,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "crossroad_06",
+      "layout": "crossroad",
+      "split": "train",
+      "other_vehicles": 3,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "crossroad_07",
+      "layout": "crossroad",
+      "split": "val",
+      "other_vehicles": 10,
+      "pedestrians": 8
+    },
+    {
+      "episode_id": "crossroad_08",
+      "layout": "crossroad",
+      "split": "test",
+      "other_vehicles": 1,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "t_north_01",
+      "layout": "t_north",
+      "split": "train",
+      "other_vehicles": 2,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "t_north_02",
+      "layout": "t_north",
+      "split": "train",
+      "other_vehicles": 0,
+      "pedestrians": 1
+    },
+    {
+      "episode_id": "t_north_03",
+      "layout": "t_north",
+      "split": "train",
+      "other_vehicles": 2,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "t_north_04",
+      "layout": "t_north",
+      "split": "train",
+      "other_vehicles": 1,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "t_north_05",
+      "layout": "t_north",
+      "split": "train",
+      "other_vehicles": 6,
+      "pedestrians": 8
+    },
+    {
+      "episode_id": "t_north_06",
+      "layout": "t_north",
+      "split": "train",
+      "other_vehicles": 1,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "t_north_07",
+      "layout": "t_north",
+      "split": "val",
+      "other_vehicles": 2,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "t_north_08",
+      "layout": "t_north",
+      "split": "test",
+      "other_vehicles": 0,
+      "pedestrians": 1
+    },
+    {
+      "episode_id": "t_south_01",
+      "layout": "t_south",
+      "split": "train",
+      "other_vehicles": 2,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "t_south_02",
+      "layout": "t_south",
+      "split": "train",
+      "other_vehicles": 1,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "t_south_03",
+      "layout": "t_south",
+      "split": "train",
+      "other_vehicles": 7,
+      "pedestrians": 8
+    },
+    {
+      "episode_id": "t_south_04",
+      "layout": "t_south",
+      "split": "train",
+      "other_vehicles": 1,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "t_south_05",
+      "layout": "t_south",
+      "split": "train",
+      "other_vehicles": 2,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "t_south_06",
+      "layout": "t_south",
+      "split": "train",
+      "other_vehicles": 0,
+      "pedestrians": 1
+    },
+    {
+      "episode_id": "t_south_07",
+      "layout": "t_south",
+      "split": "val",
+      "other_vehicles": 2,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "t_south_08",
+      "layout": "t_south",
+      "split": "test",
+      "other_vehicles": 1,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "straight_01",
+      "layout": "straight",
+      "split": "train",
+      "other_vehicles": 5,
+      "pedestrians": 8
+    },
+    {
+      "episode_id": "straight_02",
+      "layout": "straight",
+      "split": "train",
+      "other_vehicles": 1,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "straight_03",
+      "layout": "straight",
+      "split": "train",
+      "other_vehicles": 2,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "straight_04",
+      "layout": "straight",
+      "split": "train",
+      "other_vehicles": 0,
+      "pedestrians": 1
+    },
+    {
+      "episode_id": "straight_05",
+      "layout": "straight",
+      "split": "train",
+      "other_vehicles": 2,
+      "pedestrians": 0
+    },
+    {
+      "episode_id": "straight_06",
+      "layout": "straight",
+      "split": "train",
+      "other_vehicles": 5,
+      "pedestrians": 8
+    },
+    {
+      "episode_id": "straight_07",
+      "layout": "straight",
+      "split": "val",
+      "other_vehicles": 5,
+      "pedestrians": 8
+    },
+    {
+      "episode_id": "straight_08",
+      "layout": "straight",
+      "split": "test",
+      "other_vehicles": 1,
+      "pedestrians": 0
+    }
+  ],
+  "dataset": "dataset/simulation_india_v5",
+  "guide": "docs/SIMULATION_DATASET.md",
+  "limits": [
+    "Four related illustrative left-hand road topologies with shared local assets; not multiple real cities or calibrated traffic",
+    "No authentic autorickshaw asset; installed cars, buses, vans, scooters, bikes and walkers",
+    "Correlated frames within an episode remain; no episode crosses a split",
+    "Geometry-assisted labels have a conservative ignored boundary/range region"
+  ]
+}

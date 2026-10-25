@@ -1,0 +1,247 @@
+{
+  "schema": "idd_detector_refinement_result_v1",
+  "checked_utc": "2026-10-25T16:54:26.841523+00:00",
+  "report_evidence_verified": true,
+  "run": "runs/detection_train_20261025_02",
+  "epochs_completed": 3,
+  "best_epoch": 3,
+  "trainer_exit": {
+    "status": "completed",
+    "returncode": 0,
+    "finished_utc": "2026-10-25T16:54:20.316173+00:00"
+  },
+  "process_clean_exit": true,
+  "checkpoint_checks": {
+    "best": {
+      "path": "runs/detection_train_20261025_02/weights/best.pt",
+      "sha256": "f7bb7e4c5959520d797dcde5547fdcded9ece1e9651a3e7bd6ffa2273749182c",
+      "all_tensors_finite": true,
+      "bytes": 19284058
+    },
+    "last": {
+      "path": "runs/detection_train_20261025_02/weights/last.pt",
+      "sha256": "834d8a26fea5f297ea6369a5f6b40635c5ed0909b501fd4113be75a3c098d84c",
+      "all_tensors_finite": true,
+      "bytes": 19284058
+    }
+  },
+  "validation_images": 17675,
+  "resolution": 1280,
+  "metrics": {
+    "metrics/precision(B)": 0.7422869441823012,
+    "metrics/recall(B)": 0.557841963071898,
+    "metrics/mAP50(B)": 0.6224450326310994,
+    "metrics/mAP50-95(B)": 0.4152477043827353
+  },
+  "per_class": {
+    "person": {
+      "precision": 0.7813812442938647,
+      "recall": 0.5387736732047264,
+      "ap50": 0.6324605178397442,
+      "ap50_95": 0.3747593798635888,
+      "at_precision_at_least_0_75": {
+        "confidence": 0.24424424424424424,
+        "precision": 0.750512088815096,
+        "recall": 0.5543494205662315
+      }
+    },
+    "rider": {
+      "precision": 0.8216230378419206,
+      "recall": 0.6211666935558106,
+      "ap50": 0.7076834481961094,
+      "ap50_95": 0.4346019554860446,
+      "at_precision_at_least_0_75": {
+        "confidence": 0.2062062062062062,
+        "precision": 0.7502544429408052,
+        "recall": 0.6493940934358756
+      }
+    },
+    "car": {
+      "precision": 0.8413500987665867,
+      "recall": 0.7331049250535332,
+      "ap50": 0.8150605801797496,
+      "ap50_95": 0.6255442727361535,
+      "at_precision_at_least_0_75": {
+        "confidence": 0.16216216216216217,
+        "precision": 0.7504748302341261,
+        "recall": 0.7728693790149893
+      }
+    },
+    "motorcycle": {
+      "precision": 0.8386054470690039,
+      "recall": 0.7339185418064926,
+      "ap50": 0.7992275628152743,
+      "ap50_95": 0.5033466547068678,
+      "at_precision_at_least_0_75": {
+        "confidence": 0.1831831831831832,
+        "precision": 0.7506235129895004,
+        "recall": 0.7666996361581122
+      }
+    },
+    "bicycle": {
+      "precision": 0.6760494314155041,
+      "recall": 0.4908376963350785,
+      "ap50": 0.5138106832144591,
+      "ap50_95": 0.32605795410930577,
+      "at_precision_at_least_0_75": {
+        "confidence": 0.3683683683683684,
+        "precision": 0.7526578325067301,
+        "recall": 0.4580406776878225
+      }
+    },
+    "autorickshaw": {
+      "precision": 0.7824916938934968,
+      "recall": 0.7979186157779442,
+      "ap50": 0.8359652087912364,
+      "ap50_95": 0.6731785010959882,
+      "at_precision_at_least_0_75": {
+        "confidence": 0.2272272272272272,
+        "precision": 0.7504746905338917,
+        "recall": 0.8134525329927629
+      }
+    },
+    "bus": {
+      "precision": 0.8273119253670327,
+      "recall": 0.7310599078341014,
+      "ap50": 0.8068662813209923,
+      "ap50_95": 0.6329747103638431,
+      "at_precision_at_least_0_75": {
+        "confidence": 0.17617617617617617,
+        "precision": 0.750184344019517,
+        "recall": 0.7616703268713139
+      }
+    },
+    "truck": {
+      "precision": 0.7704869874640835,
+      "recall": 0.6951944712311154,
+      "ap50": 0.7680118460666598,
+      "ap50_95": 0.578631121565736,
+      "at_precision_at_least_0_75": {
+        "confidence": 0.24924924924924924,
+        "precision": 0.7504265741930374,
+        "recall": 0.7064448730311796
+      }
+    },
+    "animal": {
+      "precision": 0.546561436331078,
+      "recall": 0.041307999287458576,
+      "ap50": 0.11487424095919857,
+      "ap50_95": 0.049899923991710976,
+      "at_precision_at_least_0_75": {
+        "confidence": 0.45345345345345345,
+        "precision": 0.758319500955746,
+        "recall": 0.021806853582554516
+      }
+    },
+    "traffic_light": {
+      "precision": 0.6972480823058193,
+      "recall": 0.48663906661648476,
+      "ap50": 0.5385287044599782,
+      "ap50_95": 0.2717145768482808,
+      "at_precision_at_least_0_75": {
+        "confidence": 0.32732732732732733,
+        "precision": 0.751062792568182,
+        "recall": 0.4666917576213775
+      }
+    },
+    "traffic_sign": {
+      "precision": 0.7637459368370071,
+      "recall": 0.5257443711021824,
+      "ap50": 0.596997906747056,
+      "ap50_95": 0.3584662090851098,
+      "at_precision_at_least_0_75": {
+        "confidence": 0.25725725725725723,
+        "precision": 0.750062305721249,
+        "recall": 0.5327603276032761
+      }
+    },
+    "other_vehicle": {
+      "precision": 0.5605880086022186,
+      "recall": 0.2984375950578477,
+      "ap50": 0.33985341098273425,
+      "ap50_95": 0.15379719274019357,
+      "at_precision_at_least_0_75": {
+        "confidence": 0.46446446446446443,
+        "precision": 0.7507814342629159,
+        "recall": 0.13466108056274526
+      }
+    }
+  },
+  "metric_precision_note": "full-precision framework final-validation metrics",
+  "baseline_at_same_resolution": {
+    "metrics/precision(B)": 0.7476741548292889,
+    "metrics/recall(B)": 0.5536154569467133,
+    "metrics/mAP50(B)": 0.6168797430877998,
+    "metrics/mAP50-95(B)": 0.4112468273728132,
+    "fitness": 0.4112468273728132
+  },
+  "metric_delta_percentage_points": {
+    "metrics/precision(B)": -0.5387210646987661,
+    "metrics/recall(B)": 0.42265061251847147,
+    "metrics/mAP50(B)": 0.5565289543299601,
+    "metrics/mAP50-95(B)": 0.4000877009922077
+  },
+  "class_delta_percentage_points": {
+    "person": {
+      "ap50_delta_percentage_points": 0.3703820506795519,
+      "ap50_95_delta_percentage_points": 0.2451329759051213
+    },
+    "rider": {
+      "ap50_delta_percentage_points": 0.14245568942206077,
+      "ap50_95_delta_percentage_points": 0.17713258613524796
+    },
+    "car": {
+      "ap50_delta_percentage_points": 0.9211888426078119,
+      "ap50_95_delta_percentage_points": 0.5884045190379106
+    },
+    "motorcycle": {
+      "ap50_delta_percentage_points": 0.07803250354190272,
+      "ap50_95_delta_percentage_points": 0.23323696897379342
+    },
+    "bicycle": {
+      "ap50_delta_percentage_points": -0.11176094948344151,
+      "ap50_95_delta_percentage_points": 0.07695887944315638
+    },
+    "autorickshaw": {
+      "ap50_delta_percentage_points": -0.26395013911423293,
+      "ap50_95_delta_percentage_points": -0.14402849776516957
+    },
+    "bus": {
+      "ap50_delta_percentage_points": 1.4165359788438026,
+      "ap50_95_delta_percentage_points": 1.2893876867603238
+    },
+    "truck": {
+      "ap50_delta_percentage_points": 1.246864784471935,
+      "ap50_95_delta_percentage_points": 1.0732732279561397
+    },
+    "animal": {
+      "ap50_delta_percentage_points": 2.4296174263641626,
+      "ap50_95_delta_percentage_points": 0.6093926653331458
+    },
+    "traffic_light": {
+      "ap50_delta_percentage_points": -0.37497714666998583,
+      "ap50_95_delta_percentage_points": 0.20119761240586786
+    },
+    "traffic_sign": {
+      "ap50_delta_percentage_points": 0.41635233204561084,
+      "ap50_95_delta_percentage_points": 0.12779299090323049
+    },
+    "other_vehicle": {
+      "ap50_delta_percentage_points": 0.4076060792503333,
+      "ap50_95_delta_percentage_points": 0.32317079681769556
+    }
+  },
+  "all_classes_ap50_non_decreasing": false,
+  "overall_map50_improved": true,
+  "overall_map50_95_improved": true,
+  "person_ap50_improved": true,
+  "targets": {
+    "map50_70_percent_met": false,
+    "map50_95_45_percent_met": false
+  },
+  "protected_files_unchanged": true,
+  "initial_detector_unchanged": true,
+  "official_test_used": false,
+  "control_allowed": false,
+  "automatically_deployed": false
+}

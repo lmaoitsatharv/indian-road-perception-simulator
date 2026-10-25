@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "case": "junction",
+  "seed": 7,
+  "checks": {
+    "runtime": true,
+    "camera_alignment": true,
+    "cleanup": true,
+    "no_native_collisions": true,
+    "no_body_overlap": true,
+    "no_road_departure": true,
+    "no_wrongway": true,
+    "progress": true,
+    "junction_yield_exercised": true,
+    "ego_cleared_junction": true
+  },
+  "completed": true,
+  "exit_reason": "bounded_test_complete",
+  "health_passed": true,
+  "measured_frames": 1201,
+  "actors": {
+    "ego": {
+      "distance_m": 237.80841932375287,
+      "max_speed_mps": 7.114028824656772,
+      "stopped_s": 11.8,
+      "braking_500ms_max_mps2": 4.540099962350726,
+      "abs_jerk_500ms_p95_mps3": 4.649505359422948,
+      "abs_jerk_500ms_max_mps3": 16.02844190522984
+    },
+    "turning_car": {
+      "distance_m": 192.80372493368327,
+      "max_speed_mps": 5.045165990473491,
+      "stopped_s": 15.05,
+      "braking_500ms_max_mps2": 4.359130573923222,
+      "abs_jerk_500ms_p95_mps3": 2.338511703123549,
+      "abs_jerk_500ms_max_mps3": 8.706072654016001
+    },
+    "south_scooter": {
+      "distance_m": 215.94810172021022,
+      "max_speed_mps": 5.214538496516071,
+      "stopped_s": 9.5,
+      "braking_500ms_max_mps2": 2.8094481584594195,
+      "abs_jerk_500ms_p95_mps3": 2.8686522582756466,
+      "abs_jerk_500ms_max_mps3": 9.406126846270302
+    },
+    "delivery_van": {
+      "distance_m": 217.55054338375422,
+      "max_speed_mps": 6.152039427266386,
+      "stopped_s": 13.850000000000001,
+      "braking_500ms_max_mps2": 9.157409598128861,
+      "abs_jerk_500ms_p95_mps3": 4.969481901548086,
+      "abs_jerk_500ms_max_mps3": 19.659118688874237
+    }
+  },
+  "overlap_pairs": [],
+  "offroad": {},
+  "wrongway": {},
+  "min_gap_m": 2.8521930035202625,
+  "min_gap_pair": [
+    "ego",
+    "turning_car",
+    "21.000000312924385"
+  ],
+  "goal_reached": true,
+  "events": 17,
+  "method": "Independent saved-trace scalar SAT + all rectangle vertices + position-derived speed; 20 Hz sampling"
+}

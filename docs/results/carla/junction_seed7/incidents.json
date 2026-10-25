@@ -1,0 +1,97 @@
+{
+  "events": [
+    {
+      "sim_s": 3.9,
+      "kind": "junction_yield",
+      "actor": "turning_car"
+    },
+    {
+      "sim_s": 4.9,
+      "kind": "junction_granted",
+      "actor": "turning_car",
+      "waited_s": 0.0,
+      "concurrent_reservations": 1
+    },
+    {
+      "sim_s": 8.05,
+      "kind": "junction_yield",
+      "actor": "south_scooter"
+    },
+    {
+      "sim_s": 9.15,
+      "kind": "junction_yield",
+      "actor": "delivery_van"
+    },
+    {
+      "sim_s": 10.2,
+      "kind": "junction_granted",
+      "actor": "delivery_van",
+      "waited_s": 0.0,
+      "concurrent_reservations": 2
+    },
+    {
+      "sim_s": 13.4,
+      "kind": "junction_yield",
+      "actor": "ego"
+    },
+    {
+      "sim_s": 20.05,
+      "kind": "junction_released",
+      "actor": "turning_car"
+    },
+    {
+      "sim_s": 20.05,
+      "kind": "junction_granted",
+      "actor": "south_scooter",
+      "waited_s": 11.050000164657831,
+      "concurrent_reservations": 2
+    },
+    {
+      "sim_s": 23.85,
+      "kind": "junction_released",
+      "actor": "delivery_van"
+    },
+    {
+      "sim_s": 30.35,
+      "kind": "junction_released",
+      "actor": "south_scooter"
+    },
+    {
+      "sim_s": 30.35,
+      "kind": "junction_granted",
+      "actor": "ego",
+      "waited_s": 16.350000243633986,
+      "concurrent_reservations": 1
+    },
+    {
+      "sim_s": 40.85,
+      "kind": "junction_released",
+      "actor": "ego"
+    },
+    {
+      "sim_s": 45.45,
+      "kind": "route_goal",
+      "actor": "turning_car"
+    },
+    {
+      "sim_s": 46.3,
+      "kind": "route_goal",
+      "actor": "delivery_van"
+    },
+    {
+      "sim_s": 55.25,
+      "kind": "route_goal",
+      "actor": "south_scooter"
+    },
+    {
+      "sim_s": 55.45,
+      "kind": "route_goal",
+      "actor": "ego"
+    },
+    {
+      "sim_s": 56.25,
+      "kind": "ego_goal_stopped",
+      "actor": "ego"
+    }
+  ]
+}

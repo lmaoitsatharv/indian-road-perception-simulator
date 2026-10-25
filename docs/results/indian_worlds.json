@@ -1,0 +1,1015 @@
+{
+  "schema": "indian_worlds_results_v1",
+  "status": "five_native_worlds_verified_custom_vehicle_import_pending",
+  "five_native_worlds_passed": true,
+  "full_requested_asset_scope_complete": false,
+  "worlds": [
+    {
+      "profile": "market_street",
+      "passed": true,
+      "errors": [],
+      "cleanup_complete": true,
+      "model_control": false,
+      "rl_trained": false,
+      "training_started": false,
+      "wrong_way_definition": "Vehicle heading differs over 70 degrees from its connected native route while moving; connector/approach overlaps do not select a nearest opposite lane",
+      "ticks": 1200,
+      "paired_frames": 60,
+      "processed_camera_frames": 300,
+      "preview_hz": 5,
+      "saved_capture_hz": 1,
+      "sim_seconds": 60.00000089406967,
+      "wall_seconds": 37.95400000000154,
+      "collisions": [],
+      "body_overlaps": [],
+      "road_departures": [],
+      "wrong_way": [],
+      "sampled_min_vehicle_gap_m": 1.1058106102884928,
+      "max_displacement_m": {
+        "ego": 92.78239440917969,
+        "scooter": 68.63556671142578,
+        "motorcycle": 99.99195098876953,
+        "local_bus": 35.32224655151367,
+        "delivery_van": 67.35313415527344,
+        "hatchback": 33.45139694213867,
+        "cycle": 133.85157775878906
+      },
+      "pause_checks": {
+        "pause": true,
+        "resume": true,
+        "screenshot": false
+      },
+      "native_assets_used": 192,
+      "raw_reference_training_ready": false,
+      "cleanup_warnings": []
+    },
+    {
+      "profile": "residential_colony",
+      "passed": true,
+      "errors": [],
+      "cleanup_complete": true,
+      "model_control": false,
+      "rl_trained": false,
+      "training_started": false,
+      "wrong_way_definition": "Vehicle heading differs over 70 degrees from its connected native route while moving; connector/approach overlaps do not select a nearest opposite lane",
+      "ticks": 1200,
+      "paired_frames": 60,
+      "processed_camera_frames": 300,
+      "preview_hz": 5,
+      "saved_capture_hz": 1,
+      "sim_seconds": 60.00000089406967,
+      "wall_seconds": 38.375,
+      "collisions": [],
+      "body_overlaps": [],
+      "road_departures": [],
+      "wrong_way": [],
+      "sampled_min_vehicle_gap_m": 0.13823827038888026,
+      "max_displacement_m": {
+        "ego": 89.22945404052734,
+        "scooter": 65.08746337890625,
+        "motorcycle": 131.31503295898438,
+        "local_bus": 31.726085662841797,
+        "delivery_van": 59.688106536865234,
+        "hatchback": 147.78610229492188,
+        "cycle": 132.487548828125
+      },
+      "pause_checks": {
+        "pause": true,
+        "resume": true,
+        "screenshot": false
+      },
+      "native_assets_used": 240,
+      "raw_reference_training_ready": false,
+      "cleanup_warnings": []
+    },
+    {
+      "profile": "divided_main_road",
+      "passed": true,
+      "errors": [],
+      "cleanup_complete": true,
+      "model_control": false,
+      "rl_trained": false,
+      "training_started": false,
+      "wrong_way_definition": "Vehicle heading differs over 70 degrees from its connected native route while moving; connector/approach overlaps do not select a nearest opposite lane",
+      "ticks": 1200,
+      "paired_frames": 60,
+      "processed_camera_frames": 300,
+      "preview_hz": 5,
+      "saved_capture_hz": 1,
+      "sim_seconds": 60.00000089406967,
+      "wall_seconds": 37.71800000000076,
+      "collisions": [],
+      "body_overlaps": [],
+      "road_departures": [],
+      "wrong_way": [],
+      "sampled_min_vehicle_gap_m": 0.8431003085599312,
+      "max_displacement_m": {
+        "ego": 318.0151062011719,
+        "scooter": 294.0801696777344,
+        "motorcycle": 317.939453125,
+        "local_bus": 261.0402526855469,
+        "delivery_van": 285.3525085449219,
+        "hatchback": 251.76626586914062,
+        "cycle": 157.497802734375
+      },
+      "pause_checks": {
+        "pause": true,
+        "resume": true,
+        "screenshot": false
+      },
+      "native_assets_used": 540,
+      "raw_reference_training_ready": false,
+      "cleanup_warnings": []
+    },
+    {
+      "profile": "rural_road",
+      "passed": true,
+      "errors": [],
+      "cleanup_complete": true,
+      "model_control": false,
+      "rl_trained": false,
+      "training_started": false,
+      "wrong_way_definition": "Vehicle heading differs over 70 degrees from its connected native route while moving; connector/approach overlaps do not select a nearest opposite lane",
+      "ticks": 1200,
+      "paired_frames": 60,
+      "processed_camera_frames": 300,
+      "preview_hz": 5,
+      "saved_capture_hz": 1,
+      "sim_seconds": 60.00000089406967,
+      "wall_seconds": 35.68700000000172,
+      "collisions": [],
+      "body_overlaps": [],
+      "road_departures": [],
+      "wrong_way": [],
+      "sampled_min_vehicle_gap_m": 1.2709386256877195,
+      "max_displacement_m": {
+        "ego": 136.34523010253906,
+        "scooter": 112.40768432617188,
+        "motorcycle": 185.0334930419922,
+        "local_bus": 79.03276062011719,
+        "delivery_van": 152.29046630859375,
+        "hatchback": 118.29370880126953,
+        "cycle": 160.58694458007812
+      },
+      "pause_checks": {
+        "pause": true,
+        "resume": true,
+        "screenshot": false
+      },
+      "native_assets_used": 208,
+      "raw_reference_training_ready": false,
+      "cleanup_warnings": []
+    },
+    {
+      "profile": "irregular_junction",
+      "passed": true,
+      "errors": [],
+      "cleanup_complete": true,
+      "model_control": false,
+      "rl_trained": false,
+      "training_started": false,
+      "wrong_way_definition": "Vehicle heading differs over 70 degrees from its connected native route while moving; connector/approach overlaps do not select a nearest opposite lane",
+      "ticks": 1200,
+      "paired_frames": 60,
+      "processed_camera_frames": 300,
+      "preview_hz": 5,
+      "saved_capture_hz": 1,
+      "sim_seconds": 60.00000089406967,
+      "wall_seconds": 36.93700000000172,
+      "collisions": [],
+      "body_overlaps": [],
+      "road_departures": [],
+      "wrong_way": [],
+      "sampled_min_vehicle_gap_m": 0.19495125347484724,
+      "max_displacement_m": {
+        "ego": 99.11493682861328,
+        "scooter": 74.97037506103516,
+        "motorcycle": 136.31985473632812,
+        "local_bus": 41.613128662109375,
+        "delivery_van": 81.45245361328125,
+        "hatchback": 149.35169982910156,
+        "cycle": 121.08177947998047
+      },
+      "pause_checks": {
+        "pause": true,
+        "resume": true,
+        "screenshot": false
+      },
+      "native_assets_used": 360,
+      "raw_reference_training_ready": false,
+      "cleanup_warnings": []
+    }
+  ],
+  "native_checks": [
+    {
+      "profile": "market_street",
+      "passed": true,
+      "frames": 60,
+      "images_reopened_hashed": 300,
+      "semantic_instance_disagreement_pixels": 0,
+      "compared_semantic_pixels": 31104000,
+      "visible_native_ids": 136,
+      "native_signs": 3,
+      "ego_displacement_m": 92.78249104328708,
+      "all_displacements_m": {
+        "ego": 92.78249104328708,
+        "scooter": 68.63540554104765,
+        "motorcycle": 99.99186310841621,
+        "local_bus": 35.31082041022758,
+        "delivery_van": 67.3532819246672,
+        "hatchback": 33.45120136130195,
+        "cycle": 133.84877041634982
+      },
+      "collision_events": 0,
+      "road_departures": 0,
+      "wrong_way_events": 0,
+      "model_control": false,
+      "raw_streams_training_ready": false
+    },
+    {
+      "profile": "residential_colony",
+      "passed": true,
+      "frames": 60,
+      "images_reopened_hashed": 300,
+      "semantic_instance_disagreement_pixels": 0,
+      "compared_semantic_pixels": 31104000,
+      "visible_native_ids": 118,
+      "native_signs": 9,
+      "ego_displacement_m": 89.22945785836512,
+      "all_displacements_m": {
+        "ego": 89.22945785836512,
+        "scooter": 65.08730317883446,
+        "motorcycle": 131.31445886191517,
+        "local_bus": 31.72467658840396,
+        "delivery_van": 59.688400626808786,
+        "hatchback": 147.78860937265776,
+        "cycle": 132.48775770938792
+      },
+      "collision_events": 0,
+      "road_departures": 0,
+      "wrong_way_events": 0,
+      "model_control": false,
+      "raw_streams_training_ready": false
+    },
+    {
+      "profile": "divided_main_road",
+      "passed": true,
+      "frames": 60,
+      "images_reopened_hashed": 300,
+      "semantic_instance_disagreement_pixels": 0,
+      "compared_semantic_pixels": 31104000,
+      "visible_native_ids": 508,
+      "native_signs": 3,
+      "ego_displacement_m": 318.0153116383325,
+      "all_displacements_m": {
+        "ego": 318.0153116383325,
+        "scooter": 294.08001104028995,
+        "motorcycle": 317.93937557277343,
+        "local_bus": 261.00991073208695,
+        "delivery_van": 285.351728332667,
+        "hatchback": 251.7657738814194,
+        "cycle": 157.4980129563824
+      },
+      "collision_events": 0,
+      "road_departures": 0,
+      "wrong_way_events": 0,
+      "model_control": false,
+      "raw_streams_training_ready": false
+    },
+    {
+      "profile": "rural_road",
+      "passed": true,
+      "frames": 60,
+      "images_reopened_hashed": 300,
+      "semantic_instance_disagreement_pixels": 0,
+      "compared_semantic_pixels": 31104000,
+      "visible_native_ids": 125,
+      "native_signs": 3,
+      "ego_displacement_m": 136.34533459879106,
+      "all_displacements_m": {
+        "ego": 136.34533459879106,
+        "scooter": 112.40755926874787,
+        "motorcycle": 185.0334355853381,
+        "local_bus": 79.05091137358326,
+        "delivery_van": 152.29102011943166,
+        "hatchback": 118.29416352187835,
+        "cycle": 160.58711720294832
+      },
+      "collision_events": 0,
+      "road_departures": 0,
+      "wrong_way_events": 0,
+      "model_control": false,
+      "raw_streams_training_ready": false
+    },
+    {
+      "profile": "irregular_junction",
+      "passed": true,
+      "frames": 60,
+      "images_reopened_hashed": 300,
+      "semantic_instance_disagreement_pixels": 0,
+      "compared_semantic_pixels": 31104000,
+      "visible_native_ids": 187,
+      "native_signs": 12,
+      "ego_displacement_m": 99.11493578869182,
+      "all_displacements_m": {
+        "ego": 99.11493578869182,
+        "scooter": 74.9703235667517,
+        "motorcycle": 136.31927060865266,
+        "local_bus": 41.61165467906508,
+        "delivery_van": 81.45203756546627,
+        "hatchback": 149.3544106663155,
+        "cycle": 121.08195423522761
+      },
+      "collision_events": 0,
+      "road_departures": 0,
+      "wrong_way_events": 0,
+      "model_control": false,
+      "raw_streams_training_ready": false
+    }
+  ],
+  "map_checks": [
+    {
+      "passed": true,
+      "key": "market_street",
+      "sha256": "286a34c4c16ae0ca69487aecd6b6720bba4baa05ed7123ac79d2d00c21a26d22",
+      "rule": "LHT",
+      "road_count": 1,
+      "sampled_driving_waypoints": 8,
+      "lane_width_range_m": [
+        2.875,
+        3.075
+      ],
+      "junction_approaches": 0,
+      "median_width_m": 0,
+      "sidewalk_width_m": 1.8,
+      "shoulder_width_m": 0,
+      "lanes_each_way": 1,
+      "route_count": 2,
+      "max_route_point_gap_m": 0.35171581359258824,
+      "independent_heading_check": true
+    },
+    {
+      "passed": true,
+      "key": "residential_colony",
+      "sha256": "09639b6511b6246acdf07eb23af46305f12d679d710f89b590ca3b2fb7416d3a",
+      "rule": "LHT",
+      "road_count": 9,
+      "sampled_driving_waypoints": 48,
+      "lane_width_range_m": [
+        2.65,
+        3.1
+      ],
+      "junction_approaches": 3,
+      "median_width_m": 0,
+      "sidewalk_width_m": 2.0,
+      "shoulder_width_m": 0,
+      "lanes_each_way": 1,
+      "route_count": 6,
+      "max_route_point_gap_m": 0.4147368923293629,
+      "independent_heading_check": true
+    },
+    {
+      "passed": true,
+      "key": "divided_main_road",
+      "sha256": "1e990f1e56234347bb0767fd5bad9a49501e0cef1c307660da88611341b75711",
+      "rule": "LHT",
+      "road_count": 1,
+      "sampled_driving_waypoints": 16,
+      "lane_width_range_m": [
+        3.25,
+        3.25
+      ],
+      "junction_approaches": 0,
+      "median_width_m": 2.2,
+      "sidewalk_width_m": 2.2,
+      "shoulder_width_m": 0,
+      "lanes_each_way": 2,
+      "route_count": 4,
+      "max_route_point_gap_m": 0.35268854246171344,
+      "independent_heading_check": true
+    },
+    {
+      "passed": true,
+      "key": "rural_road",
+      "sha256": "2ef51494048c9222d96e01cdd3ed757ee4e9cf50a9df7d834434c9ddb10a9b42",
+      "rule": "LHT",
+      "road_count": 1,
+      "sampled_driving_waypoints": 8,
+      "lane_width_range_m": [
+        2.615,
+        2.735
+      ],
+      "junction_approaches": 0,
+      "median_width_m": 0,
+      "sidewalk_width_m": 0,
+      "shoulder_width_m": 1.35,
+      "lanes_each_way": 1,
+      "route_count": 2,
+      "max_route_point_gap_m": 0.35150710674709074,
+      "independent_heading_check": true
+    },
+    {
+      "passed": true,
+      "key": "irregular_junction",
+      "sha256": "d986a2d2a9491691e23cf7fbe5cdc95c5ecb439c5eede8b86db3bf824947e6bf",
+      "rule": "LHT",
+      "road_count": 16,
+      "sampled_driving_waypoints": 80,
+      "lane_width_range_m": [
+        2.7,
+        3.65
+      ],
+      "junction_approaches": 4,
+      "median_width_m": 0,
+      "sidewalk_width_m": 1.5,
+      "shoulder_width_m": 0,
+      "lanes_each_way": 1,
+      "route_count": 12,
+      "max_route_point_gap_m": 0.42672239501139464,
+      "independent_heading_check": true
+    }
+  ],
+  "label_checks": [
+    {
+      "profile": "market_street",
+      "frames": 60,
+      "visible_owned_pixels": {
+        "asphalt": 7098881,
+        "indian_sign": 33531,
+        "shop_board": 1171792,
+        "ground": 6433051,
+        "median": 0
+      },
+      "class_pixel_counts": {
+        "1": 7098881,
+        "3": 10368147,
+        "8": 33531,
+        "10": 6433051,
+        "11": 5695629,
+        "12": 60377,
+        "13": 130685,
+        "14": 1568,
+        "15": 81,
+        "16": 863374,
+        "18": 103097,
+        "19": 60,
+        "20": 57810,
+        "21": 257709
+      },
+      "asset_mapping_verified": true
+    },
+    {
+      "profile": "residential_colony",
+      "frames": 60,
+      "visible_owned_pixels": {
+        "asphalt": 7361563,
+        "indian_sign": 42164,
+        "shop_board": 0,
+        "ground": 7235993,
+        "median": 0
+      },
+      "class_pixel_counts": {
+        "1": 7361563,
+        "3": 1439452,
+        "8": 42164,
+        "9": 179421,
+        "10": 7235993,
+        "11": 13489179,
+        "12": 39749,
+        "13": 143386,
+        "15": 49212,
+        "16": 945147,
+        "18": 114789,
+        "20": 47344,
+        "21": 16601
+      },
+      "asset_mapping_verified": true
+    },
+    {
+      "profile": "divided_main_road",
+      "frames": 60,
+      "visible_owned_pixels": {
+        "asphalt": 8397467,
+        "indian_sign": 17061,
+        "shop_board": 312971,
+        "ground": 6006273,
+        "median": 364992
+      },
+      "class_pixel_counts": {
+        "1": 8397467,
+        "2": 364992,
+        "3": 4068639,
+        "8": 17061,
+        "10": 6006273,
+        "11": 11791486,
+        "12": 25009,
+        "13": 42155,
+        "14": 8234,
+        "15": 14393,
+        "16": 236983,
+        "18": 28350,
+        "19": 8213,
+        "20": 35518,
+        "21": 59227
+      },
+      "asset_mapping_verified": true
+    },
+    {
+      "profile": "rural_road",
+      "frames": 60,
+      "visible_owned_pixels": {
+        "asphalt": 6695001,
+        "indian_sign": 34249,
+        "shop_board": 0,
+        "ground": 7522920,
+        "median": 0
+      },
+      "class_pixel_counts": {
+        "1": 6695001,
+        "3": 3483092,
+        "8": 34249,
+        "9": 332293,
+        "10": 7522920,
+        "11": 11947597,
+        "13": 118113,
+        "14": 3105,
+        "15": 1059,
+        "16": 793650,
+        "18": 96454,
+        "19": 16,
+        "20": 47367,
+        "21": 29084
+      },
+      "asset_mapping_verified": true
+    },
+    {
+      "profile": "irregular_junction",
+      "frames": 60,
+      "visible_owned_pixels": {
+        "asphalt": 7608526,
+        "indian_sign": 39814,
+        "shop_board": 270482,
+        "ground": 6770609,
+        "median": 0
+      },
+      "class_pixel_counts": {
+        "1": 7608526,
+        "3": 2521443,
+        "8": 39814,
+        "10": 6770609,
+        "11": 12941588,
+        "12": 58505,
+        "13": 123913,
+        "15": 26495,
+        "16": 819430,
+        "18": 98361,
+        "20": 75020,
+        "21": 20296
+      },
+      "asset_mapping_verified": true
+    }
+  ],
+  "protected_files_unchanged": {
+    "integration/india_behavior.py": true,
+    "integration/india_road.py": true,
+    "idd_inference.py": true,
+    "predict_road.py": true,
+    "predict_road_video.py": true,
+    "runs/overnight_20261003/trial_13_shadow_fixed_bn_low_lr/best.keras": true,
+    "runs/simulation_frozen_20261022_01/best.keras": true
+  },
+  "camera_preview_hz": 5,
+  "saved_synchronized_capture_hz": 1,
+  "development_capture_frames": 300,
+  "native_session": "runs\\carla_indian_worlds_smoke_20261023T134059_973058Z_seed7101",
+  "run": "runs\\indian_worlds_20261023_01",
+  "upright_material_check_session": "runs\\carla_indian_worlds_smoke_20261023T140834_577890Z_seed7101",
+  "upright_material_check_passed": true,
+  "upright_material_check_capture_sets": 70,
+  "upright_material_independent_checks": {
+    "passed": true,
+    "maps": [
+      {
+        "passed": true,
+        "key": "market_street",
+        "sha256": "286a34c4c16ae0ca69487aecd6b6720bba4baa05ed7123ac79d2d00c21a26d22",
+        "rule": "LHT",
+        "road_count": 1,
+        "sampled_driving_waypoints": 8,
+        "lane_width_range_m": [
+          2.875,
+          3.075
+        ],
+        "junction_approaches": 0,
+        "median_width_m": 0,
+        "sidewalk_width_m": 1.8,
+        "shoulder_width_m": 0,
+        "lanes_each_way": 1,
+        "route_count": 2,
+        "max_route_point_gap_m": 0.35171581359258824,
+        "independent_heading_check": true
+      },
+      {
+        "passed": true,
+        "key": "residential_colony",
+        "sha256": "09639b6511b6246acdf07eb23af46305f12d679d710f89b590ca3b2fb7416d3a",
+        "rule": "LHT",
+        "road_count": 9,
+        "sampled_driving_waypoints": 48,
+        "lane_width_range_m": [
+          2.65,
+          3.1
+        ],
+        "junction_approaches": 3,
+        "median_width_m": 0,
+        "sidewalk_width_m": 2.0,
+        "shoulder_width_m": 0,
+        "lanes_each_way": 1,
+        "route_count": 6,
+        "max_route_point_gap_m": 0.4147368923293629,
+        "independent_heading_check": true
+      },
+      {
+        "passed": true,
+        "key": "divided_main_road",
+        "sha256": "1e990f1e56234347bb0767fd5bad9a49501e0cef1c307660da88611341b75711",
+        "rule": "LHT",
+        "road_count": 1,
+        "sampled_driving_waypoints": 16,
+        "lane_width_range_m": [
+          3.25,
+          3.25
+        ],
+        "junction_approaches": 0,
+        "median_width_m": 2.2,
+        "sidewalk_width_m": 2.2,
+        "shoulder_width_m": 0,
+        "lanes_each_way": 2,
+        "route_count": 4,
+        "max_route_point_gap_m": 0.35268854246171344,
+        "independent_heading_check": true
+      },
+      {
+        "passed": true,
+        "key": "rural_road",
+        "sha256": "2ef51494048c9222d96e01cdd3ed757ee4e9cf50a9df7d834434c9ddb10a9b42",
+        "rule": "LHT",
+        "road_count": 1,
+        "sampled_driving_waypoints": 8,
+        "lane_width_range_m": [
+          2.615,
+          2.735
+        ],
+        "junction_approaches": 0,
+        "median_width_m": 0,
+        "sidewalk_width_m": 0,
+        "shoulder_width_m": 1.35,
+        "lanes_each_way": 1,
+        "route_count": 2,
+        "max_route_point_gap_m": 0.35150710674709074,
+        "independent_heading_check": true
+      },
+      {
+        "passed": true,
+        "key": "irregular_junction",
+        "sha256": "d986a2d2a9491691e23cf7fbe5cdc95c5ecb439c5eede8b86db3bf824947e6bf",
+        "rule": "LHT",
+        "road_count": 16,
+        "sampled_driving_waypoints": 80,
+        "lane_width_range_m": [
+          2.7,
+          3.65
+        ],
+        "junction_approaches": 4,
+        "median_width_m": 0,
+        "sidewalk_width_m": 1.5,
+        "shoulder_width_m": 0,
+        "lanes_each_way": 1,
+        "route_count": 12,
+        "max_route_point_gap_m": 0.42672239501139464,
+        "independent_heading_check": true
+      }
+    ],
+    "native": [
+      {
+        "profile": "market_street",
+        "passed": true,
+        "frames": 14,
+        "images_reopened_hashed": 70,
+        "semantic_instance_disagreement_pixels": 0,
+        "compared_semantic_pixels": 7257600,
+        "visible_native_ids": 114,
+        "native_signs": 3,
+        "ego_displacement_m": 43.53178953344423,
+        "all_displacements_m": {
+          "ego": 43.53178953344423,
+          "scooter": 49.26979998726561,
+          "motorcycle": 47.87883523053108,
+          "local_bus": 35.31082041022758,
+          "delivery_van": 51.51873880218266,
+          "hatchback": 33.45120136130195,
+          "cycle": 30.69593794820628
+        },
+        "collision_events": 0,
+        "road_departures": 0,
+        "wrong_way_events": 0,
+        "model_control": false,
+        "raw_streams_training_ready": false
+      },
+      {
+        "profile": "residential_colony",
+        "passed": true,
+        "frames": 14,
+        "images_reopened_hashed": 70,
+        "semantic_instance_disagreement_pixels": 0,
+        "compared_semantic_pixels": 7257600,
+        "visible_native_ids": 103,
+        "native_signs": 9,
+        "ego_displacement_m": 48.8334808433652,
+        "all_displacements_m": {
+          "ego": 48.8334808433652,
+          "scooter": 54.71672821214436,
+          "motorcycle": 56.51367190951253,
+          "local_bus": 27.904852512431365,
+          "delivery_van": 33.987734497733015,
+          "hatchback": 31.66487139741931,
+          "cycle": 11.801389038769535
+        },
+        "collision_events": 0,
+        "road_departures": 0,
+        "wrong_way_events": 0,
+        "model_control": false,
+        "raw_streams_training_ready": false
+      },
+      {
+        "profile": "divided_main_road",
+        "passed": true,
+        "frames": 14,
+        "images_reopened_hashed": 70,
+        "semantic_instance_disagreement_pixels": 0,
+        "compared_semantic_pixels": 7257600,
+        "visible_native_ids": 264,
+        "native_signs": 3,
+        "ego_displacement_m": 75.50281528580751,
+        "all_displacements_m": {
+          "ego": 75.50281528580751,
+          "scooter": 79.4967676074172,
+          "motorcycle": 83.11404765327175,
+          "local_bus": 83.15531999260044,
+          "delivery_van": 84.8447983198417,
+          "hatchback": 82.15126573267466,
+          "cycle": 30.074710557423316
+        },
+        "collision_events": 0,
+        "road_departures": 0,
+        "wrong_way_events": 0,
+        "model_control": false,
+        "raw_streams_training_ready": false
+      },
+      {
+        "profile": "rural_road",
+        "passed": true,
+        "frames": 14,
+        "images_reopened_hashed": 70,
+        "semantic_instance_disagreement_pixels": 0,
+        "compared_semantic_pixels": 7257600,
+        "visible_native_ids": 92,
+        "native_signs": 3,
+        "ego_displacement_m": 59.03083873014001,
+        "all_displacements_m": {
+          "ego": 59.03083873014001,
+          "scooter": 64.65847860895195,
+          "motorcycle": 67.57516736243767,
+          "local_bus": 47.45531522101277,
+          "delivery_van": 67.63069371807072,
+          "hatchback": 62.26292941189224,
+          "cycle": 33.228389547259376
+        },
+        "collision_events": 0,
+        "road_departures": 0,
+        "wrong_way_events": 0,
+        "model_control": false,
+        "raw_streams_training_ready": false
+      },
+      {
+        "profile": "irregular_junction",
+        "passed": true,
+        "frames": 14,
+        "images_reopened_hashed": 70,
+        "semantic_instance_disagreement_pixels": 0,
+        "compared_semantic_pixels": 7257600,
+        "visible_native_ids": 118,
+        "native_signs": 12,
+        "ego_displacement_m": 43.53179302802694,
+        "all_displacements_m": {
+          "ego": 43.53179302802694,
+          "scooter": 49.28207473731357,
+          "motorcycle": 47.90785178338221,
+          "local_bus": 35.81233649208889,
+          "delivery_van": 44.1335690194112,
+          "hatchback": 24.548910085791253,
+          "cycle": 17.37429817640299
+        },
+        "collision_events": 0,
+        "road_departures": 0,
+        "wrong_way_events": 0,
+        "model_control": false,
+        "raw_streams_training_ready": false
+      }
+    ],
+    "protected_files_unchanged": {
+      "integration/india_behavior.py": true,
+      "integration/india_road.py": true,
+      "idd_inference.py": true,
+      "predict_road.py": true,
+      "predict_road_video.py": true,
+      "runs/overnight_20261003/trial_13_shadow_fixed_bn_low_lr/best.keras": true,
+      "runs/simulation_frozen_20261022_01/best.keras": true
+    },
+    "native_session": "runs\\carla_indian_worlds_smoke_20261023T140834_577890Z_seed7101"
+  },
+  "upright_material_label_checks": {
+    "schema": "indian_world_asset_semantics_v1",
+    "passed": true,
+    "worlds": [
+      {
+        "profile": "market_street",
+        "frames": 14,
+        "visible_owned_pixels": {
+          "asphalt": 1694597,
+          "indian_sign": 17595,
+          "shop_board": 200142,
+          "ground": 1576370,
+          "median": 0
+        },
+        "class_pixel_counts": {
+          "1": 1694597,
+          "3": 2344610,
+          "8": 17595,
+          "10": 1576370,
+          "11": 1537768,
+          "12": 37818,
+          "13": 1018,
+          "14": 61,
+          "15": 80,
+          "16": 7500,
+          "18": 815,
+          "19": 13,
+          "20": 4142,
+          "21": 35213
+        },
+        "asset_mapping_verified": true
+      },
+      {
+        "profile": "residential_colony",
+        "frames": 14,
+        "visible_owned_pixels": {
+          "asphalt": 1778493,
+          "indian_sign": 22862,
+          "shop_board": 0,
+          "ground": 1507433,
+          "median": 0
+        },
+        "class_pixel_counts": {
+          "1": 1778493,
+          "3": 1156783,
+          "8": 22862,
+          "9": 81078,
+          "10": 1507433,
+          "11": 2654249,
+          "12": 26712,
+          "13": 973,
+          "15": 1157,
+          "16": 8256,
+          "18": 822,
+          "20": 8419,
+          "21": 10363
+        },
+        "asset_mapping_verified": true
+      },
+      {
+        "profile": "divided_main_road",
+        "frames": 14,
+        "visible_owned_pixels": {
+          "asphalt": 1974929,
+          "indian_sign": 17061,
+          "shop_board": 99856,
+          "ground": 1345734,
+          "median": 85766
+        },
+        "class_pixel_counts": {
+          "1": 1974929,
+          "2": 85766,
+          "3": 1213370,
+          "8": 17061,
+          "10": 1345734,
+          "11": 2517087,
+          "12": 25007,
+          "13": 1163,
+          "14": 70,
+          "15": 94,
+          "16": 6064,
+          "18": 798,
+          "19": 73,
+          "20": 35518,
+          "21": 34866
+        },
+        "asset_mapping_verified": true
+      },
+      {
+        "profile": "rural_road",
+        "frames": 14,
+        "visible_owned_pixels": {
+          "asphalt": 1631762,
+          "indian_sign": 24304,
+          "shop_board": 0,
+          "ground": 1861345,
+          "median": 0
+        },
+        "class_pixel_counts": {
+          "1": 1631762,
+          "3": 334554,
+          "8": 24304,
+          "9": 71641,
+          "10": 1861345,
+          "11": 3272286,
+          "13": 1047,
+          "15": 71,
+          "16": 8517,
+          "18": 794,
+          "19": 16,
+          "20": 30699,
+          "21": 20564
+        },
+        "asset_mapping_verified": true
+      },
+      {
+        "profile": "irregular_junction",
+        "frames": 14,
+        "visible_owned_pixels": {
+          "asphalt": 1816326,
+          "indian_sign": 19387,
+          "shop_board": 175140,
+          "ground": 1384699,
+          "median": 0
+        },
+        "class_pixel_counts": {
+          "1": 1816326,
+          "3": 1496698,
+          "8": 19387,
+          "10": 1384699,
+          "11": 2476559,
+          "12": 37774,
+          "13": 989,
+          "15": 13,
+          "16": 6614,
+          "18": 827,
+          "20": 5870,
+          "21": 11844
+        },
+        "asset_mapping_verified": true
+      }
+    ],
+    "native_semantics_unchanged": true,
+    "source_session": "runs\\carla_indian_worlds_smoke_20261023T140834_577890Z_seed7101",
+    "training_allowed": false,
+    "scope": "Inspected synthetic development previews; no dataset split or real model evaluation",
+    "ids": {
+      "1": "road",
+      "2": "sidewalk/median",
+      "3": "building/shop board",
+      "8": "traffic sign",
+      "10": "terrain",
+      "255": "ignore"
+    },
+    "method": "Exact owned instance IDs only; preserve unrelated native classes; ignore unresolved native class 0 and sensor disagreement",
+    "limitation": "Not the complete depth/map road-boundary protocol; no detector-box export or autorickshaw runtime labels"
+  },
+  "not_trained_or_replaced": true,
+  "models_control_vehicles": false,
+  "autorickshaw": {
+    "status": "original_OBJ_MTL_and_three_wheel_manifest_prepared; not imported",
+    "runtime_allowed": false,
+    "training_allowed": false,
+    "blocker": "Packaged CARLA has no autorickshaw blueprint; CARLA-compatible Unreal source/editor and cooking toolchain not installed"
+  },
+  "limits": [
+    "Illustrative Indian-style roads and original Hindi/English textures; generic installed architecture/vehicle meshes",
+    "One seed and clear weather for each final 60s native check; not a calibrated Indian traffic benchmark",
+    "Very close sampled vehicle clearances remain: minimum 0.138m residential and 0.195m irregular junction",
+    "Native collision plus 20Hz vehicle-body checks are not continuous safety proof; no new pedestrian interaction validation",
+    "Saved asset-corrected masks are development previews, not the full geometry/depth road-label audit or a new dataset split",
+    "Rigid custom sign/banner meshes retain native raw class Other; exact instance-only correction is saved separately",
+    "Detailed custom Indian bus/scooter/van meshes are not newly authored or imported"
+  ],
+  "retained_attempts": [
+    "131823 controller tuple-unpacking failure",
+    "131926 conservative tree-bounds failure after market run",
+    "132240 material candidate probe",
+    "132718 horizontal banner/spawn failure",
+    "132931 first all-map run, residential kerb touches and nearest-lane junction direction ambiguity",
+    "133725 banner UV-grid calibration",
+    "134059 final all-map 60s verification",
+    "Later all-map upright-banner visual capture; geometry/physics/controller unchanged"
+  ]
+}

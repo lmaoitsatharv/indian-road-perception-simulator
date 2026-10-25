@@ -1,0 +1,3 @@
+# Inference and shared audit-helper imports used by the recorded camera evaluator.
+-r requirements-inference.txt
+av==16.1.0

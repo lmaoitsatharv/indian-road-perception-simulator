@@ -1,0 +1,20 @@
+{
+  "schema": "idd_detection_policy_v1",
+  "names": ["person", "rider", "car", "motorcycle", "bicycle", "autorickshaw", "bus", "truck", "animal", "traffic_light", "traffic_sign", "other_vehicle"],
+  "source_mapping": {
+    "person": "person", "rider": "rider", "car": "car", "motorcycle": "motorcycle",
+    "bicycle": "bicycle", "autorickshaw": "autorickshaw", "bus": "bus", "truck": "truck",
+    "animal": "animal", "traffic light": "traffic_light", "traffic sign": "traffic_sign",
+    "vehicle fallback": "other_vehicle", "caravan": "other_vehicle", "trailer": "other_vehicle", "train": "other_vehicle"
+  },
+  "aliases": {"auto-rickshaw": "autorickshaw", "auto rickshaw": "autorickshaw"},
+  "background_labels": ["ego vehicle", "license plate", "out of roi", "unlabeled", "rectification border", "road", "parking", "drivable fallback", "sidewalk", "rail track", "non-drivable fallback", "curb", "wall", "fence", "guard rail", "billboard", "pole", "polegroup", "obs-str-bar-fallback", "building", "bridge", "tunnel", "vegetation", "sky", "fallback background"],
+  "unknown_label_policy": "reject_image_and_block_readiness",
+  "difficult_ignore_crowd_policy": "reject_image_and_block_readiness",
+  "coordinate_policy": "explicit_per_manifest_row; use native image dimensions; clip to visible image edges and record clipping",
+  "empty_annotated_images": "retain_as_negatives",
+  "missing_annotations": "reject; never treat unlabelled test images as negatives",
+  "source": "https://github.com/AutoNUE/public-code",
+  "scope": "object_detection_observation_only",
+  "vehicle_control_allowed": false
+}

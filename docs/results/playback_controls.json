@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "run": "runs/carla_india_smoke_20261019T180538_184009Z_seed7",
+  "speeds_exercised": [
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+  ],
+  "replay_preserved_speed": true,
+  "pause_world_frame_unchanged": true,
+  "camera_controls_and_screenshot_passed": true,
+  "fixed_dt_s": 0.05,
+  "max_trace_dt_error_s": 7.450580569168253E-10,
+  "three_x_samples": 32,
+  "three_x_median_measured": 3.0000000447034836,
+  "three_x_min_measured": 2.2000000327825546,
+  "three_x_max_measured": 3.1000000461935997,
+  "goal_reached": true,
+  "goal_time_sim_s": 81.95000122115016,
+  "completed_overtakes": 1,
+  "native_collisions": 0,
+  "sampled_overlaps": 0,
+  "offroad_events": 0,
+  "wrongway_events": 0,
+  "owned_jobs_closed": true,
+  "source_sha256": {
+    "carla_india_scene.py": "a005d163b2e7145a185ca67a400e95a418771435e4afc85ffd8f5a7a6f81425a",
+    "india_behavior.py": "eee02d368e0171ee463a2d4bd42e092492e0b0262bb9dab46713348c13d28fc7",
+    "india_playback.py": "44680a0808fae2a828326750ffc2c3a9588184a4493f6c0b06b820bd17dab223",
+    "india_road.py": "7be110136adc589c8fd82398c0b3d739702a0f8040fa48c2dae9b13d42ae4e4f",
+    "india_scenery.py": "caf1b6cc82ef77aa6f29803efe68ab39310c649c6951670d8a8ac04f9f112d79"
+  },
+  "limits": "Finite seeded native test; selected speed is a request and actual throughput is hardware dependent"
+}

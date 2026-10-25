@@ -1,0 +1,69 @@
+{
+  "schema": "perception_model_handoff_v1",
+  "as_of": "2026-10-26",
+  "checkpoint_binaries_in_git": false,
+  "model_vehicle_control_implemented": false,
+  "models": [
+    {
+      "name": "locked_real_road",
+      "task": "binary road segmentation",
+      "checkpoint": "runs/overnight_20261003/trial_13_shadow_fixed_bn_low_lr/best.keras",
+      "sha256": "93a8faf3d43b77f0ce74d5cdbaf94124728d371c3b68b2a3386f9f72fc106725",
+      "input": [
+        512,
+        512,
+        3
+      ],
+      "normalization": "RGB / 127.5 - 1 once",
+      "threshold": 0.5,
+      "test_images": 689,
+      "test_road_iou": 0.9165485449959947,
+      "evaluation": "real held-out test after model lock",
+      "details": "docs/results/segmentation.json"
+    },
+    {
+      "name": "simulation_road",
+      "task": "binary road segmentation; explicit simulator scope",
+      "checkpoint": "runs/simulation_frozen_20261022_01/best.keras",
+      "sha256": "8d8c9fd7a3880bb69643c4973db8f14c46242c178fae6927d06b5f9d6aaaf8af",
+      "input": [
+        512,
+        512,
+        3
+      ],
+      "normalization": "RGB / 127.5 - 1 once",
+      "threshold": 0.5,
+      "test_images": 500,
+      "test_road_iou": 0.9992880875056498,
+      "valid_coverage": 0.982174446105957,
+      "details": "docs/results/simulation_test.json"
+    },
+    {
+      "name": "idd_detector_latest",
+      "task": "12-class bounding-box detection",
+      "checkpoint": "runs/detection_train_20261025_02/weights/best.pt",
+      "sha256": "f7bb7e4c5959520d797dcde5547fdcded9ece1e9651a3e7bd6ffa2273749182c",
+      "selected_epoch": 3,
+      "validation_images": 17675,
+      "input_resolution": 1280,
+      "evaluation_precision": "GPU FP32",
+      "map50": 0.6224450326310994,
+      "map50_95": 0.4152477043827353,
+      "classes": [
+        "person",
+        "rider",
+        "car",
+        "motorcycle",
+        "bicycle",
+        "autorickshaw",
+        "bus",
+        "truck",
+        "animal",
+        "traffic_light",
+        "traffic_sign",
+        "other_vehicle"
+      ],
+      "details": "docs/results/detection_resolution_pilot.json"
+    }
+  ]
+}

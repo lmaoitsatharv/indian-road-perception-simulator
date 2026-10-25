@@ -1,0 +1,506 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-10-22T19:21:50.245971+00:00",
+  "checkpoint": "runs/simulation_frozen_20261022_01/best.keras",
+  "checkpoint_sha256": "8d8c9fd7a3880bb69643c4973db8f14c46242c178fae6927d06b5f9d6aaaf8af",
+  "selected_epoch": 10,
+  "threshold": 0.5,
+  "episodes": 8,
+  "frames": 480,
+  "trained_or_tuned_on_confirmation": false,
+  "fresh_model": {
+    "tp": 42099894,
+    "fp": 75328,
+    "fn": 31106,
+    "tn": 81124259,
+    "ignored": 2498533,
+    "total": 125829120,
+    "road_iou": 0.9974782454422474,
+    "dice": 0.9987375309025234,
+    "precision": 0.9982139275994801,
+    "recall": 0.9992616837957798,
+    "pixel_accuracy": 0.9991370024047643,
+    "evaluated_fraction": 0.9801434437433879
+  },
+  "locked_baseline": {
+    "tp": 40503320,
+    "fp": 8549135,
+    "fn": 1627680,
+    "tn": 72650452,
+    "ignored": 2498533,
+    "total": 125829120,
+    "road_iou": 0.7991951876213431,
+    "dice": 0.8883918688977074,
+    "precision": 0.8257144316222297,
+    "recall": 0.9613662149011417,
+    "pixel_accuracy": 0.9174834463408498,
+    "evaluated_fraction": 0.9801434437433879
+  },
+  "delta_road_iou_pp": 19.82830578209043,
+  "per_episode": [
+    {
+      "episode_id": "fresh_crossroad_01",
+      "layout": "crossroad",
+      "weather": "clear",
+      "case": "mixed",
+      "seed": 4101,
+      "frames": 60,
+      "fresh_model": {
+        "tp": 5598670,
+        "fp": 24696,
+        "fn": 9611,
+        "tn": 9797607,
+        "ignored": 298056,
+        "total": 15728640,
+        "road_iou": 0.993909614756105,
+        "dice": 0.9969455058550184,
+        "precision": 0.995608324266996,
+        "recall": 0.9982862841573024,
+        "pixel_accuracy": 0.9977766881668251,
+        "evaluated_fraction": 0.9810501098632812
+      },
+      "locked_baseline": {
+        "tp": 5299679,
+        "fp": 554394,
+        "fn": 308602,
+        "tn": 9267909,
+        "ignored": 298056,
+        "total": 15728640,
+        "road_iou": 0.8599640578158024,
+        "dice": 0.9247104041630542,
+        "precision": 0.9052977303152865,
+        "recall": 0.9449738698899003,
+        "pixel_accuracy": 0.9440723695227607,
+        "evaluated_fraction": 0.9810501098632812
+      },
+      "delta_road_iou_pp": 13.394555694030252
+    },
+    {
+      "episode_id": "fresh_crossroad_02",
+      "layout": "crossroad",
+      "weather": "wet",
+      "case": "oncoming",
+      "seed": 4109,
+      "frames": 60,
+      "fresh_model": {
+        "tp": 5060056,
+        "fp": 28643,
+        "fn": 6139,
+        "tn": 10329655,
+        "ignored": 304147,
+        "total": 15728640,
+        "road_iou": 0.9931730900962896,
+        "dice": 0.9965748534647432,
+        "precision": 0.9943712528487144,
+        "recall": 0.9987882424580973,
+        "pixel_accuracy": 0.9977450150225359,
+        "evaluated_fraction": 0.9806628545125325
+      },
+      "locked_baseline": {
+        "tp": 5028291,
+        "fp": 1144342,
+        "fn": 37904,
+        "tn": 9213956,
+        "ignored": 304147,
+        "total": 15728640,
+        "road_iou": 0.8096386834181972,
+        "dice": 0.8948070030077869,
+        "precision": 0.8146103939761201,
+        "recall": 0.9925182508766441,
+        "pixel_accuracy": 0.9233526832940311,
+        "evaluated_fraction": 0.9806628545125325
+      },
+      "delta_road_iou_pp": 18.353440667809238
+    },
+    {
+      "episode_id": "fresh_t_north_01",
+      "layout": "t_north",
+      "weather": "overcast",
+      "case": "pedestrian",
+      "seed": 4201,
+      "frames": 60,
+      "fresh_model": {
+        "tp": 5551086,
+        "fp": 4744,
+        "fn": 776,
+        "tn": 9846521,
+        "ignored": 325513,
+        "total": 15728640,
+        "road_iou": 0.9990065878343722,
+        "dice": 0.9995030470776467,
+        "precision": 0.9991461221815642,
+        "recall": 0.9998602270733674,
+        "pixel_accuracy": 0.9996416312090396,
+        "evaluated_fraction": 0.9793044408162435
+      },
+      "locked_baseline": {
+        "tp": 5140740,
+        "fp": 1120198,
+        "fn": 411122,
+        "tn": 8731067,
+        "ignored": 325513,
+        "total": 15728640,
+        "road_iou": 0.7704876754705443,
+        "dice": 0.8703677366924014,
+        "precision": 0.8210814417903516,
+        "recall": 0.9259488078053814,
+        "pixel_accuracy": 0.9005838230120417,
+        "evaluated_fraction": 0.9793044408162435
+      },
+      "delta_road_iou_pp": 22.851891236382794
+    },
+    {
+      "episode_id": "fresh_t_north_02",
+      "layout": "t_north",
+      "weather": "dusk",
+      "case": "clear_overtake",
+      "seed": 4209,
+      "frames": 60,
+      "fresh_model": {
+        "tp": 5070905,
+        "fp": 6436,
+        "fn": 1571,
+        "tn": 10346197,
+        "ignored": 303531,
+        "total": 15728640,
+        "road_iou": 0.9984234812495275,
+        "dice": 0.9992111187817475,
+        "precision": 0.9987324073762232,
+        "recall": 0.9996902893182738,
+        "pixel_accuracy": 0.9994809112856188,
+        "evaluated_fraction": 0.980702018737793
+      },
+      "locked_baseline": {
+        "tp": 4937223,
+        "fp": 1342477,
+        "fn": 135253,
+        "tn": 9010156,
+        "ignored": 303531,
+        "total": 15728640,
+        "road_iou": 0.7696428952792016,
+        "dice": 0.8698284804604862,
+        "precision": 0.7862195646288835,
+        "recall": 0.9733359014414262,
+        "pixel_accuracy": 0.9041997045207265,
+        "evaluated_fraction": 0.980702018737793
+      },
+      "delta_road_iou_pp": 22.87805859703259
+    },
+    {
+      "episode_id": "fresh_t_south_01",
+      "layout": "t_south",
+      "weather": "clear",
+      "case": "junction",
+      "seed": 4301,
+      "frames": 60,
+      "fresh_model": {
+        "tp": 5475845,
+        "fp": 3589,
+        "fn": 1901,
+        "tn": 9912543,
+        "ignored": 334762,
+        "total": 15728640,
+        "road_iou": 0.9989984191807287,
+        "dice": 0.9994989586736733,
+        "precision": 0.9993450053417926,
+        "recall": 0.9996529594471887,
+        "pixel_accuracy": 0.9996433647194034,
+        "evaluated_fraction": 0.9787164052327474
+      },
+      "locked_baseline": {
+        "tp": 5103532,
+        "fp": 683589,
+        "fn": 374214,
+        "tn": 9232543,
+        "ignored": 334762,
+        "total": 15728640,
+        "road_iou": 0.8283159412692217,
+        "dice": 0.9060971603126784,
+        "precision": 0.8818775346152258,
+        "recall": 0.9316846746818855,
+        "pixel_accuracy": 0.9312841767357127,
+        "evaluated_fraction": 0.9787164052327474
+      },
+      "delta_road_iou_pp": 17.068247791150704
+    },
+    {
+      "episode_id": "fresh_t_south_02",
+      "layout": "t_south",
+      "weather": "overcast",
+      "case": "return_gap",
+      "seed": 4309,
+      "frames": 60,
+      "fresh_model": {
+        "tp": 5021855,
+        "fp": 6319,
+        "fn": 9441,
+        "tn": 10407240,
+        "ignored": 283785,
+        "total": 15728640,
+        "road_iou": 0.9968715354388932,
+        "dice": 0.9984333170634239,
+        "precision": 0.9987432813582028,
+        "recall": 0.9981235451064696,
+        "pixel_accuracy": 0.9989795954704658,
+        "evaluated_fraction": 0.9819574356079102
+      },
+      "locked_baseline": {
+        "tp": 4836949,
+        "fp": 1043207,
+        "fn": 194347,
+        "tn": 9370352,
+        "ignored": 283785,
+        "total": 15728640,
+        "road_iou": 0.7962707401741345,
+        "dice": 0.8865820974147162,
+        "precision": 0.8225885503717929,
+        "recall": 0.9613723780115501,
+        "pixel_accuracy": 0.9198727343183215,
+        "evaluated_fraction": 0.9819574356079102
+      },
+      "delta_road_iou_pp": 20.06007952647587
+    },
+    {
+      "episode_id": "fresh_straight_01",
+      "layout": "straight",
+      "weather": "wet",
+      "case": "mixed",
+      "seed": 4401,
+      "frames": 60,
+      "fresh_model": {
+        "tp": 5428411,
+        "fp": 737,
+        "fn": 1653,
+        "tn": 9983532,
+        "ignored": 314307,
+        "total": 15728640,
+        "road_iou": 0.9995599175885841,
+        "dice": 0.9997799103655035,
+        "precision": 0.9998642512600504,
+        "recall": 0.999695583698461,
+        "pixel_accuracy": 0.9998449495025182,
+        "evaluated_fraction": 0.9800168991088867
+      },
+      "locked_baseline": {
+        "tp": 5410580,
+        "fp": 1243294,
+        "fn": 19484,
+        "tn": 8740975,
+        "ignored": 314307,
+        "total": 15728640,
+        "road_iou": 0.8107732269121483,
+        "dice": 0.895499463833727,
+        "precision": 0.8131473484469348,
+        "recall": 0.9964118286635296,
+        "pixel_accuracy": 0.9180776748497649,
+        "evaluated_fraction": 0.9800168991088867
+      },
+      "delta_road_iou_pp": 18.87866906764358
+    },
+    {
+      "episode_id": "fresh_straight_02",
+      "layout": "straight",
+      "weather": "dusk",
+      "case": "pedestrian",
+      "seed": 4409,
+      "frames": 60,
+      "fresh_model": {
+        "tp": 4893066,
+        "fp": 164,
+        "fn": 14,
+        "tn": 10500964,
+        "ignored": 334432,
+        "total": 15728640,
+        "road_iou": 0.999963623314104,
+        "dice": 0.9999818113262302,
+        "precision": 0.9999664843058675,
+        "recall": 0.999997138816451,
+        "pixel_accuracy": 0.999988437209631,
+        "evaluated_fraction": 0.9787373860677083
+      },
+      "locked_baseline": {
+        "tp": 4746326,
+        "fp": 1417634,
+        "fn": 146754,
+        "tn": 9083494,
+        "ignored": 334432,
+        "total": 15728640,
+        "road_iou": 0.7521060216007254,
+        "dice": 0.8585165650119743,
+        "precision": 0.7700124595227743,
+        "recall": 0.9700078478177344,
+        "pixel_accuracy": 0.8983781432601144,
+        "evaluated_fraction": 0.9787373860677083
+      },
+      "delta_road_iou_pp": 24.785760171337866
+    }
+  ],
+  "per_layout": {
+    "crossroad": {
+      "fresh_model": {
+        "tp": 10658726,
+        "fp": 53339,
+        "fn": 15750,
+        "tn": 20127262,
+        "ignored": 602203,
+        "total": 31457280,
+        "road_iou": 0.9935598255562759,
+        "dice": 0.9967695103195977
+      },
+      "locked_baseline": {
+        "tp": 10327970,
+        "fp": 1698736,
+        "fn": 346506,
+        "tn": 18481865,
+        "ignored": 602203,
+        "total": 31457280,
+        "road_iou": 0.8347040364296676,
+        "dice": 0.9099059247223339
+      }
+    },
+    "t_north": {
+      "fresh_model": {
+        "tp": 10621991,
+        "fp": 11180,
+        "fn": 2347,
+        "tn": 20192718,
+        "ignored": 629044,
+        "total": 31457280,
+        "road_iou": 0.9987281296501026,
+        "dice": 0.9993636601541601
+      },
+      "locked_baseline": {
+        "tp": 10077963,
+        "fp": 2462675,
+        "fn": 546375,
+        "tn": 17741223,
+        "ignored": 629044,
+        "total": 31457280,
+        "road_iou": 0.7700735836359297,
+        "dice": 0.8701034699971197
+      }
+    },
+    "t_south": {
+      "fresh_model": {
+        "tp": 10497700,
+        "fp": 9908,
+        "fn": 11342,
+        "tn": 20319783,
+        "ignored": 618547,
+        "total": 31457280,
+        "road_iou": 0.9979798363905142,
+        "dice": 0.9989888968984115
+      },
+      "locked_baseline": {
+        "tp": 9940481,
+        "fp": 1726796,
+        "fn": 568561,
+        "tn": 18602895,
+        "ignored": 618547,
+        "total": 31457280,
+        "road_iou": 0.8124070455983481,
+        "dice": 0.8964951306842223
+      }
+    },
+    "straight": {
+      "fresh_model": {
+        "tp": 10321477,
+        "fp": 901,
+        "fn": 1667,
+        "tn": 20484496,
+        "ignored": 648739,
+        "total": 31457280,
+        "road_iou": 0.9997512602860603,
+        "dice": 0.9998756146732449
+      },
+      "locked_baseline": {
+        "tp": 10156906,
+        "fp": 2660928,
+        "fn": 166238,
+        "tn": 17824469,
+        "ignored": 648739,
+        "total": 31457280,
+        "road_iou": 0.7822589092235471,
+        "dice": 0.8778285861556931
+      }
+    }
+  },
+  "per_frame_changes": {
+    "improved": 480,
+    "worsened": 0,
+    "equal": 0
+  },
+  "worst_fresh_model_frame": {
+    "episode_id": "fresh_crossroad_02",
+    "layout": "crossroad",
+    "case": "oncoming",
+    "weather": "wet",
+    "seed": 4109,
+    "frame": 2303,
+    "sim_s": 47.050000701099634,
+    "comparison": "comparisons/02_oncoming_seed4109_frame0002303.jpg",
+    "fresh_model_road_iou": 0.9307354380533995,
+    "locked_baseline_road_iou": 0.7548680875035207,
+    "delta_pp": 17.58673505498788,
+    "change": "improved"
+  },
+  "independent_verification": {
+    "fresh_model": {
+      "passed": true,
+      "frames_recounted": 480,
+      "projected_road_points": 960,
+      "points_outside_opendrive_driving_lanes": 0,
+      "known_actor_pixels_checked": 1161505,
+      "owned_appearance_road_points_checked": 960,
+      "raised_footpath_pixels_checked_nonroad": 288733,
+      "mask_values_0_1": true,
+      "selected_probability_thresholds_verified": true
+    },
+    "locked_baseline": {
+      "passed": true,
+      "frames_recounted": 480,
+      "projected_road_points": 960,
+      "points_outside_opendrive_driving_lanes": 0,
+      "known_actor_pixels_checked": 1161505,
+      "owned_appearance_road_points_checked": 960,
+      "raised_footpath_pixels_checked_nonroad": 288733,
+      "mask_values_0_1": true,
+      "selected_probability_thresholds_verified": true
+    }
+  },
+  "reference_arrays_identical_between_models": true,
+  "geometry_and_assets_verified": true,
+  "all_native_health_checks_passed": true,
+  "all_scripted_behaviour_criteria_passed": false,
+  "behaviour_warnings": [
+    {
+      "episode_id": "fresh_t_north_01",
+      "unexercised_behaviour_criteria": [
+        "yielded_to_pedestrian"
+      ]
+    },
+    {
+      "episode_id": "fresh_straight_02",
+      "unexercised_behaviour_criteria": [
+        "yielded_to_pedestrian"
+      ]
+    }
+  ],
+  "native_collision_events": 0,
+  "close_clearance_alerts": 3,
+  "minimum_body_gap_m": 0.2044270711961691,
+  "real_inference_unchanged": true,
+  "real_test_images_read": false,
+  "model_control": false,
+  "scope": "recorded_carla_only",
+  "simulation_model_manifest": "runs/simulation_confirmation_20261023_01/simulation_model.json",
+  "gallery": "runs/simulation_confirmation_20261023_01/index.html",
+  "report": "docs/SIMULATION_CONFIRMATION.md",
+  "limits": [
+    "Same illustrative LHT road families; changed junction spacing, installed facades and asphalt palette",
+    "Related procedural maps, not actual Indian city maps; generic assets remain uncalibrated",
+    "Recorded replay comparison; not end-to-end live camera latency or vehicle control",
+    "Fresh seeds are disjoint from the 32 training/validation/test episodes; frozen checkpoint and threshold",
+    "No training, model reselection or tuning on these new scores"
+  ]
+}

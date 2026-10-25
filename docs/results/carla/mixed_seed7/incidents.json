@@ -1,0 +1,363 @@
+{
+  "events": [
+    {
+      "sim_s": 0.0,
+      "kind": "overtake_blocked",
+      "actor": "ego",
+      "reason": "pedestrian_conflict",
+      "leader": "slow_cycle"
+    },
+    {
+      "sim_s": 0.0,
+      "kind": "junction_yield",
+      "actor": "oncoming_car"
+    },
+    {
+      "sim_s": 0.0,
+      "kind": "bus_stop",
+      "actor": "bus",
+      "stop_duration_s": 6
+    },
+    {
+      "sim_s": 2.25,
+      "kind": "junction_granted",
+      "actor": "oncoming_car",
+      "waited_s": 0.0,
+      "concurrent_reservations": 1
+    },
+    {
+      "sim_s": 3.9,
+      "kind": "junction_yield",
+      "actor": "turning_car"
+    },
+    {
+      "sim_s": 5.0,
+      "kind": "pedestrian_started_crossing",
+      "actor": "crossing_1"
+    },
+    {
+      "sim_s": 6.2,
+      "kind": "pedestrian_yield",
+      "actor": "slow_cycle"
+    },
+    {
+      "sim_s": 8.05,
+      "kind": "junction_yield",
+      "actor": "south_scooter"
+    },
+    {
+      "sim_s": 9.15,
+      "kind": "junction_yield",
+      "actor": "delivery_van"
+    },
+    {
+      "sim_s": 12.15,
+      "kind": "junction_yield",
+      "actor": "bus"
+    },
+    {
+      "sim_s": 13.05,
+      "kind": "junction_granted",
+      "actor": "bus",
+      "waited_s": 0.0,
+      "concurrent_reservations": 2
+    },
+    {
+      "sim_s": 15.25,
+      "kind": "junction_yield",
+      "actor": "north_car"
+    },
+    {
+      "sim_s": 15.6,
+      "kind": "pedestrian_finished_crossing",
+      "actor": "crossing_1"
+    },
+    {
+      "sim_s": 15.65,
+      "kind": "overtake_blocked",
+      "actor": "ego",
+      "reason": "oncoming_gap",
+      "leader": "slow_cycle"
+    },
+    {
+      "sim_s": 15.8,
+      "kind": "junction_yield",
+      "actor": "north_car"
+    },
+    {
+      "sim_s": 16.5,
+      "kind": "junction_yield",
+      "actor": "motorcycle"
+    },
+    {
+      "sim_s": 18.4,
+      "kind": "junction_released",
+      "actor": "oncoming_car"
+    },
+    {
+      "sim_s": 18.4,
+      "kind": "junction_granted",
+      "actor": "delivery_van",
+      "waited_s": 8.200000122189522,
+      "concurrent_reservations": 2
+    },
+    {
+      "sim_s": 18.45,
+      "kind": "overtake_blocked",
+      "actor": "ego",
+      "reason": "junction_too_close",
+      "leader": "slow_cycle"
+    },
+    {
+      "sim_s": 20.9,
+      "kind": "junction_yield",
+      "actor": "motorcycle"
+    },
+    {
+      "sim_s": 26.6,
+      "kind": "pedestrian_started_crossing",
+      "actor": "crossing_2"
+    },
+    {
+      "sim_s": 28.1,
+      "kind": "junction_released",
+      "actor": "delivery_van"
+    },
+    {
+      "sim_s": 28.1,
+      "kind": "junction_granted",
+      "actor": "motorcycle",
+      "waited_s": 10.55000015720725,
+      "concurrent_reservations": 2
+    },
+    {
+      "sim_s": 28.75,
+      "kind": "junction_released",
+      "actor": "bus"
+    },
+    {
+      "sim_s": 30.05,
+      "kind": "pedestrian_yield",
+      "actor": "bus"
+    },
+    {
+      "sim_s": 30.85,
+      "kind": "junction_yield",
+      "actor": "slow_cycle"
+    },
+    {
+      "sim_s": 32.55,
+      "kind": "junction_granted",
+      "actor": "slow_cycle",
+      "waited_s": 0.0,
+      "concurrent_reservations": 2
+    },
+    {
+      "sim_s": 33.15,
+      "kind": "extended_wait",
+      "actor": "turning_car",
+      "reason": "junction_yield",
+      "seconds": 12.000000178813934
+    },
+    {
+      "sim_s": 37.0,
+      "kind": "junction_granted",
+      "actor": "ego",
+      "waited_s": 0.0,
+      "concurrent_reservations": 3
+    },
+    {
+      "sim_s": 37.1,
+      "kind": "extended_wait",
+      "actor": "south_scooter",
+      "reason": "junction_yield",
+      "seconds": 12.000000178813934
+    },
+    {
+      "sim_s": 38.2,
+      "kind": "junction_released",
+      "actor": "motorcycle"
+    },
+    {
+      "sim_s": 39.15,
+      "kind": "route_goal",
+      "actor": "oncoming_car"
+    },
+    {
+      "sim_s": 39.15,
+      "kind": "pedestrian_finished_crossing",
+      "actor": "crossing_2"
+    },
+    {
+      "sim_s": 41.4,
+      "kind": "extended_wait",
+      "actor": "north_car",
+      "reason": "headway",
+      "seconds": 12.000000178813934
+    },
+    {
+      "sim_s": 42.25,
+      "kind": "junction_yield",
+      "actor": "south_cycle"
+    },
+    {
+      "sim_s": 50.8,
+      "kind": "route_goal",
+      "actor": "delivery_van"
+    },
+    {
+      "sim_s": 54.9,
+      "kind": "junction_released",
+      "actor": "slow_cycle"
+    },
+    {
+      "sim_s": 60.05,
+      "kind": "junction_released",
+      "actor": "ego"
+    },
+    {
+      "sim_s": 60.05,
+      "kind": "junction_granted",
+      "actor": "turning_car",
+      "waited_s": 55.2000008225441,
+      "concurrent_reservations": 1
+    },
+    {
+      "sim_s": 60.65,
+      "kind": "wait_ended",
+      "actor": "turning_car",
+      "seconds": 39.50000058859587
+    },
+    {
+      "sim_s": 60.85,
+      "kind": "wait_ended",
+      "actor": "north_car",
+      "seconds": 31.45000046864152
+    },
+    {
+      "sim_s": 61.85,
+      "kind": "route_goal",
+      "actor": "bus"
+    },
+    {
+      "sim_s": 63.1,
+      "kind": "junction_yield",
+      "actor": "north_car"
+    },
+    {
+      "sim_s": 68.25,
+      "kind": "overtake_started",
+      "actor": "ego",
+      "leader": "slow_cycle",
+      "pass_time_budget_s": 8.6943536234219,
+      "opposing_lane_borrow_m": 0
+    },
+    {
+      "sim_s": 69.0,
+      "kind": "extended_wait",
+      "actor": "south_cycle",
+      "reason": "headway",
+      "seconds": 12.000000178813934
+    },
+    {
+      "sim_s": 71.05,
+      "kind": "junction_released",
+      "actor": "turning_car"
+    },
+    {
+      "sim_s": 71.05,
+      "kind": "junction_granted",
+      "actor": "south_scooter",
+      "waited_s": 62.10000092536211,
+      "concurrent_reservations": 1
+    },
+    {
+      "sim_s": 71.05,
+      "kind": "junction_granted",
+      "actor": "north_car",
+      "waited_s": 54.55000081285834,
+      "concurrent_reservations": 2
+    },
+    {
+      "sim_s": 71.3,
+      "kind": "wait_ended",
+      "actor": "south_scooter",
+      "seconds": 46.20000068843365
+    },
+    {
+      "sim_s": 71.9,
+      "kind": "wait_ended",
+      "actor": "south_cycle",
+      "seconds": 14.900000222027302
+    },
+    {
+      "sim_s": 72.25,
+      "kind": "junction_yield",
+      "actor": "south_cycle"
+    },
+    {
+      "sim_s": 74.3,
+      "kind": "return_blocked",
+      "actor": "ego",
+      "reason": "return_gap",
+      "actors": [
+        "slow_cycle"
+      ]
+    },
+    {
+      "sim_s": 74.4,
+      "kind": "overtake_return",
+      "actor": "ego"
+    },
+    {
+      "sim_s": 77.5,
+      "kind": "overtake_completed",
+      "actor": "ego",
+      "count": 1
+    },
+    {
+      "sim_s": 81.15,
+      "kind": "route_goal",
+      "actor": "ego"
+    },
+    {
+      "sim_s": 81.3,
+      "kind": "junction_released",
+      "actor": "south_scooter"
+    },
+    {
+      "sim_s": 81.95,
+      "kind": "ego_goal_stopped",
+      "actor": "ego"
+    },
+    {
+      "sim_s": 83.15,
+      "kind": "junction_released",
+      "actor": "north_car"
+    },
+    {
+      "sim_s": 83.15,
+      "kind": "junction_granted",
+      "actor": "south_cycle",
+      "waited_s": 38.95000058040023,
+      "concurrent_reservations": 1
+    },
+    {
+      "sim_s": 83.3,
+      "kind": "extended_wait",
+      "actor": "motorcycle",
+      "reason": "headway",
+      "seconds": 12.000000178813934
+    },
+    {
+      "sim_s": 101.9,
+      "kind": "junction_released",
+      "actor": "south_cycle"
+    },
+    {
+      "sim_s": 106.2,
+      "kind": "route_goal",
+      "actor": "south_scooter"
+    }
+  ]
+}

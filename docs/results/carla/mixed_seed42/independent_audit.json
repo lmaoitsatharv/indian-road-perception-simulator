@@ -1,0 +1,186 @@
+{
+  "passed": true,
+  "case": "mixed",
+  "seed": 42,
+  "checks": {
+    "runtime": true,
+    "camera_alignment": true,
+    "cleanup": true,
+    "no_native_collisions": true,
+    "no_body_overlap": true,
+    "no_road_departure": true,
+    "no_wrongway": true,
+    "progress": true,
+    "full_route_goal": true
+  },
+  "completed": true,
+  "exit_reason": "bounded_test_complete",
+  "health_passed": true,
+  "measured_frames": 2201,
+  "actors": {
+    "ego": {
+      "distance_m": 237.80562136394352,
+      "max_speed_mps": 7.114032761218564,
+      "stopped_s": 30.0,
+      "braking_500ms_max_mps2": 4.625249065884185,
+      "abs_jerk_500ms_p95_mps3": 4.1357436196601824,
+      "abs_jerk_500ms_max_mps3": 16.093749520922707
+    },
+    "slow_cycle": {
+      "distance_m": 203.53848091776098,
+      "max_speed_mps": 2.4379157957430055,
+      "stopped_s": 11.65,
+      "braking_500ms_max_mps2": 2.6314683459146853,
+      "abs_jerk_500ms_p95_mps3": 3.532925215302025,
+      "abs_jerk_500ms_max_mps3": 6.060002496324734
+    },
+    "oncoming_car": {
+      "distance_m": 182.16313260778352,
+      "max_speed_mps": 6.596832177090166,
+      "stopped_s": 71.10000000000001,
+      "braking_500ms_max_mps2": 4.611205908558086,
+      "abs_jerk_500ms_p95_mps3": 1.134643511075553,
+      "abs_jerk_500ms_max_mps3": 7.655029055270954
+    },
+    "turning_car": {
+      "distance_m": 178.88710935067076,
+      "max_speed_mps": 5.040963993496447,
+      "stopped_s": 56.050000000000004,
+      "braking_500ms_max_mps2": 2.5073241885288833,
+      "abs_jerk_500ms_p95_mps3": 1.7541322565464166,
+      "abs_jerk_500ms_max_mps3": 6.239624300302953
+    },
+    "south_scooter": {
+      "distance_m": 215.9230050989003,
+      "max_speed_mps": 5.202178877559619,
+      "stopped_s": 59.150000000000006,
+      "braking_500ms_max_mps2": 2.7471923009397887,
+      "abs_jerk_500ms_p95_mps3": 2.0416266873593716,
+      "abs_jerk_500ms_max_mps3": 9.071044305464065
+    },
+    "delivery_van": {
+      "distance_m": 217.54090517204077,
+      "max_speed_mps": 6.13494886996403,
+      "stopped_s": 62.5,
+      "braking_500ms_max_mps2": 9.156799244977579,
+      "abs_jerk_500ms_p95_mps3": 2.681886430620583,
+      "abs_jerk_500ms_max_mps3": 19.66156007811488
+    },
+    "bus": {
+      "distance_m": 206.04007389957468,
+      "max_speed_mps": 5.047150816461306,
+      "stopped_s": 56.95,
+      "braking_500ms_max_mps2": 3.8728330143930907,
+      "abs_jerk_500ms_p95_mps3": 2.8100569228598333,
+      "abs_jerk_500ms_max_mps3": 9.059412231345618
+    },
+    "motorcycle": {
+      "distance_m": 267.09805489565787,
+      "max_speed_mps": 6.171874908122156,
+      "stopped_s": 46.650000000000006,
+      "braking_500ms_max_mps2": 4.7698973187874145,
+      "abs_jerk_500ms_p95_mps3": 3.1346105613895325,
+      "abs_jerk_500ms_max_mps3": 17.147216396214525
+    },
+    "parked_car": {
+      "distance_m": 0.0,
+      "max_speed_mps": 0.0,
+      "stopped_s": 110.0,
+      "braking_500ms_max_mps2": -0.0,
+      "abs_jerk_500ms_p95_mps3": 0.0,
+      "abs_jerk_500ms_max_mps3": 0.0
+    },
+    "north_car": {
+      "distance_m": 248.46780553557159,
+      "max_speed_mps": 5.139770431223952,
+      "stopped_s": 39.2,
+      "braking_500ms_max_mps2": 2.1354674602080994,
+      "abs_jerk_500ms_p95_mps3": 1.4819336231807028,
+      "abs_jerk_500ms_max_mps3": 6.908569168065841
+    },
+    "south_cycle": {
+      "distance_m": 157.76474326250764,
+      "max_speed_mps": 2.2172546056322067,
+      "stopped_s": 23.3,
+      "braking_500ms_max_mps2": 0.9590149400059151,
+      "abs_jerk_500ms_p95_mps3": 1.9403075593618277,
+      "abs_jerk_500ms_max_mps3": 5.747680575083062
+    },
+    "crossing_1": {
+      "distance_m": 12.372264385223389,
+      "max_speed_mps": 1.200008374452466,
+      "stopped_s": 99.35000000000001,
+      "braking_500ms_max_mps2": 2.400016713141896,
+      "abs_jerk_500ms_p95_mps3": 1.9073485759690818e-05,
+      "abs_jerk_500ms_max_mps3": 4.800071573255312
+    },
+    "crossing_2": {
+      "distance_m": 14.0992112159729,
+      "max_speed_mps": 1.1500072307883615,
+      "stopped_s": 97.45,
+      "braking_500ms_max_mps2": 2.300014427303837,
+      "abs_jerk_500ms_p95_mps3": 3.8146971519381636e-05,
+      "abs_jerk_500ms_max_mps3": 4.600067001579194
+    },
+    "footpath_0": {
+      "distance_m": 111.61795806884766,
+      "max_speed_mps": 1.0282897795991632,
+      "stopped_s": 0.5,
+      "braking_500ms_max_mps2": 1.956787051058201,
+      "abs_jerk_500ms_p95_mps3": 0.5694579908413291,
+      "abs_jerk_500ms_max_mps3": 6.954345495869353
+    },
+    "footpath_1": {
+      "distance_m": 107.03414916992188,
+      "max_speed_mps": 0.9860229345258633,
+      "stopped_s": 0.55,
+      "braking_500ms_max_mps2": 1.876220647209267,
+      "abs_jerk_500ms_p95_mps3": 0.5474853352461653,
+      "abs_jerk_500ms_max_mps3": 6.666869918499293
+    },
+    "footpath_2": {
+      "distance_m": 136.5641326904297,
+      "max_speed_mps": 1.262359600330001,
+      "stopped_s": 0.25,
+      "braking_500ms_max_mps2": 2.401885914746346,
+      "abs_jerk_500ms_p95_mps3": 2.1951293291112974,
+      "abs_jerk_500ms_max_mps3": 8.531493886366667
+    },
+    "footpath_3": {
+      "distance_m": 124.70540237426758,
+      "max_speed_mps": 1.1566924876467513,
+      "stopped_s": 0.8,
+      "braking_500ms_max_mps2": 2.201003962725282,
+      "abs_jerk_500ms_p95_mps3": 2.6940917165848095,
+      "abs_jerk_500ms_max_mps3": 7.81814551895423
+    },
+    "footpath_4": {
+      "distance_m": 103.90852355957031,
+      "max_speed_mps": 0.9605407571712024,
+      "stopped_s": 0.7000000000000001,
+      "braking_500ms_max_mps2": 1.8273925236644586,
+      "abs_jerk_500ms_p95_mps3": 1.669921825232451,
+      "abs_jerk_500ms_max_mps3": 6.491088673737982
+    },
+    "footpath_5": {
+      "distance_m": 111.20606994628906,
+      "max_speed_mps": 1.0314941252545398,
+      "stopped_s": 0.8,
+      "braking_500ms_max_mps2": 1.962280214956992,
+      "abs_jerk_500ms_p95_mps3": 2.401122975315958,
+      "abs_jerk_500ms_max_mps3": 6.971435339110036
+    }
+  },
+  "overlap_pairs": [],
+  "offroad": {},
+  "wrongway": {},
+  "min_gap_m": 0.23458550858625415,
+  "min_gap_pair": [
+    "crossing_1",
+    "footpath_1",
+    "41.00000061094761"
+  ],
+  "goal_reached": true,
+  "events": 61,
+  "method": "Independent saved-trace scalar SAT + all rectangle vertices + position-derived speed; 20 Hz sampling"
+}

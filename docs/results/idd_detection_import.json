@@ -1,0 +1,214 @@
+{
+  "schema": "idd_detection_import_result_v1",
+  "completed_utc": "2026-10-23T17:32:31.871363+00:00",
+  "passed": true,
+  "training_started": false,
+  "epochs_completed": 0,
+  "optimizer_steps": 0,
+  "training_deferred_by_user": true,
+  "scope": "real_indian_object_detection_dataset",
+  "dataset": "dataset/idd117k_detection_v2",
+  "raw_extraction": "dataset/idd117k_extracted",
+  "evidence": "runs/idd_detection_import_20261023_01",
+  "counts": {
+    "train": 67159,
+    "val": 17675,
+    "test_metadata_only": 24644
+  },
+  "provider_counts": {
+    "train": 96897,
+    "val": 20202,
+    "test_metadata_only": 24644
+  },
+  "names": [
+    "person",
+    "rider",
+    "car",
+    "motorcycle",
+    "bicycle",
+    "autorickshaw",
+    "bus",
+    "truck",
+    "animal",
+    "traffic_light",
+    "traffic_sign",
+    "other_vehicle"
+  ],
+  "objects": {
+    "train": {
+      "person": 140187,
+      "rider": 200452,
+      "car": 143197,
+      "motorcycle": 200975,
+      "bicycle": 4226,
+      "autorickshaw": 53451,
+      "bus": 20959,
+      "truck": 46692,
+      "animal": 1778,
+      "traffic_light": 8628,
+      "traffic_sign": 53770,
+      "other_vehicle": 168569
+    },
+    "val": {
+      "person": 34085,
+      "rider": 60983,
+      "car": 46700,
+      "motorcycle": 56618,
+      "bicycle": 764,
+      "autorickshaw": 11745,
+      "bus": 5425,
+      "truck": 12444,
+      "animal": 963,
+      "traffic_light": 2657,
+      "traffic_sign": 22222,
+      "other_vehicle": 64832
+    }
+  },
+  "negatives": {
+    "train": 151,
+    "val": 53
+  },
+  "native_sizes": {
+    "1280x720": 426,
+    "1920x1080": 76865,
+    "1280x600": 87,
+    "1280x964": 7263,
+    "2048x1024": 193
+  },
+  "archive_regular_files": 258980,
+  "archive_unpacked_bytes": 73262082977,
+  "combined_gzip_crc_and_all_five_part_hashes_verified": true,
+  "extraction_matches_inventory": true,
+  "native_image_candidates_fully_decoded": 91657,
+  "unlisted_raw_images_excluded": 71,
+  "recording_exclusions": {
+    "method": "Keep original split labels; test recording groups take priority over val, val over train; exclude unresolved mixed uploads",
+    "source_split_membership_changed": false,
+    "raw_files_deleted": false,
+    "provider_counts": {
+      "train": 96897,
+      "val": 20202,
+      "test": 24644
+    },
+    "retained_counts": {
+      "train": 73968,
+      "val": 17689,
+      "test": 24644
+    },
+    "excluded_labelled_images": 25442,
+    "exclusion_reasons": {
+      "recording_also_in_provider_validation": 12622,
+      "recording_also_in_reserved_provider_test": 12158,
+      "unresolved_mixed_upload_recording_identity": 662
+    },
+    "excluded_by_original_split": {
+      "train": 22929,
+      "val": 2513
+    },
+    "provider_recording_conflicts": 76,
+    "exclusions_file": "runs\\idd_detection_import_20261023_01\\source_manifest_curated_exclusions.jsonl",
+    "exclusions_sha256": "7fb037874b5793876a78fc414a9930871f7c09665fd493577f5140d675a23dc8",
+    "provider_manifest": "runs\\idd_detection_import_20261023_01\\source_manifest.csv",
+    "provider_manifest_sha256": "afd6c0b153a864543da687b7883964895033117b188bb69c9d92d38eae5683e2",
+    "provider_index_sha256": "22146773ef0a48343799d2d1aa9d6751488c8808c348022a25b2887017f4421a",
+    "official_test_images_retained_as_metadata": true,
+    "training_started": false
+  },
+  "quality_exclusions": {
+    "source_audit_directory": "dataset\\idd117k_detection_v1",
+    "source_preparation_sha256": "e27bc1a50e05fd5a6fa71c843bdae3c1cfcc5640666747b85c03d6c69bd54f3d",
+    "source_audited_pairs_sha256": "318c777276b7b81c6bf24c4231bb3c5b48ad5bd9df05add7fb876fcb8b5bace3",
+    "invalid_pairs_excluded": 56,
+    "invalid_pair_reasons": {
+      "Foreground box is entirely outside the image": 1,
+      "Degenerate or reversed box": 55
+    },
+    "training_duplicates_of_validation_excluded": 6767,
+    "exclusions_file": "runs\\idd_detection_import_20261023_01\\source_manifest_quality_exclusions.jsonl",
+    "exclusions_sha256": "62a859d1eeee49ea04cfbd9cfffebab6ee71ee2b75810e69ad0e97aea50a7a6b",
+    "retained_counts": {
+      "train": 67159,
+      "val": 17675,
+      "test": 24644
+    },
+    "source_split_membership_changed": false,
+    "raw_files_deleted": false,
+    "image_pixels_decoded_again": false,
+    "training_started": false
+  },
+  "cross_split_pixel_duplicates_remaining": 0,
+  "recording_groups_disjoint_in_selected_manifest": true,
+  "unique_pixel_images_by_split": {
+    "train": 59245,
+    "val": 17675
+  },
+  "within_split_repeated_pixel_frames_retained": {
+    "train": 7914,
+    "val": 0
+  },
+  "within_split_pixel_groups_with_multiple_label_serializations": 2516,
+  "all_final_saved_labels_independently_reopened": true,
+  "final_saved_labels_independently_reopened": 84834,
+  "source_images_and_annotations_independently_rechecked": 166,
+  "maximum_sample_box_error_pixels": 9.600001931175939e-07,
+  "source_vs_saved_previews_visually_inspected": [
+    "03_IDD_95kDetection_val.jpg",
+    "09_IDD_Detection_val.jpg"
+  ],
+  "native_images_resized_offline": false,
+  "prepared_images_hardlinked": 84834,
+  "prepared_images_copied": 0,
+  "duplicate_bytes_reclaimed": 46915324190,
+  "clipped_boxes": 425,
+  "duplicate_boxes_removed": 45,
+  "official_test_pixels_opened": false,
+  "official_test_used_for_training_or_local_accuracy": false,
+  "ready_for_explicit_training_start": true,
+  "framework_configuration_checked": true,
+  "preprocessing_check_reports": {
+    "converter_checks_bound": {
+      "passed": true,
+      "check_groups": 10,
+      "sha256": "88a33d81134e36db4b3f55d79ec213dc55c33a446b3fb958da3b37d3ff617671"
+    },
+    "archive_checks": {
+      "passed": true,
+      "check_groups": 7,
+      "sha256": "771ee2b97919012b8f58bd640b264c3bb0210dfea1bec26cce32e64049558a5c"
+    },
+    "index_checks": {
+      "passed": true,
+      "check_groups": 5,
+      "sha256": "c797e0fd6a331c3d89a7a2b604852a8bc195a0f906359c9d39364767816634cf"
+    },
+    "legacy_index_checks": {
+      "passed": true,
+      "check_groups": 5,
+      "sha256": "0ea0a1dd4eca4b7c9842dc552f379bb12c97180ca0bf98203ffe2ce776643056"
+    },
+    "curation_checks": {
+      "passed": true,
+      "check_groups": 6,
+      "sha256": "2533b86a9de78642b9ea50f9ee0919aa197b674b831a3ad6bf0f9402aa23f90a"
+    },
+    "quality_checks_parallel": {
+      "passed": true,
+      "check_groups": 9,
+      "sha256": "1c643d698aae23a2e716467e520617c7da62beebba2a51b47cb2be3e0295122f"
+    }
+  },
+  "preprocessing_check_groups_passed": 42,
+  "framework_check": "runs/idd_detection_import_20261023_01/framework_check/verification.json",
+  "wsl_image_timestamp_and_size_samples": 87,
+  "training_backward_memory_checked": false,
+  "protected_files_unchanged": true,
+  "protected_fingerprints": 17,
+  "source_snapshot_files": 18,
+  "gallery": "runs/idd_detection_import_20261023_01/actual_data_audit/index.html",
+  "limits": [
+    "Custom 12-class mapping and filtered validation; not the official IDD benchmark protocol",
+    "Within-split repeated frames and source annotation variations are retained; source labels may contain human noise",
+    "Exact hashes and supplied/normalized recording identities do not establish absence of every near-duplicate across releases",
+    "No model was trained, accuracy-scored, or connected to vehicle control"
+  ]
+}

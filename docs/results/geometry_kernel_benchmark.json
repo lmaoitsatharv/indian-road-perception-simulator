@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-20",
+  "baseline_commit": "3b70f5064fa3b8543fdb77a836e17a7592303350",
+  "pairs": 1505,
+  "cases": "Seeded rotated rectangles, overlaps, touching edges and separated bodies",
+  "reference_checks": "Same overlap decision and gap within 1e-10 m of preceding NumPy kernel; also checked against independent scalar audit",
+  "repeats": 3,
+  "old_best_s": 0.386489900003653,
+  "new_best_s": 0.025767299994186033,
+  "kernel_speedup": 14.999239349518891,
+  "limit": "Best of three microbenchmark runs on this laptop; not an end-to-end simulator or model-inference speedup"
+}

@@ -1,0 +1,52 @@
+{
+  "status": "source_artwork_only_not_registered",
+  "units": "metres",
+  "axis": "X forward, Y left, Z up",
+  "wheel_centres_m": [
+    [
+      0.96,
+      0,
+      0.25
+    ],
+    [
+      -0.77,
+      -0.64,
+      0.25
+    ],
+    [
+      -0.77,
+      0.64,
+      0.25
+    ]
+  ],
+  "wheel_radius_m": 0.23,
+  "wheel_count": 3,
+  "intended_project_class": "autorickshaw",
+  "vertices": 608,
+  "faces": 372,
+  "collision_hull_proposal": {
+    "center_m": [
+      -0.1,
+      0,
+      1.04
+    ],
+    "size_m": [
+      2.7,
+      1.43,
+      1.92
+    ]
+  },
+  "native_blueprint": null,
+  "physics_verified": false,
+  "native_semantics_verified": false,
+  "runtime_allowed": false,
+  "training_allowed": false,
+  "required_next": [
+    "CARLA-compatible Unreal editor/source build and asset cooking",
+    "Rig three wheels and validate native vehicle physics/collision envelope",
+    "Register blueprint and verify semantic/instance pixels before training"
+  ],
+  "licence": "Original project artwork; no third-party source model",
+  "brand": "unbranded illustrative form",
+  "obj_sha256": "1266305a234d747d2c9e33369077102039d3579ee1605a9da72da9d3602f9f6d"
+}

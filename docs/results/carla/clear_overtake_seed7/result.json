@@ -1,0 +1,69 @@
+{
+  "case": "clear_overtake",
+  "seed": 7,
+  "exit_reason": "bounded_test_complete",
+  "sim_s": 60.00000089406967,
+  "ticks": 1201,
+  "camera_images": 1191,
+  "loop_wall_s": 21.735000000000582,
+  "simulated_time_per_wall_second": 2.760524540789881,
+  "camera_frames_aligned": true,
+  "camera_max_delivery_delay_frames": 2,
+  "ego_goal_reached": true,
+  "ego_goal_time_s": 44.450000662356615,
+  "completed_overtakes": 1,
+  "overtake_block_reasons": [
+    "return_gap"
+  ],
+  "collision_events": [],
+  "all_actor_overlaps": [],
+  "offroad_events": [],
+  "wrongway_events": [],
+  "sampled_min_body_gap_m": 0.8432976192287738,
+  "actor_stats": [
+    {
+      "id": 75,
+      "name": "ego",
+      "distance_m": 237.68666816761913,
+      "max_speed_mps": 7.1142578125,
+      "max_braking_mps2": 22.8515625,
+      "max_abs_jerk_mps3": 361.3281324504669,
+      "stopped_s": 16.350000000000097
+    },
+    {
+      "id": 76,
+      "name": "slow_cycle",
+      "distance_m": 138.92893723857995,
+      "max_speed_mps": 2.4380688362897094,
+      "max_braking_mps2": 1.2573079863395176,
+      "max_abs_jerk_mps3": 216.5529484420434,
+      "stopped_s": 1.3000000000000005
+    }
+  ],
+  "errors": [],
+  "cleanup_warnings": [],
+  "control_tests": {
+    "pause": true,
+    "resume": true,
+    "tab": true,
+    "screenshot": true,
+    "screenshot_saved": true
+  },
+  "pause_checks": [
+    {
+      "paused_frame": 169,
+      "resumed_frame": 169,
+      "passed": true
+    }
+  ],
+  "cleanup_complete": true,
+  "runtime_passed": true,
+  "limits": [
+    "Seeded illustrative Indian-style behaviour; not calibrated against traffic counts or trajectories",
+    "Rule-based controller uses simulator ground truth; no camera-model control and no RL",
+    "Geometric conflict reservations at the unsignalised junction are conservative and uncalibrated",
+    "Available scooters/bikes/bus/van/cars; no authentic autorickshaw asset installed",
+    "2D body checks are sampled at 20 Hz on a flat road; not a continuous safety proof"
+  ],
+  "screenshots": 11
+}

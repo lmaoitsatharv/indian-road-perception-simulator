@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "case": "clear_overtake",
+  "seed": 7,
+  "checks": {
+    "runtime": true,
+    "camera_alignment": true,
+    "cleanup": true,
+    "no_native_collisions": true,
+    "no_body_overlap": true,
+    "no_road_departure": true,
+    "no_wrongway": true,
+    "progress": true,
+    "completed_pass": true
+  },
+  "completed": true,
+  "exit_reason": "bounded_test_complete",
+  "health_passed": true,
+  "measured_frames": 1201,
+  "actors": {
+    "ego": {
+      "distance_m": 237.68666816761913,
+      "max_speed_mps": 7.114257706489299,
+      "stopped_s": 16.3,
+      "braking_500ms_max_mps2": 4.598998849124318,
+      "abs_jerk_500ms_p95_mps3": 3.1473213460597815,
+      "abs_jerk_500ms_max_mps3": 16.076096633585237
+    },
+    "slow_cycle": {
+      "distance_m": 138.92893723857995,
+      "max_speed_mps": 2.438068799959653,
+      "stopped_s": 1.25,
+      "braking_500ms_max_mps2": 0.012218488796625925,
+      "abs_jerk_500ms_p95_mps3": 0.05603980124683716,
+      "abs_jerk_500ms_max_mps3": 5.378083492964946
+    }
+  },
+  "overlap_pairs": [],
+  "offroad": {},
+  "wrongway": {},
+  "min_gap_m": 0.8432976192287738,
+  "min_gap_pair": [
+    "ego",
+    "slow_cycle",
+    "6.45000009611249"
+  ],
+  "goal_reached": true,
+  "events": 12,
+  "method": "Independent saved-trace scalar SAT + all rectangle vertices + position-derived speed; 20 Hz sampling"
+}

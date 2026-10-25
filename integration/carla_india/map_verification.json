@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "rule": "LHT",
+  "approaches": [
+    {
+      "approach": "west",
+      "incoming_lane": 1,
+      "outgoing_lane": -1,
+      "incoming_yaw": -0.0,
+      "outgoing_yaw": 180.0,
+      "junction_branches": 3,
+      "left_hand_verified": true
+    },
+    {
+      "approach": "east",
+      "incoming_lane": 1,
+      "outgoing_lane": -1,
+      "incoming_yaw": -180.0,
+      "outgoing_yaw": 0.0,
+      "junction_branches": 3,
+      "left_hand_verified": true
+    },
+    {
+      "approach": "south",
+      "incoming_lane": 1,
+      "outgoing_lane": -1,
+      "incoming_yaw": -90.0,
+      "outgoing_yaw": 90.0,
+      "junction_branches": 3,
+      "left_hand_verified": true
+    },
+    {
+      "approach": "north",
+      "incoming_lane": 1,
+      "outgoing_lane": -1,
+      "incoming_yaw": 90.0,
+      "outgoing_yaw": 270.0,
+      "junction_branches": 3,
+      "left_hand_verified": true
+    }
+  ],
+  "roads": 16,
+  "lane_width_m": 4.5,
+  "sidewalk_width_m": 2.2
+}

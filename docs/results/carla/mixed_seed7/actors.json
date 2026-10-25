@@ -1,0 +1,365 @@
+{
+  "vehicles": [
+    {
+      "id": 75,
+      "name": "ego",
+      "blueprint": "vehicle.tesla.model3",
+      "route": [
+        "west",
+        "east"
+      ],
+      "desired_mps": 6.8,
+      "half_length_m": 2.3958897590637207,
+      "half_width_m": 1.081725001335144,
+      "wheelbase_m": 3.0046484375,
+      "max_steer_rad": 1.2217303432379762,
+      "goal_progress_m": 263.79998779296875,
+      "goal_xy": [
+        111.89999389648438,
+        -2.25
+      ],
+      "initial_lateral_offset_m": 0.0,
+      "parked": false
+    },
+    {
+      "id": 76,
+      "name": "slow_cycle",
+      "blueprint": "vehicle.bh.crossbike",
+      "route": [
+        "west",
+        "east"
+      ],
+      "desired_mps": 2.4,
+      "half_length_m": 0.7546613812446594,
+      "half_width_m": 0.4329703152179718,
+      "wheelbase_m": 0.955712890625,
+      "max_steer_rad": 1.2217303432379762,
+      "goal_progress_m": 293.79998779296875,
+      "goal_xy": [
+        141.89999389648438,
+        -2.25
+      ],
+      "initial_lateral_offset_m": -1.28,
+      "parked": false
+    },
+    {
+      "id": 77,
+      "name": "oncoming_car",
+      "blueprint": "vehicle.nissan.micra",
+      "route": [
+        "east",
+        "west"
+      ],
+      "desired_mps": 7.0,
+      "half_length_m": 1.8166879415512085,
+      "half_width_m": 0.9225568771362305,
+      "wheelbase_m": 2.4902001953125,
+      "max_steer_rad": 1.2217303432379762,
+      "goal_progress_m": 293.79998779296875,
+      "goal_xy": [
+        -141.89999389648438,
+        2.25
+      ],
+      "initial_lateral_offset_m": 0.0,
+      "parked": false
+    },
+    {
+      "id": 79,
+      "name": "turning_car",
+      "blueprint": "vehicle.citroen.c3",
+      "route": [
+        "north",
+        "west"
+      ],
+      "desired_mps": 5.1,
+      "half_length_m": 1.9938424825668335,
+      "half_width_m": 0.9254241585731506,
+      "wheelbase_m": 1.4492236328125,
+      "max_steer_rad": 1.2217303432379762,
+      "goal_progress_m": 292.18263921377616,
+      "goal_xy": [
+        -141.89999389648438,
+        2.25
+      ],
+      "initial_lateral_offset_m": 0.0,
+      "parked": false
+    },
+    {
+      "id": 80,
+      "name": "south_scooter",
+      "blueprint": "vehicle.vespa.zx125",
+      "route": [
+        "south",
+        "north"
+      ],
+      "desired_mps": 5.3,
+      "half_length_m": 0.9085533022880554,
+      "half_width_m": 0.4329703152179718,
+      "wheelbase_m": 0.8,
+      "max_steer_rad": 1.2217303432379762,
+      "goal_progress_m": 293.79998779296875,
+      "goal_xy": [
+        -2.25,
+        -141.89999389648438
+      ],
+      "initial_lateral_offset_m": -0.5,
+      "parked": false
+    },
+    {
+      "id": 81,
+      "name": "delivery_van",
+      "blueprint": "vehicle.mercedes.sprinter",
+      "route": [
+        "east",
+        "south"
+      ],
+      "desired_mps": 5.8,
+      "half_length_m": 2.957595109939575,
+      "half_width_m": 0.9942164421081543,
+      "wheelbase_m": 3.6615234375,
+      "max_steer_rad": 1.2217303432379762,
+      "goal_progress_m": 285.1144051174652,
+      "goal_xy": [
+        2.25,
+        141.89999389648438
+      ],
+      "initial_lateral_offset_m": 0.0,
+      "parked": false
+    },
+    {
+      "id": 82,
+      "name": "bus",
+      "blueprint": "vehicle.mitsubishi.fusorosa",
+      "route": [
+        "west",
+        "east"
+      ],
+      "desired_mps": 4.8,
+      "half_length_m": 5.136342525482178,
+      "half_width_m": 1.9720759391784668,
+      "wheelbase_m": 5.6301025390625,
+      "max_steer_rad": 1.2217303432379762,
+      "goal_progress_m": 293.79998779296875,
+      "goal_xy": [
+        141.89999389648438,
+        -2.25
+      ],
+      "initial_lateral_offset_m": 0,
+      "parked": false
+    },
+    {
+      "id": 83,
+      "name": "motorcycle",
+      "blueprint": "vehicle.yamaha.yzf",
+      "route": [
+        "east",
+        "west"
+      ],
+      "desired_mps": 6.2,
+      "half_length_m": 1.0953842401504517,
+      "half_width_m": 0.4329586327075958,
+      "wheelbase_m": 1.548876953125,
+      "max_steer_rad": 1.0471975511965976,
+      "goal_progress_m": 293.79998779296875,
+      "goal_xy": [
+        -141.89999389648438,
+        2.25
+      ],
+      "initial_lateral_offset_m": -0.55,
+      "parked": false
+    },
+    {
+      "id": 84,
+      "name": "parked_car",
+      "blueprint": "vehicle.audi.a2",
+      "route": [
+        "west",
+        "east"
+      ],
+      "desired_mps": 0,
+      "half_length_m": 1.852684736251831,
+      "half_width_m": 0.8943392634391785,
+      "wheelbase_m": 2.506494140625,
+      "max_steer_rad": 1.2217303432379762,
+      "goal_progress_m": 293.79998779296875,
+      "goal_xy": [
+        141.89999389648438,
+        -2.25
+      ],
+      "initial_lateral_offset_m": -3.35,
+      "parked": true
+    },
+    {
+      "id": 85,
+      "name": "north_car",
+      "blueprint": "vehicle.nissan.micra",
+      "route": [
+        "north",
+        "south"
+      ],
+      "desired_mps": 6.447865360609063,
+      "half_length_m": 1.8166879415512085,
+      "half_width_m": 0.9225568771362305,
+      "wheelbase_m": 1.4005543518066406,
+      "max_steer_rad": 1.2217303432379762,
+      "goal_progress_m": 293.79998779296875,
+      "goal_xy": [
+        2.25,
+        141.89999389648438
+      ],
+      "initial_lateral_offset_m": 0.0,
+      "parked": false
+    },
+    {
+      "id": 86,
+      "name": "south_cycle",
+      "blueprint": "vehicle.gazelle.omafiets",
+      "route": [
+        "south",
+        "east"
+      ],
+      "desired_mps": 2.6,
+      "half_length_m": 0.9217206835746765,
+      "half_width_m": 0.3295213580131531,
+      "wheelbase_m": 0.8,
+      "max_steer_rad": 1.2217303432379762,
+      "goal_progress_m": 292.18263920223603,
+      "goal_xy": [
+        141.89999389648438,
+        -2.25
+      ],
+      "initial_lateral_offset_m": -0.9,
+      "parked": false
+    }
+  ],
+  "pedestrians": [
+    {
+      "id": 78,
+      "name": "crossing_1",
+      "a": [
+        -78,
+        -6.25
+      ],
+      "b": [
+        -78,
+        6.25
+      ],
+      "speed_mps": 1.2,
+      "crossing": true,
+      "start_s": 5.0,
+      "gap_acceptance_s": 4.5
+    },
+    {
+      "id": 87,
+      "name": "crossing_2",
+      "a": [
+        47,
+        6.25
+      ],
+      "b": [
+        47,
+        -8.0
+      ],
+      "speed_mps": 1.15,
+      "crossing": true,
+      "start_s": 26.579293985692694,
+      "gap_acceptance_s": 4.5
+    },
+    {
+      "id": 88,
+      "name": "footpath_0",
+      "a": [
+        -135,
+        -5.2
+      ],
+      "b": [
+        -100,
+        -5.2
+      ],
+      "speed_mps": 0.97535270033364,
+      "crossing": false,
+      "start_s": 0,
+      "gap_acceptance_s": null
+    },
+    {
+      "id": 89,
+      "name": "footpath_1",
+      "a": [
+        -108,
+        5.45
+      ],
+      "b": [
+        -73,
+        5.45
+      ],
+      "speed_mps": 0.9829455146788888,
+      "crossing": false,
+      "start_s": 0,
+      "gap_acceptance_s": null
+    },
+    {
+      "id": 90,
+      "name": "footpath_2",
+      "a": [
+        -52,
+        -5.2
+      ],
+      "b": [
+        -20,
+        -5.2
+      ],
+      "speed_mps": 0.9702996236711473,
+      "crossing": false,
+      "start_s": 0,
+      "gap_acceptance_s": null
+    },
+    {
+      "id": 91,
+      "name": "footpath_3",
+      "a": [
+        30,
+        5.45
+      ],
+      "b": [
+        52,
+        5.45
+      ],
+      "speed_mps": 1.0251443632924815,
+      "crossing": false,
+      "start_s": 0,
+      "gap_acceptance_s": null
+    },
+    {
+      "id": 92,
+      "name": "footpath_4",
+      "a": [
+        64,
+        -7.8
+      ],
+      "b": [
+        86,
+        -7.8
+      ],
+      "speed_mps": 1.101775989281835,
+      "crossing": false,
+      "start_s": 0,
+      "gap_acceptance_s": null
+    },
+    {
+      "id": 93,
+      "name": "footpath_5",
+      "a": [
+        113,
+        5.45
+      ],
+      "b": [
+        135,
+        5.45
+      ],
+      "speed_mps": 1.0342320500444586,
+      "crossing": false,
+      "start_s": 0,
+      "gap_acceptance_s": null
+    }
+  ]
+}

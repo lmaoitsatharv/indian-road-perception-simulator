@@ -1,0 +1,370 @@
+{
+  "schema": "indian_world_assets_v1",
+  "textures": [
+    {
+      "file": "shop_0.png",
+      "kind": "shopfront",
+      "text": [
+        "किराना स्टोर",
+        "KIRANA STORE",
+        "GROCERIES  •  DAILY NEEDS"
+      ],
+      "background": [
+        30,
+        84,
+        62
+      ],
+      "sha256": "b5c608e3d831a7df7f4312768e0d6abfbcfba6ea0d4a66d46728a25815abdefb",
+      "banner_file": "banner_shop_0.png",
+      "banner_sha256": "82f9ea789856c3f43ec54b2bf7578d6b53d9ed3aabc2387e116714335f4f4d24",
+      "native_uv_grid_probe_rect_uv": [
+        0.239,
+        0.005,
+        0.61,
+        0.64
+      ],
+      "artwork_rotation_clockwise_degrees": 90
+    },
+    {
+      "file": "shop_1.png",
+      "kind": "shopfront",
+      "text": [
+        "चाय और नाश्ता",
+        "CHAI & NASHTA",
+        "FRESH TEA  •  SNACKS"
+      ],
+      "background": [
+        140,
+        51,
+        31
+      ],
+      "sha256": "37d85c96c5853f553f048a34f33e2b91bcb346f04a0bf1a3ae4f9645f404e2ba",
+      "banner_file": "banner_shop_1.png",
+      "banner_sha256": "393331893ee1c595c272a382e75ada43f5ea40eecd1ae7735cfc0e5e2a086792",
+      "native_uv_grid_probe_rect_uv": [
+        0.239,
+        0.005,
+        0.61,
+        0.64
+      ],
+      "artwork_rotation_clockwise_degrees": 90
+    },
+    {
+      "file": "shop_2.png",
+      "kind": "shopfront",
+      "text": [
+        "फल और सब्ज़ी",
+        "FRESH SABZI",
+        "FRUIT  •  VEGETABLES"
+      ],
+      "background": [
+        46,
+        91,
+        33
+      ],
+      "sha256": "7bffd96d9396d2619a100520ed7f35f7d6dc69249318c931bba980354d490c03",
+      "banner_file": "banner_shop_2.png",
+      "banner_sha256": "dd5ee080d8c84133beb19d602ddb6b9584a38a4b688b94260d34e36ee089f956",
+      "native_uv_grid_probe_rect_uv": [
+        0.239,
+        0.005,
+        0.61,
+        0.64
+      ],
+      "artwork_rotation_clockwise_degrees": 90
+    },
+    {
+      "file": "shop_3.png",
+      "kind": "shopfront",
+      "text": [
+        "दवा की दुकान",
+        "MEDICAL STORE",
+        "PHARMACY"
+      ],
+      "background": [
+        32,
+        76,
+        112
+      ],
+      "sha256": "ccb0c6325e0bcb4d951d347995cee4e83c85620eb043b78c8acda08c96ce85bc",
+      "banner_file": "banner_shop_3.png",
+      "banner_sha256": "77b1cc033eec738aa8143ea114533cd22794a947476943f7c72ce01bc6b072d1",
+      "native_uv_grid_probe_rect_uv": [
+        0.239,
+        0.005,
+        0.61,
+        0.64
+      ],
+      "artwork_rotation_clockwise_degrees": 90
+    },
+    {
+      "file": "shop_4.png",
+      "kind": "shopfront",
+      "text": [
+        "साइकिल मरम्मत",
+        "CYCLE REPAIR",
+        "CYCLE  •  PUNCTURE"
+      ],
+      "background": [
+        102,
+        65,
+        28
+      ],
+      "sha256": "5ce83f69d509fc7ea9dc48921fa361ff3eaff09f0184cf47a305a1b48e63bcb2",
+      "banner_file": "banner_shop_4.png",
+      "banner_sha256": "37fa6052282c400eda4b973eefa63568581c3e2942795fff18ef34838c0b9625",
+      "native_uv_grid_probe_rect_uv": [
+        0.239,
+        0.005,
+        0.61,
+        0.64
+      ],
+      "artwork_rotation_clockwise_degrees": 90
+    },
+    {
+      "file": "shop_5.png",
+      "kind": "shopfront",
+      "text": [
+        "दूध और डेयरी",
+        "MILK & DAIRY",
+        "MILK  •  CURD"
+      ],
+      "background": [
+        34,
+        88,
+        120
+      ],
+      "sha256": "baea3719056b7bdc0d7970282a7e224e5244945591eebe8249fff495d469c2a1",
+      "banner_file": "banner_shop_5.png",
+      "banner_sha256": "3d7e379b2aa4f1da5315d38a583f8826925725dcc7c80e51af267c2536c6aff0",
+      "native_uv_grid_probe_rect_uv": [
+        0.239,
+        0.005,
+        0.61,
+        0.64
+      ],
+      "artwork_rotation_clockwise_degrees": 90
+    },
+    {
+      "file": "speed_20.png",
+      "kind": "traffic_sign",
+      "text": [
+        "20",
+        "km/h"
+      ],
+      "sha256": "3c5a46e0e8b4963a6ff6c2f410aed63d41dc50531ed535cec84dad8d16aa32f9",
+      "banner_file": "banner_speed_20.png",
+      "banner_sha256": "fc27822ce40b53f13d8577c3c8e50a2b8b33800e92be2dc46bdfc45857140033",
+      "native_uv_grid_probe_rect_uv": [
+        0.239,
+        0.005,
+        0.61,
+        0.64
+      ],
+      "artwork_rotation_clockwise_degrees": 90
+    },
+    {
+      "file": "speed_30.png",
+      "kind": "traffic_sign",
+      "text": [
+        "30",
+        "km/h"
+      ],
+      "sha256": "5489b6c985cba9ec0fe4770e3a7ef4be1f1bbf090c8de9f65f56f7ebec6a0321",
+      "banner_file": "banner_speed_30.png",
+      "banner_sha256": "1ce1ae1e8782e7b3613e4e6786b36cce7abeebf6761e5be3719bfe0d6ac56cbf",
+      "native_uv_grid_probe_rect_uv": [
+        0.239,
+        0.005,
+        0.61,
+        0.64
+      ],
+      "artwork_rotation_clockwise_degrees": 90
+    },
+    {
+      "file": "speed_40.png",
+      "kind": "traffic_sign",
+      "text": [
+        "40",
+        "km/h"
+      ],
+      "sha256": "fee34b4cf1af69f530e3023b0cca1df7ce50141d9c4aa2dd8c3082be1f2d19f3",
+      "banner_file": "banner_speed_40.png",
+      "banner_sha256": "144a99764f14403577bc3953d2850fa477219571e7e65ba772378585e9ffd86e",
+      "native_uv_grid_probe_rect_uv": [
+        0.239,
+        0.005,
+        0.61,
+        0.64
+      ],
+      "artwork_rotation_clockwise_degrees": 90
+    },
+    {
+      "file": "bus_stop.png",
+      "kind": "traffic_sign",
+      "text": [
+        "बस स्टॉप",
+        "BUS STOP"
+      ],
+      "background": [
+        27,
+        70,
+        111
+      ],
+      "sha256": "7936461154ccadcae28d9452e7e4759667f9c07a453bd61bbae01a6d275b9140",
+      "banner_file": "banner_bus_stop.png",
+      "banner_sha256": "76a201a2028c1a07933c99523772d40c41abce7e4b3a20a204360dc9e40389cf",
+      "native_uv_grid_probe_rect_uv": [
+        0.239,
+        0.005,
+        0.61,
+        0.64
+      ],
+      "artwork_rotation_clockwise_degrees": 90
+    },
+    {
+      "file": "keep_left.png",
+      "kind": "traffic_sign",
+      "text": [
+        "बाईं ओर चलें",
+        "KEEP LEFT"
+      ],
+      "background": [
+        28,
+        82,
+        54
+      ],
+      "sha256": "7449f4f40846870b88b35e97fadb16aaccc9e06a03dc31634164c378d765b5fe",
+      "banner_file": "banner_keep_left.png",
+      "banner_sha256": "62f5067706fb6b0335e89819fc95dfd1056f8ee63d11f18be15f1994e12b5353",
+      "native_uv_grid_probe_rect_uv": [
+        0.239,
+        0.005,
+        0.61,
+        0.64
+      ],
+      "artwork_rotation_clockwise_degrees": 90
+    },
+    {
+      "file": "village.png",
+      "kind": "traffic_sign",
+      "text": [
+        "गाँव की सड़क",
+        "VILLAGE ROAD"
+      ],
+      "background": [
+        34,
+        92,
+        62
+      ],
+      "sha256": "7f6d204d43dad4c7a88e2d738489dd6345e1d38913b9918645c40f9f61d9a841",
+      "banner_file": "banner_village.png",
+      "banner_sha256": "697e861007679db550b15b6e2847af1997dbef615793288141da571cb17ec6cf",
+      "native_uv_grid_probe_rect_uv": [
+        0.239,
+        0.005,
+        0.61,
+        0.64
+      ],
+      "artwork_rotation_clockwise_degrees": 90
+    },
+    {
+      "file": "school.png",
+      "kind": "traffic_sign",
+      "text": [
+        "विद्यालय क्षेत्र",
+        "SCHOOL ZONE"
+      ],
+      "background": [
+        141,
+        69,
+        25
+      ],
+      "sha256": "a89f4ccc20a92869411c23d31c862be02310b3391ef67f9c1802cf53c3df496f",
+      "banner_file": "banner_school.png",
+      "banner_sha256": "89432b650bc69b32ec26d0f1440a584e958a57156a59fee537bd884049cd7cdf",
+      "native_uv_grid_probe_rect_uv": [
+        0.239,
+        0.005,
+        0.61,
+        0.64
+      ],
+      "artwork_rotation_clockwise_degrees": 90
+    },
+    {
+      "file": "delivery.png",
+      "kind": "vehicle_livery",
+      "text": [
+        "स्थानीय डिलीवरी",
+        "LOCAL DELIVERY"
+      ],
+      "background": [
+        33,
+        86,
+        71
+      ],
+      "sha256": "4016092d0ef458d93bffc0ebadd9bc8ee0f78f0f23ff3033fb50758abfc8aa2e",
+      "banner_file": "banner_delivery.png",
+      "banner_sha256": "848e00feb68513749ee8c8e7b6a4183a31c98dea6d607afe7ce6ac19ffbc3e8e",
+      "native_uv_grid_probe_rect_uv": [
+        0.239,
+        0.005,
+        0.61,
+        0.64
+      ],
+      "artwork_rotation_clockwise_degrees": 90
+    }
+  ],
+  "autorickshaw": {
+    "status": "source_artwork_only_not_registered",
+    "units": "metres",
+    "axis": "X forward, Y left, Z up",
+    "wheel_centres_m": [
+      [
+        0.96,
+        0,
+        0.25
+      ],
+      [
+        -0.77,
+        -0.64,
+        0.25
+      ],
+      [
+        -0.77,
+        0.64,
+        0.25
+      ]
+    ],
+    "wheel_radius_m": 0.23,
+    "wheel_count": 3,
+    "intended_project_class": "autorickshaw",
+    "vertices": 608,
+    "faces": 372,
+    "collision_hull_proposal": {
+      "center_m": [
+        -0.1,
+        0,
+        1.04
+      ],
+      "size_m": [
+        2.7,
+        1.43,
+        1.92
+      ]
+    },
+    "native_blueprint": null,
+    "physics_verified": false,
+    "native_semantics_verified": false,
+    "runtime_allowed": false,
+    "training_allowed": false,
+    "required_next": [
+      "CARLA-compatible Unreal editor/source build and asset cooking",
+      "Rig three wheels and validate native vehicle physics/collision envelope",
+      "Register blueprint and verify semantic/instance pixels before training"
+    ],
+    "licence": "Original project artwork; no third-party source model",
+    "brand": "unbranded illustrative form",
+    "obj_sha256": "1266305a234d747d2c9e33369077102039d3579ee1605a9da72da9d3602f9f6d"
+  }
+}

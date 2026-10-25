@@ -1,0 +1,835 @@
+{
+  "date": "2026-10-20",
+  "scenario_version": "lht-neighbourhood-v4.1",
+  "completed": true,
+  "passed": true,
+  "model_control": false,
+  "rl_trained": false,
+  "scenarios": [
+    {
+      "case": "mixed",
+      "seed": 7,
+      "weather": "clear",
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "camera_alignment": true,
+        "cleanup": true,
+        "no_native_collisions": true,
+        "no_body_overlap": true,
+        "no_road_departure": true,
+        "no_wrongway": true,
+        "progress": true,
+        "full_route_goal": true
+      },
+      "completed_overtakes": 1,
+      "goal_reached": true,
+      "min_body_gap_m": 0.4827215050312521,
+      "min_gap_pair": [
+        "bus",
+        "parked_car",
+        "47.250000704079866"
+      ],
+      "close_clearance_alerts": 1,
+      "all_crossings_completed": true,
+      "pedestrian_spacing_events": [
+        {
+          "sim_s": 26.6,
+          "kind": "pedestrian_waiting_for_person",
+          "actor": "crossing_2",
+          "blockers": [
+            "footpath_3"
+          ]
+        },
+        {
+          "sim_s": 27.35,
+          "kind": "pedestrian_person_gap_accepted",
+          "actor": "crossing_2",
+          "waited_s": 0.7500000111758709
+        }
+      ],
+      "viewer_controls_verified": true,
+      "native_light_flags_verified_after_tick": true,
+      "simulated_seconds_per_loop_wall_second": 0.6098406189279431,
+      "all_actor_motion_metrics": {
+        "ego": {
+          "distance_m": 237.78413356003458,
+          "max_speed_mps": 7.114035801823337,
+          "stopped_s": 29.200000000000003,
+          "braking_500ms_max_mps2": 4.661867722645555,
+          "abs_jerk_500ms_p95_mps3": 4.176016404444372,
+          "abs_jerk_500ms_max_mps3": 16.093749520922707
+        },
+        "slow_cycle": {
+          "distance_m": 203.37984914818847,
+          "max_speed_mps": 2.4378396726723466,
+          "stopped_s": 11.8,
+          "braking_500ms_max_mps2": 2.7922802356893164,
+          "abs_jerk_500ms_p95_mps3": 3.077187384009514,
+          "abs_jerk_500ms_max_mps3": 6.4072106862911316
+        },
+        "oncoming_car": {
+          "distance_m": 182.16313260778352,
+          "max_speed_mps": 6.596832177090166,
+          "stopped_s": 71.10000000000001,
+          "braking_500ms_max_mps2": 4.611205908558086,
+          "abs_jerk_500ms_p95_mps3": 1.134643511075553,
+          "abs_jerk_500ms_max_mps3": 7.655029055270954
+        },
+        "turning_car": {
+          "distance_m": 178.89195400760576,
+          "max_speed_mps": 5.038757782052023,
+          "stopped_s": 55.85,
+          "braking_500ms_max_mps2": 2.5073241885288833,
+          "abs_jerk_500ms_p95_mps3": 1.9174875331171957,
+          "abs_jerk_500ms_max_mps3": 6.239624300302953
+        },
+        "south_scooter": {
+          "distance_m": 215.92285320254007,
+          "max_speed_mps": 5.202178877559619,
+          "stopped_s": 59.150000000000006,
+          "braking_500ms_max_mps2": 2.7471923009397887,
+          "abs_jerk_500ms_p95_mps3": 2.0417798340934024,
+          "abs_jerk_500ms_max_mps3": 9.071044305464065
+        },
+        "delivery_van": {
+          "distance_m": 217.54090517204077,
+          "max_speed_mps": 6.13494886996403,
+          "stopped_s": 62.5,
+          "braking_500ms_max_mps2": 9.156799244977579,
+          "abs_jerk_500ms_p95_mps3": 2.681886430620583,
+          "abs_jerk_500ms_max_mps3": 19.66156007811488
+        },
+        "bus": {
+          "distance_m": 206.03011450048947,
+          "max_speed_mps": 5.047150816461306,
+          "stopped_s": 56.050000000000004,
+          "braking_500ms_max_mps2": 3.751220519546186,
+          "abs_jerk_500ms_p95_mps3": 2.6910400505155176,
+          "abs_jerk_500ms_max_mps3": 9.059412231345618
+        },
+        "motorcycle": {
+          "distance_m": 267.09944093596386,
+          "max_speed_mps": 6.171874908122156,
+          "stopped_s": 46.45,
+          "braking_500ms_max_mps2": 4.7698973187874145,
+          "abs_jerk_500ms_p95_mps3": 3.1829833035772075,
+          "abs_jerk_500ms_max_mps3": 17.147216396214525
+        },
+        "parked_car": {
+          "distance_m": 0.0,
+          "max_speed_mps": 0.0,
+          "stopped_s": 110.0,
+          "braking_500ms_max_mps2": -0.0,
+          "abs_jerk_500ms_p95_mps3": 0.0,
+          "abs_jerk_500ms_max_mps3": 0.0
+        },
+        "north_car": {
+          "distance_m": 249.34573166179894,
+          "max_speed_mps": 6.325607229314396,
+          "stopped_s": 41.300000000000004,
+          "braking_500ms_max_mps2": 4.742584064169228,
+          "abs_jerk_500ms_p95_mps3": 2.8715814685841448,
+          "abs_jerk_500ms_max_mps3": 8.446960151310948
+        },
+        "south_cycle": {
+          "distance_m": 156.92258634590266,
+          "max_speed_mps": 2.2172546056322067,
+          "stopped_s": 23.650000000000002,
+          "braking_500ms_max_mps2": 0.9797668237206577,
+          "abs_jerk_500ms_p95_mps3": 1.9403075593618277,
+          "abs_jerk_500ms_max_mps3": 5.747680575083062
+        },
+        "crossing_1": {
+          "distance_m": 13.15226411819458,
+          "max_speed_mps": 1.200008374452466,
+          "stopped_s": 98.7,
+          "braking_500ms_max_mps2": 2.400016713141896,
+          "abs_jerk_500ms_p95_mps3": 1.9073485759690818e-05,
+          "abs_jerk_500ms_max_mps3": 4.800071573255312
+        },
+        "crossing_2": {
+          "distance_m": 14.789209842681885,
+          "max_speed_mps": 1.1500072307883615,
+          "stopped_s": 96.85000000000001,
+          "braking_500ms_max_mps2": 2.300014427303837,
+          "abs_jerk_500ms_p95_mps3": 3.8146971519381636e-05,
+          "abs_jerk_500ms_max_mps3": 4.600067001579194
+        },
+        "footpath_0": {
+          "distance_m": 105.89278411865234,
+          "max_speed_mps": 0.9756469581179774,
+          "stopped_s": 0.55,
+          "braking_500ms_max_mps2": 1.8560790462470336,
+          "abs_jerk_500ms_p95_mps3": 0.5407714682587541,
+          "abs_jerk_500ms_max_mps3": 6.59545878781501
+        },
+        "footpath_1": {
+          "distance_m": 106.71646118164062,
+          "max_speed_mps": 0.9831237646471893,
+          "stopped_s": 0.55,
+          "braking_500ms_max_mps2": 1.8707274833104761,
+          "abs_jerk_500ms_p95_mps3": 0.5444335775246147,
+          "abs_jerk_500ms_max_mps3": 6.646117965992749
+        },
+        "footpath_2": {
+          "distance_m": 105.34071922302246,
+          "max_speed_mps": 0.9703826759698588,
+          "stopped_s": 0.55,
+          "braking_500ms_max_mps2": 1.8463897154811106,
+          "abs_jerk_500ms_p95_mps3": 0.5383300620815137,
+          "abs_jerk_500ms_max_mps3": 6.559448046700714
+        },
+        "footpath_3": {
+          "distance_m": 110.52349853515625,
+          "max_speed_mps": 1.0251617278879623,
+          "stopped_s": 0.8,
+          "braking_500ms_max_mps2": 1.9507598295581388,
+          "abs_jerk_500ms_p95_mps3": 2.387695241341136,
+          "abs_jerk_500ms_max_mps3": 6.928863318894406
+        },
+        "footpath_4": {
+          "distance_m": 118.7850341796875,
+          "max_speed_mps": 1.1018371417844721,
+          "stopped_s": 0.8,
+          "braking_500ms_max_mps2": 2.0965575547052153,
+          "abs_jerk_500ms_p95_mps3": 2.5671385953683075,
+          "abs_jerk_500ms_max_mps3": 7.446288840583298
+        },
+        "footpath_5": {
+          "distance_m": 111.50030517578125,
+          "max_speed_mps": 1.0342407072448625,
+          "stopped_s": 0.8,
+          "braking_500ms_max_mps2": 1.968078554627938,
+          "abs_jerk_500ms_p95_mps3": 2.4084471938476795,
+          "abs_jerk_500ms_max_mps3": 6.990966588527959
+        }
+      },
+      "local_evidence": "runs/carla_india_smoke_20261020T005852_322596Z_seed7"
+    },
+    {
+      "case": "mixed",
+      "seed": 42,
+      "weather": "clear",
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "camera_alignment": true,
+        "cleanup": true,
+        "no_native_collisions": true,
+        "no_body_overlap": true,
+        "no_road_departure": true,
+        "no_wrongway": true,
+        "progress": true,
+        "full_route_goal": true
+      },
+      "completed_overtakes": 1,
+      "goal_reached": true,
+      "min_body_gap_m": 0.48312992008482475,
+      "min_gap_pair": [
+        "bus",
+        "parked_car",
+        "49.850000742822886"
+      ],
+      "close_clearance_alerts": 1,
+      "all_crossings_completed": true,
+      "pedestrian_spacing_events": [],
+      "viewer_controls_verified": true,
+      "native_light_flags_verified_after_tick": true,
+      "simulated_seconds_per_loop_wall_second": 0.6118521411438753,
+      "all_actor_motion_metrics": {
+        "ego": {
+          "distance_m": 237.78413356003458,
+          "max_speed_mps": 7.114035801823337,
+          "stopped_s": 29.200000000000003,
+          "braking_500ms_max_mps2": 4.661867722645555,
+          "abs_jerk_500ms_p95_mps3": 4.176016404444372,
+          "abs_jerk_500ms_max_mps3": 16.093749520922707
+        },
+        "slow_cycle": {
+          "distance_m": 203.37984914818847,
+          "max_speed_mps": 2.4378396726723466,
+          "stopped_s": 11.8,
+          "braking_500ms_max_mps2": 2.7922802356893164,
+          "abs_jerk_500ms_p95_mps3": 3.077187384009514,
+          "abs_jerk_500ms_max_mps3": 6.4072106862911316
+        },
+        "oncoming_car": {
+          "distance_m": 182.16313260778352,
+          "max_speed_mps": 6.596832177090166,
+          "stopped_s": 71.10000000000001,
+          "braking_500ms_max_mps2": 4.611205908558086,
+          "abs_jerk_500ms_p95_mps3": 1.134643511075553,
+          "abs_jerk_500ms_max_mps3": 7.655029055270954
+        },
+        "turning_car": {
+          "distance_m": 178.89195400760576,
+          "max_speed_mps": 5.038757782052023,
+          "stopped_s": 55.85,
+          "braking_500ms_max_mps2": 2.5073241885288833,
+          "abs_jerk_500ms_p95_mps3": 1.9174875331171957,
+          "abs_jerk_500ms_max_mps3": 6.239624300302953
+        },
+        "south_scooter": {
+          "distance_m": 215.92285320254007,
+          "max_speed_mps": 5.202178877559619,
+          "stopped_s": 59.150000000000006,
+          "braking_500ms_max_mps2": 2.7471923009397887,
+          "abs_jerk_500ms_p95_mps3": 2.0417798340934024,
+          "abs_jerk_500ms_max_mps3": 9.071044305464065
+        },
+        "delivery_van": {
+          "distance_m": 217.54090517204077,
+          "max_speed_mps": 6.13494886996403,
+          "stopped_s": 62.5,
+          "braking_500ms_max_mps2": 9.156799244977579,
+          "abs_jerk_500ms_p95_mps3": 2.681886430620583,
+          "abs_jerk_500ms_max_mps3": 19.66156007811488
+        },
+        "bus": {
+          "distance_m": 206.04322909037612,
+          "max_speed_mps": 5.060577369073223,
+          "stopped_s": 60.800000000000004,
+          "braking_500ms_max_mps2": 4.124450508782758,
+          "abs_jerk_500ms_p95_mps3": 2.470709326576124,
+          "abs_jerk_500ms_max_mps3": 9.059412231345618
+        },
+        "motorcycle": {
+          "distance_m": 267.09944093596386,
+          "max_speed_mps": 6.171874908122156,
+          "stopped_s": 46.45,
+          "braking_500ms_max_mps2": 4.7698973187874145,
+          "abs_jerk_500ms_p95_mps3": 3.1829833035772075,
+          "abs_jerk_500ms_max_mps3": 17.147216396214525
+        },
+        "parked_car": {
+          "distance_m": 0.0,
+          "max_speed_mps": 0.0,
+          "stopped_s": 110.0,
+          "braking_500ms_max_mps2": -0.0,
+          "abs_jerk_500ms_p95_mps3": 0.0,
+          "abs_jerk_500ms_max_mps3": 0.0
+        },
+        "north_car": {
+          "distance_m": 248.20931443940975,
+          "max_speed_mps": 5.139770431223952,
+          "stopped_s": 39.6,
+          "braking_500ms_max_mps2": 2.1354674602080994,
+          "abs_jerk_500ms_p95_mps3": 1.4819336231807028,
+          "abs_jerk_500ms_max_mps3": 6.908569168065841
+        },
+        "south_cycle": {
+          "distance_m": 156.92258634590266,
+          "max_speed_mps": 2.2172546056322067,
+          "stopped_s": 23.650000000000002,
+          "braking_500ms_max_mps2": 0.9797668237206577,
+          "abs_jerk_500ms_p95_mps3": 1.9403075593618277,
+          "abs_jerk_500ms_max_mps3": 5.747680575083062
+        },
+        "crossing_1": {
+          "distance_m": 13.15226411819458,
+          "max_speed_mps": 1.200008374452466,
+          "stopped_s": 98.7,
+          "braking_500ms_max_mps2": 2.400016713141896,
+          "abs_jerk_500ms_p95_mps3": 1.9073485759690818e-05,
+          "abs_jerk_500ms_max_mps3": 4.800071573255312
+        },
+        "crossing_2": {
+          "distance_m": 14.789209842681885,
+          "max_speed_mps": 1.1500072307883615,
+          "stopped_s": 96.85000000000001,
+          "braking_500ms_max_mps2": 2.300014427303837,
+          "abs_jerk_500ms_p95_mps3": 3.8146971519381636e-05,
+          "abs_jerk_500ms_max_mps3": 4.600067001579194
+        },
+        "footpath_0": {
+          "distance_m": 111.61795806884766,
+          "max_speed_mps": 1.0282897795991632,
+          "stopped_s": 0.5,
+          "braking_500ms_max_mps2": 1.956787051058201,
+          "abs_jerk_500ms_p95_mps3": 0.5694579908413291,
+          "abs_jerk_500ms_max_mps3": 6.954345495869353
+        },
+        "footpath_1": {
+          "distance_m": 107.03414916992188,
+          "max_speed_mps": 0.9860229345258633,
+          "stopped_s": 0.55,
+          "braking_500ms_max_mps2": 1.876220647209267,
+          "abs_jerk_500ms_p95_mps3": 0.5474853352461653,
+          "abs_jerk_500ms_max_mps3": 6.666869918499293
+        },
+        "footpath_2": {
+          "distance_m": 136.5641326904297,
+          "max_speed_mps": 1.262359600330001,
+          "stopped_s": 0.25,
+          "braking_500ms_max_mps2": 2.401885914746346,
+          "abs_jerk_500ms_p95_mps3": 2.1951293291112974,
+          "abs_jerk_500ms_max_mps3": 8.531493886366667
+        },
+        "footpath_3": {
+          "distance_m": 124.70540237426758,
+          "max_speed_mps": 1.1566924876467513,
+          "stopped_s": 0.8,
+          "braking_500ms_max_mps2": 2.201003962725282,
+          "abs_jerk_500ms_p95_mps3": 2.6940917165848095,
+          "abs_jerk_500ms_max_mps3": 7.81814551895423
+        },
+        "footpath_4": {
+          "distance_m": 103.90852355957031,
+          "max_speed_mps": 0.9605407571712024,
+          "stopped_s": 0.7000000000000001,
+          "braking_500ms_max_mps2": 1.8273925236644586,
+          "abs_jerk_500ms_p95_mps3": 1.669921825232451,
+          "abs_jerk_500ms_max_mps3": 6.491088673737982
+        },
+        "footpath_5": {
+          "distance_m": 111.20606994628906,
+          "max_speed_mps": 1.0314941252545398,
+          "stopped_s": 0.8,
+          "braking_500ms_max_mps2": 1.962280214956992,
+          "abs_jerk_500ms_p95_mps3": 2.401122975315958,
+          "abs_jerk_500ms_max_mps3": 6.971435339110036
+        }
+      },
+      "local_evidence": "runs/carla_india_smoke_20261020T010204_783968Z_seed42"
+    },
+    {
+      "case": "mixed",
+      "seed": 19,
+      "weather": "clear",
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "camera_alignment": true,
+        "cleanup": true,
+        "no_native_collisions": true,
+        "no_body_overlap": true,
+        "no_road_departure": true,
+        "no_wrongway": true,
+        "progress": true,
+        "full_route_goal": true
+      },
+      "completed_overtakes": 1,
+      "goal_reached": true,
+      "min_body_gap_m": 0.48252201566093245,
+      "min_gap_pair": [
+        "bus",
+        "parked_car",
+        "48.350000720471144"
+      ],
+      "close_clearance_alerts": 1,
+      "all_crossings_completed": true,
+      "pedestrian_spacing_events": [],
+      "viewer_controls_verified": true,
+      "native_light_flags_verified_after_tick": true,
+      "simulated_seconds_per_loop_wall_second": 2.7629166764404194,
+      "all_actor_motion_metrics": {
+        "ego": {
+          "distance_m": 237.78413356003458,
+          "max_speed_mps": 7.114035801823337,
+          "stopped_s": 29.200000000000003,
+          "braking_500ms_max_mps2": 4.661867722645555,
+          "abs_jerk_500ms_p95_mps3": 4.176016404444372,
+          "abs_jerk_500ms_max_mps3": 16.093749520922707
+        },
+        "slow_cycle": {
+          "distance_m": 203.37984914818847,
+          "max_speed_mps": 2.4378396726723466,
+          "stopped_s": 11.8,
+          "braking_500ms_max_mps2": 2.7922802356893164,
+          "abs_jerk_500ms_p95_mps3": 3.077187384009514,
+          "abs_jerk_500ms_max_mps3": 6.4072106862911316
+        },
+        "oncoming_car": {
+          "distance_m": 182.16313260778352,
+          "max_speed_mps": 6.596832177090166,
+          "stopped_s": 71.10000000000001,
+          "braking_500ms_max_mps2": 4.611205908558086,
+          "abs_jerk_500ms_p95_mps3": 1.134643511075553,
+          "abs_jerk_500ms_max_mps3": 7.655029055270954
+        },
+        "turning_car": {
+          "distance_m": 178.89195400760576,
+          "max_speed_mps": 5.038757782052023,
+          "stopped_s": 55.85,
+          "braking_500ms_max_mps2": 2.5073241885288833,
+          "abs_jerk_500ms_p95_mps3": 1.9174875331171957,
+          "abs_jerk_500ms_max_mps3": 6.239624300302953
+        },
+        "south_scooter": {
+          "distance_m": 215.92285320254007,
+          "max_speed_mps": 5.202178877559619,
+          "stopped_s": 59.150000000000006,
+          "braking_500ms_max_mps2": 2.7471923009397887,
+          "abs_jerk_500ms_p95_mps3": 2.0417798340934024,
+          "abs_jerk_500ms_max_mps3": 9.071044305464065
+        },
+        "delivery_van": {
+          "distance_m": 217.54090517204077,
+          "max_speed_mps": 6.13494886996403,
+          "stopped_s": 62.5,
+          "braking_500ms_max_mps2": 9.156799244977579,
+          "abs_jerk_500ms_p95_mps3": 2.681886430620583,
+          "abs_jerk_500ms_max_mps3": 19.66156007811488
+        },
+        "bus": {
+          "distance_m": 206.03924426630886,
+          "max_speed_mps": 5.0672916426218,
+          "stopped_s": 60.85,
+          "braking_500ms_max_mps2": 4.179229526817555,
+          "abs_jerk_500ms_p95_mps3": 2.472534125989496,
+          "abs_jerk_500ms_max_mps3": 9.059412231345618
+        },
+        "motorcycle": {
+          "distance_m": 267.09944093596386,
+          "max_speed_mps": 6.171874908122156,
+          "stopped_s": 46.45,
+          "braking_500ms_max_mps2": 4.7698973187874145,
+          "abs_jerk_500ms_p95_mps3": 3.1829833035772075,
+          "abs_jerk_500ms_max_mps3": 17.147216396214525
+        },
+        "parked_car": {
+          "distance_m": 0.0,
+          "max_speed_mps": 0.0,
+          "stopped_s": 110.0,
+          "braking_500ms_max_mps2": -0.0,
+          "abs_jerk_500ms_p95_mps3": 0.0,
+          "abs_jerk_500ms_max_mps3": 0.0
+        },
+        "north_car": {
+          "distance_m": 248.03702560560097,
+          "max_speed_mps": 5.07431022712126,
+          "stopped_s": 39.5,
+          "braking_500ms_max_mps2": 2.3046874257696777,
+          "abs_jerk_500ms_p95_mps3": 1.4842223698484573,
+          "abs_jerk_500ms_max_mps3": 6.908569168065841
+        },
+        "south_cycle": {
+          "distance_m": 156.92258634590266,
+          "max_speed_mps": 2.2172546056322067,
+          "stopped_s": 23.650000000000002,
+          "braking_500ms_max_mps2": 0.9797668237206577,
+          "abs_jerk_500ms_p95_mps3": 1.9403075593618277,
+          "abs_jerk_500ms_max_mps3": 5.747680575083062
+        },
+        "crossing_1": {
+          "distance_m": 13.15226411819458,
+          "max_speed_mps": 1.200008374452466,
+          "stopped_s": 98.7,
+          "braking_500ms_max_mps2": 2.400016713141896,
+          "abs_jerk_500ms_p95_mps3": 1.9073485759690818e-05,
+          "abs_jerk_500ms_max_mps3": 4.800071573255312
+        },
+        "crossing_2": {
+          "distance_m": 14.789209842681885,
+          "max_speed_mps": 1.1500072307883615,
+          "stopped_s": 96.85000000000001,
+          "braking_500ms_max_mps2": 2.300014427303837,
+          "abs_jerk_500ms_p95_mps3": 3.8146971519381636e-05,
+          "abs_jerk_500ms_max_mps3": 4.600067001579194
+        },
+        "footpath_0": {
+          "distance_m": 122.5797348022461,
+          "max_speed_mps": 1.1291503737993482,
+          "stopped_s": 0.5,
+          "braking_500ms_max_mps2": 2.1490477875158844,
+          "abs_jerk_500ms_p95_mps3": 0.6274413875507893,
+          "abs_jerk_500ms_max_mps3": 7.634277116230811
+        },
+        "footpath_1": {
+          "distance_m": 116.32395935058594,
+          "max_speed_mps": 1.071624739890922,
+          "stopped_s": 0.5,
+          "braking_500ms_max_mps2": 2.0388793337679103,
+          "abs_jerk_500ms_p95_mps3": 0.5969238103352839,
+          "abs_jerk_500ms_max_mps3": 7.241821073239413
+        },
+        "footpath_2": {
+          "distance_m": 114.12955856323242,
+          "max_speed_mps": 1.051330550740204,
+          "stopped_s": 0.5,
+          "braking_500ms_max_mps2": 2.0004271864763736,
+          "abs_jerk_500ms_p95_mps3": 0.5847167794490817,
+          "abs_jerk_500ms_max_mps3": 7.105712678858259
+        },
+        "footpath_3": {
+          "distance_m": 124.87446594238281,
+          "max_speed_mps": 1.1582946604744395,
+          "stopped_s": 0.8,
+          "braking_500ms_max_mps2": 2.203903132560755,
+          "abs_jerk_500ms_p95_mps3": 2.69714347430636,
+          "abs_jerk_500ms_max_mps3": 7.82928443463789
+        },
+        "footpath_4": {
+          "distance_m": 112.25071716308594,
+          "max_speed_mps": 1.0412597501090206,
+          "stopped_s": 0.8,
+          "braking_500ms_max_mps2": 1.9815062886027603,
+          "abs_jerk_500ms_p95_mps3": 2.4243163339997422,
+          "abs_jerk_500ms_max_mps3": 7.041625766705698
+        },
+        "footpath_5": {
+          "distance_m": 138.47621154785156,
+          "max_speed_mps": 1.2890624807914721,
+          "stopped_s": 0.35000000000000003,
+          "braking_500ms_max_mps2": 2.452392505038007,
+          "abs_jerk_500ms_p95_mps3": 3.3837889616552292,
+          "abs_jerk_500ms_max_mps3": 8.709716537305217
+        }
+      },
+      "local_evidence": "runs/carla_india_smoke_20261020T010517_024480Z_seed19"
+    },
+    {
+      "case": "clear_overtake",
+      "seed": 7,
+      "weather": "clear",
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "camera_alignment": true,
+        "cleanup": true,
+        "no_native_collisions": true,
+        "no_body_overlap": true,
+        "no_road_departure": true,
+        "no_wrongway": true,
+        "progress": true,
+        "completed_pass": true
+      },
+      "completed_overtakes": 1,
+      "goal_reached": true,
+      "min_body_gap_m": 0.8443069750394872,
+      "min_gap_pair": [
+        "ego",
+        "slow_cycle",
+        "6.45000009611249"
+      ],
+      "close_clearance_alerts": 0,
+      "all_crossings_completed": true,
+      "pedestrian_spacing_events": [],
+      "viewer_controls_verified": true,
+      "native_light_flags_verified_after_tick": true,
+      "simulated_seconds_per_loop_wall_second": 2.6684456701831496,
+      "all_actor_motion_metrics": {
+        "ego": {
+          "distance_m": 237.6849562691502,
+          "max_speed_mps": 7.114257706489299,
+          "stopped_s": 16.3,
+          "braking_500ms_max_mps2": 4.599304024896473,
+          "abs_jerk_500ms_p95_mps3": 3.1473213460597815,
+          "abs_jerk_500ms_max_mps3": 16.076096633585237
+        },
+        "slow_cycle": {
+          "distance_m": 138.9385113744172,
+          "max_speed_mps": 2.43806741350397,
+          "stopped_s": 1.25,
+          "braking_500ms_max_mps2": 0.013132823654147058,
+          "abs_jerk_500ms_p95_mps3": 0.05603980124683716,
+          "abs_jerk_500ms_max_mps3": 5.378083492964946
+        }
+      },
+      "local_evidence": "runs/carla_india_smoke_20261020T010608_992721Z_seed7"
+    },
+    {
+      "case": "pedestrian",
+      "seed": 7,
+      "weather": "overcast",
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "camera_alignment": true,
+        "cleanup": true,
+        "no_native_collisions": true,
+        "no_body_overlap": true,
+        "no_road_departure": true,
+        "no_wrongway": true,
+        "progress": true,
+        "yielded_to_pedestrian": true,
+        "person_crossed": true
+      },
+      "completed_overtakes": 0,
+      "goal_reached": true,
+      "min_body_gap_m": null,
+      "min_gap_pair": null,
+      "close_clearance_alerts": 0,
+      "all_crossings_completed": true,
+      "pedestrian_spacing_events": [],
+      "viewer_controls_verified": true,
+      "native_light_flags_verified_after_tick": true,
+      "simulated_seconds_per_loop_wall_second": 2.7389756639314466,
+      "all_actor_motion_metrics": {
+        "ego": {
+          "distance_m": 237.72587473137204,
+          "max_speed_mps": 7.114410294377651,
+          "stopped_s": 12.200000000000001,
+          "braking_500ms_max_mps2": 4.641113137612207,
+          "abs_jerk_500ms_p95_mps3": 5.271606333074587,
+          "abs_jerk_500ms_max_mps3": 16.093749520922707
+        },
+        "crossing_1": {
+          "distance_m": 13.15226411819458,
+          "max_speed_mps": 1.200008374452466,
+          "stopped_s": 48.7,
+          "braking_500ms_max_mps2": 2.400016713141896,
+          "abs_jerk_500ms_p95_mps3": 7.629394303876327e-05,
+          "abs_jerk_500ms_max_mps3": 4.800071573255312
+        }
+      },
+      "local_evidence": "runs/carla_india_smoke_20261020T010642_859200Z_seed7"
+    },
+    {
+      "case": "oncoming",
+      "seed": 7,
+      "weather": "wet",
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "camera_alignment": true,
+        "cleanup": true,
+        "no_native_collisions": true,
+        "no_body_overlap": true,
+        "no_road_departure": true,
+        "no_wrongway": true,
+        "progress": true,
+        "oncoming_blocks_pass": true
+      },
+      "completed_overtakes": 0,
+      "goal_reached": false,
+      "min_body_gap_m": 2.4957265476356842,
+      "min_gap_pair": [
+        "ego",
+        "oncoming_car",
+        "24.550000365823507"
+      ],
+      "close_clearance_alerts": 0,
+      "all_crossings_completed": true,
+      "pedestrian_spacing_events": [],
+      "viewer_controls_verified": true,
+      "native_light_flags_verified_after_tick": true,
+      "simulated_seconds_per_loop_wall_second": 2.681564285768477,
+      "all_actor_motion_metrics": {
+        "ego": {
+          "distance_m": 155.14434623735025,
+          "max_speed_mps": 5.416412272813188,
+          "stopped_s": 0.75,
+          "braking_500ms_max_mps2": 1.3229369722655206,
+          "abs_jerk_500ms_p95_mps3": 0.36926268430761433,
+          "abs_jerk_500ms_max_mps3": 16.093749520922707
+        },
+        "slow_cycle": {
+          "distance_m": 138.9249538575145,
+          "max_speed_mps": 2.4379158146246254,
+          "stopped_s": 1.25,
+          "braking_500ms_max_mps2": 0.010077338146199218,
+          "abs_jerk_500ms_p95_mps3": 0.05603980124683716,
+          "abs_jerk_500ms_max_mps3": 5.378083492964946
+        },
+        "oncoming_car": {
+          "distance_m": 182.1627511422883,
+          "max_speed_mps": 6.596832177090166,
+          "stopped_s": 21.1,
+          "braking_500ms_max_mps2": 4.611205908558086,
+          "abs_jerk_500ms_p95_mps3": 2.7733208570836956,
+          "abs_jerk_500ms_max_mps3": 7.655029055270954
+        }
+      },
+      "local_evidence": "runs/carla_india_smoke_20261020T010715_525159Z_seed7"
+    },
+    {
+      "case": "return_gap",
+      "seed": 7,
+      "weather": "dusk",
+      "passed": true,
+      "checks": {
+        "runtime": true,
+        "camera_alignment": true,
+        "cleanup": true,
+        "no_native_collisions": true,
+        "no_body_overlap": true,
+        "no_road_departure": true,
+        "no_wrongway": true,
+        "progress": true,
+        "completed_pass": true,
+        "return_gap_respected": true
+      },
+      "completed_overtakes": 1,
+      "goal_reached": true,
+      "min_body_gap_m": 0.8153172172496689,
+      "min_gap_pair": [
+        "ego",
+        "return_guard",
+        "11.250000167638063"
+      ],
+      "close_clearance_alerts": 0,
+      "all_crossings_completed": true,
+      "pedestrian_spacing_events": [],
+      "viewer_controls_verified": true,
+      "native_light_flags_verified_after_tick": true,
+      "simulated_seconds_per_loop_wall_second": 2.6501767179360076,
+      "all_actor_motion_metrics": {
+        "ego": {
+          "distance_m": 237.80437538678265,
+          "max_speed_mps": 7.114257706489299,
+          "stopped_s": 16.3,
+          "braking_500ms_max_mps2": 4.6450804226502225,
+          "abs_jerk_500ms_p95_mps3": 3.2122801775755945,
+          "abs_jerk_500ms_max_mps3": 16.076096633585237
+        },
+        "slow_cycle": {
+          "distance_m": 138.9488266223515,
+          "max_speed_mps": 2.4382194527634447,
+          "stopped_s": 1.25,
+          "braking_500ms_max_mps2": 0.010075005646647608,
+          "abs_jerk_500ms_p95_mps3": 0.05855927523385987,
+          "abs_jerk_500ms_max_mps3": 5.378083492964946
+        },
+        "return_guard": {
+          "distance_m": 174.14537811499187,
+          "max_speed_mps": 3.221130323095168,
+          "stopped_s": 1.1,
+          "braking_500ms_max_mps2": 1.0865783367580666,
+          "abs_jerk_500ms_p95_mps3": 0.610656720082263,
+          "abs_jerk_500ms_max_mps3": 7.556762470103427
+        }
+      },
+      "local_evidence": "runs/carla_india_smoke_20261020T010749_051570Z_seed7"
+    }
+  ],
+  "runtime_source_sha256": {
+    "carla_india_scene.py": "8fa249ac9913cf3f9c7694a3deee4c98bd02b43a9a0003b20c90a88283d86c15",
+    "india_behavior.py": "0a407a5289acfe29b7f4258bf9e45064d273d05856500308c405ee598834e31c",
+    "india_camera.py": "00e74bcbd4decf27903c9e9ac2b52f14265356f48591e9221fc58d013804bdd9",
+    "india_conditions.py": "a819a93303596464ba91db4fc127aadab0733f334da60b089b0423efc5af7a69",
+    "india_decisions.py": "c52572a093cfb39b1b92accaf67d522b7e3571ef615b8bc4cd01e7cf18291f8e",
+    "india_pedestrian_spacing.py": "5ec458cc6f267a22490dd318f2e1824afef13b8e5ca784c2eefab42471f8b0e7",
+    "india_playback.py": "44680a0808fae2a828326750ffc2c3a9588184a4493f6c0b06b820bd17dab223",
+    "india_road.py": "7be110136adc589c8fd82398c0b3d739702a0f8040fa48c2dae9b13d42ae4e4f",
+    "india_road_observer.py": "221a56c57d56a62a5bb057c17eeb6217e0ab7268179870ebd1703a2445a5a34c",
+    "india_scenery.py": "caf1b6cc82ef77aa6f29803efe68ab39310c649c6951670d8a8ac04f9f112d79",
+    "india_signals.py": "0aea324ec4281db6e54d0fe41f2822b0a938aa88b27606cf7565f989ac3c0301",
+    "india_surface.py": "22d10a56c455eef4a7e064b9a59bef19ba6af77fea808a39aec5307c6be81253"
+  },
+  "geometry_kernel_benchmark": {
+    "date": "2026-10-20",
+    "baseline_commit": "3b70f5064fa3b8543fdb77a836e17a7592303350",
+    "pairs": 1505,
+    "cases": "Seeded rotated rectangles, overlaps, touching edges and separated bodies",
+    "reference_checks": "Same overlap decision and gap within 1e-10 m of preceding NumPy kernel; also checked against independent scalar audit",
+    "repeats": 3,
+    "old_best_s": 0.386489900003653,
+    "new_best_s": 0.025767299994186033,
+    "kernel_speedup": 14.999239349518891,
+    "limit": "Best of three microbenchmark runs on this laptop; not an end-to-end simulator or model-inference speedup"
+  },
+  "preserved_failed_evidence": [
+    "runs/carla_quality_20261020_01",
+    "runs/carla_asphalt_observation_20261020_01"
+  ],
+  "limits": [
+    "Illustrative hand-coded traffic using simulator positions; not calibrated Indian traffic or camera-controlled driving",
+    "All body checks are sampled at 20 Hz and native collision events cover the tested vehicle actors",
+    "Close-clearance alerts remain reported separately even when no collision/overlap occurs",
+    "Rain/dusk settings change appearance; wet-friction behavior is not calibrated",
+    "Graphics and capture throughput differ; isolated geometry-kernel speedup is not total simulator speedup",
+    "All three segmentation models, source data/splits and completed real test evaluation remain preserved"
+  ]
+}

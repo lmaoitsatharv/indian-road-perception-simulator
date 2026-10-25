@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "run": "runs/carla_india_smoke_20261019T182836_913871Z_seed7",
+  "case": "mixed",
+  "seed": 7,
+  "ego_decision_steps": 2201,
+  "camera_decision_links": 2175,
+  "verified_junction_distance_records": 294,
+  "saved_hud_captures": 9,
+  "passing_reasons_observed": [
+    "junction_too_close",
+    "junction_zone",
+    "no_eligible_leader",
+    "oncoming_gap",
+    "overtake_completed",
+    "passing",
+    "pedestrian_conflict",
+    "return_gap",
+    "returning"
+  ],
+  "example_28_1s": {
+    "sim_s": 28.10000041872263,
+    "controller_reason": "headway",
+    "passing": {
+      "state": "follow",
+      "reason": "junction_too_close",
+      "leader": "slow_cycle",
+      "blockers": [
+        {
+          "reason": "oncoming_gap",
+          "actor": "motorcycle",
+          "available_m": 78.92636847537985,
+          "required_m": 124.87475804210536
+        },
+        {
+          "reason": "junction_too_close",
+          "available_m": 47.408058166503906,
+          "required_m": 71.04218112971665
+        }
+      ],
+      "junction_entry_remaining_m": 47.408058166503906,
+      "permitted_section_remaining_m": 96.29805183410645,
+      "leader_center_distance_m": 10.702661979788129,
+      "pass_time_budget_s": 8.682673695546566,
+      "required_junction_approach_m": 71.04218112971665
+    },
+    "hud_lines": [
+      "FOLLOW | Keeping distance from traffic ahead | speed 8.5 / target 8.5 km/h",
+      "Pass blocked: junction too close | available 47.4 m / required 71.0 m"
+    ]
+  },
+  "goal_reached": true,
+  "goal_time_sim_s": 81.95000122115016,
+  "completed_overtakes": 1,
+  "native_collisions": 0,
+  "sampled_overlaps": 0,
+  "owned_jobs_closed": true,
+  "baseline_comparison": {
+    "matched_actor_steps": 41819,
+    "max_position_difference_m": 0.0,
+    "max_command_differences": {
+      "target_mps": 0.0,
+      "throttle": 0.0,
+      "brake": 0.0,
+      "steer": 0.0
+    },
+    "reason_or_pass_state_changes": 0,
+    "baseline_goal_time_sim_s": 81.95000122115016,
+    "goal_time_difference_s": 0.0,
+    "baseline_overtakes": 1
+  },
+  "source_sha256": {
+    "carla_india_scene.py": "a7478c581edbf6e84fd05133370277245ab6bbb5958dad03fdabfd7eee17663a",
+    "india_behavior.py": "f150df5bfd48b06723a20b4052e58bbada9360df548fb6a4d6b9e5d427cd71cb",
+    "india_decisions.py": "c52572a093cfb39b1b92accaf67d522b7e3571ef615b8bc4cd01e7cf18291f8e",
+    "india_playback.py": "44680a0808fae2a828326750ffc2c3a9588184a4493f6c0b06b820bd17dab223",
+    "india_road.py": "7be110136adc589c8fd82398c0b3d739702a0f8040fa48c2dae9b13d42ae4e4f",
+    "india_scenery.py": "caf1b6cc82ef77aa6f29803efe68ab39310c649c6951670d8a8ac04f9f112d79"
+  },
+  "limits": "Read-only explanations of simulator-ground-truth rules; no perception control or learned policy"
+}

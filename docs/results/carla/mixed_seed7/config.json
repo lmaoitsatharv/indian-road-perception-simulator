@@ -1,0 +1,32 @@
+{
+  "output": "runs/carla_india_smoke_20261019T143619_223830Z_seed7",
+  "port": 2050,
+  "seed": 7,
+  "seconds": 210.0,
+  "sim_seconds": 110.0,
+  "case": "mixed",
+  "india_probe": false,
+  "smoke": true,
+  "suite": false,
+  "replay_check": false,
+  "replay_posted": false,
+  "architecture": "Hand-coded route following + gap checks + emergency braking; not RL",
+  "dt": 0.05,
+  "scenario_version": "lht-neighbourhood-v3",
+  "model_control": false,
+  "collision_disable": false,
+  "live_pose_teleport": false,
+  "target_ego_mps": 6.8,
+  "junction_mps": 3.8,
+  "requested_normal_accel_mps2": [
+    -3.5,
+    2.1
+  ],
+  "normal_brake_cap": 0.25,
+  "emergency_brake": 1.0,
+  "rendered_camera": [
+    960,
+    540
+  ],
+  "note": "Actuator limits are commands; actual acceleration and jerk are measured separately"
+}

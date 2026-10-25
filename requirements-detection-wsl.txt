@@ -1,0 +1,9 @@
+# Separate WSL environment; do not install into idd-tf220.
+# Install the matching GPU runtime from PyTorch's official index first:
+# pip install torch==2.9.1 torchvision==0.24.1 --index-url https://download.pytorch.org/whl/cu128
+ultralytics==8.3.225
+numpy==2.2.6
+Pillow==11.3.0
+opencv-python==4.12.0.88
+PyYAML==6.0.3
+defusedxml==0.7.1

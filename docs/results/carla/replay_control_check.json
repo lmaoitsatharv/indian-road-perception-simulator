@@ -1,0 +1,29 @@
+{
+  "episodes": [
+    {
+      "episode": "episode_03_pedestrian_seed7",
+      "actor_id": 87,
+      "start_xy": [
+        -124.87076568603516,
+        -2.25
+      ],
+      "exit_reason": "replay_requested",
+      "cleanup_complete": true,
+      "cleanup_warnings": []
+    },
+    {
+      "episode": "episode_04_pedestrian_seed7",
+      "actor_id": 91,
+      "start_xy": [
+        -124.87076568603516,
+        -2.25
+      ],
+      "exit_reason": "bounded_test_complete",
+      "cleanup_complete": true,
+      "cleanup_warnings": []
+    }
+  ],
+  "new_ego_actor": true,
+  "initial_xy_error_m": 0.0,
+  "same_setup_not_bitwise_replay_claim": true
+}

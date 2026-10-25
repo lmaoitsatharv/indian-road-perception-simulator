@@ -1,0 +1,3 @@
+# Optional plotting environment; TensorFlow GPU training uses requirements-wsl.txt.
+matplotlib>=3.9,<4
+Pillow>=11,<13

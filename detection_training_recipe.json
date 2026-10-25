@@ -1,0 +1,43 @@
+{
+  "schema": "idd_detection_training_recipe_v1",
+  "model": "yolo11s",
+  "initial_weights": "models/cache/detection/yolo11s.pt",
+  "initial_weights_metadata": "models/cache/detection/yolo11s.provenance.json",
+  "runtime_verification": "runs/detection_readiness_20261023_01/runtime_isolated/runtime_verification.json",
+  "dataset": "dataset/idd117k_detection_v2",
+  "expected_provider_counts": {
+    "train": 96897,
+    "val": 20202,
+    "test_metadata_only": 24644
+  },
+  "imgsz": 640,
+  "batch": 4,
+  "epochs": 20,
+  "patience": 5,
+  "optimizer": "AdamW",
+  "lr0": 0.0001,
+  "lrf": 0.1,
+  "seed": 42,
+  "workers": 4,
+  "amp": true,
+  "cache": false,
+  "close_mosaic": 5,
+  "deterministic": true,
+  "checkpoint_selection": "pinned Ultralytics validation fitness; no official test-label access",
+  "scope": "object_detection_observation_only",
+  "training_authorised_by_recipe_alone": false,
+  "control_allowed": false,
+  "notes": [
+    "Proposed bounded first candidate; this recipe has not been trained or accuracy-tested on IDD.",
+    "Runtime forward-only checks do not establish backward-pass memory requirements; verify the first training batches before a long run.",
+    "Letterbox to 640 at runtime; no offline stretching of native images.",
+    "Road-segmentation checkpoints and inference defaults remain separate.",
+    "Final selected manifest: 67,159 train, 17,675 validation, 24,644 unlabelled test metadata; raw provider counts recorded separately."
+  ],
+  "expected_prepared_counts": {
+    "train": 67159,
+    "val": 17675,
+    "test_metadata_only": 24644
+  },
+  "data_selection": "Original provider split membership retained; recording overlaps, unresolved uploads, invalid pairs and exact training duplicates of validation excluded with provenance"
+}

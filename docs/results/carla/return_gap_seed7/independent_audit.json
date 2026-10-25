@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "case": "return_gap",
+  "seed": 7,
+  "checks": {
+    "runtime": true,
+    "camera_alignment": true,
+    "cleanup": true,
+    "no_native_collisions": true,
+    "no_body_overlap": true,
+    "no_road_departure": true,
+    "no_wrongway": true,
+    "progress": true,
+    "completed_pass": true,
+    "return_gap_respected": true
+  },
+  "completed": true,
+  "exit_reason": "bounded_test_complete",
+  "health_passed": true,
+  "measured_frames": 1201,
+  "actors": {
+    "ego": {
+      "distance_m": 237.79723253856912,
+      "max_speed_mps": 7.114257706489299,
+      "stopped_s": 16.3,
+      "braking_500ms_max_mps2": 4.636230309292222,
+      "abs_jerk_500ms_p95_mps3": 3.2122801775755945,
+      "abs_jerk_500ms_max_mps3": 16.084477278836047
+    },
+    "slow_cycle": {
+      "distance_m": 138.92496602785593,
+      "max_speed_mps": 2.438068799959653,
+      "stopped_s": 1.25,
+      "braking_500ms_max_mps2": 0.009768719796856187,
+      "abs_jerk_500ms_p95_mps3": 0.05603980124683716,
+      "abs_jerk_500ms_max_mps3": 5.378083492964946
+    },
+    "return_guard": {
+      "distance_m": 174.14810180883953,
+      "max_speed_mps": 3.221130323095168,
+      "stopped_s": 1.1,
+      "braking_500ms_max_mps2": 1.0830688153782835,
+      "abs_jerk_500ms_p95_mps3": 0.610351544310108,
+      "abs_jerk_500ms_max_mps3": 7.556762470103427
+    }
+  },
+  "overlap_pairs": [],
+  "offroad": {},
+  "wrongway": {},
+  "min_gap_m": 0.8153168114857242,
+  "min_gap_pair": [
+    "ego",
+    "return_guard",
+    "11.250000167638063"
+  ],
+  "goal_reached": true,
+  "events": 16,
+  "method": "Independent saved-trace scalar SAT + all rectangle vertices + position-derived speed; 20 Hz sampling"
+}

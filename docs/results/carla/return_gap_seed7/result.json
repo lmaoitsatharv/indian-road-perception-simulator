@@ -1,0 +1,78 @@
+{
+  "case": "return_gap",
+  "seed": 7,
+  "exit_reason": "bounded_test_complete",
+  "sim_s": 60.00000089406967,
+  "ticks": 1201,
+  "camera_images": 1181,
+  "loop_wall_s": 22.42199999999957,
+  "simulated_time_per_wall_second": 2.6759433098773893,
+  "camera_frames_aligned": true,
+  "camera_max_delivery_delay_frames": 2,
+  "ego_goal_reached": true,
+  "ego_goal_time_s": 44.50000066310167,
+  "completed_overtakes": 1,
+  "overtake_block_reasons": [
+    "return_gap"
+  ],
+  "collision_events": [],
+  "all_actor_overlaps": [],
+  "offroad_events": [],
+  "wrongway_events": [],
+  "sampled_min_body_gap_m": 0.8153168114857242,
+  "actor_stats": [
+    {
+      "id": 95,
+      "name": "ego",
+      "distance_m": 237.79723253856912,
+      "max_speed_mps": 7.1142578125,
+      "max_braking_mps2": 19.888305663718917,
+      "max_abs_jerk_mps3": 342.0410156181283,
+      "stopped_s": 16.350000000000097
+    },
+    {
+      "id": 96,
+      "name": "slow_cycle",
+      "distance_m": 138.92496602785593,
+      "max_speed_mps": 2.4380688362897094,
+      "max_braking_mps2": 1.2573079863395176,
+      "max_abs_jerk_mps3": 216.5529484420434,
+      "stopped_s": 1.3000000000000005
+    },
+    {
+      "id": 97,
+      "name": "return_guard",
+      "distance_m": 174.14810180883953,
+      "max_speed_mps": 3.22113037109375,
+      "max_braking_mps2": 2.08282470703125,
+      "max_abs_jerk_mps3": 167.9687155141376,
+      "stopped_s": 1.1500000000000004
+    }
+  ],
+  "errors": [],
+  "cleanup_warnings": [],
+  "control_tests": {
+    "pause": true,
+    "resume": true,
+    "tab": true,
+    "screenshot": true,
+    "screenshot_saved": true
+  },
+  "pause_checks": [
+    {
+      "paused_frame": 4332,
+      "resumed_frame": 4332,
+      "passed": true
+    }
+  ],
+  "cleanup_complete": true,
+  "runtime_passed": true,
+  "limits": [
+    "Seeded illustrative Indian-style behaviour; not calibrated against traffic counts or trajectories",
+    "Rule-based controller uses simulator ground truth; no camera-model control and no RL",
+    "Geometric conflict reservations at the unsignalised junction are conservative and uncalibrated",
+    "Available scooters/bikes/bus/van/cars; no authentic autorickshaw asset installed",
+    "2D body checks are sampled at 20 Hz on a flat road; not a continuous safety proof"
+  ],
+  "screenshots": 18
+}

@@ -1,0 +1,78 @@
+{
+  "architecture": "U-Net with MobileNetV2 alpha=1.0 ImageNet encoder",
+  "input_shape": [
+    512,
+    512,
+    3
+  ],
+  "output_shape": [
+    512,
+    512,
+    1
+  ],
+  "output_activation": "sigmoid",
+  "preprocessing": "Existing idd_data.py normalizes RGB once to [-1,1]; masks stay 0/1.",
+  "seed": 42,
+  "batch_size": 4,
+  "manifest_sha256": "512cc054e2291ec5e197b0dca913ba94698cf055062b54511977816872005e90",
+  "decoder_filters": [
+    256,
+    128,
+    64,
+    32
+  ],
+  "skip_layers": [
+    "block_1_expand_relu",
+    "block_3_expand_relu",
+    "block_6_expand_relu",
+    "block_13_expand_relu",
+    "block_16_project"
+  ],
+  "new_implementation_choices": {
+    "initial_encoder_frozen": true,
+    "encoder_batchnorm_mode": "inference",
+    "loss": "mean per-image BCE + (1 - per-image soft Dice), equal weights, smooth=1e-6",
+    "optimizer": "Adam, learning_rate=0.001, clipnorm=1.0",
+    "maximum_initial_epochs": 20,
+    "threshold": 0.5,
+    "checkpoint_monitor": "val_road_iou, maximize",
+    "early_stopping_patience": 5,
+    "metric_aggregation": "TP/FP/FN summed across all pixels/batches in a split; class-1 road only",
+    "empty_union_rule": "Global empty/empty overlap is 1. No per-image IoU/Dice averaging.",
+    "optional_fine_tuning": "After validation review, unfreeze blocks 13-16 except BN; Adam lr=1e-5; new run and recompile."
+  },
+  "training_status": "original_overnight_and_boundary_runs_completed",
+  "latest_training_run": "runs/boundary_20261003/boundary_weight4",
+  "recommended_checkpoint": "runs/overnight_20261003/trial_13_shadow_fixed_bn_low_lr/best.keras",
+  "retained_models_catalog": "models/retained_models.json",
+  "initial_setup_binary_removed": true,
+  "final_test_evaluation": {
+    "status": "completed",
+    "model": "morning_best",
+    "images": 689,
+    "checkpoint_sha256": "93a8faf3d43b77f0ce74d5cdbaf94124728d371c3b68b2a3386f9f72fc106725",
+    "threshold": 0.5,
+    "finished_at_utc": "2026-10-03T14:28:34.079558+00:00",
+    "metrics_file": "runs/test_evaluation_20261003_morning_best/test_metrics.json",
+    "report": "runs/test_evaluation_20261003_morning_best/TEST_REPORT.md",
+    "gallery": "runs/test_evaluation_20261003_morning_best/gallery/index.html",
+    "protocol_lock": "models/segmentation_final_lock.json",
+    "global_metrics": {
+      "road_iou": 0.9165485449959947,
+      "road_dice": 0.9564574269606202,
+      "road_precision": 0.9518737911594287,
+      "road_recall": 0.9610854202736872,
+      "boundary_iou_5px": 0.5523147646455793,
+      "boundary_iou_14px": 0.7116727106939548,
+      "visible_boundary_precision_3px": 0.6950479892822451,
+      "visible_boundary_recall_3px": 0.7193832498929597,
+      "visible_boundary_f1_3px": 0.7070062757564605,
+      "pixel_accuracy": 0.9765579544753917,
+      "bce_plus_soft_dice_loss": 0.13863086458214482
+    },
+    "training_performed": false,
+    "test_used_for_reporting": true,
+    "future_test_informed_selection_requires_new_independent_data": true
+  },
+  "inference_protocol_lock": "models/segmentation_final_lock.json"
+}

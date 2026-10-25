@@ -1,0 +1,46 @@
+{
+  "events": [
+    {
+      "sim_s": 5.0,
+      "kind": "pedestrian_started_crossing",
+      "actor": "crossing_1"
+    },
+    {
+      "sim_s": 5.05,
+      "kind": "pedestrian_yield",
+      "actor": "ego"
+    },
+    {
+      "sim_s": 15.6,
+      "kind": "pedestrian_finished_crossing",
+      "actor": "crossing_1"
+    },
+    {
+      "sim_s": 20.75,
+      "kind": "junction_yield",
+      "actor": "ego"
+    },
+    {
+      "sim_s": 21.35,
+      "kind": "junction_granted",
+      "actor": "ego",
+      "waited_s": 0.0,
+      "concurrent_reservations": 1
+    },
+    {
+      "sim_s": 36.45,
+      "kind": "junction_released",
+      "actor": "ego"
+    },
+    {
+      "sim_s": 51.0,
+      "kind": "route_goal",
+      "actor": "ego"
+    },
+    {
+      "sim_s": 51.8,
+      "kind": "ego_goal_stopped",
+      "actor": "ego"
+    }
+  ]
+}

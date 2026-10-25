@@ -1,0 +1,12 @@
+{
+  "owned_crash_recognized": true,
+  "foreign_process_not_matched": true,
+  "guard_poll_seconds": 2,
+  "native_crash_context": {
+    "process_id": 20236,
+    "type": "GPUCrash",
+    "error": "LowLevelFatalError [File:Unknown] [Line: 803] \nResult failed, VkResult=-4\n at C:/Users/jenkins/unreal-engine/Engine/Source/Runtime/VulkanRHI/Private/VulkanMemory.cpp:4743 \n with error VK_ERROR_DEVICE_LOST\n\n\n",
+    "context": "Local native crash record; original retained outside Git",
+    "ownership": "Process was recorded inside this session's server Job Object"
+  }
+}

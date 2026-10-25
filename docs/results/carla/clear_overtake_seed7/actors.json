@@ -1,0 +1,47 @@
+{
+  "vehicles": [
+    {
+      "id": 75,
+      "name": "ego",
+      "blueprint": "vehicle.tesla.model3",
+      "route": [
+        "west",
+        "east"
+      ],
+      "desired_mps": 6.8,
+      "half_length_m": 2.3958897590637207,
+      "half_width_m": 1.081725001335144,
+      "wheelbase_m": 3.0046484375,
+      "max_steer_rad": 1.2217303432379762,
+      "goal_progress_m": 263.79998779296875,
+      "goal_xy": [
+        111.89999389648438,
+        -2.25
+      ],
+      "initial_lateral_offset_m": 0.0,
+      "parked": false
+    },
+    {
+      "id": 76,
+      "name": "slow_cycle",
+      "blueprint": "vehicle.bh.crossbike",
+      "route": [
+        "west",
+        "east"
+      ],
+      "desired_mps": 2.4,
+      "half_length_m": 0.7546613812446594,
+      "half_width_m": 0.4329703152179718,
+      "wheelbase_m": 0.955712890625,
+      "max_steer_rad": 1.2217303432379762,
+      "goal_progress_m": 293.79998779296875,
+      "goal_xy": [
+        141.89999389648438,
+        -2.25
+      ],
+      "initial_lateral_offset_m": -1.28,
+      "parked": false
+    }
+  ],
+  "pedestrians": []
+}

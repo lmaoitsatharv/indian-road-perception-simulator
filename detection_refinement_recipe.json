@@ -1,0 +1,66 @@
+{
+  "schema": "idd_detection_training_recipe_v1",
+  "model": "yolo11s",
+  "initial_weights": "runs/detection_train_20261024_02/weights/best.pt",
+  "initial_weights_metadata": "runs/detection_improvement_20261024_01/refinement_runtime/initial_checkpoint.json",
+  "runtime_verification": "runs/detection_improvement_20261024_01/refinement_runtime/runtime_verification.json",
+  "dataset": "dataset/idd117k_detection_v2",
+  "expected_provider_counts": {
+    "train": 96897,
+    "val": 20202,
+    "test_metadata_only": 24644
+  },
+  "imgsz": 960,
+  "batch": 4,
+  "epochs": 30,
+  "patience": 8,
+  "optimizer": "AdamW",
+  "lr0": 0.0003,
+  "lrf": 0.1,
+  "seed": 42,
+  "workers": 4,
+  "amp": true,
+  "cache": false,
+  "close_mosaic": 5,
+  "deterministic": true,
+  "checkpoint_selection": "pinned Ultralytics validation fitness; no official test-label access",
+  "scope": "object_detection_observation_only",
+  "training_authorised_by_recipe_alone": false,
+  "control_allowed": false,
+  "notes": [
+    "New fine-tuning run from the verified epoch-20 detector, not exact optimizer resume.",
+    "Higher resolution targets the measured small-object misses; full validation is unchanged.",
+    "Gentler mosaic/scale augmentation and zero bias warmup avoid shrinking tiny targets as aggressively or jumping trained biases.",
+    "Bounded rare-image sampling boosts bicycle, animal and traffic-light exposure; repeated-pixel identities share base weight.",
+    "All 67,159 training identities stay eligible, with 67,159 draws per epoch. Labels and provider split membership are unchanged.",
+    "Up to 30 additional epochs with patience 8; requested score targets remain unproven.",
+    "Periodic full checkpoints preserve recovery state. Road checkpoints, original detector and original recipe remain separate."
+  ],
+  "expected_prepared_counts": {
+    "train": 67159,
+    "val": 17675,
+    "test_metadata_only": 24644
+  },
+  "data_selection": "Original provider split membership retained; recording overlaps, unresolved uploads, invalid pairs and exact training duplicates of validation excluded with provenance",
+  "initialization": "verified_idd_detector",
+  "cos_lr": true,
+  "warmup_epochs": 1.0,
+  "warmup_bias_lr": 0.0,
+  "mosaic": 0.25,
+  "scale": 0.3,
+  "save_period": 5,
+  "sampling": {
+    "type": "rare_images_with_pixel_group_correction",
+    "class_image_boosts": {
+      "4": 2,
+      "8": 4,
+      "9": 2
+    },
+    "validation_weighted": false,
+    "seed": 42,
+    "duplicate_pixel_base_probability": "divide each identity by group size"
+  },
+  "baseline_analysis": "runs/detection_improvement_20261024_01/analysis.json",
+  "baseline_analysis_sha256": "0aad0d46d362cd9d53d7ba9fcf744c1ec9bc735fdf51a4ae6d939748c5f0d577",
+  "matched_comparison_resolution": 960
+}

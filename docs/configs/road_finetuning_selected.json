@@ -1,0 +1,28 @@
+{
+  "name": "shadow_fixed_bn_low_lr",
+  "run_dir": "runs/overnight_20261003/trial_13_shadow_fixed_bn_low_lr",
+  "augmentation": "shadow",
+  "first_encoder_block": 13,
+  "learning_rate": 3e-06,
+  "batch_size": 16,
+  "seed": 42,
+  "epochs": 8,
+  "initial_checkpoint": "runs/frozen_01/best.keras",
+  "freeze_decoder_batchnorm": true,
+  "rationale": "Test gentler updates from the original baseline with matched batch/augmentation; isolate decoder BatchNorm or encoder trainability. Paired labels and normalization are preserved.",
+  "phase": "fine",
+  "initial_checkpoint_sha256": "652c3e537e6b944430304d103a80bdff21a67daddcba1d9590e49dfbff0765c3",
+  "manifest_sha256": "512cc054e2291ec5e197b0dca913ba94698cf055062b54511977816872005e90",
+  "epochs_maximum": 8,
+  "split_counts": {
+    "train": 5507,
+    "val": 687,
+    "test": 689
+  },
+  "precision": "mixed_float16 with float32 probability head/loss and loss scaling",
+  "encoder_batchnorm_mode": "frozen and inference",
+  "decoder_batchnorm_mode": "frozen and inference",
+  "decoder_batchnorm_layers": 12,
+  "test_set_reserved": true,
+  "started_at_utc": "2026-10-03T00:46:33.568441+00:00"
+}

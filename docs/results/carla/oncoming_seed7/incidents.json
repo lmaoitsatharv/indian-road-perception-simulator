@@ -1,0 +1,69 @@
+{
+  "events": [
+    {
+      "sim_s": 0.0,
+      "kind": "overtake_blocked",
+      "actor": "ego",
+      "reason": "oncoming_gap",
+      "leader": "slow_cycle"
+    },
+    {
+      "sim_s": 0.0,
+      "kind": "junction_yield",
+      "actor": "oncoming_car"
+    },
+    {
+      "sim_s": 2.25,
+      "kind": "junction_granted",
+      "actor": "oncoming_car",
+      "waited_s": 0.0,
+      "concurrent_reservations": 1
+    },
+    {
+      "sim_s": 12.8,
+      "kind": "overtake_blocked",
+      "actor": "ego",
+      "reason": "junction_too_close",
+      "leader": "slow_cycle"
+    },
+    {
+      "sim_s": 18.4,
+      "kind": "junction_released",
+      "actor": "oncoming_car"
+    },
+    {
+      "sim_s": 25.6,
+      "kind": "junction_yield",
+      "actor": "slow_cycle"
+    },
+    {
+      "sim_s": 27.3,
+      "kind": "junction_granted",
+      "actor": "slow_cycle",
+      "waited_s": 0.0,
+      "concurrent_reservations": 1
+    },
+    {
+      "sim_s": 31.75,
+      "kind": "junction_granted",
+      "actor": "ego",
+      "waited_s": 0.0,
+      "concurrent_reservations": 2
+    },
+    {
+      "sim_s": 39.15,
+      "kind": "route_goal",
+      "actor": "oncoming_car"
+    },
+    {
+      "sim_s": 49.65,
+      "kind": "junction_released",
+      "actor": "slow_cycle"
+    },
+    {
+      "sim_s": 54.8,
+      "kind": "junction_released",
+      "actor": "ego"
+    }
+  ]
+}

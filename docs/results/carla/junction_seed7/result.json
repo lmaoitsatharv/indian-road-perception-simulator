@@ -1,0 +1,85 @@
+{
+  "case": "junction",
+  "seed": 7,
+  "exit_reason": "bounded_test_complete",
+  "sim_s": 60.00000089406967,
+  "ticks": 1201,
+  "camera_images": 1191,
+  "loop_wall_s": 63.65700000000015,
+  "simulated_time_per_wall_second": 0.9425515009200799,
+  "camera_frames_aligned": true,
+  "camera_max_delivery_delay_frames": 3,
+  "ego_goal_reached": true,
+  "ego_goal_time_s": 56.25000083819032,
+  "completed_overtakes": 0,
+  "overtake_block_reasons": [],
+  "collision_events": [],
+  "all_actor_overlaps": [],
+  "offroad_events": [],
+  "wrongway_events": [],
+  "sampled_min_body_gap_m": 2.852193003520263,
+  "actor_stats": [
+    {
+      "id": 75,
+      "name": "ego",
+      "distance_m": 237.80841932375287,
+      "max_speed_mps": 7.1140289306640625,
+      "max_braking_mps2": 20.60546874807727,
+      "max_abs_jerk_mps3": 364.86816398559085,
+      "stopped_s": 11.850000000000033
+    },
+    {
+      "id": 76,
+      "name": "turning_car",
+      "distance_m": 192.80372493368327,
+      "max_speed_mps": 5.045166065652322,
+      "max_braking_mps2": 17.08456224043869,
+      "max_abs_jerk_mps3": 220.98012073452315,
+      "stopped_s": 15.10000000000008
+    },
+    {
+      "id": 77,
+      "name": "south_scooter",
+      "distance_m": 215.94810172021022,
+      "max_speed_mps": 5.21453857421875,
+      "max_braking_mps2": 7.40966796875,
+      "max_abs_jerk_mps3": 176.57462680392246,
+      "stopped_s": 9.55
+    },
+    {
+      "id": 78,
+      "name": "delivery_van",
+      "distance_m": 217.55054338375422,
+      "max_speed_mps": 6.152039518938917,
+      "max_braking_mps2": 15.881346301734288,
+      "max_abs_jerk_mps3": 195.12936813593853,
+      "stopped_s": 13.900000000000063
+    }
+  ],
+  "errors": [],
+  "cleanup_warnings": [],
+  "control_tests": {
+    "pause": true,
+    "resume": true,
+    "tab": true,
+    "screenshot": true,
+    "screenshot_saved": true
+  },
+  "pause_checks": [
+    {
+      "paused_frame": 137,
+      "resumed_frame": 137,
+      "passed": true
+    }
+  ],
+  "cleanup_complete": true,
+  "runtime_passed": true,
+  "limits": [
+    "Seeded illustrative Indian-style behaviour; not calibrated against traffic counts or trajectories",
+    "Rule-based controller uses simulator ground truth; no camera-model control and no RL",
+    "Geometric conflict reservations at the unsignalised junction are conservative and uncalibrated",
+    "Available scooters/bikes/bus/van/cars; no authentic autorickshaw asset installed",
+    "2D body checks are sampled at 20 Hz on a flat road; not a continuous safety proof"
+  ],
+  "screenshots": 13
+}

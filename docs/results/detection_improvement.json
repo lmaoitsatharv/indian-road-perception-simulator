@@ -1,0 +1,212 @@
+{
+  "schema": "idd_detector_improvement_v1",
+  "checked_utc": "2026-10-24T05:50:37.685854+00:00",
+  "scope": "full validation resolution comparison plus separate cleaned-data fine-tuning startup snapshot",
+  "passed": true,
+  "resolution_comparison": {
+    "checkpoint_sha256": "57f1d54b93c794677d26fd22773284de2752d878477bb9ac04a761cc7f035153",
+    "images": 17675,
+    "instances": 319438,
+    "before_resolution": 640,
+    "after_resolution": 960,
+    "before": {
+      "metrics/precision(B)": 0.653208530400727,
+      "metrics/recall(B)": 0.4285044337113029,
+      "metrics/mAP50(B)": 0.4729516834849726,
+      "metrics/mAP50-95(B)": 0.3129140532647578,
+      "fitness": 0.3129140532647578
+    },
+    "after": {
+      "metrics/precision(B)": 0.7096227034986464,
+      "metrics/recall(B)": 0.502852981419783,
+      "metrics/mAP50(B)": 0.5587049695609542,
+      "metrics/mAP50-95(B)": 0.3716537103016615,
+      "fitness": 0.3716537103016615
+    },
+    "delta_percentage_points": {
+      "metrics/precision(B)": 5.64141730979194,
+      "metrics/recall(B)": 7.434854770848004,
+      "metrics/mAP50(B)": 8.57532860759816,
+      "metrics/mAP50-95(B)": 5.87396570369037,
+      "fitness": 5.87396570369037
+    },
+    "all_12_classes_ap50_improved": true,
+    "additional_optimizer_steps": 0
+  },
+  "clean_training_view": {
+    "dataset": "dataset/idd117k_detection_v3",
+    "counts": {
+      "train": 56729,
+      "val": 17675,
+      "test_metadata_only": 24644
+    },
+    "boxes": {
+      "train": {
+        "other_vehicle": 161007,
+        "car": 116984,
+        "motorcycle": 163457,
+        "rider": 166895,
+        "person": 114695,
+        "autorickshaw": 40659,
+        "truck": 38035,
+        "bus": 17149,
+        "traffic_light": 7208,
+        "traffic_sign": 49249,
+        "bicycle": 3236,
+        "animal": 860
+      },
+      "val": {
+        "motorcycle": 56618,
+        "rider": 60983,
+        "truck": 12444,
+        "car": 46700,
+        "bus": 5425,
+        "person": 34085,
+        "traffic_sign": 22222,
+        "bicycle": 764,
+        "traffic_light": 2657,
+        "other_vehicle": 64832,
+        "autorickshaw": 11745,
+        "animal": 963
+      }
+    },
+    "cleanup": {
+      "source_dataset": "dataset/idd117k_detection_v2",
+      "source_preparation_sha256": "d9ac048140c72638b28d03c69142f96c3ec7d3f8edcd3550a52da864c2372bdc",
+      "source_pairs_sha256": "c32ac02441b1976125dba8597f0e3c57ad8c52f17bf20547c59e34b561dca541",
+      "ambiguous_training_pixel_groups_excluded": 2516,
+      "excluded_training_entries": 10430,
+      "exclusions_by_reason": {
+        "identical_pixel_and_label_duplicate": 5385,
+        "duplicate_pixels_with_differing_annotations": 5045
+      },
+      "retained_training_pixel_groups": 56729,
+      "training_pixels_unique": true,
+      "validation_membership_and_labels_unchanged": true,
+      "labels_rewritten": false,
+      "source_annotation_truth_not_assumed": true,
+      "selection_fixture_passed": true
+    },
+    "all_saved_labels_independently_checked": true,
+    "source_image_annotation_pairs_rechecked": 143,
+    "source_sample_box_error_pixels": 9.600001931175939e-07,
+    "validation_unchanged": true,
+    "raw_and_previous_views_preserved": true
+  },
+  "fine_tuning": {
+    "run": "runs/detection_train_20261024_04",
+    "recipe": "detection_refinement_clean_recipe.json",
+    "status_at_snapshot": "training",
+    "maximum_additional_epochs": 30,
+    "patience": 8,
+    "first_backward_batches_verified": true,
+    "first_batches": {
+      "status": "training",
+      "checked_utc": "2026-10-24T05:48:23.652238+00:00",
+      "epoch": 1,
+      "epochs_max": 30,
+      "batches_completed_in_epoch": 10,
+      "batches_per_epoch": 14183,
+      "total_batches_completed": 10,
+      "optimizer_steps_completed": 7,
+      "losses": {
+        "box_loss": 1.31673264503479,
+        "cls_loss": 0.8228846192359924,
+        "dfl_loss": 1.1582860946655273
+      },
+      "sampled_losses_finite": true,
+      "elapsed_training_seconds": 7.56,
+      "gpu_peak_allocated_bytes": 2577400832,
+      "gpu_peak_reserved_bytes": 2745171968,
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "batch": 4,
+      "imgsz": 960,
+      "training_started": true,
+      "model_control": false,
+      "passed": true,
+      "scope": "real_training_backward_and_optimizer_steps_not_accuracy"
+    },
+    "scores_after_refinement_available": false,
+    "startup_verification": "docs/results/detection_refinement_start.json",
+    "sampler": {
+      "passed": true,
+      "training_identities": 56729,
+      "draws_per_epoch": 56729,
+      "replacement": true,
+      "all_training_identities_have_positive_probability": true,
+      "minimum_weight": 1.0,
+      "maximum_weight": 4.0,
+      "expected_class_exposure": {
+        "person": {
+          "original_images": 27708,
+          "expected_primary_samples_per_epoch": 28663.273214740326
+        },
+        "rider": {
+          "original_images": 35829,
+          "expected_primary_samples_per_epoch": 36821.31646193992
+        },
+        "car": {
+          "original_images": 37436,
+          "expected_primary_samples_per_epoch": 37876.500413696536
+        },
+        "motorcycle": {
+          "original_images": 38457,
+          "expected_primary_samples_per_epoch": 39093.2565873218
+        },
+        "bicycle": {
+          "original_images": 2758,
+          "expected_primary_samples_per_epoch": 4980.757096486762
+        },
+        "autorickshaw": {
+          "original_images": 19551,
+          "expected_primary_samples_per_epoch": 20758.871276731163
+        },
+        "bus": {
+          "original_images": 11401,
+          "expected_primary_samples_per_epoch": 11861.567416624237
+        },
+        "truck": {
+          "original_images": 21775,
+          "expected_primary_samples_per_epoch": 22070.404452011204
+        },
+        "animal": {
+          "original_images": 120,
+          "expected_primary_samples_per_epoch": 433.2662932790224
+        },
+        "traffic_light": {
+          "original_images": 3141,
+          "expected_primary_samples_per_epoch": 5672.177889511201
+        },
+        "traffic_sign": {
+          "original_images": 17633,
+          "expected_primary_samples_per_epoch": 18168.299898167006
+        },
+        "other_vehicle": {
+          "original_images": 26474,
+          "expected_primary_samples_per_epoch": 27089.072349159876
+        }
+      },
+      "configuration": {
+        "type": "rare_images_with_pixel_group_correction",
+        "class_image_boosts": {
+          "4": 2,
+          "8": 4,
+          "9": 2
+        },
+        "validation_weighted": false,
+        "seed": 42,
+        "duplicate_pixel_base_probability": "divide each identity by group size"
+      },
+      "validation_sampling_changed": false,
+      "labels_changed": false,
+      "scope": "primary training images; auxiliary mosaic choices follow framework behaviour"
+    }
+  },
+  "protected_files_unchanged": true,
+  "protected_fingerprints": 17,
+  "original_detector_unchanged": true,
+  "original_recipe_unchanged": true,
+  "official_test_used": false,
+  "model_control": false,
+  "target_scores_guaranteed": false
+}

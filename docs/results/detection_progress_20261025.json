@@ -1,0 +1,93 @@
+{
+  "checked_utc": "2026-10-24T22:30:55.435751+00:00",
+  "checked_ist": "2026-10-25T04:00:55.435774+05:30",
+  "status": "failed_preserved",
+  "completed_epochs": 21,
+  "maximum_epochs": 30,
+  "best_epoch": 21,
+  "latest_validation": {
+    "metrics/mAP50(B)": 0.57684,
+    "metrics/mAP50-95(B)": 0.38393,
+    "metrics/precision(B)": 0.72374,
+    "metrics/recall(B)": 0.52162
+  },
+  "starting_model_960": {
+    "metrics/mAP50(B)": 0.5587049695609542,
+    "metrics/mAP50-95(B)": 0.3716537103016615,
+    "metrics/precision(B)": 0.7096227034986464,
+    "metrics/recall(B)": 0.502852981419783
+  },
+  "gain_percentage_points": {
+    "metrics/mAP50(B)": 1.8135030439045852,
+    "metrics/mAP50-95(B)": 1.2276289698338494,
+    "metrics/precision(B)": 1.4117296501353627,
+    "metrics/recall(B)": 1.876701858021701
+  },
+  "checkpoints": {
+    "best.pt": {
+      "passed": true,
+      "epoch_completed": 21,
+      "sha256": "f885b08393274397af4e18e42bce653dca484dfee525df38caa8d70045f2fd8c",
+      "bytes": 57201889,
+      "all_model_tensors_finite": true,
+      "optimizer_finite": true,
+      "optimizer_state_entries": 255,
+      "moment_dtypes": [
+        "torch.float16"
+      ],
+      "ema_updates": 20423,
+      "class_names_match": true,
+      "full_precision_resume": false
+    },
+    "last.pt": {
+      "passed": true,
+      "epoch_completed": 21,
+      "sha256": "f885b08393274397af4e18e42bce653dca484dfee525df38caa8d70045f2fd8c",
+      "bytes": 57201889,
+      "all_model_tensors_finite": true,
+      "optimizer_finite": true,
+      "optimizer_state_entries": 255,
+      "moment_dtypes": [
+        "torch.float16"
+      ],
+      "ema_updates": 20423,
+      "class_names_match": true,
+      "full_precision_resume": false
+    },
+    "last_resume_fp32.pt": {
+      "passed": true,
+      "epoch_completed": 21,
+      "sha256": "3f853062f44fa3ed74ec44a2b73dcd92290e053280da1ab41f6822cbf1978c3b",
+      "bytes": 152019397,
+      "all_model_tensors_finite": true,
+      "optimizer_finite": true,
+      "optimizer_state_entries": 255,
+      "moment_dtypes": [
+        "torch.float32"
+      ],
+      "ema_updates": 20423,
+      "class_names_match": true,
+      "full_precision_resume": true
+    }
+  },
+  "all_checkpoints_passed": true,
+  "gpu_probe": {
+    "cuda_available": true,
+    "checkpoint_forward_pass": true,
+    "scalar_backward_pass": true,
+    "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "scope": "one synthetic image and a scalar gradient check; not accuracy evaluation or training"
+  },
+  "remaining_training_processes": [],
+  "protected_files_unchanged": true,
+  "training_restarted": false,
+  "official_test_used": false,
+  "final_evaluation_available": false,
+  "exit": {
+    "status": "failed_preserved",
+    "returncode": 1,
+    "finished_utc": "2026-10-24T20:17:36.595159+00:00",
+    "post_report_returncode": 1,
+    "supervisor_finished_utc": "2026-10-24T20:17:39.912749+00:00"
+  }
+}
