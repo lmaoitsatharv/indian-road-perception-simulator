@@ -20,6 +20,8 @@ The detector uses a project class mapping and filtered validation membership. It
 
 The three-epoch adaptation compares the same 17,675 validation images / 319,438 objects, GPU FP32 and 1280 input before and after learning. mAP50 rises 61.688% to 62.245%, and mAP50-95 rises 41.125% to 41.525%: gains of 0.557 and 0.400 percentage points. Animal remains weak; bicycle, autorickshaw and traffic-light AP50 decline slightly. [Matched report](DETECTION_RESOLUTION_PILOT_RESULT.md) and [raw summary](results/detection_resolution_pilot.json).
 
+Later development work (project validation only, not deployed; the summary row above is unchanged): the [detector error review](DETECTION_ERROR_REVIEW_20261028.md) records the 1536 / NMS 0.6 inference-setting test, and the [filtered animal view and land-only re-score](ANIMAL_FILTER_RESCORE_PLAN_20261029.md) records an overnight fine-tune whose checkpoint is not deployed.
+
 ## Connected native town
 
 ![Connected-town road network overview](results/overview/town_plan.png)
@@ -31,6 +33,8 @@ Five districts share one native world, with seven junction nodes, nine streets a
 ![Rural district](results/overview/rural_road.png)
 
 The continuous check retained one world and the same 25 vehicle identities, with 21 pedestrians present. No vehicle contacts, sampled overlaps, centre departures or direction errors were recorded under that check. The minimum sampled gap was 0.273 m, so tight clearances remain a limitation. Native controls use rules and simulator states. [Connected-town report](COMBINED_INDIAN_TOWN.md) and [summary](results/combined_indian_town.json).
+
+A later 900-second run of the same town (seed 8101) ended in a gridlock: every vehicle stopped from about 787 s to the end, while the run still reported `passed` because the pass check does not measure progress. The likely cause is in the junction-token logic; it is diagnosed but not fixed. See [the gridlock diagnosis](TOWN_GRIDLOCK_DIAGNOSIS_20261029.md).
 
 ## Live road observation
 

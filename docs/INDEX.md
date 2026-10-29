@@ -16,6 +16,7 @@
 - [Decision display](DECISION_DISPLAY.md) and [playback controls](PLAYBACK_CONTROLS.md).
 - [Recorded camera observation](CAMERA_OBSERVATION.md) and [live road preview](LIVE_SIMULATION_OBSERVATION.md).
 - [Scene quality](SIMULATION_QUALITY.md).
+- [Connected-town gridlock diagnosis](TOWN_GRIDLOCK_DIAGNOSIS_20261029.md): late-run junction lock in a 900 s run; diagnosed, not fixed.
 - [Planning/control references](../integration/README.md).
 
 ## Road segmentation
@@ -35,6 +36,9 @@
 - [Latest matched result](DETECTION_RESOLUTION_PILOT_RESULT.md).
 - [Box-error illustrations](DETECTION_BOX_EXAMPLES.md).
 - [Checkpoint recovery](DETECTION_RECOVERY.md).
+- [Error review, 28 Oct](DETECTION_ERROR_REVIEW_20261028.md): where the detector misses; 1536 / NMS 0.6 setting test (validation).
+- [Animal label review](ANIMAL_DATA_REVIEW_20261028.md) and [animal data plan](ANIMAL_DATA_PLAN_20261029.md): why animal labels were inconsistent; extra data sources.
+- [Filtered animal view and land-only re-score](ANIMAL_FILTER_RESCORE_PLAN_20261029.md): what was built and the overnight training result (validation, not deployed).
 
 ## Portable result records
 

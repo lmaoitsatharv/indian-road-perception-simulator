@@ -49,6 +49,15 @@
       "evaluation_precision": "GPU FP32",
       "map50": 0.6224450326310994,
       "map50_95": 0.4152477043827353,
+      "recorded_inference_setting": {
+        "input_resolution": 1536,
+        "nms_iou": 0.6,
+        "validation_map50": 0.6481,
+        "validation_map50_95": 0.42679,
+        "recorded": "2026-10-29, project decision before the next training session",
+        "caution": "chosen on the same validation set, so the gain over 1280 / NMS 0.7 is development evidence, not an independent test",
+        "details": "docs/DETECTION_ERROR_REVIEW_20261028.md"
+      },
       "classes": [
         "person",
         "rider",

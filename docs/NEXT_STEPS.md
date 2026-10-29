@@ -6,6 +6,8 @@ The current foundation includes evaluated real/synthetic road segmenters, a 12-c
 
 Review missed animals, small/occluded people, bicycles and broad other-vehicle labels. Separate annotation errors, class errors, localization errors, duplicates and genuine misses. Use audited training-only examples for changes while preserving validation.
 
+Work in progress (validation only, nothing deployed): [detector error review](DETECTION_ERROR_REVIEW_20261028.md), [animal data plan](ANIMAL_DATA_PLAN_20261029.md) and [filtered animal view and re-score](ANIMAL_FILTER_RESCORE_PLAN_20261029.md).
+
 Run short hypothesis-driven experiments, preserve the parent and compare every class under matched resolution/precision. The current 1280 result is 62.245% mAP50 / 41.525% mAP50-95 on project validation, not an independent test or evidence of adequate recall for control. Check the real-trained detector on the intended CARLA camera distribution before relying on its observations.
 
 ## 2. Add live detection, tracking and range
