@@ -16,7 +16,7 @@
 - [Decision display](DECISION_DISPLAY.md) and [playback controls](PLAYBACK_CONTROLS.md).
 - [Recorded camera observation](CAMERA_OBSERVATION.md) and [live road preview](LIVE_SIMULATION_OBSERVATION.md).
 - [Scene quality](SIMULATION_QUALITY.md).
-- [Connected-town gridlock diagnosis](TOWN_GRIDLOCK_DIAGNOSIS_20261029.md): late-run junction lock in a 900 s run; diagnosed, not fixed.
+- [Connected-town gridlock diagnosis](TOWN_GRIDLOCK_DIAGNOSIS_20261029.md): late-run junction lock in a 900 s run, its fix and simulation test results (one more full run pending).
 - [Planning/control references](../integration/README.md).
 
 ## Road segmentation

@@ -34,7 +34,7 @@ Five districts share one native world, with seven junction nodes, nine streets a
 
 The continuous check retained one world and the same 25 vehicle identities, with 21 pedestrians present. No vehicle contacts, sampled overlaps, centre departures or direction errors were recorded under that check. The minimum sampled gap was 0.273 m, so tight clearances remain a limitation. Native controls use rules and simulator states. [Connected-town report](COMBINED_INDIAN_TOWN.md) and [summary](results/combined_indian_town.json).
 
-A later 900-second run of the same town (seed 8101) ended in a gridlock: every vehicle stopped from about 787 s to the end, while the run still reported `passed` because the pass check does not measure progress. The likely cause is in the junction-token logic; it is diagnosed but not fixed. See [the gridlock diagnosis](TOWN_GRIDLOCK_DIAGNOSIS_20261029.md).
+A later 900-second run of the same town (seed 8101) ended in a gridlock: every vehicle stopped from about 787 s to the end, while the run still reported `passed` because the pass check does not measure progress. The junction-token logic has since been fixed and a progress check added to the pass gate; in a 900-second rerun 23 of 25 vehicles were still moving after 786 s, with no contacts. A full 900-second run with every rule is still pending. See [the gridlock diagnosis](TOWN_GRIDLOCK_DIAGNOSIS_20261029.md).
 
 ## Live road observation
 

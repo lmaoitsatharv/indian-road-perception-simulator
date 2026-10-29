@@ -158,6 +158,7 @@ class CombinedTraffic:
             "tour_outer":LoopPath(native,network,TOUR),"urban_bus_service":UrbanBusPath(native,network)}
         self.drivers,self.walkers,self.records,self.sensors,self.collisions = [],[],[],[],[]
         self.reservations,self.waiting_since = {},{}
+        self.hold_check,self.token_events,self.token_grants = {},[],0
         self.distance,self.visited,self.transitions = {},{},[]
         placements = []
         # All districts receive moving traffic at startup. Extra loops connect
@@ -256,6 +257,46 @@ class CombinedTraffic:
                 self.records.append({"actor_id":actor.id,"name":name,"blueprint":bp.id,"project_class":"person",
                     "district":street.district,"collisions_enabled":True})
 
+    def _front_of_approach(self,driver,distance,states):
+        """No co-directional body sits between this vehicle and the junction entry."""
+        state = states[driver.actor.id]
+        room = distance-driver.half_length+.5
+        for other in self.drivers:
+            if other is driver:
+                continue
+            observed = states[other.actor.id]
+            if math.cos(observed["yaw"]-state["yaw"]) < .35:
+                continue
+            dx,dy = observed["x"]-state["x"],observed["y"]-state["y"]
+            longitudinal = dx*math.cos(state["yaw"])+dy*math.sin(state["yaw"])
+            lateral = abs(-dx*math.sin(state["yaw"])+dy*math.cos(state["yaw"]))
+            gap = longitudinal-driver.half_length-other.half_length
+            if longitudinal > 0 and lateral <= driver.half_width+other.half_width+.18 and gap < room:
+                return False
+        return True
+
+    def _exit_clear(self,driver,approach,states):
+        """The lane just past the junction on this vehicle's route has room for it."""
+        distance,junction = approach
+        start = driver.s+distance+(junction["end_m"]-junction["start_m"])
+        need = 2*driver.half_length+4
+        samples = [driver.route.at(start+k) for k in np.arange(0.,need+.01,1.5)]
+        for other in self.drivers:
+            if other is driver:
+                continue
+            observed = states[other.actor.id]
+            if observed["speed"] > 2.:
+                continue
+            for p in samples:
+                if math.cos(observed["yaw"]-p[2]) < .35:
+                    continue
+                dx,dy = p[0]-observed["x"],p[1]-observed["y"]
+                longitudinal = abs(dx*math.cos(observed["yaw"])+dy*math.sin(observed["yaw"]))
+                lateral = abs(-dx*math.sin(observed["yaw"])+dy*math.cos(observed["yaw"]))
+                if longitudinal <= observed["ex"]+.5 and lateral <= observed["ey"]+driver.half_width:
+                    return False
+        return True
+
     def update(self,snapshot,sim_time):
         states,near = {},{}
         for driver in self.drivers:
@@ -278,10 +319,16 @@ class CombinedTraffic:
             states[driver.actor.id] = state
             distance,junction = driver.route.next_junction(driver.s)
             near[driver.actor.id] = (distance,junction)
-            if distance < 35 and distance > -(junction["end_m"]-junction["start_m"])-7:
+            # Queue entry only while approaching. Re-adding a vehicle that has
+            # just released the token stamped it with an old time for its next
+            # lap, so it jumped the queue over vehicles already waiting.
+            if -5 < distance < 35:
                 self.waiting_since.setdefault((junction["node"],driver.actor.id),sim_time)
         # One native reservation per junction. Hold until the complete vehicle
-        # clears the connector. FIFO queue avoids starving side streets.
+        # clears the connector. FIFO queue avoids starving side streets. Only
+        # the front vehicle of an approach with room past the junction may take
+        # the token; a token given to a queued follower can never be used and
+        # locked the whole town (29 Oct 900 s run).
         for node in NODES:
             holder = self.reservations.get(node)
             if holder is not None:
@@ -290,11 +337,28 @@ class CombinedTraffic:
                 if junction["node"] != node or distance < -(junction["end_m"]-junction["start_m"])-driver.half_length-4:
                     self.reservations.pop(node,None)
                     self.waiting_since.pop((node,holder),None)
+                    self.hold_check.pop(node,None)
+                else:
+                    # Watchdog: a holder still before the junction that has not
+                    # moved for 10 s gives the token back and rejoins the queue.
+                    held,s0,t0 = self.hold_check.get(node,(None,0.,0.))
+                    if held != holder or abs(driver.s-s0) > .5:
+                        self.hold_check[node] = (holder,driver.s,sim_time)
+                    elif sim_time-t0 > 10 and distance > 0:
+                        self.reservations.pop(node,None)
+                        self.hold_check.pop(node,None)
+                        self.waiting_since[(node,holder)] = sim_time
+                        self.token_events.append({"sim_s":sim_time,"node":node,"actor":driver.name,"event":"watchdog_release"})
             if node not in self.reservations:
-                waiting = [d for d in self.drivers if near[d.actor.id][1]["node"] == node and -5 < near[d.actor.id][0] < 35]
+                waiting = [d for d in self.drivers if near[d.actor.id][1]["node"] == node and -5 < near[d.actor.id][0] < 35
+                    and self._front_of_approach(d,near[d.actor.id][0],states)
+                    and self._exit_clear(d,near[d.actor.id],states)]
                 if waiting:
                     chosen = min(waiting,key=lambda d:(self.waiting_since.get((node,d.actor.id),sim_time),near[d.actor.id][0],d.actor.id))
                     self.reservations[node] = chosen.actor.id
+                    self.hold_check[node] = (chosen.actor.id,chosen.s,sim_time)
+                    self.token_grants += 1
+        holders = {holder:node for node,holder in self.reservations.items()}
         commands,trace = [],[]
         for driver in self.drivers:
             state = states[driver.actor.id]
@@ -348,7 +412,8 @@ class CombinedTraffic:
                 "ex":state["ex"],"ey":state["ey"],"speed":state["speed"],"route_s":driver.s,
                 "distance_m":self.distance[driver.name],"district":part["district"],"road_id":part["road_id"],
                 "lane":part["lane"],"junction":part["node"],"expected_yaw":float(reference[2]),"lateral_error_m":float(error),
-                "target":target,"reason":reason,"throttle":control.throttle,"brake":control.brake,"steer":control.steer})
+                "target":target,"reason":reason,"throttle":control.throttle,"brake":control.brake,"steer":control.steer,
+                "holds_junction":holders.get(driver.actor.id)})
         for walker in self.walkers:
             commands.append(carla.command.ApplyWalkerControl(walker.actor.id,walker.control(sim_time)))
         replies = self.client.apply_batch_sync(commands,False)

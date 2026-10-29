@@ -161,6 +161,9 @@ def main():
         latest,last_trace = {},[]
         overlaps,departures,direction_errors = [],[],[]
         min_gap = float("inf")
+        # Progress gate: contacts and departures alone cannot see a gridlock.
+        stopped_since,longest_stopped = None,0.
+        ego_mark,ego_mark_s,longest_ego_stall = 0.,0.,0.
         saved_regions = set()
         pause_check = None
         exit_reason = "duration"
@@ -187,6 +190,14 @@ def main():
             world_ids.add(world.id)
             states,trace = traffic.update(snapshot,sim_time)
             trace_file.write(json.dumps({"frame":snapshot.frame,"sim_s":sim_time,"world_id":world.id,"actors":trace})+"\n")
+            if all(row["speed"] < .1 for row in trace):
+                stopped_since = sim_time if stopped_since is None else stopped_since
+                longest_stopped = max(longest_stopped,sim_time-stopped_since)
+            else:
+                stopped_since = None
+            if traffic.distance["ego"]-ego_mark >= 1.:
+                ego_mark,ego_mark_s = traffic.distance["ego"],sim_time
+            longest_ego_stall = max(longest_ego_stall,sim_time-ego_mark_s)
             pairs = list(states.items())
             for i,(aid,a) in enumerate(pairs):
                 for bid,b in pairs[i+1:]:
@@ -265,9 +276,12 @@ def main():
             ego_visited_all_five=len(traffic.visited["ego"]) == 5,
             any_vehicle_visited_all_five=any(len(v) == 5 for v in traffic.visited.values()),
             continuous_transitions=traffic.transitions,exit_reason=exit_reason,pause_check=pause_check,
+            longest_all_vehicles_stopped_s=longest_stopped,longest_ego_stall_s=longest_ego_stall,
+            junction_token_grants=traffic.token_grants,junction_watchdog_releases=traffic.token_events,
             all_world_generation_finished_before_traffic=True,training_allowed=False)
         result["passed"] = bool(ticks >= 200 and saved >= 5 and len(world_ids) == 1 and result["world_generate_calls"] == 1
-            and not traffic.collisions and not overlaps and not departures and not direction_errors and traffic.distance["ego"] > 8)
+            and not traffic.collisions and not overlaps and not departures and not direction_errors and traffic.distance["ego"] > 8
+            and longest_stopped < 60 and longest_ego_stall < 120)
     except Exception:
         result["errors"].append(traceback.format_exc())
         print(result["errors"][-1],flush=True)
