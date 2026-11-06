@@ -29,20 +29,31 @@ collision box. The same vehicle IDs cross district boundaries without live
 teleports/replacement. Ground-truth body-gap rules and junction reservations
 control traffic; no trained perception model supplies vehicle commands.
 
-Hindi/English shops/signs, food carts, kiosks, bus stops, houses and palms are
-distributed across the districts. Vehicle/building meshes are generic installed
+Hindi/English shop boards, food carts, chai tables, bus stops, electric poles,
+window ACs, houses and palms are distributed across the districts. Buildings
+stand at the footpath at near-native size; shop boards and ACs are fixed to real
+walls found by ray casts, and are left out where no flat wall exists. Vehicle/building meshes are generic installed
 assets. The autorickshaw is still source artwork only: no compatible Unreal
 import/rig/cooking setup or registered native blueprint exists locally.
 
 ## Use
 
-- TAB switches front/follow cameras.
-- SPACE pauses/resumes; S saves a picture; ESC closes the owned simulation.
-- The minimap shows all areas, traffic and ego position together.
+- TAB switches between the chase and driver cameras.
+- 1–5 (or L for the next one) opens a street camera in each district; C returns to your car.
+- V / Shift+V follows the next or previous vehicle.
+- + / − / 0 change speed (½×, 1×, 2×, max) or return to real time.
+- SPACE pauses/resumes, with `.` stepping one frame while paused.
+- R puts your car back on its lane centre, stopped, at the next clear spot. This
+  is a live pose teleport, recorded as `vehicle_pose_teleport` and `ego_resets`.
+- W changes weather; H hides the HUD; F toggles fullscreen; S saves a picture;
+  F1 lists every key; ESC closes the owned simulation.
+- The HUD shows the district, clock and real-time factor, a minimap of all
+  areas, speed and driving state, and the areas visited.
 
 Default duration is 900 simulation seconds, bounded by 1,800 wall seconds.
 Building the whole town takes longer than a small scene. Low graphics is the
-default. Preview is 5 Hz; synchronized evidence is saved at 1 Hz.
+default. The display cameras render every 20 Hz step; synchronized evidence is
+saved at 1 Hz, encoded in worker processes so the window does not stall.
 
 ```powershell
 .\Start_Combined_Indian_Traffic.ps1

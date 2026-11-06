@@ -5,8 +5,9 @@
 Double-click **Start_Combined_Indian_Traffic.cmd** or **Start_Indian_Worlds.cmd**
 for a single connected world containing every district: market, colony, divided
 main road, village roads and irregular junction. Traffic exists across the whole
-town at once; areas are connected by driving lanes. TAB switches front/follow
-views; SPACE pauses; S saves a picture; ESC closes. Read
+town at once; areas are connected by driving lanes. TAB switches chase/driver
+views; 1–5 open street cameras; R resets your car; SPACE pauses; F1 lists all
+keys; ESC closes. Read
 [the combined-town guide](docs/COMBINED_INDIAN_TOWN.md).
 
 ## Five additional road settings

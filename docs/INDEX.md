@@ -16,7 +16,7 @@
 - [Decision display](DECISION_DISPLAY.md) and [playback controls](PLAYBACK_CONTROLS.md).
 - [Recorded camera observation](CAMERA_OBSERVATION.md) and [live road preview](LIVE_SIMULATION_OBSERVATION.md).
 - [Scene quality](SIMULATION_QUALITY.md).
-- [Connected-town gridlock diagnosis](TOWN_GRIDLOCK_DIAGNOSIS_20261029.md): late-run junction lock in a 900 s run, its fix and simulation test results (one more full run pending).
+- [Connected-town gridlock diagnosis](TOWN_GRIDLOCK_DIAGNOSIS_20261029.md): late-run junction lock in a 900 s run, its fix and simulation test results (full 900 s run confirmed 4 Nov, simulation).
 - [Planning/control references](../integration/README.md).
 
 ## Road segmentation
@@ -40,6 +40,7 @@
 - [Animal label review](ANIMAL_DATA_REVIEW_20261028.md) and [animal data plan](ANIMAL_DATA_PLAN_20261029.md): why animal labels were inconsistent; extra data sources.
 - [Filtered animal view and land-only re-score](ANIMAL_FILTER_RESCORE_PLAN_20261029.md): what was built and the overnight training result (validation, not deployed).
 - [Bicycle and traffic-light drop after v4](DETECTION_V4_BICYCLE_LIGHT_DROP_20261029.md): why two classes dipped slightly (validation, CPU-only analysis).
+- [v4b recovery fine-tune, 4 Nov](DETECTION_V4B_RECOVERY_20261104.md): whether bicycle and traffic light came back (validation, measured; nothing deployed).
 
 ## Portable result records
 

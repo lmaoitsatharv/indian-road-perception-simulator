@@ -81,6 +81,8 @@ Validity is target metadata, not a visual input feature. Synthetic and real eval
 | [Combined scenery](../integration/india_combined_scenery.py) | District scenery in one native world. |
 | [Combined traffic](../integration/india_combined_traffic.py) | Persistent routes, following/junction rules and native commands. |
 | [Combined scene](../integration/india_combined_scene.py) | World, actors, viewer, minimap, sensors and stepping. |
+| [Town HUD](../integration/india_town_hud.py) | Display-only overlay: district, clock, minimap, speed panel, key hints and help. |
+| [PNG worker](../integration/india_png_worker.py) | Encodes evidence PNGs in a separate process so the viewer keeps 20 Hz. |
 | [Neighbourhood scene](../integration/carla_india_scene.py) | Smaller scenario/capture loop. |
 | [Behavior](../integration/india_behavior.py) | Baseline controller, pedestrian rules and earlier passing state machine. |
 | [Decision display](../integration/india_decisions.py) | Frame-linked explanatory text; no actuator commands. |

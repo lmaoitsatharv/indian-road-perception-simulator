@@ -71,6 +71,7 @@ traffic only; no model, map or camera change.
 | 29 Oct | rules 1–3, 5–6 | 900 s | 0 / 0 / 0 | **23 of 25** | 185 s (a van starved at junction C) | 2,882 m |
 | 29 Oct | all rules | 465 s (run interrupted) | 0 / 0 / 0 | not reached | — | 1,469 m |
 | 29 Oct | all rules | 566 s (30-min wall-clock limit) | 0 / 0 / 0 | not reached | 75 s (car_8, junction) | 1,802 m |
+| 4 Nov | all rules | **900 s, full run** | 0 / 0 / 0 | **24 of 25** (bus parked by design) | 109 s (other_vehicle_19, junction); ego stalled at most 68 s; all vehicles stopped at once at most 0.6 s | 2,592 m |
 
 - The bus is excluded from "moving": it parks at its service stop by design. The minimum sampled gap stayed 0.273 m in every run,
   the same as before, so the tight-clearance limitation is unchanged.
@@ -78,6 +79,4 @@ traffic only; no model, map or camera change.
   within the first 566 s. The earlier run had already waited 63 s by that point, so this is not yet proof.
 - **Seeds do not vary the traffic.** Seeds 7101, 9101 and 6101 gave byte-identical results to 8101 (the seed only picks car
   colours), so they repeat one scenario rather than testing new ones. Varying spawn positions would need a code change.
-- **Still to do:** a full 900 s run with every rule, queued to start automatically after other GPU work finishes.
-  The last run was about 3× slower than earlier in the day for an unknown reason; at that speed 900 s cannot finish inside the
-  30-minute wall-clock limit.
+- **Full-run confirmation (4 Nov 2026, measured, simulation, seed 8101):** the run reached 900 s and passed the new progress gate, with 0 contacts, overlaps, departures or wrong-direction events, 187 junction grants and 0 watchdog releases (the watchdog never had to step in). 24 of 25 vehicles were moving after 786 s; the one that was not is the bus at its service stop. The original lock is not reproduced with the current code in this scenario. This is one scenario: the seed does not change traffic, so it is one repeat of one traffic pattern, not proof that no other pattern can lock up.
