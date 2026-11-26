@@ -5,8 +5,15 @@
 - [Getting started](GETTING_STARTED.md): CARLA installation, runtimes and external artifacts.
 - [Code map](CODE_MAP.md): modules, entry points and data flow.
 - [Results](RESULTS.md): current measurements and scopes.
-- [Roadmap](NEXT_STEPS.md): planned perception, routing and behavior integration.
+- [Roadmap](NEXT_STEPS.md): what is done and what remains.
+- [The project from zero](MILESTONE_2_VIVA_GUIDE.md), [progress report](MILESTONE_2_PROGRESS.md), [evidence gallery](MILESTONE_2_EVIDENCE.md), [team ownership](TEAM_OWNERSHIP.md) and the [file-by-file guide](FILE_GUIDE.md).
 - [Security](../SECURITY.md): local services, trusted model loading and publication boundaries.
+
+## Camera-only driving
+
+- [Camera driving](CAMERA_DRIVING.md): how to run it, what the car may use, destinations, passing, results and known problems.
+- [Design](CAMERA_DRIVING_DESIGN_20261106.md), [destinations design](CAMERA_DRIVING_DESTINATIONS_DESIGN_20261108.md) (with U-turns, the rear-camera phantom rule and side cameras), [destinations plan](CAMERA_DRIVING_DESTINATIONS_PLAN_20261108.md) and [decisions taken](CAMERA_DRIVING_DESTINATIONS_RULINGS_20261109.md).
+- Learned speed: [design](RL_SPEED_DESIGN_20261112.md), [decisions](RL_SPEED_RULINGS_20261112.md) and [results](RL_SPEED_RESULTS.md).
 
 ## Simulation and control
 

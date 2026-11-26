@@ -1,6 +1,6 @@
 # Getting started
 
-The simplest entry point is the rule-driven CARLA town. Model inference and training use separate runtimes and external artifacts.
+The simplest entry point is the rule-driven CARLA town. Camera-only driving, model inference and training use separate runtimes and external artifacts.
 
 ## Requirements
 
@@ -28,7 +28,7 @@ The combined town contains all five districts together. Select an appearance con
 
     .\Start_Combined_Indian_Traffic.ps1 -SimulationSeconds 120 -Seed 8101 -Weather overcast
 
-Selectable weather is not evidence of robustness in that condition. The current driver uses preset routes and rules, not camera predictions or selected destinations.
+Selectable weather is not evidence of robustness in that condition. In this scene every vehicle uses preset routes and rules; the camera-driven car is started separately (below).
 
 | Combined-town control | Action |
 | --- | --- |
@@ -44,6 +44,29 @@ The smaller neighbourhood provides separate traffic scenarios:
     .\Start_Indian_Traffic.ps1 -Seed 7 -Scenario mixed
 
 Its additional camera/replay/playback controls are documented in [simulation controls](../INDIAN_SIMULATION.md). Neither rule-driven scene requires trained models or datasets.
+
+## Camera-only driving
+
+One car in the same town is driven by the two trained models alone. It needs, in addition to the CARLA setup above:
+
+- The simulation road model checkpoint at `runs/simulation_frozen_20261022_01/best.keras` (SHA-256 `8d8c9fd7...`) and the detector at `runs/detection_train_20261025_02/weights/best.pt` (`f7bb7e4c...`), as recorded in the [model manifest](../models/perception_models.json). The launcher refuses any other checkpoint.
+- Two WSL2 GPU environments under the WSL user's home: `~/.venvs/idd-tf220` (TensorFlow, [requirements-wsl.txt](../requirements-wsl.txt)) for the road model and `~/.venvs/idd-detect` (PyTorch and Ultralytics, [requirements-detection-wsl.txt](../requirements-detection-wsl.txt)) for the detector. `setup/rebuild_wsl_envs.sh`, run inside WSL, builds both and checks the GPU. `PROJECT_WSL_ROAD_PYTHON` and `PROJECT_WSL_DETECTOR_PYTHON` select other interpreters.
+- A Windows `.venv` for the session owner (see [separate runtimes](#separate-python-runtimes)).
+
+Then, from the repository root:
+
+    .\Start_Camera_Driving.ps1                                  # 600 simulated seconds, seed 8101, clear weather
+    .\Start_Camera_Driving.ps1 -Destination "Colony junction"   # drive to a place (a name or x,y)
+    .\Start_Camera_Driving.ps1 -RLSpeed                         # the learned speed policy picks the speed
+    .\Start_Camera_Driving.ps1 -SimulationSeconds 300 -Weather dusk
+
+Loading both models in WSL and building the town takes a few minutes. In the viewer, A shows the AI's view full screen, M opens the map to pick a destination and X clears it; the other keys are as in the table above. Each run writes `runs/camera_driving_*/` (manifests, worker logs, status) and a town folder whose `camera_driving/` subfolder holds every decision, saved AI views and contacts. [Camera driving](CAMERA_DRIVING.md) explains the display and the records.
+
+The offline checks need no CARLA server or GPU; run them with the CARLA environment:
+
+    & .\.venv-carla\Scripts\python.exe setup\verify_camera_driving.py
+    & .\.venv-carla\Scripts\python.exe setup\verify_camera_destinations.py
+    & .\.venv-carla\Scripts\python.exe setup\verify_rl_speed.py --suites
 
 ## Separate Python runtimes
 

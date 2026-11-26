@@ -74,6 +74,10 @@ matlab_crash_dump*
 !/models/segmentation_final_lock.json
 !/models/model_config.json
 !/models/perception_models.json
+!/models/rl_speed_policy.json
+# Learned speed: the route export and junction times are rebuilt from the map and local runs
+/rl/data/*.npz
+/rl/data/junction_times.json
 
 # Historical setup output stays local; keep first-party utility source
 /setup/*

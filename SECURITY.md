@@ -1,6 +1,6 @@
 # Security and responsible use
 
-This repository is a research prototype for road perception and traffic simulation. Its published results describe specific data and synthetic scenarios; they do not establish suitability for controlling a physical vehicle or general road safety. The current simulator driver uses rules and simulator states. Camera-based vehicle control and reinforcement learning are not implemented.
+This repository is a research prototype for road perception and traffic simulation. Its published results describe specific data and synthetic scenarios; they do not establish suitability for controlling a physical vehicle or general road safety. In the simulator, the other traffic uses rules and simulator states; one car is driven by the camera models, optionally with a learned speed policy under a fixed shield. That is simulation evidence on a few seeds, not a safety result.
 
 See [Getting started](docs/GETTING_STARTED.md), [Results](docs/RESULTS.md) and the [documentation index](docs/INDEX.md) for operational requirements and measured limitations.
 

@@ -1,0 +1,90 @@
+{
+ "schema": "rl_speed_policy_v1",
+ "path": "models/rl_speed/policy.npz",
+ "sha256": "a76a61fed153e768a1339a98c366959e38ea921b78754951604929b5744b7a75",
+ "training_run": "runs/rl_speed_20261112_07",
+ "iteration": 109,
+ "decisions_trained": 7208960,
+ "standin_eval": {
+  "time_s": 164.64121212121634,
+  "collisions": 0,
+  "near_miss_s": 0.0,
+  "person_near_miss_s": 0.0,
+  "hard_brake_s": 4.152121212121206,
+  "emergency_s": 2.0184848484848468,
+  "over_limit_s": 0.0,
+  "max_over_m_s": -0.060878847459996166,
+  "violations": 0,
+  "timeouts": 0,
+  "episodes": 330
+ },
+ "standin_baselines": {
+  "rule": {
+   "time_s": 170.46196969697493,
+   "collisions": 0,
+   "near_miss_s": 0.0,
+   "person_near_miss_s": 0.0,
+   "hard_brake_s": 4.632727272727264,
+   "emergency_s": 2.095151515151514,
+   "over_limit_s": 24.800454545454375,
+   "max_over_m_s": 1.21391396531273,
+   "violations": 0,
+   "timeouts": 0,
+   "episodes": 330
+  },
+  "legal": {
+   "time_s": 172.50242424243004,
+   "collisions": 0,
+   "near_miss_s": 0.0,
+   "person_near_miss_s": 0.0,
+   "hard_brake_s": 4.217424242424236,
+   "emergency_s": 2.0924242424242414,
+   "over_limit_s": 0.0,
+   "max_over_m_s": -0.32091696559386307,
+   "violations": 0,
+   "timeouts": 0,
+   "episodes": 330
+  },
+  "shield": {
+   "time_s": 169.11000000000513,
+   "collisions": 0,
+   "near_miss_s": 0.0,
+   "person_near_miss_s": 0.0,
+   "hard_brake_s": 3.791363636363631,
+   "emergency_s": 2.0281818181818165,
+   "over_limit_s": 0.0,
+   "max_over_m_s": -0.3209198717806645,
+   "violations": 0,
+   "timeouts": 0,
+   "episodes": 330
+  },
+  "shield_hold": {
+   "time_s": 164.6686363636406,
+   "collisions": 0,
+   "near_miss_s": 0.0,
+   "person_near_miss_s": 0.0,
+   "hard_brake_s": 4.145606060606053,
+   "emergency_s": 2.0181818181818163,
+   "over_limit_s": 0.0,
+   "max_over_m_s": -0.06087884745999883,
+   "violations": 0,
+   "timeouts": 0,
+   "episodes": 330
+  }
+ },
+ "settings": {
+  "envs": 512,
+  "steps": 128,
+  "iterations": 150,
+  "lr": 0.0003,
+  "gamma": 0.995,
+  "lam": 0.95,
+  "hidden": 128,
+  "wait_median": 8.0,
+  "limit_hold": true,
+  "entry_ease": true,
+  "stress": 0.0,
+  "seed": 7
+ },
+ "note": "Simulation only: trained and evaluated in rl/speed_env.py; see docs/RL_SPEED_RESULTS.md for town drives."
+}

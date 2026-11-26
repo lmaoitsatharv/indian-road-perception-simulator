@@ -10,9 +10,16 @@ This map identifies primary entry points and distinguishes training, prediction,
     Labelled road-scene RGB -> YOLO11s -> boxes / classes / confidence
     CARLA RGB -> simulation road model -> live observation
 
-    CARLA actor states -> rule driver -> throttle / brake / steering -> physics
+    CARLA actor states -> rule driver -> throttle / brake / steering -> physics   (the other traffic)
 
-Perception does not currently supply driver inputs. Destination selection, tracking/range and camera-derived commands are planned in [the roadmap](NEXT_STEPS.md).
+    CARLA front RGB -> simulation road model -> road mask --+
+    CARLA front RGB -> YOLO11s -> boxes --------------------+-> camera driver -> throttle / brake / steering / gear
+    rear / side RGB (when needed) -> YOLO11s -> boxes ------+        ^
+    speedometer, gyro -> dead reckoning ---------------------+        |
+    picked destination -> sat-nav (lane graph) -> route guide, junction and U-turn cues
+    learned speed policy (optional) -> a fraction of the shield's speed
+
+The camera driver sees only its own camera pictures through the two models, its speedometer and gyro, and the sat-nav's route cues; it has no access to the simulator's actors. The sat-nav uses the car's exact position and the town's lane graph, as a phone's map would. [Camera driving](CAMERA_DRIVING.md) describes both.
 
 ## Road segmentation
 
@@ -92,6 +99,26 @@ Validity is target metadata, not a visual input feature. Synthetic and real eval
 | [Individual worlds](../integration/india_world_maps.py) | Separate road-profile specifications. |
 
 Surface, streetscape, weather and signal modules provide specific scene components. Small original textures and source-only autorickshaw artwork are under integration/indian_world_assets/. Its manifest distinguishes source artwork from a registered physics vehicle.
+
+## Camera-only driving
+
+| File | Purpose |
+| --- | --- |
+| [Launcher](../Start_Camera_Driving.ps1) | Wrapper (and `.cmd`); `-Destination`, `-RLSpeed`, weather and length options. |
+| [Session owner](../setup/run_camera_driving.py) | Checks the two approved checkpoints, starts the WSL model workers, then the town with the camera car. |
+| [Model workers](../setup/camera_driving_service.py) | Authenticated local service; [road](../setup/camera_driving_road_worker.py) and [detector](../setup/camera_driving_detector_worker.py) workers answer one picture at a time. |
+| [Road inference](../idd_driving_inference.py) | Fixed-checkpoint simulation road model for driving. |
+| [Perception client](../integration/india_perception_client.py) | Sends each front picture to both workers, plus one rear or side picture to the detector, and waits for the answers. |
+| [Camera geometry](../integration/india_camera_geometry.py) | Pinhole projection and flat-ground distances for each mounted camera. |
+| [Camera driver](../integration/india_camera_driver.py) | Lane keeping, obstacles and phantom rejection, passing, junctions, arrival, U-turns, rear/side camera checks and stuck recovery. No simulator access. |
+| [Route planner](../integration/india_route_planner.py) | The town's lane graph, snapping a clicked point, Dijkstra routes with either-side pins and U-turns. |
+| [Sat-nav](../integration/india_satnav.py) | Destination state, re-planning after wrong turns or resets, and the cues it gives the driver. |
+| [Hybrid A*](../integration/india_hybrid_astar.py) | Junction paths on the camera's top-down road grid. |
+| [Learned speed](../integration/india_rl_speed.py) | The shield, observation and numpy policy used by the driver. |
+| [Training and analysis](../rl/) | Stand-in town, PPO training, route export and CARLA run scoring for the learned speed. |
+| [Offline checks](../setup/verify_camera_driving.py) | Synthetic camera checks of driving, passing, the protocol and isolation; [destinations and U-turns](../setup/verify_camera_destinations.py) and [learned speed](../setup/verify_rl_speed.py). |
+
+The town scene ([combined scene](../integration/india_combined_scene.py)) spawns the camera car's sensors, steps the driver at 20 Hz and records its decisions, views and contacts; its HUD shows what the AI sees.
 
 ## Live observation
 

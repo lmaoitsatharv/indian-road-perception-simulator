@@ -9,7 +9,7 @@ import random
 import carla
 import numpy as np
 
-from india_behavior import Driver,Pedestrian,body,wrap
+from india_behavior import Driver,Pedestrian,body,polygon_gap,wrap
 from india_combined_map import BY_ID,NODES,TOUR,road_between,outgoing_lane,incoming_lane
 
 
@@ -112,9 +112,15 @@ class TownDriver(Driver):
 
 TWO_WHEELERS = ("motorcycle","bicycle")
 # Up to this many vehicles may hold one junction at once, on movements whose
-# paths through it never come within CONFLICT_M of each other.
+# paths through it never come within CONFLICT_M of each other where they meet at
+# an angle. Lanes running side by side (a bend's two directions, opposing
+# approaches) conflict only within LANE_CONFLICT_M, a vehicle's width and room:
+# a bend's two directions are 2.8-2.95 m apart and never cross, yet waited for
+# each other (9 Nov, the user driving to a destination at Bazaar gate).
 MAX_HOLDERS = 3
 CONFLICT_M = 3.6
+LANE_CONFLICT_M = 2.4
+SIDE_BY_SIDE_DEG = 25.
 JAYWALKERS = {"market_street":3,"divided_main_road":2,"residential_colony":1,"irregular_junction":1,"rural_road":1}
 
 
@@ -343,6 +349,131 @@ class CombinedTraffic:
         self.native = native
         self.ego_resets = 0
         self.lost_walkers = []
+        # Camera-only driving (opt-in): your car is driven by india_camera_driver,
+        # which only gets its own camera results, speedometer and gyro.
+        self.camera_driver = None
+        self.camera_ego = {"speed": 0., "yaw_rate": 0., "district": None, "node": None}
+        self.camera_route = None       # the sat-nav's route, when your car has a destination
+        self.camera_turn_why = None    # why your car was last not given its turn (for the records)
+        self.camera_near = None        # (distance, junction) to its next junction on that route
+        self._ego_tour = None          # its own loop route and s, kept while a sat-nav route stands in
+
+    def enable_camera_driver(self,driver):
+        """Hand your car to the camera driver. It leaves the junction-token system
+        (it has no map to ask for a turn); other vehicles yield to it instead."""
+        self.camera_driver = driver
+        self.stats.update(yield_to_camera_car_s=0.,yield_to_camera_car_events=0,camera_car_token_grants=0)
+
+    def set_camera_route(self,route):
+        """With a destination, your car takes its turn at junctions like the other vehicles, along the
+        sat-nav's route (which serves the reservation code as their loop routes do). None: it leaves
+        the reservations again and gets its own route back."""
+        if route is self.camera_route:
+            return
+        ego = self.ego
+        if route is not None and self._ego_tour is None:
+            self._ego_tour = (ego.route,ego.s,ego.index)
+        if route is None and self._ego_tour is not None:
+            ego.route,ego.s,ego.index = self._ego_tour
+            self._ego_tour = None
+            for held in self.reservations.values():
+                held.pop(ego.actor.id,None)
+        if route is not None:
+            ego.index,ego.s = 0,0.
+            ego.route = route
+        self.camera_route,self.camera_near = route,None
+
+    def camera_turn(self):
+        """Your car's next junction on its route and whether it has been given its turn there."""
+        if self.camera_route is None or self.camera_near is None or self.camera_near[1]["node"] is None:
+            return {"node":None,"granted":None,"distance_m":None}
+        distance,junction = self.camera_near
+        node = junction["node"]
+        granted = self.ego.actor.id in self.reservations.get(node,{})
+        return {"node":node,"granted":granted,"distance_m":distance,"why":None if granted else self.camera_turn_why}
+        self.records[0].update(controller="camera_only_models",ground_truth_to_controller=False)
+
+    def _camera_car_gap(self,driver,state,ego):
+        """Distance along this vehicle's own route ahead to your car's true body,
+        when your car stands in that path (crossing, head-on or ahead); else None."""
+        reach = float(np.clip(6.+2.5*state["speed"],6.,25.))
+        if math.hypot(ego["x"]-state["x"],ego["y"]-state["y"]) > reach+driver.half_length+ego["ex"]+3.:
+            return None
+        width = driver.half_width+.4
+        route = driver.route
+        aheads = np.arange(0.,reach+.01,1.)
+        s_values = driver.s+driver.half_length+aheads+.5
+        if isinstance(route,UrbanBusPath):
+            s_values = np.clip(s_values,0.,route.length-1e-5)
+        index = np.minimum(np.searchsorted(route.distances,s_values%route.length),len(route.points)-1)
+        points = route.points[index]
+        # Only samples near your car need the exact rectangle test.
+        near = np.hypot(points[:,0]-ego["x"],points[:,1]-ego["y"]) <= math.hypot(ego["ex"],ego["ey"])+width+1.
+        for k in np.flatnonzero(near):
+            px,py,yaw = points[k]
+            px,py = px-driver.offset*math.sin(yaw),py+driver.offset*math.cos(yaw)
+            c,s = math.cos(yaw),math.sin(yaw)
+            rect = [(px+a*c-b*s,py+a*s+b*c) for a,b in ((-.6,-width),(.6,-width),(.6,width),(-.6,width))]
+            if polygon_gap(rect,ego["polygon"])[0]:
+                return float(aheads[k])
+        return None
+
+    def _camera_car_lane(self,state):
+        """Where your car really is on the map (scoring and display only; never given to its driver)."""
+        location = carla.Location(x=state["x"],y=state["y"],z=0.)
+        on_lane = self.native.get_waypoint(location,False,carla.LaneType.Driving)
+        nearest = on_lane or self.native.get_waypoint(location,True,carla.LaneType.Driving)
+        info = {"on_lane":on_lane is not None,"junction":None,"road_id":None,"lane":None,"lane_yaw":None,"lane_offset_m":None,
+            "wrong_side":False}
+        if nearest is None:
+            return info
+        if nearest.is_junction:
+            index = nearest.junction_id-1000
+            info["junction"] = list(NODES)[index] if 0 <= index < len(NODES) else "junction"
+        elif nearest.road_id in BY_ID:
+            self.camera_ego["district"] = BY_ID[nearest.road_id].district
+        yaw = math.radians(nearest.transform.rotation.yaw)
+        centre = nearest.transform.location
+        info.update(road_id=nearest.road_id,lane=nearest.lane_id,lane_yaw=yaw,
+            lane_offset_m=-(state["x"]-centre.x)*math.sin(yaw)+(state["y"]-centre.y)*math.cos(yaw))
+        info["wrong_side"] = bool(on_lane is not None and info["junction"] is None and math.cos(state["yaw"]-yaw) < 0)
+        return info
+
+    def reset_camera_car(self):
+        """Lift your car, stopped, onto the nearest clear lane ahead in its direction
+        (simulator recovery after a crash or a long stall; counted as a reset)."""
+        ego = self.ego
+        location = ego.actor.get_location()
+        heading = math.radians(ego.actor.get_transform().rotation.yaw)
+        wp = self.native.get_waypoint(location,True,carla.LaneType.Driving)
+        if wp is None:
+            return None
+        lanes = [w for w in (wp,wp.get_left_lane(),wp.get_right_lane()) if w is not None and w.lane_type == carla.LaneType.Driving]
+        same = [w for w in lanes if math.cos(math.radians(w.transform.rotation.yaw)-heading) > 0] or lanes
+        wp = min(same,key=lambda w:w.transform.location.distance(location))
+        cars = [d.actor.get_location() for d in self.drivers[1:]]
+        people = [w.actor.get_location() for w in self.walkers]
+        moved = 0.
+        for _ in range(100):
+            spot = wp.transform.location
+            clear = all(spot.distance(q) > 10. for q in cars) and all(spot.distance(q) > 3. for q in people)
+            if clear and not wp.is_junction and not any(n.is_junction for n in wp.next(ego.half_length+6.)):
+                break
+            following = wp.next(3.)
+            if not following:
+                return None
+            wp,moved = following[0],moved+3.
+        else:
+            return None
+        t = wp.transform
+        ego.actor.set_target_velocity(carla.Vector3D())
+        ego.actor.set_target_angular_velocity(carla.Vector3D())
+        ego.actor.set_transform(carla.Transform(carla.Location(x=t.location.x,y=t.location.y,z=t.location.z+.35),
+            carla.Rotation(yaw=t.rotation.yaw)))
+        ego.actor.apply_control(carla.VehicleControl(brake=1.))
+        self.records[0]["live_pose_teleport"] = True
+        self.ego_resets += 1
+        return moved
 
     def reset_ego(self):
         """Viewer key R: put your car back on its lane centre, stopped, moving
@@ -391,17 +522,20 @@ class CombinedTraffic:
             for s in np.linspace(.05,c["length"]-.05,max(4,int(c["length"])+1)):
                 wp = native.get_waypoint_xodr(c["id"],1,float(s))
                 if wp is not None:
-                    points.append((wp.transform.location.x,wp.transform.location.y))
+                    points.append((wp.transform.location.x,wp.transform.location.y,math.radians(wp.transform.rotation.yaw)))
             if len(points) >= 4:
                 paths[c["id"]] = (c["node"],np.asarray(points))
         conflicts = {}
         for a,(node_a,pa) in paths.items():
             for b,(node_b,pb) in paths.items():
                 if a < b and node_a == node_b:
-                    gap = float(np.min(np.linalg.norm(pa[:,None,:]-pb[None,:,:],axis=2)))
-                    conflicts[(a,b)] = conflicts[(b,a)] = gap < CONFLICT_M
+                    gaps = np.linalg.norm(pa[:,None,:2]-pb[None,:,:2],axis=2)
+                    turn = np.abs((pa[:,None,2]-pb[None,:,2]+math.pi)%(2*math.pi)-math.pi)
+                    side_by_side = (turn < math.radians(SIDE_BY_SIDE_DEG)) | (turn > math.pi-math.radians(SIDE_BY_SIDE_DEG))
+                    conflicts[(a,b)] = conflicts[(b,a)] = bool((gaps < LANE_CONFLICT_M).any()
+                        or ((gaps < CONFLICT_M) & ~side_by_side).any())
         self.conflict_summary = {"pairs":len(conflicts)//2,"compatible_pairs":sum(not v for v in conflicts.values())//2,
-            "conflict_distance_m":CONFLICT_M,"max_holders":MAX_HOLDERS}
+            "conflict_distance_m":CONFLICT_M,"side_by_side_conflict_distance_m":LANE_CONFLICT_M,"max_holders":MAX_HOLDERS}
         return conflicts
 
     def spawn_jaywalkers(self):
@@ -482,7 +616,7 @@ class CombinedTraffic:
         Everyone is back on the lane centre near a junction."""
         merge_blocked = set()
         for driver in self.drivers:
-            if driver.kind == "bus":
+            if driver.kind == "bus" or (driver is self.ego and self.camera_driver is not None):
                 continue
             state = states[driver.actor.id]
             part = driver.route.part_at(driver.s)
@@ -714,6 +848,33 @@ class CombinedTraffic:
             state = body(driver.actor,observed)
             v = observed.get_velocity()
             state["speed"] = math.hypot(v.x,v.y)
+            if driver is self.ego and self.camera_driver is not None:
+                # No route for the camera car: distance from its speed, place from the map
+                # (scoring only). It never queues for a junction token.
+                self.camera_ego.update(speed=state["speed"],yaw_rate=math.radians(observed.get_angular_velocity().z))
+                # Signed along its heading: backing up does not count as progress.
+                along = v.x*math.cos(state["yaw"])+v.y*math.sin(state["yaw"])
+                self.distance[driver.name] += along*.05
+                if along < 0:
+                    self.camera_ego["reverse_m"] = self.camera_ego.get("reverse_m",0.)-along*.05
+                state["lane_info"] = self._camera_car_lane(state)
+                district = self.camera_ego["district"]
+                if district and district not in self.visited[driver.name]:
+                    self.visited[driver.name].add(district)
+                    self.transitions.append({"sim_s":sim_time,"actor":driver.name,"district":district,
+                        "distance_m":self.distance[driver.name],"frame":snapshot.frame})
+                states[driver.actor.id] = state
+                if self.camera_route is not None:
+                    # On a sat-nav route: queue for the next junction's turn as the other vehicles do.
+                    progress = self.camera_route.progress(state["x"],state["y"],state["yaw"],driver.index)
+                    driver.index,driver.s = progress["index"],progress["s"]
+                    distance,junction = self.camera_route.next_junction(driver.s)
+                    near[driver.actor.id] = self.camera_near = (distance,junction)
+                    if junction["node"] is not None and -5 < distance < 35:
+                        self.waiting_since.setdefault((junction["node"],driver.actor.id),sim_time)
+                else:
+                    near[driver.actor.id] = (1e5,{"node":None,"start_m":1e5,"end_m":1e5+1.,"road_id":None})
+                continue
             driver.index,local = driver.route.project(state["x"],state["y"],driver.index)
             delta = (local-driver.last_local_s+driver.route.length/2)%driver.route.length-driver.route.length/2
             driver.s += delta
@@ -780,33 +941,71 @@ class CombinedTraffic:
             # only vehicles following a holder on its very movement may still
             # join (a platoon), and only while that head has waited < 12 s.
             blocked,head_wait = False,0.
+            mine = self.camera_route is not None and any(d is self.ego for d in waiting)
+            if mine:
+                self.camera_turn_why = "behind others in the queue"
             for chosen in waiting:
                 if len(held) >= MAX_HOLDERS:
+                    if mine and self.ego.actor.id not in held:
+                        self.camera_turn_why = "junction full"
                     break
                 distance,junction = near[chosen.actor.id]
                 road = junction["road_id"]
+                ego = chosen is self.ego
                 if chosen.kind in TWO_WHEELERS and abs(chosen.offset) > .3:
                     continue
                 same = road in held.values()
                 if blocked and (not same or head_wait > 12.):
+                    if ego:
+                        self.camera_turn_why = "an earlier vehicle is waiting for a crossing movement"
                     continue
                 if not self._front_of_approach(chosen,distance,states,{a for a,r in held.items() if r == road}):
+                    if ego:
+                        self.camera_turn_why = "a vehicle ahead of it in its approach"
                     continue
                 if not same and any(self.conflicts.get((road,r),True) for r in held.values()):
                     blocked,head_wait = True,sim_time-self.waiting_since.get((node,chosen.actor.id),sim_time)
+                    if ego:
+                        self.camera_turn_why = "a crossing movement holds the junction: " + ", ".join(
+                            self.by_id[a].name for a,r in held.items() if self.conflicts.get((road,r),True))
                     continue
                 if not self._exit_clear(chosen,(distance,junction),states):
+                    if ego:
+                        self.camera_turn_why = "no room past the junction"
                     continue
                 held[chosen.actor.id] = road
                 self.hold_check[(node,chosen.actor.id)] = (chosen.actor.id,chosen.s,sim_time)
                 self.token_grants += 1
+                if chosen is self.ego and self.camera_driver is not None:
+                    self.stats["camera_car_token_grants"] += 1
                 if len(held) > 1:
                     self.stats["shared_junction_grants"] += 1
                 self.stats["max_simultaneous_holders"] = max(self.stats["max_simultaneous_holders"],len(held))
         holders = {holder:node for node,held in self.reservations.items() for holder in held}
         commands,trace = [],[]
+        camera = self.camera_driver is not None
         for driver in self.drivers:
             state = states[driver.actor.id]
+            if camera and driver is self.ego:
+                # The models drive: only its own camera results, speed and gyro reach the driver.
+                out = self.camera_driver.control(state["speed"],self.camera_ego["yaw_rate"],sim_time)
+                control = carla.VehicleControl(throttle=out["throttle"],brake=out["brake"],steer=out["steer"],
+                    reverse=bool(out.get("reverse")))
+                commands.append(carla.command.ApplyVehicleControl(driver.actor.id,control))
+                driver.target,driver.reason = out["target"],out["reason"]
+                lane = state["lane_info"]
+                trace.append({"id":driver.actor.id,"name":driver.name,"x":state["x"],"y":state["y"],"yaw":state["yaw"],
+                    "ex":state["ex"],"ey":state["ey"],"speed":state["speed"],"route_s":self.distance[driver.name],
+                    "distance_m":self.distance[driver.name],"district":self.camera_ego["district"] or "market_street",
+                    "road_id":lane["road_id"],"lane":lane["lane"],"junction":lane["junction"],
+                    "expected_yaw":lane["lane_yaw"] if lane["lane_yaw"] is not None else state["yaw"],
+                    "lateral_error_m":lane["lane_offset_m"],"on_lane":lane["on_lane"],"wrong_side":lane["wrong_side"],
+                    "target":out["target"],"reason":out["reason"],"decision":out["decision"],"detail":out["detail"],
+                    "throttle":control.throttle,"brake":control.brake,"steer":control.steer,"yaw_rate":self.camera_ego["yaw_rate"],
+                    "reverse":control.reverse,
+                    "holds_junction":None,"lane_offset_m":lane["lane_offset_m"],"two_wheeler":False,"kind":driver.kind,
+                    "camera_driven":True})
+                continue
             part = driver.route.part_at(driver.s)
             target,reason = min(driver.desired,part["cruise"]),"district_speed"
             if hasattr(driver,"service_stop_s"):
@@ -852,8 +1051,9 @@ class CombinedTraffic:
                 if heading < .35:
                     continue
                 other_part = other.route.part_at(other.s)
+                # (The camera car has no route lane, so it is always a possible leader.)
                 if part["road_id"] == other_part["road_id"] and part["lane"] != other_part["lane"] \
-                        and abs(driver.offset) < .3 and abs(other.offset) < .3:
+                        and abs(driver.offset) < .3 and abs(other.offset) < .3 and not (camera and other is self.ego):
                     continue
                 dx,dy = observed["x"]-state["x"],observed["y"]-state["y"]
                 longitudinal = dx*math.cos(state["yaw"])+dy*math.sin(state["yaw"])
@@ -881,6 +1081,19 @@ class CombinedTraffic:
                         target,reason = safe,"pedestrian_crossing"
                     if gap < 2.:
                         target,reason = 0.,"emergency_pedestrian"
+            if camera:
+                # Other drivers see your car and give way when it stands in their path
+                # (it is outside the junction tokens and may cross or drift into a lane).
+                gap = self._camera_car_gap(driver,state,states[self.ego.actor.id])
+                if gap is not None:
+                    safe = max(0.,(gap-3.)/1.9)
+                    if safe < target:
+                        target,reason = safe,"yield_to_camera_car"
+                    if gap < 1.5:
+                        target,reason = 0.,"emergency_gap"
+                    if driver.reason not in ("yield_to_camera_car","emergency_gap"):
+                        self.stats["yield_to_camera_car_events"] += 1
+                    self.stats["yield_to_camera_car_s"] += .05
             if driver.actor.id in merge_blocked and target > 0:
                 # Let the body alongside go first, then merge in behind it.
                 target,reason = min(target,1.),"merging"

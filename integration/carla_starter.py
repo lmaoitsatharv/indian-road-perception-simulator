@@ -11,6 +11,7 @@ from pathlib import Path
 import queue
 import random
 import shutil
+import sys
 import time
 import traceback
 import xml.etree.ElementTree as ET
@@ -56,13 +57,12 @@ def main() -> int:
     shutil.copy2(__file__, output / "carla_starter_source.py")
     shutil.copy2(ROOT / "setup/carla/run_session.py", output / "run_session_source.py")
     lock = ROOT / "setup/carla/viewer.lock"
-    try:
-        lock_fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
-    except FileExistsError:
-        raise RuntimeError("Another CARLA viewer may be running. Inspect setup/carla/viewer.lock before retrying.")
     lock_identity = {"pid": os.getpid(), "output": str(output)}
-    os.write(lock_fd, json.dumps(lock_identity).encode("utf-8"))
-    os.close(lock_fd)
+    # A lock left by a viewer that was closed or crashed is cleared; a live viewer still refuses.
+    sys.path.insert(0, str(ROOT / "setup/carla"))
+    from session_locks import claim
+    claim(lock, json.dumps(lock_identity).encode("utf-8"),
+          "Another CARLA viewer is running. Inspect setup/carla/viewer.lock before retrying.")
     rng = random.Random(args.seed)
     world = tm = original_settings = camera = collision_sensor = ego = None
     owned, controllers, collisions = [], [], []

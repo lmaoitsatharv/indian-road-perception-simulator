@@ -23,8 +23,8 @@ def wsl_distribution(explicit=None):
     return explicit or os.environ.get("PROJECT_WSL_DISTRIBUTION") or "Ubuntu-24.04"
 
 
-def wsl_python(distribution=None, explicit=None):
-    """Resolve the target WSL user's home, or use an explicit absolute interpreter."""
+def wsl_python(distribution=None, explicit=None, venv="idd-tf220"):
+    """Resolve the target WSL user's home (its ~/.venvs/<venv>), or use an explicit absolute interpreter."""
     configured = explicit or os.environ.get("PROJECT_WSL_PYTHON")
     if configured:
         if not configured.startswith("/") or "\n" in configured or "\r" in configured:
@@ -38,7 +38,7 @@ def wsl_python(distribution=None, explicit=None):
     home = result.stdout.strip()
     if not home.startswith("/") or "\n" in home or "\r" in home:
         raise ValueError("Could not resolve the selected WSL user's HOME")
-    return home.rstrip("/") + "/.venvs/idd-tf220/bin/python"
+    return home.rstrip("/") + f"/.venvs/{venv}/bin/python"
 
 
 def matlab_executable(explicit=None):

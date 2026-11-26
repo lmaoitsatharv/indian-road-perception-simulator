@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "setup"))
 # Reuse only this class, not the historical controller, deadline, queue or lease.
 from windows_job import CarlaJob
+from session_locks import claim
 
 
 def atomic(path: Path, data: dict) -> None:
@@ -69,6 +70,9 @@ def main() -> int:
     parser.add_argument("--observe-road", action="store_true")
     parser.add_argument("--dataset-plan", type=Path, help="Predeclared Indian simulation capture episodes")
     parser.add_argument("--live-road-config",type=Path,help="Opt-in native-CARLA live-observer session")
+    parser.add_argument("--camera-drive",type=Path,help="Camera-only driving session for the connected town (setup/run_camera_driving.py)")
+    parser.add_argument("--destination",help="Camera-driving runs: drive to this place (a name, or x,y)")
+    parser.add_argument("--destinations",help="Camera-driving test runs: places separated by ';', the next set 5 s after arriving")
     parser.add_argument("--road-camera-hz", type=int, choices=(1,5), default=5)
     parser.add_argument("--surface-style", choices=("legacy", "asphalt"), default="asphalt")
     parser.add_argument("--weather", choices=("clear", "overcast", "wet", "dusk"), default="clear")
@@ -78,6 +82,10 @@ def main() -> int:
             parser.error("New worlds use their own native preview; choose --india-world without old-scene/model flags")
         if args.speed != 1:
             parser.error("New worlds currently use 1x playback")
+    if args.camera_drive and args.india_world != "combined":
+        parser.error("Camera-only driving runs in the connected town: use --india-world combined")
+    if (args.destination or args.destinations) and not args.camera_drive:
+        parser.error("--destination and --destinations need --camera-drive (a camera-driving session)")
     if args.live_road_config and (not args.india or not args.observe_road or args.road_camera_hz!=5):
         parser.error("Live observation requires --india --observe-road --road-camera-hz 5")
     if args.dataset_plan and (not args.india or not args.smoke or not args.observe_road):
@@ -102,12 +110,9 @@ def main() -> int:
     if not executable.is_file() or not executable.resolve().is_relative_to(ROOT / "tools/carla"):
         raise RuntimeError("Invalid CARLA installation path")
     lock = ROOT / "setup/carla/session.lock"
-    try:
-        fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
-    except FileExistsError:
-        raise RuntimeError("A dedicated session may already be running; inspect setup/carla/session.lock.")
-    os.write(fd, str(os.getpid()).encode("ascii"))
-    os.close(fd)
+    # A lock left by a run that was closed or crashed is cleared; a live one still refuses.
+    claim(lock, str(os.getpid()).encode("ascii"),
+          "A dedicated session is already running; inspect setup/carla/session.lock.")
     server = viewer = None
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S_%fZ")
     prefix = "carla_indian_worlds" if args.india_world else "carla_india" if args.india else "carla"
@@ -196,6 +201,12 @@ def main() -> int:
             argv.append("--camera-probe")
         if args.india_world:
             argv.extend(["--india-world", args.india_world,"--sim-seconds",str(args.sim_seconds),"--weather",args.weather])
+            if args.camera_drive:
+                argv.extend(["--camera-drive", str(args.camera_drive.resolve())])
+                if args.destination:
+                    argv.append(f"--destination={args.destination}")   # "=": a negative x is not an option
+                if args.destinations:
+                    argv.append(f"--destinations={args.destinations}")
         if args.india:
             argv.append("--india")
             argv.extend(["--case", args.case, "--sim-seconds", str(args.sim_seconds), "--view", args.view])

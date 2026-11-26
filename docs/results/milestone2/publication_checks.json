@@ -1,0 +1,83 @@
+{
+  "schema": "milestone2_publication_checks_v1",
+  "as_of": "2026-10-26",
+  "passed": true,
+  "python_sources_parsed": 217,
+  "powershell_sources_parsed": 18,
+  "json_and_notebooks_parsed": 84,
+  "clean_notebooks": 2,
+  "published_file_guide_entries": 468,
+  "current_document_links_checked": 630,
+  "missing_current_links": [],
+  "data_conversion_fixture_groups": 10,
+  "sampling_and_readiness_checks": [
+    "rare_image_weights_are_bounded_and_expected",
+    "duplicate_pixel_group_base_weights_sum_to_one",
+    "all_original_training_identities_keep_positive_probability",
+    "validation_rows_never_enter_weighted_training",
+    "zero_excessive_and_nan_boosts_rejected",
+    "actual_refinement_metadata_ready",
+    "changed_checkpoint_verification_hash_rejected",
+    "original_coco_recipe_still_ready"
+  ],
+  "evidence_writer_unit_tests": {
+    "passed": true,
+    "tests": 4,
+    "script": "setup/verify_road_evidence_writer.py"
+  },
+  "separate_map_profiles_checked": 5,
+  "combined_map_native_joins_checked": 72,
+  "combined_map_matches_recorded_hash": true,
+  "live_protocol_checks_passed": true,
+  "sharing_guard_fixture_groups": 18,
+  "actual_git_index_guard": {
+    "passed": true,
+    "files": 468,
+    "findings": []
+  },
+  "staged_whitespace_check_passed": true,
+  "protected_files_unchanged": true,
+  "protected_files_checked": 17,
+  "current_checkpoint_hash_checks": {
+    "locked_real_road": true,
+    "simulation_road": true,
+    "idd_detector_latest": true
+  },
+  "copied_synthetic_images_verified": 4,
+  "recoverably_archived_files": 100,
+  "recoverably_archived_bytes": 160788486,
+  "rebuildable_cache_directories_removed": 6,
+  "rebuildable_cache_files_removed": 113,
+  "rebuildable_cache_bytes_removed": 1634669,
+  "pdfs": [
+    {
+      "name": "Milestone_2_Study_Guide.pdf",
+      "pages": 32,
+      "rendered_pages": 32,
+      "visual_review_complete": true,
+      "text_complete_checks_passed": true,
+      "local_output_only": true
+    },
+    {
+      "name": "Milestone_2_Progress_Report.pdf",
+      "pages": 10,
+      "rendered_pages": 10,
+      "visual_review_complete": true,
+      "text_complete_checks_passed": true,
+      "local_output_only": true
+    }
+  ],
+  "independent_factual_review_complete": true,
+  "new_training_started": false,
+  "native_simulator_scene_executed": false,
+  "new_test_accuracy_evaluation": false,
+  "all_historical_scripts_reexecuted": false,
+  "formal_security_scan_claimed": false,
+  "limits": [
+    "Validation uses existing recorded metrics; models/scenes were not re-scored during publication.",
+    "Offline CARLA map validation does not replace a fresh full native driving check.",
+    "Historical documents retain local run/gallery links; current milestone links were checked.",
+    "The repository guard checks common accidental disclosure patterns, not every possible secret or vulnerability.",
+    "Balanced team ownership is a preparation/validation allocation, not invented historical authorship."
+  ]
+}
