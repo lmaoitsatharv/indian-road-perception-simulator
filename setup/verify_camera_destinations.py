@@ -632,6 +632,20 @@ def uturn_checks():
           "a box that close out of nowhere does not",
           fake and not any(fake) and real and all(real) and at_start and all(at_start),
           f"out of nowhere {fake}, came up {real}, at the start {at_start}")
+    # 27 Nov CARLA run: a motorcycle came up and stopped 3 m behind, 3.3-4 m to one side, and made a phantom 'bus'
+    # straight behind count, holding the backing move for 10 s. The boxes as CARLA recorded them.
+    moto = np.array([[0., 114., 76., 278., .68, vcd.CLASSES.index("motorcycle")]], np.float32)
+    phantom = np.array([[229., 0., 947., 528., .41, vcd.CLASSES.index("bus")]], np.float32)
+    d = vcd.fresh_driver(rear=True)
+    for k in range(15):
+        look(d, k, [])
+    d.pose = (1., 0., 0.)   # drives a metre forward
+    for k in range(15, 25):
+        look(d, k, [], moto)
+    beside = look(d, 25, [], np.vstack([moto, phantom]))
+    read = [(o["class"], round(o["behind_m"], 1), round(o["y_left"], 1), round(o["y_right"], 1)) for o in d.rear_obstacles]
+    check("uturn: a motorcycle stopped 3 m behind to one side does not make a phantom box straight behind count",
+          beside and not any(beside), f"phantom believed {beside}; read {read}")
 
 
 def satnav_checks(routes):

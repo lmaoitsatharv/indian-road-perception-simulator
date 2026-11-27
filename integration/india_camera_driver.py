@@ -333,7 +333,7 @@ class CameraDriver:
         self.seen = None            # (sim_time, every obstacle of the last frame: dicts with "corners" in odometry)
         self.seen_log = []          # (sim_time, odometry centres of the vehicles seen), the last 3 s
         self.rear_log = []          # the same for the rear camera
-        self.rear_seen_at = None    # car pose (odometry) when something was last read close behind, or the rear camera started
+        self.rear_seen = []         # (car pose, odometry near edge or None) of things read close behind; None: the rear camera started
         self.side_obstacles = {}    # view -> (sim_time, side-camera detections, with "odo" corners)
         self.track_log = []         # (sim_time, view, [(class, person, odometry points)]) from every camera, the last 3 s
         self.stay_behind = None     # after giving up a pass: hold position behind that vehicle (last seen time)
@@ -860,8 +860,13 @@ class CameraDriver:
         rear = self._rear_obstacles(perception.rear_boxes)
         if rear is not None:
             started = self.rear_time is None or sim_time - self.rear_time > 1.
-            if started or any(self._read_behind(o) for o in rear):
-                self.rear_seen_at = tuple(float(v) for v in pose)
+            here = tuple(float(v) for v in pose)
+            if started:
+                self.rear_seen = [(here, None)]   # whatever is close behind may have been there all along
+            for o in rear:
+                if self._read_behind(o):
+                    self.rear_seen.append((here, to_odometry(np.array([[o["x"], o["y_left"]], [o["x"], o["y_right"]]]), pose)))
+            self.rear_seen = [e for e in self.rear_seen if self._forward_since(e[0]) < s.uturn_rear_reveal_m][-60:]
             self.rear_obstacles, self.rear_time = rear, sim_time
             self._track(sim_time, "rear", [(o["class"], o["person"], to_odometry(np.array(
                 [[o["x"], o["y_left"]], [o["x"], o["y_right"]], [o["x"] - LENGTH_M.get(o["class"], 4.), o["y_right"]],
@@ -1828,21 +1833,31 @@ class CameraDriver:
     def _rear_believed(self, o):
         """A rear box counts for the turn's checks. Nothing gets within uturn_rear_seen_m of the tail unseen: the car
         stops 2.5 m short of what it sees behind, and anything else coming up is read farther out first. A box that
-        near counts only if something was read close behind (or the camera started) and the car has not driven
-        uturn_rear_reveal_m forward since, which would show a real one farther out. 18 Nov CARLA rerun: boxes over
-        most of the rear picture ("bus 0.0 m behind", "autorickshaw 0.7 m behind", nothing there) held the backing
-        moves for about 20 s."""
+        near counts only if something was read close behind at the same place across the car (within 1 m), or the
+        camera has just started, and the car has not driven uturn_rear_reveal_m forward since, which would show a
+        real one farther out. 18 Nov CARLA rerun: boxes over most of the rear picture ("bus 0.0 m behind",
+        "autorickshaw 0.7 m behind", nothing there) held the backing moves for about 20 s. 27 Nov: a motorcycle that
+        stopped 3 m behind, 3.3-4 m to one side, vouched for such a box straight behind and held a backing move 10 s."""
         s = self.settings
         if o["behind_m"] >= s.uturn_rear_seen_m:
             return True
-        if self.rear_seen_at is None:
-            return False
-        x0, y0, yaw0 = self.rear_seen_at
+        for pose, edge in self.rear_seen:
+            if self._forward_since(pose) >= s.uturn_rear_reveal_m:
+                continue
+            if edge is None:
+                return True
+            ys = to_vehicle(edge, self.pose)[:, 1]
+            if ys.min() <= o["y_right"] + 1. and ys.max() >= o["y_left"] - 1.:
+                return True
+        return False
+
+    def _forward_since(self, pose):
+        """How far the car's tail has moved forward (along its heading then) since it was at `pose`."""
+        x0, y0, yaw0 = pose
         x, y, yaw = self.pose
         tail = self.front - 2 * self.half_length
-        moved = (x + tail * math.cos(yaw) - x0 - tail * math.cos(yaw0)) * math.cos(yaw0) \
+        return (x + tail * math.cos(yaw) - x0 - tail * math.cos(yaw0)) * math.cos(yaw0) \
             + (y + tail * math.sin(yaw) - y0 - tail * math.sin(yaw0)) * math.sin(yaw0)
-        return moved < s.uturn_rear_reveal_m
 
     def _seen_near(self, direction, sim_time):
         """Something the cameras see in the way of the next metre or two of this move, or None."""

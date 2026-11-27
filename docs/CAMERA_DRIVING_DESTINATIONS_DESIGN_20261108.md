@@ -319,6 +319,18 @@ not changed.
 The phantom rule and the side cameras have now run in CARLA; the wedge recovery has not. The 20 degree rear camera also serves the passing
 checks; their offline checks pass, but passing has not been re-run in CARLA.
 
+### CARLA run, 27 November (learned speed, the weather switched mid-run)
+
+- **A phantom behind came back.** In a backing move a motorcycle rode up and stopped 3.2 m behind, 3.3-4 m to one
+  side. Read properly, it counted as "something seen coming", so a phantom "bus 0.0 m behind" (pixels 229-947 by
+  0-528, confidence 0.27-0.48) straight behind was believed and held the move for about 10 s. A sighting now vouches
+  for a close box only within 1 m of it across the car (offline check with the boxes as recorded).
+- **Wet weather put the car on the pavement.** The weather was switched to wet mid-run; the road model then marked
+  the wet pavement as road, the car took the pavement's far edge for its kerb, drove 3.3 m left of its lane and
+  touched something at the roadside. This is the known wet-weather weakness of the road model (run07), not changed.
+- **Two turns were stopped by the R key**, once while waiting on "person 1.1 m behind" and once on "car close
+  ahead". That car was real: stopped about 4 m ahead and 3.5 m to the right, waiting for this car.
+
 ## Files
 
 | File | Change |

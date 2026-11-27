@@ -102,8 +102,8 @@ Design: [CAMERA_DRIVING_DESTINATIONS_DESIGN_20261108.md](CAMERA_DRIVING_DESTINAT
 - **Turning round:** it stops where the route turns, waits for a gap in traffic, then turns on full lock forward and
   back between the road's edges (from the sat-nav's map) until it faces the other way. Stalls, parked vehicles and
   people that stay off the road do not hold it up. After 12 moves or 80 s it gives up and the sat-nav re-plans without
-  U-turns. A rear box nearer than 1.5 m counts only if something was seen coming up behind first: phantom boxes over
-  the rear picture held the backing moves. Across the street, traffic along it is beside the car, where only the side
+  U-turns. A rear box nearer than 1.5 m counts only if something was seen coming up behind first, at the same place
+  across the car: phantom boxes over the rear picture held the backing moves. Across the street, traffic along it is beside the car, where only the side
   cameras see it: a move stops where it is while anything on the road within 20 m comes towards the car at 1.2 m/s
   or more ("car coming on the left, 12 m"), until it has stopped or gone by. The first CARLA run (18 Nov) stuck on a
   stall behind. After the fixes in the destinations design doc, the second turned round in 6 moves. The phantom rule
@@ -128,7 +128,7 @@ Design: [CAMERA_DRIVING_DESTINATIONS_DESIGN_20261108.md](CAMERA_DRIVING_DESTINAT
   - `result.json` → `camera_driving.navigation`: destinations reached, re-plans, junction turns (planned or fallback
     frames), plan times and waiting time
 
-**Offline checks:** `setup/verify_camera_destinations.py` (run with `.venv-carla`) passes 66 of 66. These cover:
+**Offline checks:** `setup/verify_camera_destinations.py` (run with `.venv-carla`) passes 67 of 67. These cover:
 
 - **Routes:**
   - every place reaches every other; it turns round only by a U-turn on a two-way street, 25 m or more from a junction
@@ -145,6 +145,7 @@ Design: [CAMERA_DRIVING_DESTINATIONS_DESIGN_20261108.md](CAMERA_DRIVING_DESTINAT
   - with the side cameras: a car coming along the far lane mid-turn holds the move until it stops; a car parked 14 m
     along the far lane does not
   - a kerb the map does not show, 0.5 m inside its road edge: the move ends at it and the turn still finishes
+  - a motorcycle stopped 3 m behind to one side does not make a phantom box straight behind count (27 Nov)
 - **Hybrid A\*:**
   - left, right and straight-on turns at a synthetic crossroads in about 30-50 ms each, round a stopped car, and a
     walled-off exit
